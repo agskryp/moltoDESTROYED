@@ -11,7 +11,27 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer">
-  <div class="site-info">
+    <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      
+      <?php
+                  wp_nav_menu( array(
+                    'theme_location' => 'menu-1',
+                    'menu_id'        => 'footer-menu',
+                  ) );
+                ?>
+      
+    </div>
+      </div>
+  </div>
+  
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+    
+  
+  <div class="site-info text-center">
     <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'moltodestroyed' ) ); ?>">
       <?php
         /* translators: %s: CMS name, i.e. WordPress. */
@@ -27,6 +47,9 @@
              'moltodestroyed', '<a href="http://agskryp.com">AGSkryp</a>'
             );
     ?>
+      </div>
+    </div>
+    </div>
   </div><!-- .site-info -->
 </footer><!-- #colophon -->
 
