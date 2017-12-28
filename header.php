@@ -27,50 +27,51 @@
       </a>
 
       <header id="masthead" class="site-header">
-        <div class="site-branding">
-        <?php
-          the_custom_logo();
+        <div class="site-branding text-center" style="height: 250px; background: pink;">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <?php
+                  the_custom_logo();
 
-          if ( is_front_page() && is_home() ) :
-        ?>
-          <h1 class="site-title">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-              <?php bloginfo( 'name' ); ?>
-            </a>
-          </h1>
+                  if ( is_front_page() && is_home() ) :
+                ?>
+                  <h1 class="site-title">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                      <?php bloginfo( 'name' ); ?>
+                    </a>
+                  </h1>
 
-        <?php else : ?>
-          <p class="site-title">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-              <?php bloginfo( 'name' ); ?>
-            </a>
-          </p>
+                <?php else : ?>
+                  <p class="site-title">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                      <?php bloginfo( 'name' ); ?>
+                    </a>
+                  </p>
 
-        <?php
-          endif;
-
-          $description = get_bloginfo( 'description', 'display' );
-
-          if ( $description || is_customize_preview() ) :
-        ?>
-          <p class="site-description">
-            <?php echo $description; /* WPCS: xss ok. */ ?>
-          </p>
-
-        <?php endif; ?>
+                <?php endif; ?>
+              </div>
+            </div>
+          </div>
         </div><!-- .site-branding -->
 
-        <nav id="site-navigation" class="main-navigation">
-          <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-            <?php esc_html_e( 'Primary Menu', 'moltodestroyed' ); ?>
-          </button>
-          
-          <?php
-            wp_nav_menu( array(
-              'theme_location' => 'menu-1',
-              'menu_id'        => 'primary-menu',
-            ) );
-          ?>
+        <nav id="site-navigation" class="main-navigation" style="background: lightgreen;">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">          
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                  <?php esc_html_e( 'Primary Menu', 'moltodestroyed' ); ?>
+                </button>
+
+                <?php
+                  wp_nav_menu( array(
+                    'theme_location' => 'menu-1',
+                    'menu_id'        => 'primary-menu',
+                  ) );
+                ?>
+              </div>
+            </div>
+          </div>
         </nav><!-- #site-navigation -->
       </header><!-- #masthead -->
 
