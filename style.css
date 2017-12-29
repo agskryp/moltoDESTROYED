@@ -532,6 +532,20 @@ a:hover, a:active {
 .site-footer {
   background: yellow;
 }
+.site {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.site-header {
+  flex-grow: 0;
+}
+.site-content {
+  flex-grow: 1;
+}
+.site-footer {
+  flex-grow: 0;
+}
 /*--------------------------------------------------------------
  # Infinite scroll
  --------------------------------------------------------------*/
