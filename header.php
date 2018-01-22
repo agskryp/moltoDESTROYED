@@ -16,7 +16,7 @@
     
 	<link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<?php wp_head(); ?>
   </head>
 
@@ -59,8 +59,10 @@
           <div class="container">
             <div class="row">
               <div class="col-xs-12">          
-                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                  <?php esc_html_e( 'Primary Menu', 'moltodestroyed' ); ?>
+                <button class="menu-toggle main-menu-button" aria-controls="primary-menu" aria-expanded="false">
+                  <i class="fa fa-bars" aria-hidden="true"></i> 
+                  
+                  <?php esc_html_e( 'Main Menu', 'moltodestroyed' ); ?>
                 </button>
 
                 <?php

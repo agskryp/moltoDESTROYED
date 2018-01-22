@@ -415,6 +415,11 @@ a:hover, a:active {
   text-align: right;
   width: 50%;
 }
+.main-menu-button {
+  border: none;
+  background: none;
+  font-size: 1em;
+}
 /*--------------------------------------------------------------
  # Accessibility
  --------------------------------------------------------------*/
