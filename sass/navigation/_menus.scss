@@ -53,6 +53,7 @@
   li {
     position: relative;
     display: inline-block;
+    margin: 0 16px;
 
     &:hover > a,
     &.focus > a {}
@@ -61,6 +62,13 @@
   a {
     display: block;
     text-decoration: none;
+    &:visited {
+      color: $color__link;
+    }
+    &:hover,
+    &:focus {
+      color: $color__link-hover;
+    }
   }
 
   .current_page_item > a,
