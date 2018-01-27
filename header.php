@@ -27,28 +27,27 @@
       </a>
 
       <header id="masthead" class="site-header">
-        <div class="site-branding text-center" style="height: 250px; background: pink;">
+        <div class="site-branding text-center">
           <div class="container-fluid">
             <div class="row">
               <div class="col-xs-12">
-                <?php
-                  the_custom_logo();
-
-                  if ( is_front_page() && is_home() ) :
-                ?>
-                  <h1 class="site-title">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <?php if ( is_front_page() ) : ?>
+                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <h1 class="site-title sr-only">
                       <?php bloginfo( 'name' ); ?>
-                    </a>
-                  </h1>
+                    </h1>
 
-                <?php else : ?>
-                  <p class="site-title">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <?php the_header_image_tag(); ?>
+                  </a>
+                
+                <?php else : ?>                
+                  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <p class="site-title sr-only">
                       <?php bloginfo( 'name' ); ?>
-                    </a>
-                  </p>
+                    </p>
 
+                    <?php the_header_image_tag(); ?>
+                  </a>
                 <?php endif; ?>
               </div>
             </div>

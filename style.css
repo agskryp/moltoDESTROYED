@@ -563,6 +563,12 @@ a:hover, a:active {
 .site-footer {
   flex-grow: 0;
 }
+.site-branding {
+  background: #fff;
+}
+.site-branding .col-xs-12 {
+  padding: 0;
+}
 /*--------------------------------------------------------------
  # Infinite scroll
  --------------------------------------------------------------*/
