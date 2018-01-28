@@ -15,7 +15,7 @@ get_header(); ?>
       <div class="row">
         <div class="col-xs-12 col-sm-8 text-center">
           <?php if ( have_posts() ) : ?>
-            <header class="page-header">
+            <header>
               <h1>Comic Archive</h1>
             </header> <!-- .page-header -->
 
