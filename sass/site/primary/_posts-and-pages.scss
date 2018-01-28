@@ -20,3 +20,16 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+
+
+
+.comic-strip {
+  img {
+    border: 2px solid #000;
+  }
+  
+  .posted-on {
+    font-size: .8em;
+  }
+}
