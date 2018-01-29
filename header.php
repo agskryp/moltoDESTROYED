@@ -54,7 +54,7 @@
           </div>
         </div><!-- .site-branding -->
 
-        <nav id="site-navigation" class="main-navigation" style="border-bottom: 3px solid #000; background: #fff">
+        <nav id="site-navigation" class="main-navigation">
           <div class="container">
             <div class="row">
               <div class="col-xs-12">          
