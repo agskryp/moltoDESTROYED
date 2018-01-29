@@ -6,25 +6,29 @@
 
 <main class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <h2>Welcome to moltoDESTROYED</h2>
+    <div class="col-xs-12 col-sm-8 text-center">
+    
+        <?php
+      $wp_query = new WP_Query ( array( 'post_type' => 'comics', 'posts_per_page' => 1 ) );
       
-      <p>
-        Yaaay! Welcome to moltoDESTROYED!! A silly little web comic featuring fifteen eccentric characters and the special moments they share!
-      </p>
+            while ( have_posts() ) : the_post();
 
-      <p>
-        Now don't be afraid to jump straight into the latest comic strip, or if you're a first timer, start at the beginning and watch the evolving changes in illustration and major decline of humour between each comic!
-      </p>
+            get_template_part( 'template-parts/content', get_post_type() );
 
-      <p>
-        Feel free to like and/or follow us on the many different social networks were connected with like FaceBook and Twitter and Google+ to instantly receive the latest comic, there's also a Tumblr and Instagram page for images of various drawings and original sketches. If you aren't about the social scene, grab the RSS Feed.
-      </p>
+            the_post_navigation();
 
-      <p>
-        If you're curious to know more about moltoDESTROYED, the about page has a couple of sentences explaining the who and whats of the website.
-      </p>
-    </div>
+            // If comments are open or we have at least one comment, load up the comment template.
+            if ( comments_open() || get_comments_number() ) :
+                comments_template();
+            endif;
+
+            // End of the loop.
+            endwhile; 
+          ?>
+      
+      </div>
+        <?php require get_template_directory() . '/partials/sidebar.php'; ?>    
+      
   </div>
 </main>
 
