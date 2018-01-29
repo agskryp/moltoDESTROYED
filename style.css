@@ -543,6 +543,9 @@ a:hover, a:active {
   display: block;
   margin: 0 20%;
 }
+.widget:last-of-type::after {
+  display: none;
+}
 /*--------------------------------------------------------------
  # Content
  --------------------------------------------------------------*/
@@ -571,8 +574,14 @@ a:hover, a:active {
 .comic-strip .posted-on {
   font-size: 0.8em;
 }
-.comic-archive .hentry {
+.comic-archive ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
+}
+.comic-archive li {
+  line-height: 1.3;
+  margin-bottom: 0.5em;
 }
 /*--------------------------------------------------------------
  ## Comments
