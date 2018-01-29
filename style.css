@@ -515,8 +515,20 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # Widgets
  --------------------------------------------------------------*/
+.widget-area {
+  max-width: 320px;
+  margin: 0 auto;
+}
 .widget-area h2 {
   text-align: center;
+}
+.widget-area li {
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+}
+.widget-area ol, .widget-area ul {
+  list-style: none;
+  padding: 0;
 }
 .widget {
   margin: 0 0 1.5em;
@@ -524,6 +536,12 @@ a:hover, a:active {
 }
 .widget select {
   max-width: 100%;
+}
+.widget::after {
+  content: "";
+  border-bottom: 2px solid #000;
+  display: block;
+  margin: 0 20%;
 }
 /*--------------------------------------------------------------
  # Content
