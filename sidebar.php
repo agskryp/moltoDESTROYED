@@ -26,9 +26,13 @@
         ) );
 
         foreach( $recent_posts as $recent ) {
-          echo '<li><a href="' . get_permalink( $recent["ID"] ) . '" title="Look '.esc_attr( $recent["post_title"] ).'" >' .   $recent["post_title"].'</a> </li> ';
-        }
-      ?>
+      ?>      
+        <li>
+          <a href="<?php echo get_permalink( $recent['ID'] ) ?>">
+            <?php echo $recent["post_title"] ?>
+          </a>      
+        </li>
+      <?php } ?>
     </ul>
   </section>
 
