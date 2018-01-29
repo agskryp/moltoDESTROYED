@@ -198,6 +198,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3em;
 }
+h2 {
+  font-size: 2em;
+}
 p {
   margin-bottom: 1.5em;
 }
@@ -258,7 +261,7 @@ hr {
   margin-bottom: 1.5em;
 }
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 1.5em;
 }
 ul {
   list-style: disc;
@@ -268,7 +271,7 @@ ol {
 }
 li > ul, li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em;
+  margin-left: 0;
 }
 dt {
   font-weight: bold;
@@ -360,6 +363,8 @@ a:hover, a:active {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 3px solid #000;
+  background: #fff;
 }
 .main-navigation ul {
   display: none;
@@ -396,9 +401,10 @@ a:hover, a:active {
 .main-navigation a {
   display: block;
   text-decoration: none;
+  text-transform: uppercase;
 }
 .main-navigation a:visited {
-  color: #565656;
+  color: #000;
 }
 .main-navigation a:hover, .main-navigation a:focus {
   color: #969696;
@@ -544,6 +550,9 @@ a:hover, a:active {
 .comic-strip .posted-on {
   font-size: 0.8em;
 }
+.comic-archive .hentry {
+  margin: 0;
+}
 /*--------------------------------------------------------------
  ## Comments
  --------------------------------------------------------------*/
@@ -572,6 +581,11 @@ a:hover, a:active {
 }
 .site-footer {
   flex-grow: 0;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
 }
 .site-header {
   margin-bottom: 1.5em;
