@@ -25,6 +25,20 @@
   select {
     max-width: 100%;
   }
+  
+  .btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 0;
+    padding: .5em;
+    color: #fff;
+    background: GREY;
+    &:hover {
+      background: darken(GREY, 6%);
+    }
+  }
 }
 
 .widget::after {
