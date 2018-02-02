@@ -38,6 +38,11 @@
     &:hover {
       background: darken(GREY, 6%);
     }
+    
+    svg {
+      fill: #fff;
+      margin-right: .5em;
+    }
   }
 }
 
