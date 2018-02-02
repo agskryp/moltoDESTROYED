@@ -12,7 +12,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-8">
-      <div id="primary" class="content-area text-center">
+      <div id="primary" class="content-area">
         <main id="main" class="site-main">
           <?php
             while ( have_posts() ) :

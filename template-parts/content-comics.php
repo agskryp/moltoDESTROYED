@@ -11,10 +11,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="entry-header">
-    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+    <?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
   </header> <!-- .entry-header -->
   
-  <div class="entry-content comic-strip">
+  <div class="entry-content comic-strip text-center">
     <?php
       $image = get_field( 'comic_strip' );
 
@@ -25,13 +25,15 @@
       <div class="entry-meta">
         <?php moltodestroyed_comic_posted_on(); ?>
       </div> <!-- .entry-meta -->
+    <?php endif; ?>
+  </div> <!-- .entry-content -->
+  
+  <div class="comic-strip-navigation">
     <?php 
-      endif; 
-
       wp_link_pages( array(
           'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'moltodestroyed' ),
           'after'  => '</div>',
       ) );
 	?>
-  </div> <!-- .entry-content -->
+  </div> <!-- .comic-strip-navigation -->
 </article> <!-- #post-<?php the_ID(); ?> -->
