@@ -54,8 +54,13 @@
 
   li {
     position: relative;
-    display: inline-block;
+    display: block;
+    text-align: center;
     margin: 0 16px;
+    @media screen and (min-width: 600px) {
+      display: inline-block;
+      text-align: left;
+    }
 
     &:hover > a,
     &.focus > a {}
@@ -114,6 +119,7 @@
 
   .nav-next {
     float: right;
+    text-align: right;
     width: 50%;
   }
 }
