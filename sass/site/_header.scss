@@ -1,5 +1,30 @@
 .site-header {
   margin-bottom: 1.5em;
+  
+  .social-container {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-left: -148px;
+    margin-bottom: -8px;
+    background: #fff;
+    border-top-left-radius: 6px;
+    padding: 6px 6px 0;
+    @media screen and (min-width: 620px) {
+      right: inherit;
+    }
+    a {
+      margin-right: 6px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+      svg:hover {
+        fill: #828282;
+      }
+    }
+  }
 }
 
 .site-branding {

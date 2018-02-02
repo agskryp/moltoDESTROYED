@@ -40,6 +40,8 @@
                     <?php the_header_image_tag(); ?>
                   </a>
                 
+                <?php require get_template_directory() . '/partials/social-container.php'; ?>
+                
                 <?php else : ?>                
                   <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                     <p class="site-title sr-only">
@@ -48,6 +50,9 @@
 
                     <?php the_header_image_tag(); ?>
                   </a>
+                
+                <?php require get_template_directory() . '/partials/social-container.php'; ?>
+                
                 <?php endif; ?>
               </div>
             </div>
