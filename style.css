@@ -651,7 +651,7 @@ a:hover, a:active {
   border-top-left-radius: 6px;
   padding: 6px 6px 0;
 }
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 621px) {
   .site-header .social-container {
     right: inherit;
   }
@@ -662,6 +662,14 @@ a:hover, a:active {
 }
 .site-header .social-container a:hover {
   text-decoration: none;
+}
+.site-header .social-container a svg {
+  height: 30px;
+}
+@media screen and (min-width: 621px) {
+  .site-header .social-container a svg {
+    height: 36px;
+  }
 }
 .site-header .social-container a svg:hover {
   fill: #828282;
