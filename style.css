@@ -395,8 +395,15 @@ a:hover, a:active {
 }
 .main-navigation li {
   position: relative;
-  display: inline-block;
+  display: block;
+  text-align: center;
   margin: 0 16px;
+}
+@media screen and (min-width: 600px) {
+  .main-navigation li {
+    display: inline-block;
+    text-align: left;
+  }
 }
 .main-navigation a {
   display: block;
@@ -433,6 +440,7 @@ a:hover, a:active {
 }
 .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
   float: right;
+  text-align: right;
   width: 50%;
 }
 .main-menu-button {
@@ -537,6 +545,23 @@ a:hover, a:active {
 .widget select {
   max-width: 100%;
 }
+.widget .btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 0;
+  padding: 0.5em;
+  color: #fff;
+  background: GREY;
+}
+.widget .btn-social:hover {
+  background: #717171;
+}
+.widget .btn-social svg {
+  fill: #fff;
+  margin-right: 0.5em;
+}
 .widget::after {
   content: "";
   border-bottom: 2px solid #000;
@@ -612,13 +637,34 @@ a:hover, a:active {
 .site-footer {
   flex-grow: 0;
 }
-@media (min-width: 1200px) {
-  .container {
-    width: 970px;
-  }
-}
 .site-header {
   margin-bottom: 1.5em;
+}
+.site-header .social-container {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-left: -148px;
+  margin-bottom: -8px;
+  background: #fff;
+  border-top-left-radius: 6px;
+  padding: 6px 6px 0;
+}
+@media screen and (min-width: 620px) {
+  .site-header .social-container {
+    right: inherit;
+  }
+}
+.site-header .social-container a {
+  margin-right: 6px;
+  text-decoration: none;
+}
+.site-header .social-container a:hover {
+  text-decoration: none;
+}
+.site-header .social-container a svg:hover {
+  fill: #828282;
 }
 .site-branding {
   background: #fff;

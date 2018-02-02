@@ -34,8 +34,8 @@
         <?php require get_template_directory() . '/partials/sidebar.php'; ?>        
       </div>
     </div>
-  </main><!-- #main -->
-</div><!-- #primary -->
+  </main> <!-- #main -->
+</div> <!-- #primary -->
 
 <?php
   get_footer();

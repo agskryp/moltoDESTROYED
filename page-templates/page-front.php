@@ -6,8 +6,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-8 text-center">
-      <div id="primary" class="content-area">
+    <div class="col-xs-12 col-sm-8">
+      <div id="primary" class="content-area text-center">
         <main id="main" class="site-main">
           <?php
             $wp_query = new WP_Query ( array( 
