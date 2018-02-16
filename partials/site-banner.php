@@ -1,0 +1,1 @@
+ <img src="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-sm.png">

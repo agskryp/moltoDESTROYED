@@ -37,7 +37,8 @@
                       <?php bloginfo( 'name' ); ?>
                     </h1>
 
-                    <?php the_header_image_tag(); ?>
+                    <?php // the_header_image_tag(); ?>
+                    <?php require get_template_directory() . '/partials/site-banner.php'; ?>
                   </a>
                 
                 <?php require get_template_directory() . '/partials/social-container.php'; ?>
@@ -48,7 +49,8 @@
                       <?php bloginfo( 'name' ); ?>
                     </p>
 
-                    <?php the_header_image_tag(); ?>
+                    <?php // the_header_image_tag(); ?>
+                    <?php require get_template_directory() . '/partials/site-banner.php'; ?>
                   </a>
                 
                 <?php require get_template_directory() . '/partials/social-container.php'; ?>
