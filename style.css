@@ -645,11 +645,11 @@ a:hover, a:active {
   position: absolute;
   bottom: 0;
   right: 0;
-  margin-left: -148px;
+  margin-left: -124px;
   margin-bottom: -8px;
-  background: #fff;
   border-top-left-radius: 6px;
-  padding: 6px 6px 0;
+  padding: 3px 3px 0 0;
+  line-height: 1;
 }
 @media screen and (min-width: 621px) {
   .site-header .social-container {
@@ -664,7 +664,14 @@ a:hover, a:active {
   text-decoration: none;
 }
 .site-header .social-container a svg {
-  height: 30px;
+  height: 24px;
+  width: 24px;
+}
+@media screen and (min-width: 360px) {
+  .site-header .social-container a svg {
+    height: 30px;
+    width: 30px;
+  }
 }
 @media screen and (min-width: 621px) {
   .site-header .social-container a svg {
