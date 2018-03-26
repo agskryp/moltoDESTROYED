@@ -524,10 +524,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # Widgets
  --------------------------------------------------------------*/
-.widget-area {
-  max-width: 320px;
-  margin: 0 auto;
-}
 .widget-area h2 {
   text-align: center;
 }
@@ -547,14 +543,12 @@ a:hover, a:active {
   max-width: 100%;
 }
 .widget .btn-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 24px;
   line-height: 0;
   padding: 0.5em;
   color: #fff;
   background: GREY;
+  margin-bottom: 5px;
 }
 .widget .btn-social:hover {
   background: #717171;
@@ -562,15 +556,6 @@ a:hover, a:active {
 .widget .btn-social svg {
   fill: #fff;
   margin-right: 0.5em;
-}
-.widget::after {
-  content: "";
-  border-bottom: 2px solid #000;
-  display: block;
-  margin: 0 20%;
-}
-.widget:last-of-type::after {
-  display: none;
 }
 /*--------------------------------------------------------------
  # Content
@@ -674,7 +659,7 @@ a:hover, a:active {
     width: 30px;
   }
 }
-@media screen and (min-width: 621px) {
+@media screen and (min-width: 768px) {
   .site-header .social-container a svg {
     height: 36px;
   }
