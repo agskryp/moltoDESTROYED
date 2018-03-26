@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-8">
+    <div class="col-xs-12">
       <div id="primary" class="content-area comic-archive text-center">
         <main id="main" class="site-main">    
           <?php if ( have_posts() ) : ?>
@@ -36,7 +36,7 @@ get_header(); ?>
       </div> <!-- #primary -->
     </div>
 
-    <?php require get_template_directory() . '/partials/sidebar.php'; ?>
+    <?php get_sidebar(); ?>
   </div>
 </div>
 

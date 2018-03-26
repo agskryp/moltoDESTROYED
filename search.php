@@ -48,7 +48,7 @@ get_header(); ?>
           endif; ?>
         </div>
         
-       <?php require get_template_directory() . '/partials/sidebar.php'; ?>
+         <?php get_sidebar(); ?>
       </div>
     </main>
     <!-- #main -->

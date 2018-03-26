@@ -17,7 +17,7 @@
 <div id="primary" class="content-area">
   <main id="main" class="site-main container">
     <div class="row">
-      <div class="col-xs-12 col-sm-8">
+      <div class="col-xs-12">
         <?php if ( have_posts() ) : ?>
           <?php if ( is_home() && ! is_front_page() ) : ?>
             <header>
@@ -54,7 +54,7 @@
         ?>  
       </div>
 
-      <?php require get_template_directory() . '/partials/sidebar.php'; ?>
+        <?php get_sidebar(); ?>
     </div>    
   </main><!-- #main -->
 </div><!-- #primary -->

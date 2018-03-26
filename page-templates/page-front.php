@@ -6,7 +6,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-8">
+    <div class="col-xs-12">
       <div id="primary" class="content-area text-center">
         <main id="main" class="site-main">
           <?php
@@ -34,7 +34,7 @@
       </div> <!-- #primary -->
     </div>
     
-    <?php require get_template_directory() . '/partials/sidebar.php'; ?>      
+      <?php get_sidebar(); ?>     
   </div>
 </div>
 

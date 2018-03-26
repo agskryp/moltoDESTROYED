@@ -13,7 +13,7 @@ get_header(); ?>
   <main id="main" class="site-main">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-8">
+        <div class="col-xs-12">
           <?php if ( have_posts() ) : ?>
             <header class="page-header">
               <?php
@@ -45,7 +45,7 @@ get_header(); ?>
           ?>
        </div>
       
-        <?php require get_template_directory() . '/partials/sidebar.php'; ?>        
+        <?php get_sidebar(); ?>      
       </div>
     </div>
   </main> <!-- #main -->

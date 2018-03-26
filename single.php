@@ -13,7 +13,7 @@
   <main id="main" class="site-main">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-8">
+        <div class="col-xs-12">
           <?php
             while ( have_posts() ) : the_post();
 
@@ -31,7 +31,7 @@
           ?>
         </div>
       
-        <?php require get_template_directory() . '/partials/sidebar.php'; ?>        
+          <?php get_sidebar(); ?>     
       </div>
     </div>
   </main> <!-- #main -->
