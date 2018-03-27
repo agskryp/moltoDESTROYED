@@ -14,8 +14,7 @@
 
 <div class="col-xs-12">
   <aside id="secondary" class="widget-area">
-    <div class="row">
-    <section class="widget col-xs-12 text-center" style="padding-bottom: 1.5em;">
+    <section class="widget text-center" style="padding-bottom: 1.5em; border-bottom: 2px solid black;">
         <h2>Follow Us</h2>
 
         <a type="button"
@@ -52,10 +51,9 @@
         </a>
       
     </section>
-      </div>
     
-    <div class="row">
-      <section class="widget col-xs-12 col-sm-6">
+<div style="margin: 0 auto;">
+      <section class="widget col-xs-12 col-sm-4">
         <h2>Recent Comics</h2>
 
         <ul>
@@ -76,7 +74,7 @@
         </ul>
       </section>
 
-      <section class="widget col-xs-12 col-sm-6">
+      <section class="widget col-xs-12 col-sm-4 col-sm-offset-2">
         <h2>Recent Posts</h2>
 
         <ul>
@@ -97,8 +95,8 @@
           <?php } ?>
         </ul>
       </section>
+    
     </div>
-
     <?php
       /**
        * Avoid using customize sidebar options
