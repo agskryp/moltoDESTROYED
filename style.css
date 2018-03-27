@@ -524,6 +524,11 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  # Widgets
  --------------------------------------------------------------*/
+.widget-area {
+  padding-top: 1.5em;
+  border-top: 2px solid #000;
+  margin-top: 1.5em;
+}
 .widget-area h2 {
   text-align: center;
 }
@@ -543,8 +548,9 @@ a:hover, a:active {
   max-width: 100%;
 }
 .widget .btn-social {
-  font-size: 24px;
-  line-height: 0;
+  display: inline-flex;
+  font-size: 22px;
+  line-height: 1;
   padding: 0.5em;
   color: #fff;
   background: GREY;
@@ -607,7 +613,14 @@ a:hover, a:active {
  ## Global Sections
  --------------------------------------------------------------*/
 .site-footer {
-  background: yellow;
+  background: #333;
+  text-align: center;
+}
+.site-footer ul {
+  list-style: none;
+}
+.site-footer li {
+  display: inline-block;
 }
 .site {
   display: flex;

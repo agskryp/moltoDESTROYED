@@ -10,10 +10,13 @@
 
 </div><!-- #content -->
 
-<footer id="colophon" class="site-footer">
+<footer id="colophon" class="site-footer" style="">
     <div class="container">
   <div class="row">
     <div class="col-xs-12">
+      
+      <img src="http://moltodestroyed.local/wp-content/themes/moltodestroyed/images/banner/molto-banner-template-xs.png" srcset="http://moltodestroyed.local/wp-content/themes/moltodestroyed/images/banner/molto-banner-template-sm.png 480w,
+             http://moltodestroyed.local/wp-content/themes/moltodestroyed/images/banner/molto-banner-template-md.png 768w," alt="moltoDESTROYED Banner" style="max-height: 90px;">
       
       <?php
                   wp_nav_menu( array(
