@@ -10,6 +10,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  
+  <?php 
+  
+//  Conditional statement stating
+//    if home page header be h2
+//      else header be h1
+  
+  ?>
+  
+  
   <header class="entry-header">
     <?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
   </header> <!-- .entry-header -->
@@ -27,6 +37,13 @@
       </div> <!-- .entry-meta -->
     <?php endif; ?>
   </div> <!-- .entry-content -->
+  
+    <?php 
+  
+//  place social sharing buttons here
+  
+  ?>
+  
   
   <div class="comic-strip-navigation">
     <?php 
