@@ -15,8 +15,7 @@
   <div class="row">
     <div class="col-xs-12">
       
-      <img src="http://moltodestroyed.local/wp-content/themes/moltodestroyed/images/banner/molto-banner-template-xs.png" srcset="http://moltodestroyed.local/wp-content/themes/moltodestroyed/images/banner/molto-banner-template-sm.png 480w,
-             http://moltodestroyed.local/wp-content/themes/moltodestroyed/images/banner/molto-banner-template-md.png 768w," alt="moltoDESTROYED Banner" style="max-height: 90px;">
+      <img src="http://moltodestroyed.local/wp-content/themes/moltodestroyed/images/banner/molto-banner-template-inversed.png" alt="moltoDESTROYED Banner">
       
       <?php
                   wp_nav_menu( array(
