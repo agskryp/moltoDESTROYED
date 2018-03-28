@@ -525,9 +525,15 @@ a:hover, a:active {
  # Widgets
  --------------------------------------------------------------*/
 .widget-area {
-  padding-top: 1.5em;
-  border-top: 2px solid #000;
-  margin-top: 1.5em;
+  max-width: 420px;
+  margin: 0 auto;
+  border-top: none;
+}
+@media all and (min-width: 768px) {
+  .widget-area {
+    max-width: none;
+    border-top: 2px solid #000;
+  }
 }
 .widget-area h2 {
   text-align: center;
@@ -539,6 +545,15 @@ a:hover, a:active {
 .widget-area ol, .widget-area ul {
   list-style: none;
   padding: 0;
+}
+.widget-area section {
+  padding-top: 1.5em;
+  border-top: 2px solid #000;
+}
+@media all and (min-width: 768px) {
+  .widget-area section {
+    border-top: none;
+  }
 }
 .widget {
   margin: 0 0 1.5em;
@@ -635,6 +650,9 @@ a:hover, a:active {
 }
 .site-footer {
   flex-grow: 0;
+}
+.container {
+  max-width: 970px;
 }
 .site-header {
   margin-bottom: 1.5em;

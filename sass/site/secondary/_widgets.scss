@@ -1,7 +1,11 @@
 .widget-area {
-  padding-top: 1.5em;
-  border-top: 2px solid #000;
-  margin-top: 1.5em;
+  max-width: 420px;
+  margin: 0 auto;
+  border-top: none;
+  @media all and (min-width: $screen-md) {
+    max-width: none;
+    border-top: 2px solid #000;
+  }
 
   h2 {
     text-align: center;
@@ -16,6 +20,17 @@
   ul {
     list-style: none;
     padding: 0;
+  }
+  
+  section {
+    
+    padding-top: 1.5em;
+  border-top: 2px solid #000;
+    
+      @media all and (min-width: $screen-md) {
+    
+    border-top: none;
+  }
   }
 }
 
