@@ -615,9 +615,18 @@ a:hover, a:active {
   line-height: 1.3;
   margin-bottom: 0.5em;
 }
-.comic-strip-navigation {
-  max-width: 320px;
+.comic-navigation-container {
+  max-width: 600px;
   margin: 0 auto;
+}
+.comic-navigation-container .comic-navigation {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.comic-navigation-container .comic-navigation a {
+  font-size: 2em;
+  letter-spacing: -6px;
 }
 /*--------------------------------------------------------------
  ## Comments
