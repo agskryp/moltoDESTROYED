@@ -189,3 +189,45 @@ function remove_search_widget() {
   add_action( 'widgets_init', 'remove_search_widget' );
 
 
+
+
+function the_comic_navigation( $args = array() ) {
+	echo get_the_comic_navigation( $args );
+}
+
+function get_the_comic_navigation( $args = array() ) {
+	$args = wp_parse_args( $args, array(
+		'prev_text'          => '&lt;',
+		'next_text'          => '&gt;',
+		'in_same_term'       => false,
+		'excluded_terms'     => '',
+		'taxonomy'           => 'category',
+		'screen_reader_text' => __( 'Post navigation' ),
+	) );
+
+	$navigation = '';
+
+	$previous = get_previous_post_link(
+		'<div class="nav-previous">%link</div>',
+		$args['prev_text'],
+		$args['in_same_term'],
+		$args['excluded_terms'],
+		$args['taxonomy']
+	);
+
+	$next = get_next_post_link(
+		'<div class="nav-next">%link</div>',
+		$args['next_text'],
+		$args['in_same_term'],
+		$args['excluded_terms'],
+		$args['taxonomy']
+	);
+
+	// Only add markup if there's somewhere to navigate to.
+	if ( $previous || $next ) {
+		$navigation = _navigation_markup( $previous . $next, 'post-navigation', $args['screen_reader_text'] );
+	}
+
+	return $navigation;
+}
+

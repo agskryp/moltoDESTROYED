@@ -23,6 +23,11 @@
   <header class="entry-header">
     <?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
   </header> <!-- .entry-header -->
+
+  <div class="comic-strip-navigation">
+    <?php   the_comic_navigation(); ?>
+  </div> <!-- .comic-strip-navigation -->
+  
   
   <div class="entry-content comic-strip text-center">
     <?php
@@ -46,11 +51,6 @@
   
   
   <div class="comic-strip-navigation">
-    <?php 
-      wp_link_pages( array(
-          'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'moltodestroyed' ),
-          'after'  => '</div>',
-      ) );
-	?>
+    <?php   the_comic_navigation(); ?>
   </div> <!-- .comic-strip-navigation -->
 </article> <!-- #post-<?php the_ID(); ?> -->
