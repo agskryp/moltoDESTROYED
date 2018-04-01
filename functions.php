@@ -162,19 +162,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 function custom_add_google_fonts() {
   wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Bangers|Nunito+Sans', false );
 }
-
-  add_action( 'wp_enqueue_scripts', 'custom_add_google_fonts' );
+add_action( 'wp_enqueue_scripts', 'custom_add_google_fonts' );
 
 /**
  * Redirect the search page to the 404 page
  */
 function wpb_filter_query( $query, $error = true ) {
   if ( is_search() ) {
-    $query->is_search = false;
-    $query->query_vars[s] = false;
-    $query->query[s] = false;
+    $query -> is_search = false;
+    $query -> query_vars[s] = false;
+    $query -> query[s] = false;
     if ( $error == true )
-      $query->is_404 = true;
+      $query -> is_404 = true;
     }
   }
 add_action( 'parse_query', 'wpb_filter_query' );
@@ -184,50 +183,6 @@ add_filter( 'get_search_form', create_function( '$a', "return null;" ) );
  * Disable the search feature
  */
 function remove_search_widget() {
-  unregister_widget('WP_Widget_Search');
+  unregister_widget( 'WP_Widget_Search' );
 }
-  add_action( 'widgets_init', 'remove_search_widget' );
-
-
-
-
-function the_comic_navigation( $args = array() ) {
-	echo get_the_comic_navigation( $args );
-}
-
-function get_the_comic_navigation( $args = array() ) {
-	$args = wp_parse_args( $args, array(
-		'prev_text'          => '&lt;',
-		'next_text'          => '&gt;',
-		'in_same_term'       => false,
-		'excluded_terms'     => '',
-		'taxonomy'           => 'category',
-		'screen_reader_text' => __( 'Post navigation' ),
-	) );
-
-	$navigation = '';
-
-	$previous = get_previous_post_link(
-		'<div class="nav-previous">%link</div>',
-		$args['prev_text'],
-		$args['in_same_term'],
-		$args['excluded_terms'],
-		$args['taxonomy']
-	);
-
-	$next = get_next_post_link(
-		'<div class="nav-next">%link</div>',
-		$args['next_text'],
-		$args['in_same_term'],
-		$args['excluded_terms'],
-		$args['taxonomy']
-	);
-
-	// Only add markup if there's somewhere to navigate to.
-	if ( $previous || $next ) {
-		$navigation = _navigation_markup( $previous . $next, 'post-navigation', $args['screen_reader_text'] );
-	}
-
-	return $navigation;
-}
-
+add_action( 'widgets_init', 'remove_search_widget' );
