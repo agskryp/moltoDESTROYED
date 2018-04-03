@@ -160,7 +160,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Import Google Fonts.
  */
 function custom_add_google_fonts() {
-  wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Bangers|Nunito+Sans', false );
+  wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Bangers|Open+Sans', false );
 }
 add_action( 'wp_enqueue_scripts', 'custom_add_google_fonts' );
 
