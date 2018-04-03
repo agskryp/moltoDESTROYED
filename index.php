@@ -15,7 +15,7 @@
 ?>
 
 <div id="primary" class="content-area">
-  <main id="main" class="site-main container">
+  <main id="main" class="site-main narrow-container">
     <div class="row">
       <div class="col-xs-12">
         <?php if ( have_posts() ) : ?>

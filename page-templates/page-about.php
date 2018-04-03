@@ -4,7 +4,7 @@
   get_header(); 
 ?>
 
-<main class="container">
+<main class="narrow-container">
   <div class="row">
     <div class="col-xs-12">
       <h2>Welcome to moltoDESTROYED</h2>

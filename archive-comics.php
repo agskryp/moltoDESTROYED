@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div class="container">
+<div class="narrow-container">
   <div class="row">
     <div class="col-xs-12">
       <div id="primary" class="content-area comic-archive text-center">
