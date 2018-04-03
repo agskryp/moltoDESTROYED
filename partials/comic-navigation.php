@@ -5,19 +5,26 @@
 ?>
 
 <div class="comic-navigation-container">
-  <nav class="comic-navigation">
-    <?php 
-      $first = get_posts( array(
-        'numberposts' => 1,
-        'order'       => 'asc',
-        'post_type'   => 'comics'
-      ) );
+  <nav class="comic-navigation text-center row">
+    <div class="col-xs-offset-1 col-xs-2">
+      <?php 
+        $first = get_posts( array(
+          'numberposts' => 1,
+          'order'       => 'asc',
+          'post_type'   => 'comics'
+        ) );
+
+        $first_url = get_permalink( $first[0] -> ID );
+
+        if ( $post -> ID !== $first[0] -> ID ) {
+          echo "<a href='" . $first_url . "'> &lt; &lt; &lt; </a>";
+        } 
+
+        ?>
+    </div>
     
-      $first_url = get_permalink( $first[0] -> ID );
-    
-      if ( $post -> ID !== $first[0] -> ID ) {
-        echo "<a href='" . $first_url . "'> < < < </a>";
-      }
+    <div class="col-xs-2">
+      <?php
     
     
      
@@ -26,6 +33,11 @@
 	  );
     
       echo $previous;
+      ?>
+    </div>
+    <div class="col-xs-2">
+      
+      <?php
     
     
 
@@ -41,6 +53,12 @@
       
       echo "<a href='" . $random_url . "'> ? ? ? </a>";
       
+      ?>
+    </div>
+    
+    <div class="col-xs-2">
+      <?php
+      
      
     
       $next = get_next_post_link(
@@ -48,6 +66,11 @@
       );
     
       echo $next;
+      ?>
+    </div>
+    
+    <div class="col-xs-2">
+      <?php
     
       $latest = get_posts( array(
         'numberposts' => 1,
@@ -58,9 +81,10 @@
       $latest_url = get_permalink( $latest[0] -> ID );
     
       if ( $post -> ID !== $latest[0] -> ID ) {
-        echo "<a href='" . $latest_url . "'> > > > </a>";
+        echo "<a href='" . $latest_url . "'> &gt; &gt; &gt; </a>";
       }
     ?>
+    </div>
   </nav>
 </div>
 

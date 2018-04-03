@@ -23,19 +23,23 @@
 }
 
 .comic-navigation-container {
-  max-width: 600px;
-  margin: 0 auto;
+  
+  
 
 .comic-navigation {
   
-  
-    display: inline-flex;
-    justify-content: space-around;
-    width: 100%;
+  div  {
+    padding: 0;
+  }
     
   a {
-    font-size: 2em;
-    letter-spacing: -6px;
-  }
+    font-size: 1.5em;
+    letter-spacing: -4px;
+    padding-right: 7px;
+    @media all and (min-width: $screen-sm) {
+      font-size: 2em;
+      letter-spacing: -6px;
+      }
+    }
   }
 }
