@@ -42,32 +42,4 @@
     max-width: 100%;
   }
   
-  .btn-social {
-    display: inline-flex;
-    font-size: 22px;
-    line-height: 1;
-    padding: .5em;
-    color: #fff;
-    background: GREY;
-    margin-bottom: 5px;
-    &:hover {
-      background: darken(GREY, 6%);
-    }
-    
-    svg {
-      fill: #fff;
-      margin-right: .5em;
-    }
-  }
 }
-
-//.widget::after {
-//  content: "";
-//  border-bottom: 2px solid #000;
-//  display: block;
-//  margin: 0 20%;
-//}
-//
-//.widget:last-of-type::after {
-//  display: none;
-//}
