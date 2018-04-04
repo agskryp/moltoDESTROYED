@@ -564,22 +564,6 @@ a:hover, a:active {
 .widget select {
   max-width: 100%;
 }
-.widget .btn-social {
-  display: inline-flex;
-  font-size: 22px;
-  line-height: 1;
-  padding: 0.5em;
-  color: #fff;
-  background: GREY;
-  margin-bottom: 5px;
-}
-.widget .btn-social:hover {
-  background: #717171;
-}
-.widget .btn-social svg {
-  fill: #fff;
-  margin-right: 0.5em;
-}
 /*--------------------------------------------------------------
  # Content
  --------------------------------------------------------------*/
@@ -643,15 +627,49 @@ a:hover, a:active {
 /*--------------------------------------------------------------
  ## Global Sections
  --------------------------------------------------------------*/
-.site-footer {
+.footer-menu {
   background: #333;
-  text-align: center;
+  border-top: 2px solid #000;
+  padding-top: 1.5em;
 }
-.site-footer ul {
+.footer-menu img {
+  padding-bottom: 1.5em;
+}
+.footer-menu ul {
   list-style: none;
+  padding: 0;
 }
-.site-footer li {
-  display: inline-block;
+.footer-menu h2 {
+  color: WHITE;
+}
+.footer-menu a {
+  color: #ccc;
+  display: inline-flex;
+  align-items: center;
+}
+.footer-menu a:hover, .footer-menu a:focus, .footer-menu a:active {
+  color: #999;
+}
+.footer-menu a:hover svg, .footer-menu a:focus svg, .footer-menu a:active svg {
+  fill: #999;
+}
+.footer-menu a svg {
+  fill: #ccc;
+  margin-right: 0.5em;
+}
+.footer-copyright {
+  background: BLACK;
+  padding: 0.5em 0;
+}
+.footer-copyright span {
+  color: WHITE;
+  font-size: 0.7em;
+}
+.footer-copyright a {
+  color: #ccc;
+}
+.footer-copyright a:hover, .footer-copyright a:focus, .footer-copyright a:active {
+  color: #999;
 }
 .site {
   display: flex;
@@ -670,6 +688,7 @@ a:hover, a:active {
 .narrow-container {
   max-width: 750px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .site-header {
   margin-bottom: 1.5em;
