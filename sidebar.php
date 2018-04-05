@@ -1,13 +1,12 @@
 <?php
-/**
- * The sidebar containing the main widget area
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package moltodestroyed
- */
+  /**
+   * The sidebar containing the main widget area
+   *
+   * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+   * @package moltodestroyed
+   */
 
- // TODO: What's this?  If the sidebar features are hardcoded is this needed?
+  // TODO: What's this?  If the sidebar features are hardcoded is this needed?
   if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
   }
