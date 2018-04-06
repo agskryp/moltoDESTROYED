@@ -6,67 +6,74 @@
  * and the comment form.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package moltodestroyed
  */
+
+// NOTE:
+// Comments are currently disabled through out the site
+// This template isn't fully customized / stylized
 
 /*
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if ( post_password_required() ) {
-	return;
-}
+  if ( post_password_required() ) {
+    return;
+  }
 ?>
 
 <div id="comments" class="comments-area">
-
-	<?php
+  <?php
 	// You can start editing here -- including this comment!
-	if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-			$comment_count = get_comments_number();
-			if ( 1 === $comment_count ) {
-				printf(
-					/* translators: 1: title. */
-					esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', 'moltodestroyed' ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'moltodestroyed' ) ),
-					number_format_i18n( $comment_count ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			}
-			?>
-		</h2><!-- .comments-title -->
+	if ( have_comments() ) :
+  ?>
+  <h2 class="comments-title">
+    <?php
+      $comment_count = get_comments_number();
 
-		<?php the_comments_navigation(); ?>
+      if ( 1 === $comment_count ) {
+        printf( /* translators: 1: title. */
+          esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', 'moltodestroyed' ), '<span>' . get_the_title() . '</span>'
+        );
+      } else {
+        printf( // WPCS: XSS OK.
+          /* translators: 1: comment count number, 2: title. */
+          esc_html( _nx( 
+            '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'moltodestroyed'
+          ) ),
 
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
-			?>
-		</ol><!-- .comment-list -->
+          number_format_i18n( $comment_count ), '<span>' . get_the_title() . '</span>'
+        );
+      }
+    ?>
+  </h2> <?php // .comments-title // ?>
 
-		<?php the_comments_navigation();
+  <?php the_comments_navigation(); ?>
 
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) : ?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'moltodestroyed' ); ?></p>
-		<?php
-		endif;
+  <ol class="comment-list">
+    <?php
+      wp_list_comments( array(
+        'style'      => 'ol',
+        'short_ping' => true,
+      ) );
+    ?>
+  </ol> <?php // .comment-list // ?>
 
-	endif; // Check for have_comments().
+  <?php the_comments_navigation(); ?>
 
-	comment_form();
-	?>
+  <?php // If comments are closed and there are comments, let's leave a little note, shall we?
+    if ( ! comments_open() ) :
+  ?>
+    <p class="no-comments">
+      <?php esc_html_e( 'Comments are closed.', 'moltodestroyed' ); ?>
+    </p>
+  <?php
+    endif;
+  endif;
 
-</div><!-- #comments -->
+  // Check for have_comments().
+  comment_form();
+  ?>
+
+</div> <?php // #comments // ?>

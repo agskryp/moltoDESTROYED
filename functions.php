@@ -3,7 +3,6 @@
  * moltodestroyed functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
  * @package moltodestroyed
  */
 
@@ -91,7 +90,7 @@ add_action( 'after_setup_theme', 'moltodestroyed_setup' );
  * @global int $content_width
  */
 function moltodestroyed_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'moltodestroyed_content_width', 640 );
+	$GLOBALS[ 'content_width' ] = apply_filters( 'moltodestroyed_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'moltodestroyed_content_width', 0 );
 
@@ -153,7 +152,7 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+  require get_template_directory() . '/inc/jetpack.php';
 }
 
 /**
