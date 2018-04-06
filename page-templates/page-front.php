@@ -22,9 +22,7 @@
           if ( comments_open() || get_comments_number() ) :
             comments_template();
           endif;
-
-        // End of the loop.
-        endwhile; 
+        endwhile; // End of the loop.
       ?>
     </main> <?php // #main // ?>
   </div> <?php // #primary // ?>
