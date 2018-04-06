@@ -1,13 +1,13 @@
 <?php
-/**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package moltodestroyed
- */
+  /**
+   * The template for displaying archive pages
+   *
+   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+   * @package moltodestroyed
+   */
 
-get_header(); ?>
+  get_header();
+?>
 
 <div class="narrow-container">
   <div id="primary" class="content-area">
