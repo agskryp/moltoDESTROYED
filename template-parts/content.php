@@ -1,12 +1,10 @@
 <?php
-/**
- * Template part for displaying posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package moltodestroyed
- */
-
+  /**
+   * Template part for displaying posts
+   *
+   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+   * @package moltodestroyed
+   */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
