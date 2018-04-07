@@ -5,7 +5,7 @@
 ?>
 
 <div class="narrow-container">
-  <div id="primary" class="content-area text-center">
+  <div id="primary" class="content-area">
     <main id="main" class="site-main">
       <?php
         $wp_query = new WP_Query ( array( 
