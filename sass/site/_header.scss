@@ -11,26 +11,32 @@
     border-top-left-radius: 6px;
     padding: 3px 3px 0 0;
     line-height: 1;
+    
     @media screen and (min-width: $screen-md) {
       right: inherit;
     }
+    
     a {
       margin-right: 6px;
       text-decoration: none;
       &:hover {
         text-decoration: none;
       }      
+      
       svg {
         height: 26px;
         width: 26px;
+        
         @media screen and (min-width: $screen-xs) {
           height: 30px;
           width: 30px;
         }
+        
         @media screen and (min-width: $screen-md) {
           height: 36px;
         }
       }
+      
       svg:hover {
         fill: #828282;
       }

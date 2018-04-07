@@ -37,6 +37,7 @@
  # Media
  ## Captions
  ## Galleries
+ # Misc
  --------------------------------------------------------------*/
 /*--------------------------------------------------------------
  # Normalize
@@ -696,6 +697,9 @@ a:hover, a:active {
   padding: 0;
   margin: 0;
 }
+.bottom-cushion {
+  margin-bottom: 1.5em;
+}
 .site-header {
   margin-bottom: 1.5em;
 }
@@ -832,4 +836,10 @@ embed, iframe, object {
 }
 .gallery-caption {
   display: block;
+}
+/*--------------------------------------------------------------
+ # Misc
+ --------------------------------------------------------------*/
+#sb_instagram .sbi_follow_btn a {
+  background: #999;
 }
