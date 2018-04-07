@@ -26,8 +26,7 @@ if ( ! function_exists( 'moltodestroyed_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'moltodestroyed' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			esc_html_x( 'Posted on %s', 'post date', 'moltodestroyed' ), $time_string
 		);
 
 		$byline = sprintf(
