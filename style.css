@@ -584,11 +584,35 @@ a:hover, a:active {
   clear: both;
   margin: 0 0 1.5em;
 }
+.comic-header {
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+.comic-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 0;
+}
+@media all and (min-width: 360px) {
+  .comic-header h1 {
+    font-size: 3em;
+  }
+}
+@media all and (min-width: 768px) {
+  .comic-header h1 {
+    font-size: 3.5em;
+  }
+}
+.comic-strip {
+  margin: 0 0 1em;
+}
 .comic-strip img {
   border: 2px solid #000;
 }
+.comic-strip .entry-meta {
+  line-height: 1;
+}
 .comic-strip .posted-on {
-  font-size: 0.8em;
+  font-size: 0.75em;
 }
 .comic-archive ul {
   list-style: none;
@@ -599,15 +623,28 @@ a:hover, a:active {
   line-height: 1.3;
   margin-bottom: 0.5em;
 }
+.comic-navigation-container {
+  line-height: 1;
+  margin-bottom: 1em;
+}
+.comic-navigation-container .comic-navigation {
+  max-width: 567px;
+  margin: 0 auto;
+}
 .comic-navigation-container .comic-navigation div {
   padding: 0;
 }
 .comic-navigation-container .comic-navigation a {
-  font-size: 1.5em;
+  font-size: 1.2em;
   letter-spacing: -4px;
   padding-right: 7px;
 }
-@media all and (min-width: 480px) {
+@media all and (min-width: 360px) {
+  .comic-navigation-container .comic-navigation a {
+    font-size: 1.5em;
+  }
+}
+@media all and (min-width: 768px) {
   .comic-navigation-container .comic-navigation a {
     font-size: 2em;
     letter-spacing: -6px;
