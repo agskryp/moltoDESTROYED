@@ -14,7 +14,7 @@
 
 <aside id="secondary" class="widget-area"> 
   <div class="row">
-    <section class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-6 col-md-offset-1 col-md-5">
+    <section class="col-xs-offset-0 col-xs-12 col-sm-6 col-md-offset-1 col-md-5">
       <h2>Recent Comics</h2>
 
       <ul>
@@ -31,7 +31,7 @@
       </ul>
     </section>
 
-    <section class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-6 col-md-5">
+    <section class="col-xs-offset-0 col-xs-12 col-sm-6 col-md-5">
       <h2>Recent Posts</h2>
 
       <ul>

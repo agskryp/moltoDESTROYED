@@ -7,6 +7,11 @@
     border-top: 2px solid #000;
   }
   
+  .row {
+    margin: 0;
+  }
+  
+  
   li {
     line-height: 1.3;
     margin-bottom: .5em;
@@ -20,15 +25,19 @@
   
   section {
     
-    padding-top: 1.5em;
+    padding: 1.5em 0 0;
   border-top: 2px solid #000;
     
       @media all and (min-width: $screen-md) {
     
     border-top: none;
+        padding: 1.5em 15px 0;
   }
   }
 }
+
+
+
 
 .widget {
   margin: 0 0 1.5em;
