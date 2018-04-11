@@ -1,6 +1,10 @@
 .site-header {
   margin-bottom: 1.5em;
   
+  .container-fluid {
+    padding: 0;
+  }
+  
   .social-container {
     display: inline-block;
     position: absolute;
@@ -17,17 +21,30 @@
     }
     
     a {
-      margin-right: 6px;
+      margin-right: 4px;
       text-decoration: none;
       &:hover {
         text-decoration: none;
-      }      
+      } 
+       @media screen and (min-width: $screen-xs) {
+         margin-right: 5px;
+        }
+      
+       @media screen and (min-width: $screen-sm) {
+         margin-right: 6px;
+        }
+      
       
       svg {
-        height: 26px;
-        width: 26px;
+        height: 22px;
+        width: 22px;
         
         @media screen and (min-width: $screen-xs) {
+          height: 26px;
+          width: 26px;
+        }
+        
+        @media screen and (min-width: $screen-sm) {
           height: 30px;
           width: 30px;
         }
