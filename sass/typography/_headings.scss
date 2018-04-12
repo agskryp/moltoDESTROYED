@@ -20,11 +20,8 @@ h1 {
 }
 
 h2 {
- font-size: 1.5em;
-
-  @media all and (min-width: $screen-xs) {
     font-size: 2em;
-  }
+  
 
   @media all and (min-width: $screen-md) {
     font-size: 2.5em;
