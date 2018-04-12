@@ -198,10 +198,30 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5em;
 }
 h1 {
-  font-size: 3em;
+  font-size: 2.5em;
+}
+@media all and (min-width: 360px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+@media all and (min-width: 768px) {
+  h1 {
+    font-size: 3.5em;
+  }
 }
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
+}
+@media all and (min-width: 360px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+@media all and (min-width: 768px) {
+  h2 {
+    font-size: 2.5em;
+  }
 }
 p {
   margin-bottom: 1.5em;
@@ -340,11 +360,11 @@ textarea {
  ## Links
  --------------------------------------------------------------*/
 a {
-  color: #565656;
+  color: #898989;
   font-weight: bold;
 }
 a:visited {
-  color: #565656;
+  color: #898989;
 }
 a:hover, a:focus, a:active {
   color: #bcbcbc;
@@ -589,23 +609,32 @@ a:hover, a:active {
   clear: both;
   margin: 0 0 1.5em;
 }
+.blog-posts h2 {
+  font-size: 2em;
+}
+@media all and (min-width: 360px) {
+  .blog-posts h2 {
+    font-size: 2.5em;
+  }
+}
+.blog-posts h2 a {
+  color: #000;
+}
+.blog-posts h2 a:hover, .blog-posts h2 a:active, .blog-posts h2 a:visited {
+  color: #000;
+}
+.blog-posts article {
+  border-bottom: 2px solid black;
+}
+.blog-posts article p {
+  margin-bottom: inherit;
+}
 .comic-header {
   line-height: 1;
   margin-bottom: 0.5em;
 }
 .comic-header h1 {
-  font-size: 2.5em;
   margin-bottom: 0;
-}
-@media all and (min-width: 360px) {
-  .comic-header h1 {
-    font-size: 3em;
-  }
-}
-@media all and (min-width: 768px) {
-  .comic-header h1 {
-    font-size: 3.5em;
-  }
 }
 .comic-strip {
   margin: 0 0 1em;
@@ -621,7 +650,7 @@ a:hover, a:active {
 }
 .comic-archive ul {
   list-style: none;
-  padding: 0;
+  padding: 0 0 1em;
   margin: 0;
 }
 .comic-archive li {

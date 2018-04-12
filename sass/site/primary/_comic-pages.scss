@@ -4,16 +4,7 @@
   margin-bottom: .5em;
   
   h1 {
-    font-size: 2.5em;
     margin-bottom: 0;
-
-    @media all and (min-width: $screen-xs) {
-      font-size: 3em;
-    }
-    
-    @media all and (min-width: $screen-md) {
-      font-size: 3.5em;
-    }
   }
 }
 
@@ -36,7 +27,7 @@
 .comic-archive {
   ul {
     list-style: none;
-    padding: 0;
+    padding: 0 0 1em;
     margin: 0;
   }
   

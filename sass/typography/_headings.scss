@@ -8,9 +8,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2.5em;
+
+  @media all and (min-width: $screen-xs) {
+    font-size: 3em;
+  }
+
+  @media all and (min-width: $screen-md) {
+    font-size: 3.5em;
+  }
 }
 
 h2 {
-  font-size: 2em;
+ font-size: 1.5em;
+
+  @media all and (min-width: $screen-xs) {
+    font-size: 2em;
+  }
+
+  @media all and (min-width: $screen-md) {
+    font-size: 2.5em;
+  }
 }
