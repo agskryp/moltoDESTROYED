@@ -16,7 +16,7 @@
 
 <div class="narrow-container">
   <div id="primary" class="content-area">
-    <main id="main" class="site-main">
+    <main id="main" class="site-main blog-posts">
       <?php if ( have_posts() ) : ?>
         <header>
           <h1 class="page-title screen-reader-text">
