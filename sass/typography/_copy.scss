@@ -6,18 +6,28 @@ dfn, cite, em, i {
 	font-style: italic;
 }
 
+cite {
+  margin-left: 6px;
+}
+
 blockquote {
-	margin: 0 1.5em;
+  margin: 0 0 1.5em;
+  border-left: 4px solid #000;
+  font-style: italic;
+  background: $color__background-screen;
 }
 
 address {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
+  margin-left: 1.5em;
+  font-size: 1.1em;
+  line-height: 1.25;
 }
 
 pre {
 	background: $color__background-pre;
 	font-family: $font__pre;
-	@include font-size(0.9375);
+	@include font-size(1);
 	line-height: $font__line-height-pre;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -30,16 +40,33 @@ code, kbd, tt, var {
 	@include font-size(0.9375);
 }
 
+code {
+  font-size: 85%;
+  color: #f1f1f1;
+  background-color: #000;
+  border-radius: 2px;
+  max-width: 100%;
+  overflow: auto;
+  display: inline-block;
+  white-space: pre;
+  line-height: 1.25
+}
+
 abbr, acronym {
-	border-bottom: 1px dotted $color__border-abbr;
-	cursor: help;
+  border-bottom: none !important;
+  cursor: help;
 }
 
 mark, ins {
-	background: $color__background-ins;
-	text-decoration: none;
+  background: $color__background-ins;
+  text-decoration: none;
 }
 
 big {
 	font-size: 125%;
+}
+
+q {
+  font-style: italic;
+  font-size: 110%;
 }

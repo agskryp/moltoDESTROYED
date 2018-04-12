@@ -224,11 +224,20 @@ p {
 dfn, cite, em, i {
   font-style: italic;
 }
+cite {
+  margin-left: 6px;
+}
 blockquote {
-  margin: 0 1.5em;
+  margin: 0 0 1.5em;
+  border-left: 4px solid #000;
+  font-style: italic;
+  background: #f1f1f1;
 }
 address {
   margin: 0 0 1.5em;
+  margin-left: 1.5em;
+  font-size: 1.1em;
+  line-height: 1.25;
 }
 pre {
   background: #eee;
@@ -246,16 +255,31 @@ code, kbd, tt, var {
   font-size: 15px;
   font-size: 0.9375rem;
 }
+code {
+  font-size: 85%;
+  color: #f1f1f1;
+  background-color: #000;
+  border-radius: 2px;
+  max-width: 100%;
+  overflow: auto;
+  display: inline-block;
+  white-space: pre;
+  line-height: 1.25;
+}
 abbr, acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: none !important;
   cursor: help;
 }
 mark, ins {
-  background: #fff9c0;
+  background: #f9f9f9;
   text-decoration: none;
 }
 big {
   font-size: 125%;
+}
+q {
+  font-style: italic;
+  font-size: 110%;
 }
 /*--------------------------------------------------------------
  # Elements
@@ -290,6 +314,7 @@ hr {
 }
 ul, ol {
   margin: 0 0 1.5em;
+  padding-left: 20px;
 }
 ul {
   list-style: disc;
@@ -297,9 +322,15 @@ ul {
 ol {
   list-style: decimal;
 }
+ol li {
+  padding-left: 3px;
+}
 li > ul, li > ol {
   margin-bottom: 0;
   margin-left: 0;
+}
+li {
+  font-weight: normal;
 }
 dt {
   font-weight: bold;
@@ -320,6 +351,16 @@ figure {
 table {
   margin: 0 0 1.5em;
   width: 100%;
+  border: 2px solid #000;
+  background: #f1f1f1;
+  line-height: 1.25;
+}
+thead {
+  background: #ccc;
+}
+td, th {
+  padding: 10px;
+  border: 2px solid #000;
 }
 button {
   outline: none;
@@ -367,7 +408,7 @@ textarea {
  --------------------------------------------------------------*/
 a {
   color: #898989;
-  font-weight: bold;
+  font-weight: 600;
 }
 a:visited {
   color: #898989;
@@ -470,7 +511,7 @@ a:hover, a:active {
   text-align: center;
   width: 100%;
   margin: 0 0 1.5em;
-  line-height: 1;
+  line-height: 1.25;
 }
 @media all and (min-width: 480px) {
   .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous, .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
@@ -635,38 +676,38 @@ a:hover, a:active {
   clear: both;
   margin: 0 0 1.5em;
 }
-.blog-posts h2 {
+.blog-posts-list .entry-content, .blog-post .entry-content {
+  margin: 0 0 1.5em;
+}
+.blog-posts-list h2 {
   font-size: 2em;
 }
 @media all and (min-width: 360px) {
-  .blog-posts h2 {
+  .blog-posts-list h2 {
     font-size: 2.5em;
   }
 }
-.blog-posts h2 a {
+.blog-posts-list h2 a {
   color: #000;
 }
-.blog-posts h2 a:hover, .blog-posts h2 a:active, .blog-posts h2 a:focus {
+.blog-posts-list h2 a:hover, .blog-posts-list h2 a:active, .blog-posts-list h2 a:focus {
   color: #898989;
 }
-.blog-posts .post-thumbnail {
+.blog-posts-list .post-thumbnail {
   display: table;
   margin: 0 auto 0.5em;
 }
-.blog-posts .post-thumbnail:hover {
+.blog-posts-list .post-thumbnail:hover {
   opacity: 0.8;
 }
-.blog-posts article {
+.blog-posts-list article {
   border-bottom: 2px solid black;
   margin: 0 0 1.5em;
 }
-.blog-posts article .entry-content {
-  margin: 0 0 1.5em;
-}
-.blog-posts article p {
+.blog-posts-list article p {
   margin-bottom: 0;
 }
-.blog-posts article .read-more {
+.blog-posts-list article .read-more {
   margin-top: 0.5em;
   display: inline-block;
 }

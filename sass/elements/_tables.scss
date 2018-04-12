@@ -1,4 +1,16 @@
 table {
-	margin: 0 0 1.5em;
-	width: 100%;
+  margin: 0 0 1.5em;
+  width: 100%;
+  border: 2px solid #000;
+  background: $color__background-screen;
+  line-height: 1.25;
+}
+
+thead {
+  background: $color__background-hr;
+}
+
+td, th {
+  padding: 10px;
+  border: 2px solid #000;
 }
