@@ -185,3 +185,13 @@ function remove_search_widget() {
   unregister_widget( 'WP_Widget_Search' );
 }
 add_action( 'widgets_init', 'remove_search_widget' );
+
+/**
+ * Replace the default link text for excerpts
+ */
+function new_excerpt_more($more) {
+  global $post;
+	
+  return '... <br> <a href="'. get_permalink( $post -> ID ) . '"> Continue Reading &rarr;</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
