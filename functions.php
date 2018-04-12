@@ -192,6 +192,6 @@ add_action( 'widgets_init', 'remove_search_widget' );
 function new_excerpt_more($more) {
   global $post;
 	
-  return '... <br> <a href="'. get_permalink( $post -> ID ) . '"> Continue Reading &rarr;</a>';
+  return '... <br> <a class="read-more" href="'. get_permalink( $post -> ID ) . '"> Continue Reading &rarr;</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');

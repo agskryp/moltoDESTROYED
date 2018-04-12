@@ -211,12 +211,7 @@ h1 {
   }
 }
 h2 {
-  font-size: 1.5em;
-}
-@media all and (min-width: 360px) {
-  h2 {
-    font-size: 2em;
-  }
+  font-size: 2em;
 }
 @media all and (min-width: 768px) {
   h2 {
@@ -275,6 +270,17 @@ html {
 body {
   background: #ededed;
   /* Fallback for when there is no custom background color defined. */
+  font-size: 18px;
+}
+@media all and (min-width: 360px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 480px) {
+  body {
+    font-size: 22px;
+  }
 }
 hr {
   background-color: #ccc;
@@ -620,14 +626,29 @@ a:hover, a:active {
 .blog-posts h2 a {
   color: #000;
 }
-.blog-posts h2 a:hover, .blog-posts h2 a:active, .blog-posts h2 a:visited {
-  color: #000;
+.blog-posts h2 a:hover, .blog-posts h2 a:active, .blog-posts h2 a:focus {
+  color: #898989;
+}
+.blog-posts .post-thumbnail {
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+.blog-posts .post-thumbnail:hover {
+  opacity: 0.8;
 }
 .blog-posts article {
   border-bottom: 2px solid black;
+  margin: 0 0 1.5em;
+}
+.blog-posts article .entry-content {
+  margin: 0 0 1.5em;
 }
 .blog-posts article p {
-  margin-bottom: inherit;
+  margin-bottom: 0;
+}
+.blog-posts article .read-more {
+  margin-top: 0.5em;
+  display: inline-block;
 }
 .comic-header {
   line-height: 1;
