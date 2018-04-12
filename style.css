@@ -270,16 +270,16 @@ html {
 body {
   background: #ededed;
   /* Fallback for when there is no custom background color defined. */
-  font-size: 18px;
+  font-size: 16px;
 }
 @media all and (min-width: 360px) {
   body {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media all and (min-width: 480px) {
   body {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 hr {
@@ -460,18 +460,38 @@ a:hover, a:active {
     text-align: center;
   }
 }
-.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
+.site-main .comment-navigation, .site-main .post-navigation {
   margin: 0 0 1.5em;
+}
+.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
   overflow: hidden;
+}
+.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous, .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
+  text-align: center;
+  width: 100%;
+  margin: 0 0 1.5em;
+  line-height: 1;
+}
+@media all and (min-width: 480px) {
+  .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous, .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
+    width: 50%;
+  }
 }
 .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
   float: left;
-  width: 50%;
+}
+@media all and (min-width: 480px) {
+  .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
+    text-align: left;
+  }
 }
 .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
   float: right;
-  text-align: right;
-  width: 50%;
+}
+@media all and (min-width: 480px) {
+  .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
+    text-align: right;
+  }
 }
 .main-menu-button {
   border: none;
@@ -630,8 +650,8 @@ a:hover, a:active {
   color: #898989;
 }
 .blog-posts .post-thumbnail {
-  display: inline-block;
-  margin-bottom: 0.5em;
+  display: table;
+  margin: 0 auto 0.5em;
 }
 .blog-posts .post-thumbnail:hover {
   opacity: 0.8;
