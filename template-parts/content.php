@@ -15,20 +15,19 @@
       else :
         the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
       endif;
-
-      if ( 'post' === get_post_type() ) :
-    ?>
-      <div class="entry-meta">
-        <?php moltodestroyed_posted_on(); ?>
-      </div> 
-    <?php endif; ?>
+     ?>
   </header> <?php // .entry-header // ?>
 
   <?php moltodestroyed_post_thumbnail(); ?>
 
   <div class="entry-content">
     <?php
-      the_content( sprintf( wp_kses(
+    if ( is_singular() ) :
+      the_content( );
+    
+    else :
+    
+    the_excerpt( sprintf( wp_kses(
         /* translators: %s: Name of current post. Only visible to screen readers */
         __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'moltodestroyed' ), array(
           'span' => array(
@@ -36,6 +35,8 @@
           ),
         )
       ), get_the_title() ) );
+    
+    endif;
 
       wp_link_pages( array(
         'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'moltodestroyed' ),
@@ -44,7 +45,14 @@
     ?>
   </div> <?php // .entry-content // ?>
 
-  <footer class="entry-footer">
-    <?php moltodestroyed_entry_footer(); ?>
+  <footer class="entry-footer text-right" style="margin-bottom: 1.5em;">
+    <?php // moltodestroyed_entry_footer(); ?>
+  
+ <?php  if ( get_post_type() === 'post' ) :
+    ?>
+      <div class="entry-meta" style="font-size: .75em;">
+        <?php moltodestroyed_posted_on(); ?>
+      </div> 
+    <?php endif; ?>
   </footer>
 </article>
