@@ -128,36 +128,68 @@ if ( ! function_exists( 'moltodestroyed_entry_footer' ) ) :
 endif;
 
 if ( ! function_exists( 'moltodestroyed_post_thumbnail' ) ) :
-/**
- * Displays an optional post thumbnail.
- *
- * Wraps the post thumbnail in an anchor element on index views, or a div
- * element when on single views.
- */
-function moltodestroyed_post_thumbnail() {
-	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
-		return;
-	}
+  /**
+   * Displays an optional post thumbnail.
+   *
+   * Wraps the post thumbnail in an anchor element on index views, or a div
+   * element when on single views.
+   */
+  function moltodestroyed_post_thumbnail() {
+      if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+          return;
+      }
 
-	if ( is_singular() ) :
-	?>
+      if ( is_singular() ) :
+      ?>
 
-	<div class="post-thumbnail">
-		<?php the_post_thumbnail(); ?>
-	</div><!-- .post-thumbnail -->
+      <div class="post-thumbnail">
+          <?php the_post_thumbnail(); ?>
+      </div><!-- .post-thumbnail -->
 
-	<?php else : ?>
+      <?php else : ?>
 
-	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-		<?php
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
-		?>
-	</a>
+      <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+          <?php
+              the_post_thumbnail( 'post-thumbnail', array(
+                  'alt' => the_title_attribute( array(
+                      'echo' => false,
+                  ) ),
+              ) );
+          ?>
+      </a>
 
-	<?php endif; // End is_singular().
-}
+      <?php endif; // End is_singular().
+  }
 endif;
+
+
+/**
+ * Returns the navigation to next/previous set of posts, when applicable.
+ */
+function get_molto_posts_navigation( $args = array() ) {
+  $navigation = '';
+
+  // Don't print empty markup if there's only one page.
+  if ( $GLOBALS[ 'wp_query' ] -> max_num_pages > 1 ) {
+    $args = wp_parse_args( $args, array(
+      'prev_text'          => __( '&larr; View older posts' ),
+      'next_text'          => __( 'View newer posts &rarr;' ),
+      'screen_reader_text' => __( 'Posts navigation' ),
+    ) );
+
+    $next_link = get_previous_posts_link( $args[ 'next_text' ] );
+    $prev_link = get_next_posts_link( $args[ 'prev_text' ] );
+
+    if ( $prev_link ) {
+      $navigation .= '<div class="nav-previous">' . $prev_link . '</div>';
+    }
+
+    if ( $next_link ) {
+      $navigation .= '<div class="nav-next">' . $next_link . '</div>';
+    }
+
+    $navigation = _navigation_markup( $navigation, 'posts-navigation', $args[ 'screen_reader_text' ] );
+  }
+
+  echo $navigation;
+}

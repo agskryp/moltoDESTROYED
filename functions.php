@@ -155,6 +155,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
   require get_template_directory() . '/inc/jetpack.php';
 }
 
+////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                    //
+//                              Custom functions below                                //
+//                                                                                    //
+////////////////////////////////////////////////////////////////////////////////////////
+
 /**
  * Import Google Fonts.
  */
@@ -194,4 +200,5 @@ function new_excerpt_more($more) {
 	
   return '... <br> <a class="read-more" href="'. get_permalink( $post -> ID ) . '"> Continue Reading &rarr;</a>';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+
