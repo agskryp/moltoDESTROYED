@@ -13,7 +13,7 @@
       if ( is_singular() ) :
         the_title( '<h1 class="entry-title" style="display: inline-block;">', '</h1>' );
       else :
-        the_title( '<h2 class="entry-title" style="display: inline-block; flex-grow: 2;"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+        the_title( '<h2 class="entry-title" style="display: inline-block; flex-grow: 2; word-break: break-word;"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
       endif;
      ?>
     
@@ -21,7 +21,7 @@
       if ( !is_singular() ) :
     ?>
       <div class="entry-meta pull-right" style="font-size: .75em; padding-left: 2em;">
-        <?php moltodestroyed_posted_on(); ?>
+        <?php molto_post_date(); ?>
       </div> 
     <?php endif;
     endif; ?>

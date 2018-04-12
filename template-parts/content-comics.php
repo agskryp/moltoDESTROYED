@@ -23,7 +23,7 @@
       <img src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo the_title(); ?>" />
     
       <div class="entry-meta">
-        <?php moltodestroyed_comic_posted_on(); ?>
+        <span class="posted-on">Posted on</span> <?php molto_post_date(); ?>
       </div> 
     <?php endif; ?>
   </div> <?php // .entry-content // ?>
