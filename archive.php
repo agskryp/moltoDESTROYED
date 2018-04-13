@@ -2,6 +2,10 @@
   /**
    * The template for displaying archive pages
    *
+   * NOTE:
+   * Using page-archive.php as template for archive lists,
+   * currently NOT using archive.php for anything on the site
+   *
    * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
    * @package moltodestroyed
    */
