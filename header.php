@@ -70,11 +70,19 @@
       </div> <?php // .site-branding // ?>
 
       <nav id="site-navigation" class="main-navigation">
-        <div class="container">        
-          <button class="menu-toggle main-menu-button" aria-controls="primary-menu" aria-expanded="false">
-            <?php esc_html_e( 'Main Menu', 'moltodestroyed' ); ?>
+        <div class="container"> <?php // Prevents button and menu list from being side-by-side ?>       
+          <button class="menu-toggle main-menu-button" aria-controls="primary-menu" aria-expanded="false" style="display:flex; align-items: center; background: #f1f1f1;">
+            <b>
+              <?php esc_html_e( 'MENU', 'moltodestroyed' ); ?>
+            </b>
+              
+              <div id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             
-            <i class="fa fa-bars" aria-hidden="true"></i> 
           </button>
 
           <?php
