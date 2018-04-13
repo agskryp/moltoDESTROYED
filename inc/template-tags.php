@@ -145,11 +145,10 @@ if ( ! function_exists( 'moltodestroyed_post_thumbnail' ) ) :
   }
 endif;
 
-
 /**
- * Returns the navigation to next/previous set of posts, when applicable.
+ * Returns the navigation for next/previous list of posts, when applicable.
  */
-function get_molto_posts_navigation( $args = array() ) {
+function molto_posts_navigation( $args = array() ) {
   $navigation = '';
 
   // Don't print empty markup if there's only one page.
@@ -172,6 +171,45 @@ function get_molto_posts_navigation( $args = array() ) {
     }
 
     $navigation = _navigation_markup( $navigation, 'posts-navigation', $args[ 'screen_reader_text' ] );
+  }
+
+  echo $navigation;
+}
+
+/**
+ * Retrieves the navigation for next/previous post, when applicable.
+ */
+function molto_blog_navigation( $args = array() ) {
+  $args = wp_parse_args( $args, array(
+	'prev_text'          => '<small>&larr; View previous post</small><br>%title',
+	'next_text'          => '<small>View next post &rarr;</small><br>%title',
+	'in_same_term'       => false,
+	'excluded_terms'     => '',
+	'taxonomy'           => 'category',
+	'screen_reader_text' => __( 'Post navigation' ),
+  ) );
+
+  $navigation = '';
+
+  $previous = get_previous_post_link(
+	'<div class="nav-previous">%link</div>',
+	$args[ 'prev_text' ],
+	$args[ 'in_same_term' ],
+	$args[ 'excluded_terms' ],
+	$args[ 'taxonomy' ]
+  );
+
+  $next = get_next_post_link(
+    '<div class="nav-next">%link</div>',
+    $args[ 'next_text' ],
+    $args[ 'in_same_term' ],
+    $args[ 'excluded_terms' ],
+    $args[ 'taxonomy' ]
+  );
+
+  // Only add markup if there's somewhere to navigate to.
+  if ( $previous || $next ) {
+    $navigation = _navigation_markup( $previous . $next, 'post-navigation', $args[ 'screen_reader_text' ] );
   }
 
   echo $navigation;

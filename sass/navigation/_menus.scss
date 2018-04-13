@@ -102,18 +102,12 @@
     text-align: center;
   }
 }
-
-.comment-navigation {
-  .site-main & {
-    margin: 0 0 1.5em;
-  }
-}
-  
 .comment-navigation,
 .posts-navigation,
 .post-navigation {  
   .site-main & {
-    overflow: hidden;
+    overflow: hidden;    
+    margin: 0 0 1.5em;
   }
   
   .nav-previous,
@@ -129,15 +123,19 @@
   
   .nav-previous {
     float: left;
+    padding-right: 0;
     @media all and (min-width: $screen-sm) {
       text-align: left;
+      padding-right: 10px;
     }
   }
 
   .nav-next {
     float: right; 
+    padding-left: 0;
     @media all and (min-width: $screen-sm) {
       text-align: right;
+      padding-left: 10px;
     }
   }
 }

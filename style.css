@@ -501,11 +501,9 @@ a:hover, a:active {
     text-align: center;
   }
 }
-.site-main .comment-navigation {
-  margin: 0 0 1.5em;
-}
 .site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
   overflow: hidden;
+  margin: 0 0 1.5em;
 }
 .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous, .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
   text-align: center;
@@ -520,18 +518,22 @@ a:hover, a:active {
 }
 .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
   float: left;
+  padding-right: 0;
 }
 @media all and (min-width: 480px) {
   .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
     text-align: left;
+    padding-right: 10px;
   }
 }
 .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
   float: right;
+  padding-left: 0;
 }
 @media all and (min-width: 480px) {
   .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
     text-align: right;
+    padding-left: 10px;
   }
 }
 .main-menu-button {
