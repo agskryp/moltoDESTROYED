@@ -242,8 +242,8 @@ address {
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
@@ -374,10 +374,10 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   border-radius: 3px;
   background: #e6e6e6;
   color: rgba(0, 0, 0, .8);
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 1;
-  padding: 0.6em 1em 0.4em;
+  padding: 0.5em 1em;
 }
 button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
@@ -501,7 +501,7 @@ a:hover, a:active {
     text-align: center;
   }
 }
-.site-main .comment-navigation, .site-main .post-navigation {
+.site-main .comment-navigation {
   margin: 0 0 1.5em;
 }
 .site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
@@ -589,11 +589,13 @@ a:hover, a:active {
   display: inline;
   float: left;
   margin-right: 1.5em;
+  margin-bottom: 1.5em;
 }
 .alignright {
   display: inline;
   float: right;
   margin-left: 1.5em;
+  margin-bottom: 1.5em;
 }
 .aligncenter {
   clear: both;
@@ -711,6 +713,13 @@ a:hover, a:active {
   margin-top: 0.5em;
   display: inline-block;
 }
+.blog-post article {
+  border-bottom: 2px solid black;
+}
+.blog-post .post-thumbnail {
+  display: table;
+  margin: 0 auto 0.5em;
+}
 .comic-header {
   line-height: 1;
   margin-bottom: 0.5em;
@@ -774,6 +783,14 @@ a:hover, a:active {
 }
 .bypostauthor {
   display: block;
+}
+.comments-area {
+  border-top: 2px solid black;
+  padding-top: 1.5em;
+}
+.comments-area ol {
+  list-style: none;
+  padding-left: 0;
 }
 /*--------------------------------------------------------------
  ## Global Sections
@@ -965,10 +982,14 @@ embed, iframe, object {
   margin-right: auto;
 }
 .wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
+  margin: 0;
+  font-size: 90%;
+  line-height: 1.25;
 }
 .wp-caption-text {
   text-align: center;
+  font-size: 90%;
+  line-height: 1.25;
 }
 /*--------------------------------------------------------------
  ## Galleries

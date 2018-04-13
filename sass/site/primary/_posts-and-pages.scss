@@ -75,5 +75,13 @@
 }
 
 .blog-post {
-
+  
+   article {
+    border-bottom: 2px solid black;
+  }
+  
+  .post-thumbnail {
+    display: table;
+    margin: 0 auto .5em;
+  }
 }
