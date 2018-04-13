@@ -9,10 +9,6 @@
    * @package moltodestroyed
    */
 
-  // NOTE:
-  // Comments are currently disabled through out the site
-  // This template isn't fully customized / stylized
-
   /*
    * If the current post is protected by a password and
    * the visitor has not yet entered the password we will
@@ -24,32 +20,26 @@
 ?>
 
 <div id="comments" class="comments-area">
-  <?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-  ?>
+  <?php	if ( have_comments() ) : ?>
+  
   <h2 class="comments-title">
     <?php
       $comment_count = get_comments_number();
-
+    
       if ( 1 === $comment_count ) {
-        printf( /* translators: 1: title. */
-          esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', 'moltodestroyed' ), '<span>' . get_the_title() . '</span>'
-        );
-      } else {
+        /* translators: 1: title. */
+        printf( esc_html_e( '1 Comment', 'moltodestroyed' ) );
+      }
+    
+      else {
+        /* translators: 1: comment count number, 2: title. */
         printf( // WPCS: XSS OK.
-          /* translators: 1: comment count number, 2: title. */
-          esc_html( _nx( 
-            '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'moltodestroyed'
-          ) ),
-
-          number_format_i18n( $comment_count ), '<span>' . get_the_title() . '</span>'
+          esc_html( _nx( '%1$s Comment', '%1$s Comments', $comment_count, 'comments title', 'moltodestroyed' ) ),
+          number_format_i18n( $comment_count )
         );
       }
     ?>
-  </h2> <?php // .comments-title // ?>
-
-  <?php the_comments_navigation(); ?>
+  </h2>
 
   <ol class="comment-list">
     <?php
@@ -58,7 +48,7 @@
         'short_ping' => true,
       ) );
     ?>
-  </ol> <?php // .comment-list // ?>
+  </ol>
 
   <?php the_comments_navigation(); ?>
 

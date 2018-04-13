@@ -1,6 +1,17 @@
 .comment-content a {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
+
 .bypostauthor {
-	display: block;
+  display: block;
+}
+
+.comments-area {
+  border-top: 2px solid black;
+  padding-top: 1.5em;
+  
+  ol {
+    list-style: none;
+    padding-left: 0;
+  }
 }
