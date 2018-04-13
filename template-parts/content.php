@@ -11,20 +11,17 @@
   <header class="entry-header" style="display: flex;">
     <?php
       if ( is_singular() ) :
-        the_title( '<h1 class="entry-title" style="display: inline-block;">', '</h1>' );
+        the_title( '<h1 class="entry-title" style="display: inline-block; word-break: break-word; flex-grow: 2;">', '</h1>' );
       else :
         the_title( '<h2 class="entry-title" style="display: inline-block; flex-grow: 2; word-break: break-word;"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
       endif;
      ?>
     
-    <?php  if ( get_post_type() === 'post' ) :
-      if ( !is_singular() ) :
-    ?>
+    <?php  if ( get_post_type() === 'post' ) : ?>
       <div class="entry-meta pull-right" style="font-size: .75em; padding-left: 2em;">
         <?php molto_post_date(); ?>
       </div> 
-    <?php endif;
-    endif; ?>
+    <?php endif; ?>
   </header> <?php // .entry-header // ?>
 
   <?php moltodestroyed_post_thumbnail(); ?>
