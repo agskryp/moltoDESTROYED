@@ -30,8 +30,6 @@
       ?>
     </main> <?php // #main // ?>
   </div> <?php // #primary // ?>
-
-  <?php get_sidebar(); ?>  
 </div> <?php // .narrow-container // ?>
 
 <?php
