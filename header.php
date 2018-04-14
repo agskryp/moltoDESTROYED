@@ -70,13 +70,13 @@
       </div> <?php // .site-branding // ?>
 
       <nav id="site-navigation" class="main-navigation">
-        <div class="container"> <?php // Prevents button and menu list from being side-by-side ?> 
+        <div class="container-fluid"> <?php // Prevents button and menu list from being side-by-side ?> 
           
           
           
-            <div class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-expand-lg navbar-light bg-light">
           <button class="navbar-toggler menu-toggle" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            MENU
+            <b>MENU</b>
                    <div id="nav-icon3">
                 <span></span>
                 <span></span>
@@ -84,7 +84,7 @@
                 <span></span>
               </div>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="collapse" id="navbarNavAltMarkup">
                      <?php
             wp_nav_menu( array(
               'theme_location' => 'menu-1',

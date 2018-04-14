@@ -430,8 +430,6 @@ a:hover, a:active {
   clear: both;
   float: left;
   width: 100%;
-  padding: 10px 0;
-  display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 2px solid #000;
@@ -468,7 +466,7 @@ a:hover, a:active {
   position: relative;
   display: block;
   text-align: center;
-  margin: 0 16px;
+  margin: 10px 16px;
 }
 @media screen and (min-width: 768px) {
   .main-navigation li {
@@ -490,7 +488,14 @@ a:hover, a:active {
 /* Small menu. */
 .menu-toggle {
   display: flex;
-  margin: 0 auto;
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 0;
+  background: #333;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
 }
 .main-navigation.toggled ul {
   display: block;
@@ -1074,7 +1079,7 @@ embed, iframe, object {
 }
 #nav-icon3 {
   width: 20px;
-  height: 12px;
+  height: 14px;
   display: inline-block;
   margin-left: 6px;
   -webkit-transform: rotate(0deg);
@@ -1092,7 +1097,7 @@ embed, iframe, object {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #000;
+  background: #fff;
   border-radius: 9px;
   opacity: 1;
   left: 0;
