@@ -84,7 +84,7 @@
                 <span></span>
               </div>
           </button>
-          <div class="collapse" id="navbarNavAltMarkup">
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                      <?php
             wp_nav_menu( array(
               'theme_location' => 'menu-1',

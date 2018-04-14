@@ -432,8 +432,13 @@ a:hover, a:active {
   width: 100%;
   align-items: center;
   justify-content: center;
-  border-bottom: 2px solid #000;
+  border-bottom: none;
   background: #fff;
+}
+@media all and (min-width: 768px) {
+  .main-navigation {
+    border-bottom: 2px solid #000;
+  }
 }
 .main-navigation ul {
   display: none;
@@ -466,12 +471,26 @@ a:hover, a:active {
   position: relative;
   display: block;
   text-align: center;
-  margin: 10px 16px;
+  border-bottom: 2px solid #000;
 }
 @media screen and (min-width: 768px) {
   .main-navigation li {
     display: inline-block;
     text-align: left;
+    border-bottom: none;
+  }
+}
+.main-navigation li a {
+  padding: 8px 16px;
+}
+.main-navigation li a:hover, .main-navigation li a:focus, .main-navigation li a:active {
+  color: #000;
+  background: #f1f1f1;
+}
+@media all and (min-width: 768px) {
+  .main-navigation li a:hover, .main-navigation li a:focus, .main-navigation li a:active {
+    color: #bcbcbc;
+    background: transparent;
   }
 }
 .main-navigation a {
@@ -496,6 +515,8 @@ a:hover, a:active {
   color: #fff;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  font-size: 1em;
 }
 .main-navigation.toggled ul {
   display: block;
@@ -550,6 +571,10 @@ a:hover, a:active {
   background: none;
   font-size: 1em;
   padding: 6px;
+}
+.navbar-collapse {
+  padding: 0;
+  border-top: none;
 }
 /*--------------------------------------------------------------
  # Accessibility

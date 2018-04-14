@@ -4,8 +4,11 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  border-bottom: 2px solid #000;
-  background: #fff;
+  border-bottom: none;
+  background: #fff;  
+  @media all and (min-width: $screen-md) {
+    border-bottom: 2px solid #000;
+  }
 
   ul {
     display: none;
@@ -54,10 +57,25 @@
     position: relative;
     display: block;
     text-align: center;
-    margin: 10px 16px;
+    border-bottom: 2px solid #000;
     @media screen and (min-width: $screen-md) {
       display: inline-block;
       text-align: left;
+      border-bottom: none;
+    }
+    
+    a {
+      padding: 8px 16px;
+      &:hover,
+      &:focus,
+      &:active {
+        color: #000;
+        background: $color__background-screen;
+        @media all and (min-width: $screen-md) {
+          color: $color__link-hover;
+          background: transparent;
+        }
+      }
     }
 
     &:hover > a,
@@ -95,6 +113,8 @@
   color: #fff;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  font-size: 1em;
 }
 
 .main-navigation.toggled ul {
@@ -157,3 +177,7 @@
 
 }
   
+.navbar-collapse {
+  padding: 0;
+  border-top: none;
+}
