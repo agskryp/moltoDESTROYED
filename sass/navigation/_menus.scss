@@ -87,7 +87,11 @@
 
 /* Small menu. */
 
-.menu-toggle,
+.menu-toggle {
+  display: flex;
+  margin: 0 auto;
+}
+
 .main-navigation.toggled ul {
   display: block;
   margin: 0 auto;

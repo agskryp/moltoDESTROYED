@@ -117,6 +117,10 @@ add_action( 'widgets_init', 'moltodestroyed_widgets_init' );
  */
 function moltodestroyed_scripts() {
   wp_enqueue_style( 'moltodestroyed-style', get_stylesheet_uri() );
+  
+  wp_enqueue_script( 'bootstrap-collapse',  get_template_directory_uri() . '/js/bootstrap-collapse-min.js', array(), '3.3.7', true );
+  
+  wp_enqueue_script( 'bootstrap-transitions',  get_template_directory_uri() . '/js/bootstrap-transitions-min.js', array(), '3.3.7', true );
 
   wp_enqueue_script( 'moltodestroyed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

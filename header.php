@@ -70,13 +70,43 @@
       </div> <?php // .site-branding // ?>
 
       <nav id="site-navigation" class="main-navigation">
-        <div class="container"> <?php // Prevents button and menu list from being side-by-side ?>       
-          <button class="menu-toggle main-menu-button" aria-controls="primary-menu" aria-expanded="false" style="display:flex; align-items: center; background: #f1f1f1;">
+        <div class="container"> <?php // Prevents button and menu list from being side-by-side ?> 
+          
+          
+          
+            <div class="navbar navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler menu-toggle" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            MENU
+                   <div id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                     <?php
+            wp_nav_menu( array(
+              'theme_location' => 'menu-1',
+              'menu_id'        => 'primary-menu',
+            ) );
+          ?>
+          </div>
+        </div>
+          
+          
+          
+          
+          
+          
+          
+<!--
+          <button class="menu-toggle main-menu-button" aria-controls="primary-menu" aria-expanded="false" style="align-items: center; background: #f1f1f1;">
             <b>
               <?php esc_html_e( 'MENU', 'moltodestroyed' ); ?>
             </b>
               
-              <div id="nav-icon3">
+              <div id="nav-icon7">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -84,15 +114,23 @@
               </div>
             
           </button>
+-->
 
           <?php
-            wp_nav_menu( array(
-              'theme_location' => 'menu-1',
-              'menu_id'        => 'primary-menu',
-            ) );
+//            wp_nav_menu( array(
+//              'theme_location' => 'menu-1',
+//              'menu_id'        => 'primary-menu',
+//            ) );
           ?>
         </div> <?php // .container // ?>
       </nav> <?php // #site-navigation // ?>
+      
+      
+      
+       
+      
+      
+      
     </header> <?php // #masthead // ?>
 
     <div id="content" class="site-content">
