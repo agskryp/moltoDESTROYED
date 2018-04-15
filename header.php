@@ -31,18 +31,14 @@
     <header id="masthead" class="site-header">
       <div class="site-branding text-center">
         <div class="container-fluid">
-          <div class="col-xs-12"> <?php // Required for social-container // ?>
+          <div class="col-xs-12"> <?php // required for social-container // ?>
             <?php if ( is_front_page() ) : ?>
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                 <h1 class="site-title sr-only">
                   <?php bloginfo( 'name' ); ?>
                 </h1>
 
-                <?php 
-                  // the_header_image_tag(); 
-
-                  require get_template_directory() . '/partials/site-banner.php';
-                ?>
+                <?php require get_template_directory() . '/partials/site-banner.php'; ?>
               </a>
             <?php
               require get_template_directory() . '/partials/social-container.php';
@@ -54,11 +50,7 @@
                   <?php bloginfo( 'name' ); ?>
                 </p>
 
-                <?php
-                  // the_header_image_tag(); 
-
-                  require get_template_directory() . '/partials/site-banner.php';
-                ?>
+                <?php require get_template_directory() . '/partials/site-banner.php'; ?>
               </a>
             <?php
               require get_template_directory() . '/partials/social-container.php';
@@ -70,32 +62,33 @@
       </div> <?php // .site-branding // ?>
 
       <nav id="site-navigation" class="main-navigation">
-          <button class="navbar-toggler menu-toggle" type="button" data-toggle="collapse" data-target="#mainNavMenu" aria-controls="mainNavMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <b>MENU</b>
-                   <div id="nav-icon3">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-          </button>
-          <div class="collapse navbar-collapse" id="mainNavMenu">
-                     <?php
+        <button
+                class="navbar-toggler menu-toggle"
+                type="button"
+                data-toggle="collapse"
+                data-target="#mainNavMenu"
+                aria-controls="mainNavMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+          <b>MENU</b>
+          
+          <div id="main-menu-icon" class="main-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="mainNavMenu">
+          <?php
             wp_nav_menu( array(
               'theme_location' => 'menu-1',
               'menu_id'        => 'primary-menu',
             ) );
           ?>
-          </div>
-        
-      </nav> <?php // #site-navigation // ?>
-      
-      
-      
-       
-      
-      
-      
+        </div>
+      </nav> <?php // #site-navigation // ?>   
     </header> <?php // #masthead // ?>
 
     <div id="content" class="site-content">
