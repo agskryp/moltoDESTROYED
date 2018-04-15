@@ -30,9 +30,13 @@
 
     <header id="masthead" class="site-header">
       <div class="site-branding text-center">
-        <div class="container-fluid">
+        <div class="container">
           <div class="col-xs-12"> <?php // required for social-container // ?>
-            <?php if ( is_front_page() ) : ?>
+            <?php 
+              if ( is_front_page() ) :
+                require get_template_directory() . '/partials/header-characters.php';
+            ?>
+
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                 <h1 class="site-title sr-only">
                   <?php bloginfo( 'name' ); ?>
@@ -41,9 +45,10 @@
                 <?php require get_template_directory() . '/partials/site-banner.php'; ?>
               </a>
             <?php
-              require get_template_directory() . '/partials/social-container.php';
+                require get_template_directory() . '/partials/header-social-container.php';
 
               else :
+                require get_template_directory() . '/partials/header-characters.php';
             ?>                
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                 <p class="site-title sr-only">
@@ -53,7 +58,7 @@
                 <?php require get_template_directory() . '/partials/site-banner.php'; ?>
               </a>
             <?php
-              require get_template_directory() . '/partials/social-container.php';
+                require get_template_directory() . '/partials/header-social-container.php';
 
               endif;
             ?>            
