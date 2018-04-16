@@ -95,14 +95,6 @@
     }
   }
   
-  .right {
-    top: 5%;
-    right: -109px;
-    @media all and (min-width: 1200px) {
-      right: -8px;
-    } 
-  }
-  
   .right,
   .far-right {
     transform: scaleX(-1);
@@ -121,6 +113,16 @@
     } 
   }
   
+  .right {
+    top: 5%;
+    right: -109px;
+    @media all and (min-width: 1200px) {
+      right: -8px;
+    } 
+  }
   
-  
+  .far-right {
+    top: 10%;
+    right: -208px;
+  }
 }

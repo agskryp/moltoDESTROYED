@@ -3,14 +3,9 @@
   
   <div id="characterLeft" class="large left"></div>
   
-  <div id="characterFarRight" class="large far-right"
-       style=" 
-              top: 10%;
-              right: -208px;">
-  </div>
+  <div id="characterFarRight" class="large far-right"></div>
   
-  <div id="characterRight" class="large right">
-  </div>
+  <div id="characterRight" class="large right"></div>
 
 
 
@@ -35,7 +30,6 @@
 <script type="text/javascript">
 
   function getRandomLargeCharacter() {
-
     <?php
       function getLargeCharacters() {
         $dirName = get_template_directory() . "/images/characters/large/";
@@ -68,31 +62,19 @@
   ?>
     
     largeCharacters.splice(0, 2);
-    
-    var randomNumber = Math.random() * largeCharacters.length;
-    
-    
-    var farLeft = Math.floor( randomNumber );
-    
-  var farLeftImage = '<img src="'+largeCharacters[farLeft]+'" border=0>';
+        
+    var randomNumber = Math.floor( Math.random() * largeCharacters.length );
+    var imageString = '<img src="'+largeCharacters[randomNumber]+'" border=0>';
 
-
-    
-  return farLeftImage;
-    
-  
-  
-  
+    return imageString;
   }
 
 document.getElementById('characterFarLeft').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
 document.getElementById('characterLeft').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
   
-  
 document.getElementById('characterRight').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
 document.getElementById('characterFarRight').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
   
-
 </script>
 
 
