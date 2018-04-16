@@ -1,81 +1,21 @@
-<?php
-
-
-?>
-
-<script type="text/javascript">
-/*
-Random Image Script- By JavaScript Kit (http://www.javascriptkit.com) 
-Over 400+ free JavaScripts here!
-Keep this notice intact please
-*/
-function random_imglink(){
-
-<?php
-function returnimages() {
-   $dirname = get_template_directory() . "/images/characters/large/";
-  $urlpath = get_template_directory_uri() . "/images/characters/large/";
- 
-   $extension = "(jpg|jpeg|png|gif|bmp)$";
-   $files = array();
-   $curimage=0;
-  
-   if($handle = opendir($dirname)) {
-       while(false !== ($file = readdir($handle))){
-               
-                 echo 'myimages[' . $curimage .']="' . $urlpath . $file . '";' . "\n";
-                 $curimage++;
-               
-       }
-
-       closedir($handle);
-   }
-   return($files);
-}
-
-echo "var myimages=new Array();" . "\n";
-returnimages();
-?>
-  
-  var indexToRemove = 0;
-var numberToRemove = 2;
-
-myimages.splice(indexToRemove, numberToRemove);
-  
-  console.log(myimages);
-
-var ry=Math.floor(Math.random()*myimages.length)
-document.write('<img src="'+myimages[ry]+'" border=0>')
-}
-random_imglink()
-</script>
-
 <div class="header-characters">
-  <div class="large far-right"
-       
-       style=" background:lightgreen;    top: 10%;
-    right: -208px;">
-
+  <div id="characterFarLeft" class="large far-left"></div>
+  
+  <div id="characterLeft" class="large left"></div>
+  
+  <div id="characterFarRight" class="large far-right"
+       style=" 
+              top: 10%;
+              right: -208px;">
   </div>
   
-  <div class="large right"
-
-       style="background:red; ">
+  <div id="characterRight" class="large right">
   </div>
 
 
-  <div class="large far-left"
-       
-       style="
-    background: pink;
-    top: 17%;
-    left: -208px;">
-  </div>
+
             
-  <div class="large left"
-       
-       style=" background:purple;">
-  </div>
+
 <!--
 
             <div style="    width: 70px;
@@ -90,5 +30,69 @@ random_imglink()
 -->
   </div> 
 
+
+
+<script type="text/javascript">
+
+  function getRandomLargeCharacter() {
+
+    <?php
+      function getLargeCharacters() {
+        $dirName = get_template_directory() . "/images/characters/large/";
+        $urlPath = get_template_directory_uri() . "/images/characters/large/";
+        $files = [];
+        $arrayPosition = 0;
+        
+        if( $directory = opendir( $dirName ) ) {
+          while( $image = readdir( $directory ) ) {
+            echo 'largeCharacters[' . $arrayPosition . ']="' . $urlPath . $image . '";' . "\n";
+            $arrayPosition++;
+          }
+
+          closedir( $directory );
+        }
+
+        return($files);
+      }
+
+      echo "var largeCharacters=new Array();" . "\n";
+    
+      getLargeCharacters();
+    ?>
+
+  <?php
+    /*
+     * First two items in array are . and .. respectively,
+     * we don't need them in our array so we remove them.
+     */   
+  ?>
+    
+    largeCharacters.splice(0, 2);
+    
+    var randomNumber = Math.random() * largeCharacters.length;
+    
+    
+    var farLeft = Math.floor( randomNumber );
+    
+  var farLeftImage = '<img src="'+largeCharacters[farLeft]+'" border=0>';
+
+
+    
+  return farLeftImage;
+    
+  
+  
+  
+  }
+
+document.getElementById('characterFarLeft').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
+document.getElementById('characterLeft').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
+  
+  
+document.getElementById('characterRight').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
+document.getElementById('characterFarRight').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
+  
+
+</script>
 
 
