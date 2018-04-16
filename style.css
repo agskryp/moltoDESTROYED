@@ -1104,6 +1104,9 @@ a:hover, a:active {
     right: -8px;
   }
 }
+.header-characters .right, .header-characters .far-right {
+  transform: scaleX(-1);
+}
 .header-characters .left {
   top: 3%;
   left: -109px;

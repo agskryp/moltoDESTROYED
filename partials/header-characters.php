@@ -13,19 +13,19 @@ function random_imglink(){
 
 <?php
 function returnimages() {
-   $dirname = get_template_directory() . "/images/characters/facing-left/";
-  $urlpath = get_template_directory_uri() . "/images/characters/facing-left/";
+   $dirname = get_template_directory() . "/images/characters/large/";
+  $urlpath = get_template_directory_uri() . "/images/characters/large/";
  
-   $extension = "\.(jpg|jpeg|png|gif|bmp)$";
+   $extension = "(jpg|jpeg|png|gif|bmp)$";
    $files = array();
    $curimage=0;
   
    if($handle = opendir($dirname)) {
        while(false !== ($file = readdir($handle))){
-//               if(eregi($extension, $file)){
+               
                  echo 'myimages[' . $curimage .']="' . $urlpath . $file . '";' . "\n";
                  $curimage++;
-//               }
+               
        }
 
        closedir($handle);

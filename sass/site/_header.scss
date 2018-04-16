@@ -104,6 +104,11 @@
     } 
   }
   
+  .right,
+  .far-right {
+    transform: scaleX(-1);
+  }
+  
   .left {
     top: 3%;
     left: -109px;
