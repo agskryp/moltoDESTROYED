@@ -1,16 +1,39 @@
-            <div style="width: 180px;  height: 180px;  background:red; position: absolute;     top: 5%;
-    right: 0;">
-&nbsp;
+<div class="header-characters">
+  <div class="large far-right"
+       
+       style=" background:lightgreen;    top: 10%;
+    right: -208px;">
 
-</div>
+  </div>
+  
+  <div class="large right"
 
-            <div style="width: 180px;  height: 180px;  background:lightgreen; position: absolute;     top: 10%;
-    right: -180px;">
-&nbsp;
+       style="background:red; ">
+  </div>
 
-</div>
+
+  <div class="large far-left"
+       
+       style="
+    background: pink;
+    top: 17%;
+    left: -208px;">
+  </div>
             
-            <div style="width: 160px;  height: 160px;  background:purple; position: absolute; top: 4%;  left: 0;">
+  <div class="large left"
+       
+       style=" background:purple;">
+  </div>
+<!--
+
+            <div style="    width: 70px;
+    height: 70px;
+    background: turquoise;
+    position: absolute;
+    top: 64%;
+    left: 228px;">
 &nbsp;
 
 </div>
+-->
+  </div>         

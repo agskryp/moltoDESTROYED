@@ -11,7 +11,6 @@
     bottom: 0;
     right: 0;
     margin-left: -124px;
-    margin-bottom: -8px;
     border-top-left-radius: 6px;
     padding: 3px 3px 0 0;
     line-height: 1;
@@ -67,4 +66,52 @@
   .col-xs-12 {
     padding: 0;
   }
+}
+
+
+
+
+
+
+.header-characters {
+  
+  div {
+    position: absolute;
+  }
+  
+  .large {
+    width: 200px;
+    height: 200px;
+    display: none;
+    @media all and (min-width: 992px) {
+      display: block;
+    }
+  }
+  
+  .far-right,
+  .far-left {
+    display: none;
+    @media all and (min-width: 1450px) {
+      display: block;
+    }
+  }
+  
+  .right {
+    top: 5%;
+    right: -109px;
+    @media all and (min-width: 1200px) {
+      right: -8px;
+    } 
+  }
+  
+  .left {
+    top: 3%;
+    left: -109px;
+    @media all and (min-width: 1200px) {
+      left: -8px;
+    } 
+  }
+  
+  
+  
 }

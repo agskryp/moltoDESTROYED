@@ -294,6 +294,7 @@ html {
 body {
   background: #ededed;
   /* Fallback for when there is no custom background color defined. */
+  overflow-x: hidden;
   font-size: 16px;
 }
 @media all and (min-width: 360px) {
@@ -505,7 +506,6 @@ a:hover, a:active {
 .menu-toggle {
   display: flex;
   width: 100%;
-  margin-top: 10px;
   border: none;
   border-radius: 0;
   background: #333;
@@ -1018,7 +1018,6 @@ a:hover, a:active {
   bottom: 0;
   right: 0;
   margin-left: -124px;
-  margin-bottom: -8px;
   border-top-left-radius: 6px;
   padding: 3px 3px 0 0;
   line-height: 1;
@@ -1074,6 +1073,45 @@ a:hover, a:active {
 }
 .site-branding .col-xs-12 {
   padding: 0;
+}
+.header-characters div {
+  position: absolute;
+}
+.header-characters .large {
+  width: 200px;
+  height: 200px;
+  display: none;
+}
+@media all and (min-width: 992px) {
+  .header-characters .large {
+    display: block;
+  }
+}
+.header-characters .far-right, .header-characters .far-left {
+  display: none;
+}
+@media all and (min-width: 1450px) {
+  .header-characters .far-right, .header-characters .far-left {
+    display: block;
+  }
+}
+.header-characters .right {
+  top: 5%;
+  right: -109px;
+}
+@media all and (min-width: 1200px) {
+  .header-characters .right {
+    right: -8px;
+  }
+}
+.header-characters .left {
+  top: 3%;
+  left: -109px;
+}
+@media all and (min-width: 1200px) {
+  .header-characters .left {
+    left: -8px;
+  }
 }
 /*--------------------------------------------------------------
  # Infinite scroll
