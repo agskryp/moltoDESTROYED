@@ -1,4 +1,6 @@
 <div class="header-characters">
+  <div id="characterFarFarLeft" class="large far-far-left"></div>
+  
   <div id="characterFarLeft" class="large far-left"></div>
   
   <div id="characterLeft" class="large left"></div>
@@ -49,7 +51,9 @@
         return($files);
       }
 
-      echo "var largeCharacters=new Array();" . "\n";
+      echo "var largeCharacters = new Array();" . "\n";
+    
+    
     
       getLargeCharacters();
     ?>
@@ -61,7 +65,16 @@
      */   
   ?>
     
+    var largeCharacters;
+//    console.log( largeCharacters );
+    
     largeCharacters.splice(0, 2);
+    
+
+    
+
+    
+    console.log( largeCharacters );
         
     var randomNumber = Math.floor( Math.random() * largeCharacters.length );
     var imageString = '<img src="'+largeCharacters[randomNumber]+'" border=0>';
@@ -69,6 +82,7 @@
     return imageString;
   }
 
+document.getElementById('characterFarFarLeft').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
 document.getElementById('characterFarLeft').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
 document.getElementById('characterLeft').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
   

@@ -81,8 +81,18 @@
   .large {
     width: 200px;
     height: 200px;
+//    background: pink;
     display: none;
+    text-align: right;
     @media all and (min-width: 992px) {
+      display: block;
+    }
+  }
+  
+  .far-far-left,
+  .far-far-right {
+    display: none;
+    @media all and (min-width: 1500px) {
       display: block;
     }
   }
@@ -90,8 +100,10 @@
   .far-right,
   .far-left {
     display: none;
-    @media all and (min-width: 1450px) {
-      display: block;
+    @media all and (min-width: 1250px) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
     }
   }
   
@@ -100,16 +112,24 @@
     transform: scaleX(-1);
   }
   
+  .far-far-left {
+    top: 12%;
+    left: -208px;
+    z-index: 2;
+  }
+  
   .far-left {
     top: 17%;
-    left: -208px;
+    left: -118px;
+    z-index: 3;
+
   }
   
   .left {
     top: 3%;
     left: -109px;
     @media all and (min-width: 1200px) {
-      left: -8px;
+      left: 8px;
     } 
   }
   

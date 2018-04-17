@@ -1081,18 +1081,51 @@ a:hover, a:active {
   width: 200px;
   height: 200px;
   display: none;
+  text-align: right;
 }
 @media all and (min-width: 992px) {
   .header-characters .large {
     display: block;
   }
 }
+.header-characters .far-far-left, .header-characters .far-far-right {
+  display: none;
+}
+@media all and (min-width: 1500px) {
+  .header-characters .far-far-left, .header-characters .far-far-right {
+    display: block;
+  }
+}
 .header-characters .far-right, .header-characters .far-left {
   display: none;
 }
-@media all and (min-width: 1450px) {
+@media all and (min-width: 1250px) {
   .header-characters .far-right, .header-characters .far-left {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+.header-characters .right, .header-characters .far-right {
+  transform: scaleX(-1);
+}
+.header-characters .far-far-left {
+  top: 12%;
+  left: -208px;
+  z-index: 2;
+}
+.header-characters .far-left {
+  top: 17%;
+  left: -118px;
+  z-index: 3;
+}
+.header-characters .left {
+  top: 3%;
+  left: -109px;
+}
+@media all and (min-width: 1200px) {
+  .header-characters .left {
+    left: 8px;
   }
 }
 .header-characters .right {
@@ -1104,21 +1137,9 @@ a:hover, a:active {
     right: -8px;
   }
 }
-.header-characters .right, .header-characters .far-right {
-  transform: scaleX(-1);
-}
-.header-characters .far-left {
-  top: 17%;
-  left: -208px;
-}
-.header-characters .left {
-  top: 3%;
-  left: -109px;
-}
-@media all and (min-width: 1200px) {
-  .header-characters .left {
-    left: -8px;
-  }
+.header-characters .far-right {
+  top: 10%;
+  right: -208px;
 }
 /*--------------------------------------------------------------
  # Infinite scroll
