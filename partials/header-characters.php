@@ -5,9 +5,11 @@
   
   <div id="characterLeft" class="large left"></div>
   
-  <div id="characterFarRight" class="large far-right"></div>
-  
   <div id="characterRight" class="large right"></div>
+
+  <div id="characterFarRight" class="large far-right"></div>
+
+  <div id="characterFarFarRight" class="large far-far-right"></div>
 
 
 
@@ -88,6 +90,7 @@ document.getElementById('characterLeft').insertAdjacentHTML('beforeend', getRand
   
 document.getElementById('characterRight').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
 document.getElementById('characterFarRight').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
+document.getElementById('characterFarFarRight').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
   
 </script>
 

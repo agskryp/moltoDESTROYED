@@ -108,7 +108,8 @@
   }
   
   .right,
-  .far-right {
+  .far-right,
+  .far-far-right {
     transform: scaleX(-1);
   }
   
@@ -127,22 +128,32 @@
   
   .left {
     top: 3%;
-    left: -109px;
+    left: -94px;
     @media all and (min-width: 1200px) {
       left: 8px;
     } 
   }
   
   .right {
-    top: 5%;
-    right: -109px;
+    top: 16%;
+    right: -94px;
+    z-index: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     @media all and (min-width: 1200px) {
-      right: -8px;
+      right: 0;
     } 
   }
   
   .far-right {
-    top: 10%;
+    top: 5%;
+    right: -103px;
+    z-index: 2;
+  }
+  
+  .far-far-right {
+    top: 13%;
     right: -208px;
   }
 }
