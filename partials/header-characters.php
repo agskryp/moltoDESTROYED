@@ -43,8 +43,10 @@
         
         if( $directory = opendir( $dirName ) ) {
           while( $image = readdir( $directory ) ) {
+               if($image != "." && $image != ".." && $image != ".DS_Store") {
             echo 'largeCharacters[' . $arrayPosition . ']="' . $urlPath . $image . '";' . "\n";
             $arrayPosition++;
+               }
           }
 
           closedir( $directory );
@@ -68,12 +70,7 @@
   ?>
     
     var largeCharacters;
-//    console.log( largeCharacters );
-    
-    largeCharacters.splice(0, 2);
-    
 
-    
 
     
     console.log( largeCharacters );
