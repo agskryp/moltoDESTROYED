@@ -43,40 +43,29 @@
         
         if( $directory = opendir( $dirName ) ) {
           while( $image = readdir( $directory ) ) {
-               if($image != "." && $image != ".." && $image != ".DS_Store") {
-            echo 'largeCharacters[' . $arrayPosition . ']="' . $urlPath . $image . '";' . "\n";
-            $arrayPosition++;
-               }
+            if( $image != "." && $image != ".." && $image != ".DS_Store" ) {
+              echo 'largeCharacters[' . $arrayPosition . ']="' . $urlPath . $image . '";' . "\n";
+              $arrayPosition++;
+            }
           }
 
           closedir( $directory );
         }
 
-        return($files);
+        return( $files );
       }
 
       echo "var largeCharacters = new Array();" . "\n";
     
-    
-    
       getLargeCharacters();
     ?>
 
-  <?php
-    /*
-     * First two items in array are . and .. respectively,
-     * we don't need them in our array so we remove them.
-     */   
-  ?>
-    
     var largeCharacters;
-
-
     
     console.log( largeCharacters );
         
     var randomNumber = Math.floor( Math.random() * largeCharacters.length );
-    var imageString = '<img src="'+largeCharacters[randomNumber]+'" border=0>';
+    var imageString = '<img src="' + largeCharacters[ randomNumber ] + '">';
 
     return imageString;
   }
