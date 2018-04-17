@@ -113,6 +113,13 @@
     transform: scaleX(-1);
   }
   
+  .right,
+  .far-far-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
   .far-far-left {
     top: 12%;
     left: -208px;
@@ -137,23 +144,21 @@
   .right {
     top: 16%;
     right: -94px;
-    z-index: 3;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    z-index: 2;
     @media all and (min-width: 1200px) {
       right: 0;
     } 
   }
   
   .far-right {
-    top: 5%;
-    right: -103px;
-    z-index: 2;
+    top: 1%;
+    right: -123px;
+    align-items: flex-start;
   }
   
   .far-far-right {
     top: 13%;
-    right: -208px;
+    right: -238px;
+    z-index: 2;
   }
 }
