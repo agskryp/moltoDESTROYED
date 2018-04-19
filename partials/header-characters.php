@@ -10,11 +10,7 @@
   <div id="characterFarRight" class="large far-right"></div>
 
   <div id="characterFarFarRight" class="large far-far-right"></div>
-
-
-
             
-
 <!--
 
             <div style="    width: 70px;
@@ -32,8 +28,9 @@
 
 
 <script type="text/javascript">
-
   function getRandomLargeCharacter() {
+    var largeCharacters = [];
+    
     <?php
       function getLargeCharacters() {
         $dirName = get_template_directory() . "/images/characters/large/";
@@ -54,15 +51,9 @@
 
         return( $files );
       }
-
-      echo "var largeCharacters = new Array();" . "\n";
     
       getLargeCharacters();
     ?>
-
-    var largeCharacters;
-    
-    console.log( largeCharacters );
         
     var randomNumber = Math.floor( Math.random() * largeCharacters.length );
     var imageString = '<img src="' + largeCharacters[ randomNumber ] + '">';
@@ -70,13 +61,13 @@
     return imageString;
   }
 
-document.getElementById('characterFarFarLeft').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
-document.getElementById('characterFarLeft').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
-document.getElementById('characterLeft').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
+document.getElementById( 'characterFarFarLeft' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
+document.getElementById( 'characterFarLeft' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
+document.getElementById( 'characterLeft' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
   
-document.getElementById('characterRight').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
-document.getElementById('characterFarRight').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
-document.getElementById('characterFarFarRight').insertAdjacentHTML('beforeend', getRandomLargeCharacter());
+document.getElementById( 'characterRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
+document.getElementById( 'characterFarRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
+document.getElementById( 'characterFarFarRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
   
 </script>
 
