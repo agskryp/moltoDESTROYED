@@ -85,7 +85,13 @@
 
 </div> <?php // #page // ?>
 
-<?php wp_footer(); ?>
+<?php 
+  wp_footer();
+
+  require get_template_directory() . '/inc/header-image-randomizer.php';
+?>
+
+
 
 </body>
 </html>
