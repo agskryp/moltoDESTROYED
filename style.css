@@ -1077,7 +1077,7 @@ a:hover, a:active {
   background: #fff;
 }
 .site-branding .col-xs-12 {
-  padding: 0 0 24px;
+  padding: 0 0 30px;
 }
 @media all and (min-width: 768px) {
   .site-branding .col-xs-12 {
@@ -1118,12 +1118,11 @@ a:hover, a:active {
 }
 .header-characters .center-left {
   left: 0;
-  top: 41%;
+  top: 44%;
 }
 @media all and (min-width: 360px) {
   .header-characters .center-left {
     left: 1%;
-    top: 44%;
   }
 }
 @media all and (min-width: 480px) {
@@ -1156,8 +1155,34 @@ a:hover, a:active {
   }
 }
 .header-characters .center-right {
-  top: 58%;
-  right: 348px;
+  top: 41%;
+  right: 19%;
+}
+@media all and (min-width: 360px) {
+  .header-characters .center-right {
+    top: 43%;
+  }
+}
+@media all and (min-width: 480px) {
+  .header-characters .center-right {
+    top: 47%;
+  }
+}
+@media all and (min-width: 768px) {
+  .header-characters .center-right {
+    top: 55%;
+    right: 25%;
+  }
+}
+@media all and (min-width: 992px) {
+  .header-characters .center-right {
+    right: 30%;
+  }
+}
+@media all and (min-width: 1200px) {
+  .header-characters .center-right {
+    right: 34%;
+  }
 }
 .header-characters .large {
   width: 200px;

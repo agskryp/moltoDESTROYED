@@ -1,10 +1,6 @@
 .site-header {
   margin-bottom: 1.5em;
   
-  .container {
-//    padding: 0;
-  }
-  
   .social-container {
     display: inline-block;
     position: absolute;
@@ -70,7 +66,7 @@
   background: #fff;
   
   .col-xs-12 {
-    padding: 0 0 24px;
+    padding: 0 0 30px;
     @media all and (min-width: $screen-md) {
       padding: 0;
     }
@@ -116,10 +112,9 @@
   
   .center-left {
     left: 0;
-    top: 41%;
+    top: 44%;
     @media all and (min-width: $screen-xs) {
       left: 1%;
-      top: 44%;
     }
     
     @media all and (min-width: $screen-sm) {
@@ -148,9 +143,31 @@
   }
   
   .center-right {
-     top: 58%; 
-    right: 348px;
+    top: 41%;
+    right: 19%;
+    
+    @media all and (min-width: $screen-xs) {
+      top: 43%;
+    }
+    
+    @media all and (min-width: $screen-sm) {
+      top: 47%    
+    }
+    
+    @media all and (min-width: $screen-md) {
+      top: 55%;
+      right: 25%;   
+    }
+    
+    @media all and (min-width: $screen-lg) {
+      right: 30%;   
+    }
+    
+    @media all and (min-width: 1200px) {
+      right: 34%;
+    }
   }
+  
   
   .large {
     width: 200px;
@@ -183,7 +200,7 @@
   .right,
   .far-right,
   .far-far-right,
-  .center-right {
+  .center-right{
     transform: scaleX(-1);
   }
   
