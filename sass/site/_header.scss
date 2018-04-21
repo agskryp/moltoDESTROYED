@@ -18,6 +18,9 @@
     @media all and (min-width: $screen-md) {
       line-height: 1;
       width: auto;
+    }
+    
+    @media all and (min-width: $screen-lg) {
       right: inherit;
     }
     
@@ -67,8 +70,10 @@
   
   .col-xs-12 {
     padding: 0 0 30px;
+    margin-top: 30px;
     @media all and (min-width: $screen-md) {
       padding: 0;
+      margin-top: 10px;
     }
   }
 }
@@ -142,6 +147,29 @@
     }
   }
   
+  .center {
+    top: -29px;
+    left: 39%;
+    
+    @media all and (min-width: $screen-sm) {
+      top: -20px; 
+      left: 41%;
+    }
+    
+    @media all and (min-width: $screen-md) {
+      top: -5px;
+      left: 43%;
+    }
+    
+    @media all and (min-width: $screen-lg) {
+      left: 44%;
+    }
+    
+    @media all and (min-width: 1200px) {
+      left: 45%;
+    }
+  }
+  
   .center-right {
     top: 41%;
     right: 19%;
@@ -156,15 +184,15 @@
     
     @media all and (min-width: $screen-md) {
       top: 55%;
-      right: 25%;   
+      right: 19%;   
     }
     
     @media all and (min-width: $screen-lg) {
-      right: 30%;   
+      right: 26%;   
     }
     
     @media all and (min-width: 1200px) {
-      right: 34%;
+      right: 30%;
     }
   }
   

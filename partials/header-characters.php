@@ -8,6 +8,8 @@
   
   <div id="characterLeftCenter" class="small center-left"></div> 
   
+  <div id="characterCenter" class="small center"></div> 
+  
   <div id="characterRightCenter" class="small center-right"></div> 
   
   

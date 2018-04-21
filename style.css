@@ -1029,6 +1029,10 @@ a:hover, a:active {
   .site-header .social-container {
     line-height: 1;
     width: auto;
+  }
+}
+@media all and (min-width: 992px) {
+  .site-header .social-container {
     right: inherit;
   }
 }
@@ -1078,10 +1082,12 @@ a:hover, a:active {
 }
 .site-branding .col-xs-12 {
   padding: 0 0 30px;
+  margin-top: 30px;
 }
 @media all and (min-width: 768px) {
   .site-branding .col-xs-12 {
     padding: 0;
+    margin-top: 10px;
   }
 }
 .header-characters div {
@@ -1154,6 +1160,32 @@ a:hover, a:active {
     left: 21%;
   }
 }
+.header-characters .center {
+  top: -29px;
+  left: 39%;
+}
+@media all and (min-width: 480px) {
+  .header-characters .center {
+    top: -20px;
+    left: 41%;
+  }
+}
+@media all and (min-width: 768px) {
+  .header-characters .center {
+    top: -5px;
+    left: 43%;
+  }
+}
+@media all and (min-width: 992px) {
+  .header-characters .center {
+    left: 44%;
+  }
+}
+@media all and (min-width: 1200px) {
+  .header-characters .center {
+    left: 45%;
+  }
+}
 .header-characters .center-right {
   top: 41%;
   right: 19%;
@@ -1171,17 +1203,17 @@ a:hover, a:active {
 @media all and (min-width: 768px) {
   .header-characters .center-right {
     top: 55%;
-    right: 25%;
+    right: 19%;
   }
 }
 @media all and (min-width: 992px) {
   .header-characters .center-right {
-    right: 30%;
+    right: 26%;
   }
 }
 @media all and (min-width: 1200px) {
   .header-characters .center-right {
-    right: 34%;
+    right: 30%;
   }
 }
 .header-characters .large {
