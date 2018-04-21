@@ -1009,9 +1009,6 @@ a:hover, a:active {
 .site-header {
   margin-bottom: 1.5em;
 }
-.site-header .container {
-  padding: 0;
-}
 .site-header .social-container {
   display: inline-block;
   position: absolute;
@@ -1020,10 +1017,18 @@ a:hover, a:active {
   margin-left: -124px;
   border-top-left-radius: 6px;
   padding: 3px 3px 0 0;
-  line-height: 1;
+  line-height: 1.4;
+  width: 65px;
 }
-@media screen and (min-width: 768px) {
+@media all and (min-width: 480px) {
   .site-header .social-container {
+    width: 90px;
+  }
+}
+@media all and (min-width: 768px) {
+  .site-header .social-container {
+    line-height: 1;
+    width: auto;
     right: inherit;
   }
 }
@@ -1034,12 +1039,12 @@ a:hover, a:active {
 .site-header .social-container a:hover {
   text-decoration: none;
 }
-@media screen and (min-width: 360px) {
+@media all and (min-width: 360px) {
   .site-header .social-container a {
     margin-right: 5px;
   }
 }
-@media screen and (min-width: 480px) {
+@media all and (min-width: 480px) {
   .site-header .social-container a {
     margin-right: 6px;
   }
@@ -1048,19 +1053,19 @@ a:hover, a:active {
   height: 22px;
   width: 22px;
 }
-@media screen and (min-width: 360px) {
+@media all and (min-width: 360px) {
   .site-header .social-container a svg {
     height: 26px;
     width: 26px;
   }
 }
-@media screen and (min-width: 480px) {
+@media all and (min-width: 480px) {
   .site-header .social-container a svg {
     height: 30px;
     width: 30px;
   }
 }
-@media screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   .site-header .social-container a svg {
     height: 36px;
   }
@@ -1105,7 +1110,7 @@ a:hover, a:active {
     height: 70px;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 600px) {
   .header-characters .small {
     width: 80px;
     height: 80px;
@@ -1124,19 +1129,30 @@ a:hover, a:active {
 @media all and (min-width: 480px) {
   .header-characters .center-left {
     left: 3%;
-    top: 46%;
+    top: 48%;
   }
 }
 @media all and (min-width: 600px) {
   .header-characters .center-left {
     left: 5%;
-    top: 50%;
+    top: 53%;
   }
 }
 @media all and (min-width: 768px) {
   .header-characters .center-left {
+    left: 3%;
+    top: 60%;
+  }
+}
+@media all and (min-width: 992px) {
+  .header-characters .center-left {
     top: 62%;
-    left: 228px;
+    left: 15%;
+  }
+}
+@media all and (min-width: 1200px) {
+  .header-characters .center-left {
+    left: 21%;
   }
 }
 .header-characters .center-right {

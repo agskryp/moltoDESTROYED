@@ -2,7 +2,7 @@
   margin-bottom: 1.5em;
   
   .container {
-    padding: 0;
+//    padding: 0;
   }
   
   .social-container {
@@ -13,9 +13,15 @@
     margin-left: -124px;
     border-top-left-radius: 6px;
     padding: 3px 3px 0 0;
-    line-height: 1;
+    line-height: 1.4;
+    width: 65px;
+    @media all and (min-width: $screen-sm) {
+      width: 90px;
+    }
     
-    @media screen and (min-width: $screen-md) {
+    @media all and (min-width: $screen-md) {
+      line-height: 1;
+      width: auto;
       right: inherit;
     }
     
@@ -25,11 +31,11 @@
       &:hover {
         text-decoration: none;
       } 
-       @media screen and (min-width: $screen-xs) {
+       @media all and (min-width: $screen-xs) {
          margin-right: 5px;
         }
       
-       @media screen and (min-width: $screen-sm) {
+       @media all and (min-width: $screen-sm) {
          margin-right: 6px;
         }
       
@@ -38,17 +44,17 @@
         height: 22px;
         width: 22px;
         
-        @media screen and (min-width: $screen-xs) {
+        @media all and (min-width: $screen-xs) {
           height: 26px;
           width: 26px;
         }
         
-        @media screen and (min-width: $screen-sm) {
+        @media all and (min-width: $screen-sm) {
           height: 30px;
           width: 30px;
         }
         
-        @media screen and (min-width: $screen-md) {
+        @media all and (min-width: $screen-md) {
           height: 36px;
         }
       }
@@ -96,11 +102,13 @@
       width: 65px;
       height: 65px;
     }
+    
     @media all and (min-width: $screen-sm) {
       width: 70px;
       height: 70px;
     }
-    @media all and (min-width: $screen-md) {
+    
+    @media all and (min-width: 600px) {
       width: 80px;
       height: 80px;
     }
@@ -116,18 +124,27 @@
     
     @media all and (min-width: $screen-sm) {
      left: 3%;
-     top: 46%; 
+     top: 48%; 
     }
     
     @media all and (min-width: 600px) {
      left: 5%;
-     top: 50%; 
+     top: 53%; 
     }
     
     @media all and (min-width: $screen-md) {
-     top: 62%; 
-    left: 228px;
-  }
+      left: 3%;
+      top: 60%;   
+    }
+    
+    @media all and (min-width: 992px) {
+      top: 62%; 
+      left: 15%;
+    }
+    
+    @media all and (min-width: 1200px) { 
+      left: 21%;
+    }
   }
   
   .center-right {

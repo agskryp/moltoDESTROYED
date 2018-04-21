@@ -31,6 +31,7 @@
     <header id="masthead" class="site-header">
       <div class="site-branding text-center">
         <div class="container">
+          <div class="row">
           <div class="col-xs-12"> <?php // required for social-container // ?>
             <?php 
               if ( is_front_page() ) :
@@ -63,7 +64,8 @@
               endif;
             ?>            
           </div> <?php // .col-xs-12 // ?>
-        </div> <?php // .container-fluid // ?>
+          </div>
+        </div> <?php // .container // ?>
       </div> <?php // .site-branding // ?>
 
       <nav id="site-navigation" class="main-navigation">
