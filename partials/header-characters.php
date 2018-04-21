@@ -5,6 +5,12 @@
   
   <div id="characterLeft" class="large left"></div>
   
+  
+  <div id="characterLeftCenter" class="small center-left"></div> 
+  
+  <div id="characterRightCenter" class="small center-right"></div> 
+  
+  
   <div id="characterRight" class="large right"></div>
 
   <div id="characterFarRight" class="large far-right"></div>

@@ -1077,6 +1077,34 @@ a:hover, a:active {
 .header-characters div {
   position: absolute;
 }
+.header-characters .small {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+@media all and (min-width: 480px) {
+  .header-characters .small {
+    width: 80px;
+    height: 80px;
+  }
+}
+.header-characters .center-left {
+  left: 0;
+  top: 41%;
+}
+@media all and (min-width: 480px) {
+  .header-characters .center-left {
+    top: 62%;
+    left: 228px;
+  }
+}
+.header-characters .center-right {
+  top: 58%;
+  right: 348px;
+}
 .header-characters .large {
   width: 200px;
   height: 200px;
@@ -1106,13 +1134,8 @@ a:hover, a:active {
     align-items: flex-end;
   }
 }
-.header-characters .right, .header-characters .far-right, .header-characters .far-far-right {
+.header-characters .right, .header-characters .far-right, .header-characters .far-far-right, .header-characters .center-right {
   transform: scaleX(-1);
-}
-.header-characters .right, .header-characters .far-far-right {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
 }
 .header-characters .far-far-left {
   top: 6%;
@@ -1137,6 +1160,14 @@ a:hover, a:active {
   top: 16%;
   right: -94px;
   z-index: 2;
+  display: none;
+}
+@media all and (min-width: 992px) {
+  .header-characters .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
 }
 @media all and (min-width: 1200px) {
   .header-characters .right {
@@ -1152,6 +1183,14 @@ a:hover, a:active {
   top: 13%;
   right: -238px;
   z-index: 2;
+  display: none;
+}
+@media all and (min-width: 1200px) {
+  .header-characters .far-far-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
 }
 /*--------------------------------------------------------------
  # Infinite scroll
