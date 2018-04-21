@@ -43,4 +43,7 @@
   document.getElementById( 'characterRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
   document.getElementById( 'characterFarRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
   document.getElementById( 'characterFarFarRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
+  
+  document.getElementById( 'characterLeftFooter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
+  document.getElementById( 'characterRightFooter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
 </script>

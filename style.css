@@ -946,15 +946,34 @@ a:hover, a:active {
 .site-footer a:hover svg, .site-footer a:focus svg, .site-footer a:active svg {
   fill: #999;
 }
+.site-footer .footer-banner {
+  max-width: 500px;
+  width: 100%;
+}
+.site-footer .footer-characters {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+}
+.site-footer .footer-characters div {
+  width: 150px;
+  height: 120px;
+}
+.site-footer .footer-characters img {
+  max-height: 100%;
+}
+.site-footer .footer-characters .right {
+  transform: scaleX(-1);
+}
+@media all and (min-width: 992px) {
+  .site-footer .footer-characters .right {
+    transform: none;
+  }
+}
 .site-footer .footer-menu {
   background: #333;
   border-top: 2px solid #000;
   padding-top: 1.5em;
-}
-.site-footer .footer-menu img {
-  padding-bottom: 1.5em;
-  max-width: 500px;
-  width: 100%;
 }
 .site-footer .footer-menu nav {
   max-width: 420px;
@@ -1005,6 +1024,11 @@ a:hover, a:active {
 }
 .bottom-cushion {
   margin-bottom: 1.5em;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .site-header {
   margin-bottom: 1.5em;

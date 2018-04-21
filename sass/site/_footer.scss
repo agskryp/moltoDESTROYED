@@ -19,17 +19,39 @@
       }
     } 
   }
+  
+  .footer-banner {
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .footer-characters {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    
+    div {
+      width: 150px;
+      height: 120px;
+    }
+    
+    img {
+      max-height: 100%;
+    }
+    
+    .right {
+       transform: scaleX(-1);
+      
+      @media all and (min-width: $screen-lg) {
+        transform: none;
+      }
+    }
+  }
 
   .footer-menu {
     background: #333;
     border-top: 2px solid #000;
-    padding-top: 1.5em;
-
-    img {
-      padding-bottom: 1.5em;
-      max-width: 500px;
-      width: 100%;
-    }
+    padding-top: 1.5em;   
 
     nav {
       max-width: 420px;
