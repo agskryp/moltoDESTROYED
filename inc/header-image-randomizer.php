@@ -37,7 +37,7 @@
   document.getElementById( 'characterLeft' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() ); 
   
   document.getElementById( 'characterLeftCenter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() ); 
-  document.getElementById( 'characterRightCenter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() ); 
+//  document.getElementById( 'characterRightCenter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() ); 
   
   document.getElementById( 'characterRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
   document.getElementById( 'characterFarRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );

@@ -1,7 +1,7 @@
 .site-header {
   margin-bottom: 1.5em;
   
-  .container-fluid {
+  .container {
     padding: 0;
   }
   
@@ -64,7 +64,10 @@
   background: #fff;
   
   .col-xs-12 {
-    padding: 0;
+    padding: 0 0 24px;
+    @media all and (min-width: $screen-md) {
+      padding: 0;
+    }
   }
 }
 
@@ -89,7 +92,15 @@
     align-items: center;
     justify-content: center;
     position: absolute; 
+    @media all and (min-width: $screen-xs) {
+      width: 65px;
+      height: 65px;
+    }
     @media all and (min-width: $screen-sm) {
+      width: 70px;
+      height: 70px;
+    }
+    @media all and (min-width: $screen-md) {
       width: 80px;
       height: 80px;
     }
@@ -98,8 +109,22 @@
   .center-left {
     left: 0;
     top: 41%;
+    @media all and (min-width: $screen-xs) {
+      left: 1%;
+      top: 44%;
+    }
     
     @media all and (min-width: $screen-sm) {
+     left: 3%;
+     top: 46%; 
+    }
+    
+    @media all and (min-width: 600px) {
+     left: 5%;
+     top: 50%; 
+    }
+    
+    @media all and (min-width: $screen-md) {
      top: 62%; 
     left: 228px;
   }
@@ -193,7 +218,7 @@
     right: -238px;
     z-index: 2;
     display: none;
-    @media all and (min-width: 1200px) {
+    @media all and (min-width: 1500px) {
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;

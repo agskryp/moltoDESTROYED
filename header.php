@@ -30,8 +30,8 @@
 
     <header id="masthead" class="site-header">
       <div class="site-branding text-center">
-        <div class="container" style="padding: 0;">
-          <div class="col-xs-12" style="padding-bottom: 24px;"> <?php // required for social-container // ?>
+        <div class="container">
+          <div class="col-xs-12"> <?php // required for social-container // ?>
             <?php 
               if ( is_front_page() ) :
                 require get_template_directory() . '/partials/header-characters.php';

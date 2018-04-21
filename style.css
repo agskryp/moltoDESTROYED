@@ -1009,7 +1009,7 @@ a:hover, a:active {
 .site-header {
   margin-bottom: 1.5em;
 }
-.site-header .container-fluid {
+.site-header .container {
   padding: 0;
 }
 .site-header .social-container {
@@ -1072,10 +1072,18 @@ a:hover, a:active {
   background: #fff;
 }
 .site-branding .col-xs-12 {
-  padding: 0;
+  padding: 0 0 24px;
+}
+@media all and (min-width: 768px) {
+  .site-branding .col-xs-12 {
+    padding: 0;
+  }
 }
 .header-characters div {
   position: absolute;
+}
+.header-characters img {
+  max-height: 100%;
 }
 .header-characters .small {
   width: 60px;
@@ -1085,7 +1093,19 @@ a:hover, a:active {
   justify-content: center;
   position: absolute;
 }
+@media all and (min-width: 360px) {
+  .header-characters .small {
+    width: 65px;
+    height: 65px;
+  }
+}
 @media all and (min-width: 480px) {
+  .header-characters .small {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media all and (min-width: 768px) {
   .header-characters .small {
     width: 80px;
     height: 80px;
@@ -1095,7 +1115,25 @@ a:hover, a:active {
   left: 0;
   top: 41%;
 }
+@media all and (min-width: 360px) {
+  .header-characters .center-left {
+    left: 1%;
+    top: 44%;
+  }
+}
 @media all and (min-width: 480px) {
+  .header-characters .center-left {
+    left: 3%;
+    top: 46%;
+  }
+}
+@media all and (min-width: 600px) {
+  .header-characters .center-left {
+    left: 5%;
+    top: 50%;
+  }
+}
+@media all and (min-width: 768px) {
   .header-characters .center-left {
     top: 62%;
     left: 228px;
@@ -1185,7 +1223,7 @@ a:hover, a:active {
   z-index: 2;
   display: none;
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1500px) {
   .header-characters .far-far-right {
     display: flex;
     justify-content: flex-end;
