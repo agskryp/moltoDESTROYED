@@ -22,9 +22,17 @@
                 alt="moltoDESTROYED Banner">
           
           <div class="footer-characters bottom-cushion">
-              <div id="characterLeftFooter" class="left flex-center"></div> 
+            <div  class="left flex-center">
+              <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
+            </div> 
+            
+            <div class="center flex-center">
+              <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
+            </div> 
           
-              <div id="characterRightFooter" class="right flex-center"></div> 
+            <div class="right flex-center">
+              <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
+            </div> 
           </div>
         </div>
         

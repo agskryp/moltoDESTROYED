@@ -23,7 +23,7 @@
   .footer-banner {
     max-width: 500px;
     width: 100%;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
   }
   
   .footer-characters {
@@ -38,6 +38,13 @@
     
     img {
       max-height: 100%;
+    }
+    
+    .center {
+      display: none;
+      @media all and (min-width: $screen-sm) {
+        display: flex;
+      }
     }
     
     .right {
