@@ -22,6 +22,7 @@ function getImagesFromDir( $path ) {
 
 function getRandomFromArray( $ar ) {
   $num = array_rand( $ar );
+  
   return $ar[ $num ];
 }
 
