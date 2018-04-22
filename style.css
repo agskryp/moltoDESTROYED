@@ -585,7 +585,7 @@ a:hover, a:active {
 }
 .main-menu-icon {
   width: 20px;
-  height: 14px;
+  height: 12px;
   display: inline-block;
   margin-left: 6px;
   -webkit-transform: rotate(0deg);
@@ -950,6 +950,7 @@ a:hover, a:active {
 .site-footer .footer-banner {
   max-width: 500px;
   width: 100%;
+  margin-bottom: 1em;
 }
 .site-footer .footer-characters {
   display: flex;
@@ -957,7 +958,7 @@ a:hover, a:active {
   justify-content: space-around;
 }
 .site-footer .footer-characters div {
-  width: 150px;
+  width: 120px;
   height: 120px;
 }
 .site-footer .footer-characters img {
