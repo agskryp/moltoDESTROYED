@@ -1,3 +1,5 @@
+
+
 <script type="text/javascript">
   function getRandomLargeCharacter() {
     var largeCharacters = [];
@@ -32,18 +34,18 @@
     return imageString;
   }
   
-  document.getElementById( 'characterFarFarLeft' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
-  document.getElementById( 'characterFarLeft' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
-  document.getElementById( 'characterLeft' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() ); 
-  
-  document.getElementById( 'characterLeftCenter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() ); 
-  document.getElementById( 'characterCenter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() ); 
-  document.getElementById( 'characterRightCenter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() ); 
-  
-  document.getElementById( 'characterRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
-  document.getElementById( 'characterFarRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
-  document.getElementById( 'characterFarFarRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
-  
-  document.getElementById( 'characterLeftFooter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
-  document.getElementById( 'characterRightFooter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
+//  document.getElementById( 'characterFarFarLeft' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
+//  document.getElementById( 'characterFarLeft' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
+//  document.getElementById( 'characterLeft' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() ); 
+//  
+//  document.getElementById( 'characterLeftCenter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() ); 
+//  document.getElementById( 'characterCenter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() ); 
+//  document.getElementById( 'characterRightCenter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() ); 
+//  
+//  document.getElementById( 'characterRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
+//  document.getElementById( 'characterFarRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
+//  document.getElementById( 'characterFarFarRight' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
+//  
+//  document.getElementById( 'characterLeftFooter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
+//  document.getElementById( 'characterRightFooter' ).insertAdjacentHTML( 'beforeend', getRandomLargeCharacter() );
 </script>
