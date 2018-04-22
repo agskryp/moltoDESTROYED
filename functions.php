@@ -208,37 +208,8 @@ function new_excerpt_more($more) {
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
+
 /**
- * TODO: Find a better location for this script
- *
- * Create an array of images in the character folder and
- * randomly choose one of them
+ * Choose a random character image
  */
-$root = get_template_directory();
-$path = '/images/characters/large/';
-$imageURLRoot = get_template_directory_uri() . $path;
-
-function getImagesFromDir( $path ) {
-  $images = array();
-  
-  if ( $img_dir = opendir( $path ) ) {
-    while ( false !== ( $img_file = readdir( $img_dir ) ) ) {
-      if ( preg_match("/(\.png)$/", $img_file ) ) {
-        $images[] = $img_file;
-      }
-    }
-    
-    closedir( $img_dir );
-  }
-  
-  return $images;
-}
-
-function getRandomFromArray( $ar ) {
-  $num = array_rand( $ar );
-  return $ar[ $num ];
-}
-
-$imgList = getImagesFromDir( $root . $path );
-$img = getRandomFromArray( $imgList );
-
+require get_template_directory() . '/inc/character-image-randomizer.php';
