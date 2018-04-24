@@ -41,8 +41,8 @@
     </main> <?php // #main // ?>      
   </div> <?php // #primary // ?>
   
-  <?php get_sidebar(); ?>
+  <?php dynamic_sidebar( 'sidebar-1' ); ?>
 </div> <?php // .narrow-container // ?>
 
 <?php
-get_footer();
+  get_footer();
