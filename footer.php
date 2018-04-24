@@ -87,12 +87,16 @@
   <div class="footer-copyright">
     <div class="container">
       <span class="pull-left">
-        moltoDESTROYED &amp; moltodestroyed.com is Copyright © 2014-2018
+        moltoDESTROYED &amp; moltodestroyed.com is Copyright &copy; 2014-2018
         <a href="mailto:moltodestroyed@gmail.com">Molto D. Stroyed</a>
       </span>
 
       <span class="pull-right">
-        Designed by <a href="http://agskryp.com">A.G. Skryp</a>
+        Designed by 
+        
+        <a href="<?php echo esc_url( __( 'http://agskryp.com', 'moltodestroyed' ) ); ?>"  target="_blank">
+          A.G. Skryp
+        </a>
       </span>
     </div>
   </div> <?php // .footer-copyright // ?>
