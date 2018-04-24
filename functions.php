@@ -90,8 +90,11 @@ add_action( 'after_setup_theme', 'moltodestroyed_setup' );
  * @global int $content_width
  */
 function moltodestroyed_content_width() {
-	$GLOBALS[ 'content_width' ] = apply_filters( 'moltodestroyed_content_width', 640 );
+  $GLOBALS[ 'content_width' ] = apply_filters( 'moltodestroyed_content_width', 640 );
 }
+
+if ( ! isset( $content_width ) ) $content_width = 750;
+
 add_action( 'after_setup_theme', 'moltodestroyed_content_width', 0 );
 
 /**
@@ -208,8 +211,15 @@ function new_excerpt_more($more) {
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
-
 /**
  * Choose a random character image
  */
 require get_template_directory() . '/inc/character-image-randomizer.php';
+
+/**
+ * Remove WP Emoji settings
+ */
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
