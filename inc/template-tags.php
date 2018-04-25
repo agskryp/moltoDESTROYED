@@ -154,9 +154,9 @@ function molto_posts_navigation( $args = array() ) {
   // Don't print empty markup if there's only one page.
   if ( $GLOBALS[ 'wp_query' ] -> max_num_pages > 1 ) {
     $args = wp_parse_args( $args, array(
-      'prev_text'          => __( '&larr; View older posts', 'moltodestroyed' ),
-      'next_text'          => __( 'View newer posts &rarr;', 'moltodestroyed' ),
-      'screen_reader_text' => __( 'Posts navigation', 'moltodestroyed' ),
+      'prev_text'          => esc_html__( '&larr; View older posts', 'moltodestroyed' ),
+      'next_text'          => esc_html__( 'View newer posts &rarr;', 'moltodestroyed' ),
+      'screen_reader_text' => esc_html__( 'Posts navigation', 'moltodestroyed' ),
     ) );
 
     $next_link = get_previous_posts_link( $args[ 'next_text' ] );
@@ -186,7 +186,7 @@ function molto_blog_navigation( $args = array() ) {
 	'in_same_term'       => false,
 	'excluded_terms'     => '',
 	'taxonomy'           => 'category',
-	'screen_reader_text' => __( 'Post navigation', 'moltodestroyed' ),
+	'screen_reader_text' => esc_html__( 'Post navigation', 'moltodestroyed' ),
   ) );
 
   $navigation = '';
