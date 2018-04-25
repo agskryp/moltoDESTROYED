@@ -13,19 +13,17 @@
   <div id="primary" class="content-area">
     <main id="main" class="site-main">
       <section class="error-404 not-found">
-        <header>
-          <h1 class="page-title text-center">
-            4OH4!!
-          </h1>
-        </header>
+        <h1 class="page-title text-center">
+          4OH4!!
+        </h1>
 
         <div class="page-content">
-          <p class="text-center h4 bottom-cushion">
+          <p class="text-center h3 bottom-cushion">
             <?php esc_html_e( 'We\'re sorry, but this page doesn\'t exist.', 'moltodestroyed' ); ?>
           </p>
           
           <div class="left-character pull-left">
-           <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
+            <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
           </div>
           
           <p>
@@ -33,8 +31,8 @@
             something to inconvience you for a moment.
           </p>
           
-             <div class="right-character pull-right">
-           <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
+          <div class="right-character pull-right">
+            <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
           </div>
           
           <p>
@@ -46,15 +44,16 @@
             You could always try again tomorrow if you want, we won't stop you.
           </p>
           
-             <div class="left-character pull-left">
-           <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
+          <div class="left-character pull-left">
+            <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
           </div>
+          
           <p>
             In the mean time, you can <a href="<?php echo get_site_url(); ?>">return to the homepage</a>,
             or see if there's a reason you're seeing this page in one of the
             <a href="<?php echo get_site_url() . MOLTO_BLOG; ?>">blog postings</a>.
           </p>
-        </div>    
+        </div> <?php // .page-content // ?>
       </section> <?php // .error-404 // ?>
     </main> <?php // #main // ?>      
   </div> <?php // #primary // ?>
