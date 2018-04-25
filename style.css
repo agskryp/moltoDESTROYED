@@ -911,6 +911,20 @@ a:hover, a:active {
   line-height: 1.25;
   margin-bottom: 0.5em;
 }
+.error-404 .left-character img, .error-404 .right-character img {
+  max-width: 150px;
+  max-height: 150px;
+  padding: 0 1.5em 1.5em 0;
+}
+@media all and (min-width: 480px) {
+  .error-404 .left-character img, .error-404 .right-character img {
+    max-width: inherit;
+    max-height: inherit;
+  }
+}
+.error-404 .right-character {
+  transform: scaleX(-1);
+}
 /*--------------------------------------------------------------
  ## Comments
  --------------------------------------------------------------*/

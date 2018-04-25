@@ -1,0 +1,16 @@
+.error-404 {
+  .left-character img,
+  .right-character img {
+    max-width: 150px;
+    max-height: 150px;
+    padding: 0 1.5em 1.5em 0;
+    @media all and (min-width: $screen-sm) {
+      max-width: inherit;
+      max-height: inherit;
+    }
+  }
+  
+  .right-character {
+    transform: scaleX(-1);
+  }
+}
