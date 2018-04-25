@@ -217,6 +217,11 @@ add_filter( 'excerpt_more', 'new_excerpt_more' );
 require get_template_directory() . '/inc/character-image-randomizer.php';
 
 /**
+ * Import PHP constants
+ */
+require get_template_directory() . '/inc/constants.php';
+
+/**
  * Remove WP Emoji settings
  */
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );

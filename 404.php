@@ -6,8 +6,6 @@
    * @package moltodestroyed
    */
 
-define( 'MOLTO_BLOG', '/blog' );
-
   get_header();
 ?>
 
