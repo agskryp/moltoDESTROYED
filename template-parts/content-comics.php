@@ -28,6 +28,13 @@
     <?php endif; ?>
   </div> <?php // .entry-content // ?>
   
+  <a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Hello%20world"
+       target="popup" 
+  onclick="window.open('https://twitter.com/intent/tweet?text=Hello%20world','popup','width=600,height=600'); return false;"
+  data-size="large">
+Twitter</a>
+  
   <?php //  place social sharing buttons here // ?>
   
   <?php require get_template_directory() . '/partials/comic-navigation.php'; ?>
