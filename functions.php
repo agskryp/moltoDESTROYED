@@ -119,6 +119,8 @@ add_action( 'widgets_init', 'moltodestroyed_widgets_init' );
  * Enqueue scripts and styles.
  */
 function moltodestroyed_scripts() {
+  wp_enqueue_style( 'bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '3.3.7' );
+  
   wp_enqueue_style( 'moltodestroyed-style', get_stylesheet_uri() );
   
   wp_enqueue_script( 'bootstrap-collapse',  get_template_directory_uri() . '/js/bootstrap-collapse-min.js', array(), '3.3.7', true );
