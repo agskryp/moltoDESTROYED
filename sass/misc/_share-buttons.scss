@@ -1,16 +1,19 @@
-.social-share-button {
-  background: BLACK;  
-  padding: 6px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  &:hover {
-    background: #898989;
-  }
-  
-  
-  svg {
-    fill: WHITE;
+.social-share-container {
+  margin-bottom: 1em;
+
+  .social-share-button {
+    background: #000;  
+    padding: 6px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    &:hover {
+      background: #898989;
+    }
+
+    svg {
+      fill: #fff;
+    }
   }
 }

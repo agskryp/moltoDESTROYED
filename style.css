@@ -1447,17 +1447,20 @@ embed, iframe, object {
 #sb_instagram .sbi_follow_btn a {
   background: #999;
 }
-.social-share-button {
-  background: BLACK;
+.social-share-container {
+  margin-bottom: 1em;
+}
+.social-share-container .social-share-button {
+  background: #000;
   padding: 6px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
 }
-.social-share-button:hover {
+.social-share-container .social-share-button:hover {
   background: #898989;
 }
-.social-share-button svg {
-  fill: WHITE;
+.social-share-container .social-share-button svg {
+  fill: #fff;
 }
