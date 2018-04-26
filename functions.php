@@ -131,7 +131,7 @@ function moltodestroyed_scripts() {
   
   wp_enqueue_script( 'moltodestroyed-toggle-animation', get_template_directory_uri() . '/js/toggle-animation.js', array(), '1.0.0', true );
 
-  if ( is_singular( 'comics' ) || is_page_template( 'page-templates/page-front.php') ) {
+  if ( is_singular( 'comics' ) || is_page_template( 'page-templates/page-front.php' ) ) {
     wp_enqueue_script( 'moltodestroyed-pop-up-window', get_template_directory_uri() . '/js/pop-up-window.js', array(), '1.0.1', true );
   }
 
