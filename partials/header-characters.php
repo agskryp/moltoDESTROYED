@@ -37,4 +37,3 @@
     <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
   </div>
 </div> 
-
