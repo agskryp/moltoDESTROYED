@@ -25,9 +25,9 @@ function PopupCenter(url, title, w, h) {
 
 
   <a class="twitter-share-button"
-  href="https://twitter.com/intent/tweet?text=Read%20<?php echo get_the_title(); ?>%20on%20moltoDESTROYED%20<?php echo get_permalink(); ?>"
+  href="https://twitter.com/intent/tweet?text=Read &#39;<?php echo get_the_title(); ?>&#39; on moltoDESTROYED: <?php echo get_permalink(); ?>"
        target="popup" 
-  onclick="PopupCenter('https://twitter.com/intent/tweet?text=Read%20<?php echo get_the_title(); ?>%20on%20moltoDESTROYED%20<?php echo get_permalink(); ?>','popup','600','300');">
+  onclick="PopupCenter('','popup','600','300');">
 Twitter</a>
 
 
