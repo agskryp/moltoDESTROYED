@@ -1,0 +1,16 @@
+.social-share-button {
+  background: BLACK;  
+  padding: 6px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  &:hover {
+    background: #898989;
+  }
+  
+  
+  svg {
+    fill: WHITE;
+  }
+}

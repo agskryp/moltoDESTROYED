@@ -1447,3 +1447,17 @@ embed, iframe, object {
 #sb_instagram .sbi_follow_btn a {
   background: #999;
 }
+.social-share-button {
+  background: BLACK;
+  padding: 6px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.social-share-button:hover {
+  background: #898989;
+}
+.social-share-button svg {
+  fill: WHITE;
+}
