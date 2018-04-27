@@ -4,53 +4,29 @@
   get_header(); 
 ?>
 
-<main class="narrow-container">
-  <h2>Welcome to moltoDESTROYED</h2>
+<main class="narrow-container about-page">
+  <h1 class="text-center">About</h1>
 
   <p>
-    Yaaay! Welcome to moltoDESTROYED!! A silly little web comic
-    featuring fifteen eccentric characters and the special moments they share!
-  </p>
-
-  <p>
-    Now don't be afraid to jump straight into the latest comic strip,
-    or if you're a first timer, start at the beginning and watch the
-    evolving changes in illustration and major decline of humour between
-    each comic!
-  </p>
-
-  <p>
-    Feel free to like and/or follow us on the many different social networks
-    were connected with like FaceBook and Twitter and Google+ to instantly
-    receive the latest comic, there's also a Tumblr and Instagram page for
-    images of various drawings and original sketches. If you aren't about
-    the social scene, grab the RSS Feed.
-  </p>
-
-  <p>
-    If you're curious to know more about moltoDESTROYED, the about page has
-    a couple of sentences explaining the who and whats of the website.
-  </p>
-
-  <h2>About moltoDESTROYED</h2>
-
-  <p>
-    moltoDESTROYED is a simple, silly, and monochromatic web comic featuring
-    fifteen eccentric characters and various forms of humour.
-  </p>
-
-  <p>
-    moltoDESTROYED &amp; moltodestroyed.com is written, illustrated, created,
-    and produced by Molto D. Stroyed. Comments and criticism about the comic 
-    can be e-mailed here, feedback and issues with the website can be 
-    addressed to the webmaster.
-  </p>
-
-  <p>
-    The cast and characters of moltoDESTROYED are entirely fictional and do
+    moltoDESTROYED is a growing collection of silly and monochromatic comic strips featuring
+    a cast of fifteen eclectic characters, all of whom are entirely fictional and do
     not represent any fruit, vegetable, snack, animal, party supply or person
     living or dead.
   </p>
+  
+  <div class="left-character pull-left">
+    <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
+  </div> 
+  
+  <p>
+    All site content is written, illustrated, created, and produced by molto D. stroyed.  You can get in contact with me using the form below.  I'm also available on <a href="https://www.facebook.com/molto-DESTROYED-621021044638414/" target="_blank">Facebook</a> and <a href="https://twitter.com/moltodestroyed" target="_blank">Twitter</a>.
+  </p>
+  
+  <div class="contact-form">
+    <span style="font-size: 70%; font-style: italic;">NOTE: all fields are required</span>
+    
+    <?php echo do_shortcode( '[contact-form-7 id="1741" title="Contact form 1"]' ); ?>
+  </div>
 </main>
 
 <?php

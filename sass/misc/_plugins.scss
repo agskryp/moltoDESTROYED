@@ -1,3 +1,51 @@
 #sb_instagram .sbi_follow_btn a {
   background: #999;
 }
+
+.contact-form {
+  clear: both;
+  
+  br {
+    display: none;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  label {
+    display: inline;
+  }
+
+  input {
+    width: 100%;
+    font-size: 1.7rem;
+  }
+  
+  div.wpcf7 .ajax-loader {
+    display: block;
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    margin: 1em auto 0;
+    text-align: center;
+  }
+  
+  span.wpcf7-not-valid-tip {
+    text-align: center;
+    color: #333;
+    font-size: 1.3rem;
+  }
+  
+  div.wpcf7-response-output {
+    margin: -3em 0 1em;
+    padding: 0.2em 1em;
+    border: 2px solid #000;
+    text-align: center;
+  }
+  
+  div.wpcf7-validation-errors,
+  div.wpcf7-acceptance-missing {
+    border: 2px solid #000;
+  }
+}
