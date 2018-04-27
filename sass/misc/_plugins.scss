@@ -40,12 +40,14 @@
   div.wpcf7-response-output {
     margin: -3em 0 1em;
     padding: 0.2em 1em;
-    border: 2px solid #000;
+    border: 4px solid #000;
     text-align: center;
+    font-weight: bold;
+    background: $color__background-screen;
   }
   
   div.wpcf7-validation-errors,
   div.wpcf7-acceptance-missing {
-    border: 2px solid #000;
+    border: 4px solid #000;
   }
 }
