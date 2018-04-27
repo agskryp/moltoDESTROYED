@@ -22,7 +22,7 @@
                 alt="moltoDESTROYED Banner">
           
           <div class="footer-characters bottom-cushion">
-            <div  class="left flex-center">
+            <div class="left flex-center">
               <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
             </div> 
             
