@@ -1,5 +1,3 @@
-
-
 <div class="social-share-container text-center">
   <a class="social-share-button"
      href="https://twitter.com/intent/tweet?text=Check out the comic &#39;<?php echo get_the_title(); ?>&#39; @ moltoDESTROYED: <?php echo get_permalink(); ?>"
@@ -36,13 +34,19 @@
     </svg>
   </a>
   
-  
+  <a class="social-share-button"
+     href="http://www.stumbleupon.com/submit?url=<?php echo get_permalink(); ?>&title=<?php echo get_the_title(); ?>"
+     target="popupStumbleUpon" 
+     onclick="PopupCenter('','popupStumbleUpon','546','600');">
+    <svg width="25" height="25" viewBox="0 0 24 24">
+      <path d="M13.271 9.231l1.581.88 2.502-.846v-1.696c0-2.925-2.445-5.202-5.354-5.202-2.897 0-5.354 2.129-5.354 5.17v7.749c0 .702-.568 1.27-1.27 1.27s-1.271-.568-1.271-1.27v-3.284h-4.105v3.328c0 2.963 2.402 5.365 5.365 5.365 2.937 0 5.323-2.361 5.364-5.288v-7.653c0-.702.569-1.27 1.271-1.27s1.271.568 1.271 1.27v1.477zm6.624 2.772v3.437c0 .702-.569 1.27-1.271 1.27s-1.271-.568-1.271-1.27v-3.372l-2.502.847-1.581-.881v3.344c.025 2.941 2.418 5.317 5.364 5.317 2.963 0 5.365-2.402 5.365-5.365v-3.328h-4.104z"/>
+    </svg>
+  </a>
+     
   <a class="social-share-button"
      href="mailto:?subject=<?php echo get_the_title(); ?>&body=Check out the comic strip &#39;<?php echo get_the_title(); ?>&#39; @ moltoDESTROYED: <?php echo get_permalink(); ?>">
     <svg width="25" height="25" viewBox="0 0 24 24">
       <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
     </svg>
-  </a>
-     
+  </a>     
 </div>
-
