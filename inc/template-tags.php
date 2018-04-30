@@ -30,7 +30,7 @@ if ( !function_exists( 'molto_post_date' ) ) :
 	  esc_html_x( '%s', 'post date', 'moltodestroyed' ), $time_string
 	);
 	
-    echo '<span class="posted-on">' . $posted_on . '</span>';
+    echo $posted_on;
   }
 endif;
 

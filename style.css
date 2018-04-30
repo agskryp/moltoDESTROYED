@@ -1494,7 +1494,7 @@ embed, iframe, object {
   font-size: 1.5rem;
 }
 .contact-form textarea:focus, .contact-form input:focus {
-  outline-color: #898989;
+  outline-color: #ccc;
 }
 .contact-form div.wpcf7 .ajax-loader {
   display: block;

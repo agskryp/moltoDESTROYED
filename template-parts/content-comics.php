@@ -22,8 +22,10 @@
     ?>
       <img src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo the_title(); ?>" />
     
-      <div class="entry-meta">
-        <span class="posted-on">Posted on</span> <?php molto_post_date(); ?>
+      <div id="comicfin" class="entry-meta">
+        <span class="posted-on">
+          Posted on <?php molto_post_date(); ?>
+        </span>
       </div> 
     <?php endif; ?>
   </div> <?php // .entry-content // ?>
