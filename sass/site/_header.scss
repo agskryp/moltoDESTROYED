@@ -1,6 +1,12 @@
 .site-header {
   margin-bottom: 1.5em;
   
+  .site-banner {
+    img {
+      max-height: 190px;
+    }
+  }
+  
   .social-container {
     display: inline-block;
     position: absolute;

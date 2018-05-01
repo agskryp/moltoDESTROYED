@@ -1086,6 +1086,9 @@ a:hover, a:active {
 .site-header {
   margin-bottom: 1.5em;
 }
+.site-header .site-banner img {
+  max-height: 190px;
+}
 .site-header .social-container {
   display: inline-block;
   position: absolute;
@@ -1479,6 +1482,10 @@ embed, iframe, object {
 }
 .contact-form {
   clear: both;
+}
+.contact-form .contact-notice {
+  font-size: 70%;
+  font-style: italic;
 }
 .contact-form br {
   display: none;

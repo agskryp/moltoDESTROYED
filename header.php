@@ -9,12 +9,11 @@
 ?>
 
 <!doctype html>
-
 <html <?php language_attributes(); ?> >
-  
+
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64750314-1"></script>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <?php wp_head(); ?>
@@ -28,7 +27,7 @@
     </iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
-  
+
   <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content">
       <?php esc_html_e( 'Skip to content', 'moltodestroyed' ); ?>
@@ -39,44 +38,34 @@
         <div class="container">
           <div class="row">
             <div class="col-xs-12"> <?php // required for social-container // ?>
-              <?php 
-                if ( is_front_page() ) :
-                  require get_template_directory() . '/partials/header-characters.php';
-              ?>
+              <?php require get_template_directory() . '/partials/header-characters.php'; ?>
 
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+              <a class="site-banner" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <?php if ( is_front_page() ) : ?>
                   <h1 class="site-title sr-only">
                     <?php bloginfo( 'name' ); ?>
                   </h1>
 
-                  <?php require get_template_directory() . '/partials/site-banner.php'; ?>
-                </a>
-              <?php
-                  require get_template_directory() . '/partials/header-social-container.php';
-
-                else :
-                  require get_template_directory() . '/partials/header-characters.php';
-              ?>                
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <?php else : ?>
                   <p class="site-title sr-only">
                     <?php bloginfo( 'name' ); ?>
                   </p>
+                <?php endif; ?>
 
-                  <?php require get_template_directory() . '/partials/site-banner.php'; ?>
-                </a>
-              <?php
-                  require get_template_directory() . '/partials/header-social-container.php';
+                <img src="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-xs.png"
+                     srcset="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-sm.png 480w,
+                             <?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-md.png 768w,"
+                     alt="moltoDESTROYED Banner">
+              </a>
 
-                endif;
-              ?>            
+              <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
             </div> <?php // .col-xs-12 // ?>
-          </div>
+          </div> <?php // .row // ?>
         </div> <?php // .container // ?>
       </div> <?php // .site-branding // ?>
 
       <nav id="site-navigation" class="main-navigation">
-        <button
-                class="navbar-toggler menu-toggle"
+        <button class="navbar-toggler menu-toggle"
                 type="button"
                 data-toggle="collapse"
                 data-target="#mainNavMenu"
@@ -84,7 +73,7 @@
                 aria-expanded="false"
                 aria-label="Toggle navigation">
           <b>MENU</b>
-          
+
           <div id="main-menu-icon" class="main-menu-icon">
             <span></span>
             <span></span>
@@ -92,7 +81,7 @@
             <span></span>
           </div>
         </button>
-        
+
         <div class="collapse navbar-collapse" id="mainNavMenu">
           <?php
             wp_nav_menu( array(
@@ -101,7 +90,7 @@
             ) );
           ?>
         </div>
-      </nav> <?php // #site-navigation // ?>   
+      </nav> <?php // #site-navigation // ?>
     </header> <?php // #masthead // ?>
 
     <div id="content" class="site-content">
