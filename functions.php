@@ -123,6 +123,8 @@ function moltodestroyed_scripts() {
   
   wp_enqueue_style( 'moltodestroyed-style', get_stylesheet_uri() );
   
+  wp_enqueue_script( 'google-scripts',  get_template_directory_uri() . '/js/google-scripts.js', array(), '1.0.0', false );
+  
   wp_enqueue_script( 'bootstrap-collapse',  get_template_directory_uri() . '/js/bootstrap-collapse-min.js', array(), '3.3.7', true );
   
   wp_enqueue_script( 'bootstrap-transitions',  get_template_directory_uri() . '/js/bootstrap-transitions-min.js', array(), '3.3.7', true );
