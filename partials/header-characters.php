@@ -12,15 +12,15 @@
   </div>
 
 
-  <div class="small center-left">
+  <div class="small flex-center center-left">
     <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
   </div>
 
-  <div class="small center">
+  <div class="small flex-center center">
     <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
   </div>
 
-  <div class="small center-right">
+  <div class="small flex-center center-right">
     <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
   </div>
 

@@ -1,5 +1,5 @@
 // Rem output with px fallback
-@mixin font-size($sizeValue: 1) {
+@mixin font-size( $sizeValue: 1 ) {
   font-size: ($sizeValue * 16) * 1px;
   font-size: $sizeValue * 1rem;
 }
@@ -24,7 +24,7 @@
 }
 
 // Column width with margin
-@mixin column-width($numberColumns: 3) {
+@mixin column-width( $numberColumns: 3 ) {
   width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
 
@@ -38,8 +38,22 @@
 
 // Default transform state
 @mixin zero-degree() {
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
+  -webkit-transform: rotate( 0deg );
+  -moz-transform: rotate( 0deg );
+  -o-transform: rotate( 0deg );
+  transform: rotate( 0deg );
+}
+
+// Display content to be flex-end
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+// Display content to be flex-center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
