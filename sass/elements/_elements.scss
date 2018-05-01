@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-//  overflow-x: hidden;
 }
 
 *,
@@ -11,8 +10,7 @@ html {
 }
 
 body {
-  background: $color__background-body;
-  /* Fallback for when there is no custom background color defined. */
+  background: $color__background-body; // Fallback for when there is no custom background color defined.
   overflow-x: hidden;
   font-size: 16px;
 
@@ -32,22 +30,18 @@ hr {
   margin-bottom: 1.5em;
 }
 
-@import "lists";
-
 img {
-  height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */
+  height: auto; // Make sure images are scaled correctly.
+  max-width: 100%; // Adhere to container width.
 }
 
 figure {
-  margin: 1em 0;
-  /* Extra wide images within figure tags don't overflow the content area. */
+  margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
 }
-
-@import "tables";
 
 button {
   outline: none;
 }
+
+@import "lists";
+@import "tables";
