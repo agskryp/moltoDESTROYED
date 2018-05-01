@@ -11,17 +11,17 @@
     width: 60px;
     height: 60px;
     position: absolute;
-    @media all and (min-width: $screen-xs) {
+    @media all and ( min-width: $screen-xs ) {
       width: 65px;
       height: 65px;
     }
 
-    @media all and (min-width: $screen-sm) {
+    @media all and ( min-width: $screen-sm ) {
       width: 70px;
       height: 70px;
     }
 
-    @media all and (min-width: 600px) {
+    @media all and ( min-width: $screen-ms ) {
       width: 80px;
       height: 80px;
     }
@@ -30,31 +30,31 @@
   .center-left {
     left: 0;
     top: 44%;
-    @media all and (min-width: $screen-xs) {
+    @media all and ( min-width: $screen-xs ) {
       left: 1%;
     }
 
-    @media all and (min-width: $screen-sm) {
+    @media all and ( min-width: $screen-sm ) {
       left: 3%;
       top: 48%;
     }
 
-    @media all and (min-width: 600px) {
+    @media all and ( min-width: $screen-ms ) {
       left: 5%;
       top: 53%;
     }
 
-    @media all and (min-width: $screen-md) {
+    @media all and ( min-width: $screen-md ) {
       left: 3%;
       top: 60%;
     }
 
-    @media all and (min-width: 992px) {
+    @media all and ( min-width: $screen-lg ) {
       top: 62%;
       left: 15%;
     }
 
-    @media all and (min-width: 1200px) {
+    @media all and ( min-width: $screen-xl ) {
       left: 21%;
     }
   }
@@ -63,21 +63,21 @@
     top: -29px;
     left: 39%;
 
-    @media all and (min-width: $screen-sm) {
+    @media all and ( min-width: $screen-sm ) {
       top: -20px;
       left: 41%;
     }
 
-    @media all and (min-width: $screen-md) {
+    @media all and ( min-width: $screen-md ) {
       top: -5px;
       left: 43%;
     }
 
-    @media all and (min-width: $screen-lg) {
+    @media all and ( min-width: $screen-lg ) {
       left: 44%;
     }
 
-    @media all and (min-width: 1200px) {
+    @media all and ( min-width: $screen-xl ) {
       left: 45%;
     }
   }
@@ -86,24 +86,24 @@
     top: 41%;
     right: 19%;
 
-    @media all and (min-width: $screen-xs) {
+    @media all and ( min-width: $screen-xs ) {
       top: 43%;
     }
 
-    @media all and (min-width: $screen-sm) {
+    @media all and ( min-width: $screen-sm ) {
       top: 47%
     }
 
-    @media all and (min-width: $screen-md) {
+    @media all and ( min-width: $screen-md ) {
       top: 55%;
       right: 19%;
     }
 
-    @media all and (min-width: $screen-lg) {
+    @media all and ( min-width: $screen-lg ) {
       right: 26%;
     }
 
-    @media all and (min-width: 1200px) {
+    @media all and ( min-width: $screen-xl ) {
       right: 30%;
     }
   }
@@ -113,15 +113,7 @@
     height: 200px;
     display: none;
     text-align: right;
-    @media all and (min-width: 992px) {
-      display: block;
-    }
-  }
-
-  .far-far-left,
-  .far-far-right {
-    display: none;
-    @media all and (min-width: 1500px) {
+    @media all and ( min-width: $screen-lg ) {
       display: block;
     }
   }
@@ -129,8 +121,16 @@
   .far-right,
   .far-left {
     display: none;
-    @media all and (min-width: 1250px) {
+    @media all and ( min-width: $screen-xl ) {
       @include flex-end;
+    }
+  }
+  
+  .far-far-left,
+  .far-far-right {
+    display: none;
+    @media all and ( min-width: $screen-xg ) {
+      display: block;
     }
   }
 
@@ -138,7 +138,7 @@
   .far-right,
   .far-far-right,
   .center-right {
-    transform: scaleX(-1);
+    transform: scaleX( -1 );
   }
 
   .far-far-left {
@@ -157,7 +157,7 @@
   .left {
     top: 3%;
     left: -94px;
-    @media all and (min-width: 1200px) {
+    @media all and ( min-width: $screen-xl ) {
       left: 8px;
     }
   }
@@ -167,10 +167,10 @@
     right: -94px;
     z-index: 2;
     display: none;
-    @media all and (min-width: 992px) {
+    @media all and ( min-width: $screen-lg ) {
       @include flex-end;
     }
-    @media all and (min-width: 1200px) {
+    @media all and ( min-width: $screen-xl ) {
       right: 0;
     }
   }
@@ -186,7 +186,7 @@
     right: -238px;
     z-index: 2;
     display: none;
-    @media all and (min-width: 1500px) {
+    @media all and ( min-width: $screen-xg ) {
       @include flex-end;
     }
   }
