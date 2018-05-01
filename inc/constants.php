@@ -1,7 +1,6 @@
 <?php
 
-  /**
-   * Pages 
-   */
-
-  define( 'MOLTO_BLOG', '/blog' );
+/**
+ * Pages 
+ */
+define( 'MOLTO_BLOG', '/blog' );
