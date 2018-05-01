@@ -119,6 +119,7 @@ add_action( 'widgets_init', 'moltodestroyed_widgets_init' );
  * Enqueue scripts and styles.
  */
 function moltodestroyed_scripts() {
+  wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Bangers|Open+Sans:400,600' );
   wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/sass/bootstrap/bootstrap.min.css', array(), '3.3.7' );
   wp_enqueue_style( 'moltodestroyed-style', get_stylesheet_uri() );
   
@@ -173,14 +174,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 ////////////////////////////////////////////////////////////////////////////////////////
 
 /**
- * Import Google Fonts.
- */
-function custom_add_google_fonts() {
-  wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Bangers|Open+Sans:400,600', false );
-}
-add_action( 'wp_enqueue_scripts', 'custom_add_google_fonts' );
-
-/**
  * Redirect the search page to the 404 page
  */
 function wpb_filter_query( $query, $error = true ) {
@@ -208,7 +201,6 @@ add_action( 'widgets_init', 'remove_search_widget' );
  */
 function new_excerpt_more($more) {
   global $post;
-	
   return '... <br> <a class="read-more" href="'. get_permalink( $post -> ID ) . '"> Continue Reading &rarr;</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
