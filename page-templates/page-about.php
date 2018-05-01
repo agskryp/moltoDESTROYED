@@ -23,7 +23,7 @@
   </p>
   
   <div class="contact-form">
-    <span style="font-size: 70%; font-style: italic;">NOTE: all fields are required</span>
+    <span class="contact-notice">NOTE: all fields are required</span>
     
     <?php echo do_shortcode( '[contact-form-7 id="1741" title="Contact form 1"]' ); ?>
   </div>
