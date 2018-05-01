@@ -11,7 +11,7 @@
   <header class="comic-header">
     <?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
   </header>
-  
+
   <?php require get_template_directory() . '/partials/comic-navigation.php'; ?>
 
   <div class="entry-content comic-strip text-center">
@@ -21,18 +21,18 @@
       if( !empty( $image ) ): 
     ?>
       <img src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo the_title(); ?>" />
-    
+
       <div id="comicfin" class="entry-meta">
         <span class="posted-on">
           Posted on <?php molto_post_date(); ?>
         </span>
-      </div> 
+      </div>
     <?php endif; ?>
-  </div> <?php // .entry-content // ?>
+  </div>
 
   <?php
     require get_template_directory() . '/partials/social-share-buttons.php';
-  
+
     require get_template_directory() . '/partials/comic-navigation.php';
   ?>
 </article>

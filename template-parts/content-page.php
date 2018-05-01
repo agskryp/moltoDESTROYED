@@ -15,28 +15,28 @@
   <?php moltodestroyed_post_thumbnail(); ?>
 
   <div class="entry-content">
-	<?php
+    <?php
       the_content();
 
       wp_link_pages( array(
-		'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'moltodestroyed' ),
-		'after'  => '</div>',
+        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'moltodestroyed' ),
+        'after'  => '</div>',
       ) );
-	?>
-  </div> <?php // .entry-content // ?>
+    ?>
+  </div>
 
   <?php if ( get_edit_post_link() ) : ?>
-	<footer class="entry-footer">
+    <footer class="entry-footer">
       <?php
         edit_post_link(	sprintf( wp_kses(
-		  /* translators: %s: Name of current post. Only visible to screen readers */
-		  __( 'Edit <span class="screen-reader-text">%s</span>', 'moltodestroyed' ), array(
-		    'span' => array(
-		      'class' => array(),
-		    ),
-		  )
-		), get_the_title() ), '<span class="edit-link pull-right bottom-cushion">', '</span>'	);
+          /* translators: %s: Name of current post. Only visible to screen readers */
+          __( 'Edit <span class="screen-reader-text">%s</span>', 'moltodestroyed' ), array(
+            'span' => array(
+              'class' => array(),
+            ),
+          )
+        ), get_the_title() ), '<span class="edit-link pull-right bottom-cushion">', '</span>'	);
       ?>
-	</footer> <?php // .entry-footer // ?>
+    </footer>
   <?php endif; ?>
 </article>
