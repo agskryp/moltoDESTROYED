@@ -20,13 +20,11 @@
 </head>
 
 <body <?php body_class(); ?> >
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
+  <noscript> <?php // Google Tag Manager (noscript) // ?>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCG5RNG"
             height="0" width="0" style="display:none;visibility:hidden">
     </iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  </noscript> 
 
   <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content">
@@ -37,7 +35,7 @@
       <div class="site-branding text-center">
         <div class="container">
           <div class="row">
-            <div class="col-xs-12"> <?php // required for social-container // ?>
+            <div class="col-xs-12"> <?php // Required for .social-container // ?>
               <?php require get_template_directory() . '/partials/header-characters.php'; ?>
 
               <a class="site-banner" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -59,20 +57,16 @@
               </a>
 
               <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
-            </div> <?php // .col-xs-12 // ?>
-          </div> <?php // .row // ?>
-        </div> <?php // .container // ?>
-      </div> <?php // .site-branding // ?>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <nav id="site-navigation" class="main-navigation">
-        <button class="navbar-toggler menu-toggle"
-                type="button"
-                data-toggle="collapse"
-                data-target="#mainNavMenu"
-                aria-controls="mainNavMenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-          <b>MENU</b>
+        <button class="navbar-toggler menu-toggle" type="button" data-toggle="collapse" data-target="#mainNavMenu" aria-controls="mainNavMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <b>
+            MENU
+          </b>
 
           <div id="main-menu-icon" class="main-menu-icon">
             <span></span>
@@ -91,6 +85,6 @@
           ?>
         </div>
       </nav> <?php // #site-navigation // ?>
-    </header> <?php // #masthead // ?>
+    </header><?php // #masthead // ?>
 
     <div id="content" class="site-content">
