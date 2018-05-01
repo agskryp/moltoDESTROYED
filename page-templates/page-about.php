@@ -5,7 +5,9 @@
 ?>
 
 <main class="narrow-container about-page">
-  <h1 class="text-center">About</h1>
+  <h1 class="text-center">
+    About
+  </h1>
 
   <p>
     moltoDESTROYED is a growing collection of silly and monochromatic comic strips featuring a cast of fifteen eclectic characters, all of whom are entirely fictional and do not represent any fruit, vegetable, snack, animal, party supply or person living or dead.

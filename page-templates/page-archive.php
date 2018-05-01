@@ -8,10 +8,14 @@
   <div id="primary" class="content-area">
     <main id="main" class="site-main archive-page">
       <div class="row">
-        <h1 class="sr-only">Archive</h1>
+        <h1 class="sr-only">
+          Archive
+        </h1>
 
         <section class="col-xs-12 col-sm-6">
-          <h2>Comic Strips</h2>
+          <h2>
+            Comic Strips
+          </h2>
 
           <ul>
             <?php
@@ -28,7 +32,9 @@
         </section>
 
         <section class="col-xs-12 col-sm-6">
-          <h2>Blog Posts</h2>
+          <h2>
+            Blog Posts
+          </h2>
 
           <ul>
             <?php
