@@ -54,6 +54,8 @@
       </section> <?php // .error-404 // ?>
     </main> <?php // #main // ?>
   </div> <?php // #primary // ?>
+  
+  <?php dynamic_sidebar( 'sidebar-1' ); ?>
 </div> <?php // .narrow-container // ?>
 
 <?php
