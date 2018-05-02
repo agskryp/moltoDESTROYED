@@ -952,15 +952,15 @@ a:hover, a:active {
   display: inline-flex;
   align-items: center;
 }
-.site-footer a svg {
-  fill: #bcbcbc;
-  margin-right: 0.5em;
-}
 .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
   color: #898989;
 }
 .site-footer a:hover svg, .site-footer a:focus svg, .site-footer a:active svg {
   fill: #898989;
+}
+.site-footer a svg {
+  fill: #bcbcbc;
+  margin-right: 0.5em;
 }
 .site-footer .footer-banner {
   max-width: 500px;
@@ -996,7 +996,7 @@ a:hover, a:active {
   }
 }
 .site-footer .footer-menu {
-  background: #404040;
+  background: #333;
   border-top: 2px solid #000;
   padding-top: 1.5em;
 }

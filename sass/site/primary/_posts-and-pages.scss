@@ -27,6 +27,7 @@
  ********************************/
 .blog-posts-list,
 .blog-post {
+  
   article {
     border-bottom: $border-2px;
   }
@@ -42,6 +43,7 @@
 }
 
 .blog-posts-list {
+  
   h2 {
     font-size: 2em;
     @media all and ( min-width: $screen-xs ) {

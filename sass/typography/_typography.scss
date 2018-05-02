@@ -1,20 +1,13 @@
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
+body, button, input, select, optgroup, textarea {
   color: $color__text-main;
   font-family: $font__main;
   @include font-size(2);
   line-height: $font__line-height-body;
 }
 
-input,
-textarea {
+input, textarea {
   font-weight: 100;
 }
 
 @import "headings";
-
 @import "copy";

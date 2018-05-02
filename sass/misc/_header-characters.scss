@@ -1,4 +1,5 @@
 .header-characters {
+  
   div {
     position: absolute;
   }
@@ -62,7 +63,6 @@
   .center {
     top: -29px;
     left: 39%;
-
     @media all and ( min-width: $screen-sm ) {
       top: -20px;
       left: 41%;
@@ -85,7 +85,6 @@
   .center-right {
     top: 41%;
     right: 19%;
-
     @media all and ( min-width: $screen-xs ) {
       top: 43%;
     }
@@ -151,7 +150,6 @@
     top: 17%;
     left: -108px;
     z-index: 3;
-
   }
 
   .left {
@@ -170,6 +168,7 @@
     @media all and ( min-width: $screen-lg ) {
       @include flex-end;
     }
+    
     @media all and ( min-width: $screen-xl ) {
       right: 0;
     }

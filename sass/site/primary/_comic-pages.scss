@@ -23,24 +23,25 @@
   line-height: 1;
   margin-bottom: 1em;
 
-.comic-navigation {
-  max-width: 567px;
-  margin: 0 auto;
-  div  {
-    padding: 0;
-  }
+  .comic-navigation {
+    max-width: 567px;
+    margin: 0 auto;
     
-  a {
-    font-size: 1.2em;
-    letter-spacing: -3px;
-    padding-right: 7px;
-    @media all and ( min-width: $screen-xs ) {
-      font-size: 1.5em;
+    div  {
+      padding: 0;
     }
     
-    @media all and ( min-width: $screen-md ) {
-      font-size: 2em;
-      letter-spacing: -6px;
+    a {
+      font-size: 1.2em;
+      letter-spacing: -3px;
+      padding-right: 7px;
+      @media all and ( min-width: $screen-xs ) {
+        font-size: 1.5em;
+      }
+    
+      @media all and ( min-width: $screen-md ) {
+        font-size: 2em;
+        letter-spacing: -6px;
       }
     }
   }

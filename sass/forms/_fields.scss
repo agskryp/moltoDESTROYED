@@ -18,27 +18,15 @@ textarea {
   border: 1px solid $color__border-input;
   border-radius: 3px;
   padding: 5px 10px;
-
   &:focus {
     color: $color__text-input-focus;
   }
 }
 
-::-webkit-input-placeholder { 
-  color: #ccc; // Chrome/Opera/Safari
-}
-
-::-moz-placeholder {
-  color: #ccc; // Firefox 19+
-}
-
-:-moz-placeholder {
-  color: #ccc; // Firefox 18-
-}
-
-:-ms-input-placeholder {
-  color: #ccc; // IE 10+
-}
+::-webkit-input-placeholder { color: $color__border-input; } // Chrome/Opera/Safari
+::-moz-placeholder          { color: $color__border-input; } // Firefox 19+
+:-moz-placeholder           { color: $color__border-input; } // Firefox 18-
+:-ms-input-placeholder      { color: $color__border-input; } // IE 10+
 
 select {
   border: 1px solid $color__border-input;

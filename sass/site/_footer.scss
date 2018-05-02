@@ -1,20 +1,22 @@
 .site-footer {
+  
   a {
     color: $color__link-hover;
     display: inline-flex;
     align-items: center;
-    svg {
-      fill: $color__link-hover;
-      margin-right: .5em;
-    }
-
     &:hover,
     &:focus,
     &:active {
       color: $color__link;
+      
       svg {
         fill: $color__link;
       }
+    }
+    
+    svg {
+      fill: $color__link-hover;
+      margin-right: .5em;
     }
   }
 
@@ -28,6 +30,7 @@
     display: flex;
     align-content: center;
     justify-content: space-around;
+    
     div {
       width: 120px;
       height: 120px;
@@ -56,6 +59,7 @@
     background: lighten($color__background-dark, 20%);
     border-top: $border-2px;
     padding-top: $grid-padding;
+    
     nav {
       max-width: 420px;
       margin: 0 auto;
@@ -74,6 +78,7 @@
   .footer-copyright {
     background: $color__background-dark;
     padding-top: .5em;
+    
     span {
       color: $color__text-light;
       font-size: .6em;

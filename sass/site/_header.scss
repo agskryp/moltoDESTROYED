@@ -1,11 +1,9 @@
 .site-header {
-  margin-bottom: 1.5em;
+  margin-bottom: $grid-padding;
 }
 
-.site-banner {
-  img {
-    max-height: 190px;
-  }
+.site-banner img {
+  max-height: 190px;
 }
 
 .social-container {
