@@ -26,11 +26,9 @@
   textarea {
     width: 100%;
     font-size: 1.5rem;
-  }
-
-  textarea:focus,
-  input:focus {
-    outline-color: #ccc;
+    &:focus {
+      outline-color: $color__background-hr;
+    }
   }
 
   input[type="submit"] {
@@ -46,7 +44,7 @@
     }
   }
 
-  div.wpcf7 .ajax-loader {
+  div.wpcf7 .ajax-loader { // Spinner
     display: block;
     background-size: cover;
     width: 32px;
@@ -56,9 +54,9 @@
     clear: both;
   }
 
-  span.wpcf7-not-valid-tip {
+  span.wpcf7-not-valid-tip { // Input errors
     text-align: center;
-    color: #333;
+    color: $color__text-main;
     font-size: 1.3rem;
   }
 

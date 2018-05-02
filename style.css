@@ -838,16 +838,19 @@ a:hover, a:active {
   display: table;
   margin: 0 auto 0.5em;
 }
-.about-page .left-character img {
+.left-character img, .right-character img {
   max-width: 150px;
   max-height: 150px;
   padding: 0 1.5em 1.5em 0;
 }
 @media all and (min-width: 480px) {
-  .about-page .left-character img {
+  .left-character img, .right-character img {
     max-width: inherit;
     max-height: inherit;
   }
+}
+.right-character {
+  transform: scaleX(-1);
 }
 .comic-header {
   line-height: 1;
@@ -933,20 +936,6 @@ a:hover, a:active {
 .archive-page li {
   line-height: 1.25;
   margin-bottom: 0.5em;
-}
-.error-404 .left-character img, .error-404 .right-character img {
-  max-width: 150px;
-  max-height: 150px;
-  padding: 0 1.5em 1.5em 0;
-}
-@media all and (min-width: 480px) {
-  .error-404 .left-character img, .error-404 .right-character img {
-    max-width: inherit;
-    max-height: inherit;
-  }
-}
-.error-404 .right-character {
-  transform: scaleX(-1);
 }
 /*--------------------------------------------------------------
  ## Comments
@@ -1489,7 +1478,7 @@ embed, iframe, object {
   width: 100%;
   font-size: 1.5rem;
 }
-.contact-form textarea:focus, .contact-form input:focus {
+.contact-form input:focus, .contact-form textarea:focus {
   outline-color: #ccc;
 }
 .contact-form input[type="submit"] {
@@ -1515,7 +1504,7 @@ embed, iframe, object {
 }
 .contact-form span.wpcf7-not-valid-tip {
   text-align: center;
-  color: #333;
+  color: #000;
   font-size: 1.3rem;
 }
 .contact-form div.wpcf7-response-output {
