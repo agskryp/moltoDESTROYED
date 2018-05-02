@@ -8,8 +8,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <header class="comic-header">
-    <?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
+  <header>
+    <?php the_title( '<h1 class="entry-title text-center comic-header">', '</h1>' ); ?>
   </header>
 
   <?php require get_template_directory() . '/partials/comic-navigation.php'; ?>

@@ -1,66 +1,61 @@
 .site-footer {
   a {
-    color: #ccc;
+    color: $color__link-hover;
     display: inline-flex;
     align-items: center;
-
     svg {
-      fill: #ccc;
+      fill: $color__link-hover;
       margin-right: .5em;
     }
 
     &:hover,
     &:focus,
     &:active {
-      color: #999;
-      
+      color: $color__link;
       svg {
-        fill: #999;
+        fill: $color__link;
       }
-    } 
+    }
   }
-  
+
   .footer-banner {
     max-width: 500px;
     width: 100%;
     margin-bottom: .5em;
   }
-  
+
   .footer-characters {
     display: flex;
     align-content: center;
     justify-content: space-around;
-    
     div {
       width: 120px;
       height: 120px;
     }
-    
+
     img {
       max-height: 100%;
     }
-    
+
     .center {
       display: none;
-      @media all and (min-width: $screen-sm) {
+      @media all and ( min-width: $screen-sm ) {
         display: flex;
       }
     }
-    
+
     .right {
-       transform: scaleX(-1);
-      
-      @media all and (min-width: $screen-lg) {
+      transform: scaleX( -1 );
+      @media all and ( min-width: $screen-lg ) {
         transform: none;
       }
     }
   }
 
   .footer-menu {
-    background: #333;
-    border-top: 2px solid #000;
-    padding-top: 1.5em;   
-
+    background: lighten($color__background-dark, 20%);
+    border-top: $border-2px;
+    padding-top: $grid-padding;
     nav {
       max-width: 420px;
       margin: 0 auto;
@@ -72,23 +67,22 @@
     }
 
     h2 {
-      color: #fff;
+      color: $color__text-light;
     }
   }
 
   .footer-copyright {
-    background: #000;
+    background: $color__background-dark;
     padding-top: .5em;
-
     span {
-      color: #fff;
+      color: $color__text-light;
       font-size: .6em;
       line-height: 1.2;
       padding-bottom: .5em;
     }
 
     .pull-right {
-      padding-left: 1.5em;
+      padding-left: $grid-padding;
     }
   }
 }

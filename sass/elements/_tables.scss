@@ -1,7 +1,7 @@
 table {
-  margin: 0 0 1.5em;
+  margin: 0 0 $grid-padding;
   width: 100%;
-  border: 2px solid #000;
+  border: $border-2px;
   background: $color__background-screen;
   line-height: 1.25;
 }
@@ -12,5 +12,5 @@ thead {
 
 td, th {
   padding: 10px;
-  border: 2px solid #000;
+  border: $border-2px;
 }
