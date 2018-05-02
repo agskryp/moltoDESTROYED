@@ -13,6 +13,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  
 // Google Adsense
 (adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "ca-pub-7152512923549304",
+google_ad_client: "ca-pub-5942635838820429",
 enable_page_level_ads: true
 });
