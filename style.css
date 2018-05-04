@@ -1,10 +1,10 @@
 /*!
  Theme Name: moltodestroyed
  Theme URI: https://underscores.me/
- Author: AGSkryp
+ Author: A.G. Skryp
  Author URI: http://agskryp.com
  Description: Wordpress theme for the moltodestroyed web comic
- Version: 1.0.0
+ Version: 1.0.1
  License: GNU General Public License v2 or later
  License URI: LICENSE
  Text Domain: moltodestroyed
@@ -512,6 +512,7 @@ a:hover, a:active {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
+  color: #000;
 }
 .main-navigation a:visited {
   color: #000;
@@ -856,7 +857,7 @@ a:hover, a:active {
 }
 .comic-header {
   line-height: 1;
-  margin-bottom: 0.25;
+  margin-bottom: 0.25em;
 }
 .comic-strip {
   margin: 0 0 1em;

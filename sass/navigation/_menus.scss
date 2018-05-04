@@ -76,8 +76,9 @@
     display: block;
     text-decoration: none;
     text-transform: uppercase;
+    color: $color__text-main;
     &:visited {
-      color: #000;
+      color: $color__text-main;
     }
     
     &:hover,
