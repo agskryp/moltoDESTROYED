@@ -17,7 +17,11 @@
 <div class="narrow-container">
   <div id="primary" class="content-area">
     <main id="main" class="site-main blog-posts-list">
-      <?php if ( have_posts() ) : ?>
+      <?php 
+        require_once get_template_directory() . '/partials/ads/top-of-main-area.php';
+      
+        if ( have_posts() ) :
+      ?>
         <h1 class="page-title screen-reader-text">
           <?php single_post_title(); ?>
         </h1>
@@ -34,6 +38,9 @@
              */
             get_template_part( 'template-parts/content', get_post_format() );
           endwhile;
+      
+        require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
+        
         molto_posts_navigation();
 
         else :
