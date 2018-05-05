@@ -11,8 +11,3 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NCG5RNG');
  
-// Google Adsense
-(adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "ca-pub-5942635838820429",
-enable_page_level_ads: true
-});
