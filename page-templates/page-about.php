@@ -5,9 +5,15 @@
 ?>
 
 <main class="narrow-container about-page">
+  <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
+  
   <h1 class="text-center">
     About
   </h1>
+  
+  <div class="right-character pull-right">
+    <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
+  </div>
 
   <p>
     moltoDESTROYED is a growing collection of silly and monochromatic comic strips featuring a cast of fifteen eclectic characters, all of whom are entirely fictional and do not represent any fruit, vegetable, snack, animal, party supply or person living or dead.
@@ -20,6 +26,8 @@
   <p>
     All site content is written, illustrated, created, and produced by molto D. stroyed. You can get in contact with me using the form below. I'm also available on <a href="<?php echo esc_url( __( 'https://www.facebook.com/molto-DESTROYED-621021044638414/', 'moltodestroyed' ) ); ?>" target="_blank">Facebook</a> and <a href="<?php echo esc_url( __( 'https://twitter.com/moltodestroyed', 'moltodestroyed' ) ); ?>" target="_blank">Twitter</a>.
   </p>
+  
+  <?php require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>
 
   <div class="contact-form">
     <span class="contact-notice">NOTE: all fields are required</span>

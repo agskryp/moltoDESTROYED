@@ -7,6 +7,8 @@
 <div class="narrow-container">
   <div id="primary" class="content-area">
     <main id="main" class="site-main archive-page">
+      <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
+      
       <div class="row">
         <h1 class="sr-only">
           Archive
@@ -51,6 +53,8 @@
           </ul>
         </section>
       </div> <?php // .row // ?>
+      
+      <?php require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>
     </main> <?php // #main // ?>
   </div> <?php // #primary // ?>
 </div> <?php // .narrow-container // ?>
