@@ -24,7 +24,7 @@
               <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
             </div>
 
-            <div class="center flex-center">
+            <div class="left flex-center">
               <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
             </div>
 

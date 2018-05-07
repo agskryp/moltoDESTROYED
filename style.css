@@ -977,19 +977,17 @@ a:hover, a:active {
   justify-content: space-around;
 }
 .site-footer .footer-characters div {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
+}
+@media all and (min-width: 480px) {
+  .site-footer .footer-characters div {
+    width: 120px;
+    height: 120px;
+  }
 }
 .site-footer .footer-characters img {
   max-height: 100%;
-}
-.site-footer .footer-characters .center {
-  display: none;
-}
-@media all and (min-width: 480px) {
-  .site-footer .footer-characters .center {
-    display: flex;
-  }
 }
 .site-footer .footer-characters .right {
   transform: scaleX(-1);
