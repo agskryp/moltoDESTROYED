@@ -841,6 +841,18 @@ a:hover, a:active {
   margin-top: 0.5em;
   display: inline-block;
 }
+.entry-header {
+  display: flex;
+}
+.entry-header .entry-meta {
+  font-size: 0.75em;
+  padding-left: 2em;
+}
+.blog-title {
+  display: inline-block;
+  word-break: break-word;
+  flex-grow: 2;
+}
 /**
  * Style for characters within main body of site
  */
@@ -1526,4 +1538,14 @@ embed, iframe, object {
 }
 .social-share-container .social-share-button svg {
   fill: #fff;
+}
+.ad-container {
+  margin-bottom: 1.5em;
+  clear: both;
+}
+.ad-container span {
+  font-size: 50%;
+  display: block;
+  padding: 0;
+  margin: 0;
 }

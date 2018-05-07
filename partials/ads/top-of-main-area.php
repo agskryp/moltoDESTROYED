@@ -1,5 +1,5 @@
-<div style="margin-bottom: 1.5em; clear: both;">
-  <span style="font-size: 50%; display: block; text-align: center; padding: 0; margin: 0;">
+<div class="ad-container">
+  <span class="text-center">
     Advertisement
   </span>
 
@@ -11,6 +11,6 @@
   </ins>
 
   <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </div>

@@ -82,6 +82,21 @@
   }
 }
 
+.entry-header {
+  display: flex;
+  
+  .entry-meta {
+    font-size: .75em;
+    padding-left: 2em;
+  }
+}
+
+.blog-title {
+  display: inline-block;
+  word-break: break-word;
+  flex-grow: 2;
+}
+
 /**
  * Style for characters within main body of site
  */
