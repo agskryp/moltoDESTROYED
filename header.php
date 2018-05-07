@@ -12,8 +12,9 @@
 <html <?php language_attributes(); ?> >
 
 <head>
-  <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="<?php bloginfo( 'charset' ); ?>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64750314-1"></script>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <?php wp_head(); ?>
