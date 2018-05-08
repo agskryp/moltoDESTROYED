@@ -1,0 +1,19 @@
+.social-share-container {
+  margin-bottom: 1em;
+
+  .social-share-button {
+    background: $color__background-dark;  
+    padding: 6px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    &:hover {
+      background: $color__link;
+    }
+
+    svg {
+      fill: $color__text-light;
+    }
+  }
+}

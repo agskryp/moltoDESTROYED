@@ -1,9 +1,9 @@
 p {
-	margin-bottom: 1.5em;
+  margin-bottom: $grid-padding;
 }
 
 dfn, cite, em, i {
-	font-style: italic;
+  font-style: italic;
 }
 
 cite {
@@ -11,39 +11,39 @@ cite {
 }
 
 blockquote {
-  margin: 0 0 1.5em;
+  margin: 0 0 $grid-padding;
   border-left: 4px solid #000;
   font-style: italic;
   background: $color__background-screen;
 }
 
 address {
-  margin: 0 0 1.5em;
-  margin-left: 1.5em;
+  margin: 0 0 $grid-padding;
+  margin-left: $grid-padding;
   font-size: 1.1em;
   line-height: 1.25;
 }
 
 pre {
-	background: $color__background-pre;
-	font-family: $font__pre;
-	@include font-size(1);
-	line-height: $font__line-height-pre;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
+  background: $color__background-pre;
+  font-family: $font__pre;
+  @include font-size(1.5);
+  line-height: $font__line-height-pre;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
 }
 
 code, kbd, tt, var {
-	font-family: $font__code;
-	@include font-size(0.9375);
+  font-family: $font__code;
+  @include font-size(0.9375);
 }
 
 code {
   font-size: 85%;
   color: #f1f1f1;
-  background-color: #000;
+  background-color: $color__background-dark;
   border-radius: 2px;
   max-width: 100%;
   overflow: auto;
@@ -63,7 +63,7 @@ mark, ins {
 }
 
 big {
-	font-size: 125%;
+  font-size: 125%;
 }
 
 q {

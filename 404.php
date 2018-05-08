@@ -12,37 +12,51 @@
 <div class="narrow-container">
   <div id="primary" class="content-area">
     <main id="main" class="site-main">
-      <section class="error-404 not-found text-center">
-        <header>
-          <h1 class="page-title">
-            4OH4!!
-          </h1>
-        </header>
+      <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
+      
+      <section class="error-404 not-found">
+        <h1 class="page-title text-center">
+          4OH4!!
+        </h1>
 
         <div class="page-content">
-          <p>
+          <p class="text-center h3 bottom-cushion">
             <?php esc_html_e( 'We\'re sorry, but this page doesn\'t exist.', 'moltodestroyed' ); ?>
           </p>
-          
+
+          <div class="left-character pull-left">
+            <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
+          </div>
+
           <p>
-            It's possible that it did exist once upon a time, and we've decided to change
-            something to inconvience you for a moment. <br>
-            Or maybe it never ever existed! <br>
-            Perhaps it may exist one day, but today isn't that day.
-            You could always try again tomorrow if you want, we won't stop you.
+            It's possible that it did exist once upon a time, and we've decided to change something to inconvience you for a moment.
           </p>
-          
+
+          <div class="right-character pull-right">
+            <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
+          </div>
+
           <p>
-            In the mean time, you can always <a href="#">return to the homepage</a>,
-            or see if there's an answer in one of the <a href="#">recent postings</a>.
+            Or maybe it never <em>ever</em> existed!
           </p>
-        </div>    
+
+          <p>
+            Perhaps it may exist one day, but today isn't that day. You could always try again tomorrow if you want, we won't stop you.
+          </p>
+
+          <p>
+            In the mean time, you can <a href="<?php echo get_site_url(); ?>">return to the homepage</a>, or see if there's a reason you're seeing this page in one of the
+            <a href="<?php echo get_site_url() . MOLTO_BLOG; ?>">blog postings</a>.
+          </p>
+        </div> <?php // .page-content // ?>
       </section> <?php // .error-404 // ?>
-    </main> <?php // #main // ?>      
+      
+    <?php require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>  
+    </main> <?php // #main // ?>
   </div> <?php // #primary // ?>
   
-  <?php get_sidebar(); ?>
+  <?php dynamic_sidebar( 'sidebar-1' ); ?>
 </div> <?php // .narrow-container // ?>
 
 <?php
-get_footer();
+  get_footer();

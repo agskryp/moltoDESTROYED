@@ -30,7 +30,7 @@ if ( !function_exists( 'molto_post_date' ) ) :
 	  esc_html_x( '%s', 'post date', 'moltodestroyed' ), $time_string
 	);
 	
-    echo '<span class="posted-on">' . $posted_on . '</span>';
+    echo $posted_on;
   }
 endif;
 
@@ -41,14 +41,13 @@ if ( !function_exists( 'molto_post_author' ) ) :
   function molto_post_author() {
     $author = sprintf(
       /* translators: %s: post author. */
-	  esc_html_x( 'by %s', 'post author', 'moltodestroyed' ),
-	  '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
+      esc_html_x( 'by %s', 'post author', 'moltodestroyed' ),
+      '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+    );
 
-	echo '<span class="byline"> ' . $author . '</span>';
+    echo '<span class="byline"> ' . $author . '</span>';
   }
 endif;
-
 
 if ( ! function_exists( 'moltodestroyed_entry_footer' ) ) :
 	/**
@@ -154,9 +153,9 @@ function molto_posts_navigation( $args = array() ) {
   // Don't print empty markup if there's only one page.
   if ( $GLOBALS[ 'wp_query' ] -> max_num_pages > 1 ) {
     $args = wp_parse_args( $args, array(
-      'prev_text'          => __( '&larr; View older posts' ),
-      'next_text'          => __( 'View newer posts &rarr;' ),
-      'screen_reader_text' => __( 'Posts navigation' ),
+      'prev_text'          => esc_html__( '&larr; View older posts', 'moltodestroyed' ),
+      'next_text'          => esc_html__( 'View newer posts &rarr;', 'moltodestroyed' ),
+      'screen_reader_text' => esc_html__( 'Posts navigation', 'moltodestroyed' ),
     ) );
 
     $next_link = get_previous_posts_link( $args[ 'next_text' ] );
@@ -186,7 +185,7 @@ function molto_blog_navigation( $args = array() ) {
 	'in_same_term'       => false,
 	'excluded_terms'     => '',
 	'taxonomy'           => 'category',
-	'screen_reader_text' => __( 'Post navigation' ),
+	'screen_reader_text' => esc_html__( 'Post navigation', 'moltodestroyed' ),
   ) );
 
   $navigation = '';

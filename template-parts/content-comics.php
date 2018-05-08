@@ -8,10 +8,12 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <header class="comic-header">
-    <?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
-  </header>
+  <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
   
+  <header>
+    <?php the_title( '<h1 class="entry-title text-center comic-header">', '</h1>' ); ?>
+  </header>
+
   <?php require get_template_directory() . '/partials/comic-navigation.php'; ?>
 
   <div class="entry-content comic-strip text-center">
@@ -21,14 +23,20 @@
       if( !empty( $image ) ): 
     ?>
       <img src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo the_title(); ?>" />
-    
-      <div class="entry-meta">
-        <span class="posted-on">Posted on</span> <?php molto_post_date(); ?>
-      </div> 
+
+      <div id="comicfin" class="entry-meta">
+        <span class="posted-on">
+          Posted on <?php molto_post_date(); ?>
+        </span>
+      </div>
     <?php endif; ?>
-  </div> <?php // .entry-content // ?>
+  </div>
+
+  <?php
+    require_once get_template_directory() . '/partials/social-share-buttons.php';
   
-  <?php //  place social sharing buttons here // ?>
-  
-  <?php require get_template_directory() . '/partials/comic-navigation.php'; ?>
+    require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
+
+    require get_template_directory() . '/partials/comic-navigation.php';
+  ?>
 </article>

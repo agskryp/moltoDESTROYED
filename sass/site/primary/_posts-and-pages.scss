@@ -3,44 +3,55 @@
 }
 
 .hentry {
-  margin: 0 0 1.5em;
+  margin: 0 0 $grid-padding;
 }
 
-.updated:not(.published) {
+.updated:not( .published ) {
   display: none;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0;
+  margin: $grid-padding 0 0;
 }
 
 .page-links {
   clear: both;
-  margin: 0 0 1.5em;
+  margin: 0 0 $grid-padding;
 }
 
+/*********************************
+ * .blog-posts-list = index.php
+ * .blog-post       = single.php
+ ********************************/
 .blog-posts-list,
 .blog-post {
-     .entry-content {
-      margin: 0 0 1.5em;
-    }
+  
+  article {
+    border-bottom: $border-2px;
+  }
+
+  .post-thumbnail {
+    display: table;
+    margin: 0 auto .5em;
+  }
+  
+  .entry-content {
+    margin: 0;
+  }
 }
 
 .blog-posts-list {
+  
   h2 {
-     font-size: 2em;
+    font-size: 2em;
+    @media all and ( min-width: $screen-xs ) {
+      font-size: 2.5em;
+    }
 
-  @media all and (min-width: $screen-xs) {
-    font-size: 2.5em;
-  }
-    
     a {
-      color: #000;
-      
-      
-      
+      color: $color__text-main;
       &:hover,
       &:active,
       &:focus {
@@ -48,25 +59,22 @@
       }
     }
   }
+
+  .post-thumbnail:hover {
+    opacity: .8;
+  }
   
-  .post-thumbnail {
-    display: table;
-    margin: 0 auto .5em;
-    
-    &:hover {
-      opacity: .8;
-    }
+  .entry-content {
+    margin: 0 0 $grid-padding;
   }
 
-  
   article {
-    border-bottom: 2px solid black;
-    margin: 0 0 1.5em;
-    
+    margin: 0 0 $grid-padding;
+
     p {
       margin-bottom: 0;
     }
-    
+
     .read-more {
       margin-top: .5em;
       display: inline-block;
@@ -74,14 +82,35 @@
   }
 }
 
-.blog-post {
+.entry-header {
+  display: flex;
   
-   article {
-    border-bottom: 2px solid black;
+  .entry-meta {
+    font-size: .75em;
+    padding-left: 2em;
   }
-  
-  .post-thumbnail {
-    display: table;
-    margin: 0 auto .5em;
+}
+
+.blog-title {
+  display: inline-block;
+  word-break: break-word;
+  flex-grow: 2;
+}
+
+/**
+ * Style for characters within main body of site
+ */
+.left-character img,
+.right-character img {
+  max-width: 150px;
+  max-height: 150px;
+  padding: 0 $grid-padding $grid-padding 0;
+  @media all and ( min-width: $screen-sm ) {
+    max-width: inherit;
+    max-height: inherit;
   }
+}
+
+.right-character {
+  transform: scaleX( -1 );
 }

@@ -7,7 +7,9 @@
 <div class="container">
   <div id="primary" class="content-area">
     <main id="main" class="site-main">
-      <?php
+      <?php      
+        require_once get_template_directory() . '/partials/ads/top-of-main-area.php';
+
         while ( have_posts() ) : 
           the_post();
 
@@ -18,9 +20,12 @@
             comments_template();
           endif;
         endwhile; // End of the loop.
+
+        require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
       ?>
-    </main> <?php // #main // ?>
-  </div> <?php // #primary // ?>
-</div> <?php // .container // ?>
+    </main> 
+  </div> 
+</div>
+
 <?php
   get_footer();

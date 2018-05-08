@@ -90,8 +90,11 @@ add_action( 'after_setup_theme', 'moltodestroyed_setup' );
  * @global int $content_width
  */
 function moltodestroyed_content_width() {
-	$GLOBALS[ 'content_width' ] = apply_filters( 'moltodestroyed_content_width', 640 );
+  $GLOBALS[ 'content_width' ] = apply_filters( 'moltodestroyed_content_width', 750 );
 }
+
+if ( ! isset( $content_width ) ) $content_width = 750;
+
 add_action( 'after_setup_theme', 'moltodestroyed_content_width', 0 );
 
 /**
@@ -116,16 +119,23 @@ add_action( 'widgets_init', 'moltodestroyed_widgets_init' );
  * Enqueue scripts and styles.
  */
 function moltodestroyed_scripts() {
-  wp_enqueue_style( 'moltodestroyed-style', get_stylesheet_uri() );
-
-  wp_enqueue_script( 'moltodestroyed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-  wp_enqueue_script( 'moltodestroyed-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+  wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Bangers|Open+Sans:400,600' );
+  wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/sass/bootstrap/bootstrap.min.css', array(), '3.3.7' );
+  wp_enqueue_style( 'moltodestroyed-style', get_stylesheet_uri(), array(), THEME_VERSION_NUMBER );
   
-  wp_enqueue_script( 'moltodestroyed-toggle-animation', get_template_directory_uri() . '/js/toggle-animation.js', array(), '1.0.0', true );
+  wp_enqueue_script( 'google-scripts',  get_template_directory_uri() . '/js/google-scripts.js', array(), THEME_VERSION_NUMBER, false );
+  wp_enqueue_script( 'bootstrap-collapse',  get_template_directory_uri() . '/js/bootstrap-collapse-min.js', array(), '3.3.7', true );
+  wp_enqueue_script( 'bootstrap-transitions',  get_template_directory_uri() . '/js/bootstrap-transitions-min.js', array(), '3.3.7', true );
+  wp_enqueue_script( 'moltodestroyed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+  wp_enqueue_script( 'moltodestroyed-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+  wp_enqueue_script( 'moltodestroyed-toggle-animation', get_template_directory_uri() . '/js/toggle-animation.js', array(), THEME_VERSION_NUMBER, true );
+
+  if ( is_singular( 'comics' ) || is_page_template( 'page-templates/page-front.php' ) ) {
+    wp_enqueue_script( 'moltodestroyed-pop-up-window', get_template_directory_uri() . '/js/pop-up-window.js', array(), THEME_VERSION_NUMBER, true );
+  }
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-      wp_enqueue_script( 'comment-reply' );
+    wp_enqueue_script( 'comment-reply' );
   }
 }
 add_action( 'wp_enqueue_scripts', 'moltodestroyed_scripts' );
@@ -164,14 +174,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 ////////////////////////////////////////////////////////////////////////////////////////
 
 /**
- * Import Google Fonts.
- */
-function custom_add_google_fonts() {
-  wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Bangers|Open+Sans:400,600', false );
-}
-add_action( 'wp_enqueue_scripts', 'custom_add_google_fonts' );
-
-/**
  * Redirect the search page to the 404 page
  */
 function wpb_filter_query( $query, $error = true ) {
@@ -199,8 +201,32 @@ add_action( 'widgets_init', 'remove_search_widget' );
  */
 function new_excerpt_more($more) {
   global $post;
-	
   return '... <br> <a class="read-more" href="'. get_permalink( $post -> ID ) . '"> Continue Reading &rarr;</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
+/**
+ * Choose a random character image
+ */
+require get_template_directory() . '/inc/character-image-randomizer.php';
+
+/**
+ * Import PHP constants
+ */
+require get_template_directory() . '/inc/constants.php';
+
+/**
+ * Remove WP Emoji settings
+ */
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function wpdocs_theme_add_editor_styles() {
+  add_editor_style( get_stylesheet_uri() );
+}
+add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );

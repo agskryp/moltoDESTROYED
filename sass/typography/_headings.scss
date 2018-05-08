@@ -2,28 +2,25 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-family: 'Bangers', sans-serif;
   letter-spacing: 1px;
-  color: #000;
+  color: $color__text-main;
   line-height: 1;
   margin: 0 0 .5em;
 }
 
 h1 {
   font-size: 2.5em;
-
-  @media all and (min-width: $screen-xs) {
+  @media all and ( min-width: $screen-xs ) {
     font-size: 3em;
   }
 
-  @media all and (min-width: $screen-md) {
+  @media all and ( min-width: $screen-md ) {
     font-size: 3.5em;
   }
 }
 
 h2 {
-    font-size: 2em;
-  
-
-  @media all and (min-width: $screen-md) {
+  font-size: 2em;
+  @media all and ( min-width: $screen-md ) {
     font-size: 2.5em;
   }
 }

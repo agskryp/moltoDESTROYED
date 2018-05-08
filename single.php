@@ -25,12 +25,11 @@
             comments_template();
           endif;
 
-        // End of the loop.
-        endwhile; 
+        endwhile; // End of the loop.
       ?>
-    </main> <?php // #main // ?>
-  </div> <?php // #primary // ?>
-</div> <?php // .narrow-container // ?>
+    </main>
+  </div>
+</div>
 
 <?php
   get_footer();

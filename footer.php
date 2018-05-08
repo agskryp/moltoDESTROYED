@@ -15,16 +15,31 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-6 text-center">
-           <img
-                src="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-inversed-xs.png"
-                srcset="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-inversed-sm.png 360w"
-                alt="moltoDESTROYED Banner">
+          <img class="footer-banner"
+               src="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-inversed-xs.png"
+               srcset="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-inversed-sm.png 360w" alt="moltoDESTROYED Banner">
+
+          <div class="footer-characters bottom-cushion">
+            <div class="left flex-center">
+              <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
+            </div>
+
+            <div class="left flex-center">
+              <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
+            </div>
+
+            <div class="right flex-center">
+              <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
+            </div>
+          </div>
         </div>
-        
+
         <div class="col-xs-12 col-md-6">
           <nav class="row">
             <div class="col-xs-6 zero-cushion">
-              <h2>Explore</h2>
+              <h2>
+                Explore
+              </h2>
 
               <?php
                 wp_nav_menu( array(
@@ -35,7 +50,9 @@
             </div>
 
             <div class="col-xs-6 zero-cushion">
-              <h2>Connect</h2>
+              <h2>
+                Connect
+              </h2>
 
               <ul>
                 <li>
@@ -72,12 +89,11 @@
   <div class="footer-copyright">
     <div class="container">
       <span class="pull-left">
-        moltoDESTROYED &amp; moltodestroyed.com is Copyright © 2014-2018
-        <a href="mailto:moltodestroyed@gmail.com">Molto D. Stroyed</a>
+        moltoDESTROYED &amp; moltodestroyed.com is Copyright &copy; 2014-2018 <a href="mailto:moltodestroyed@gmail.com">molto D. stroyed</a>
       </span>
 
       <span class="pull-right">
-        Designed by <a href="http://agskryp.com">A.G. Skryp</a>
+        Designed by <a href="<?php echo esc_url( __( 'http://agskryp.com', 'moltodestroyed' ) ); ?>"  target="_blank">A.G. Skryp</a>
       </span>
     </div>
   </div> <?php // .footer-copyright // ?>

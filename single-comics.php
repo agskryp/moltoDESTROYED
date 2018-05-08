@@ -15,7 +15,7 @@
       <?php
         while ( have_posts() ) :
           the_post();
-          
+
           get_template_part( 'template-parts/content', get_post_type() );
 
           // If comments are open or we have at least one comment, load up the comment template.
@@ -23,12 +23,11 @@
             comments_template();
           endif;
 
-        // End of the loop.
-        endwhile; 
+        endwhile; // End of the loop.
       ?>
-    </main> <?php // #main // ?>
-  </div> <?php // #primary // ?>
-</div> <?php // .narrow-container // ?>
+    </main>
+  </div>
+</div>
 
 <?php
   get_footer();

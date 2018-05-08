@@ -6,38 +6,30 @@
     max-width: none;
     border-top: 2px solid #000;
   }
-  
+
   .row {
     margin: 0;
   }
-  
-  
+
   li {
     line-height: 1.25;
     margin-bottom: .5em;
   }
-  
-  ol,
-  ul {
+
+  ol, ul {
     list-style: none;
     padding: 0;
   }
-  
+
   section {
-    
     padding: 1.5em 0 0;
-  border-top: 2px solid #000;
-    
-      @media all and (min-width: $screen-md) {
-    
-    border-top: none;
-        padding: 1.5em 15px 0;
-  }
+    border-top: 2px solid #000;
+    @media all and (min-width: $screen-md) {
+      border-top: none;
+      padding: 1.5em 15px 0;
+    }
   }
 }
-
-
-
 
 .widget {
   margin: 0 0 1.5em;
@@ -46,5 +38,4 @@
   select {
     max-width: 100%;
   }
-  
 }
