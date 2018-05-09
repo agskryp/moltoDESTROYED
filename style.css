@@ -372,7 +372,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
-  background: #999;
+  background: #898989;
   color: rgba(0, 0, 0, .8);
   font-size: 28px;
   font-size: 1.75rem;
@@ -1470,7 +1470,7 @@ embed, iframe, object {
  # Misc
  --------------------------------------------------------------*/
 #sb_instagram .sbi_follow_btn a {
-  background: #999;
+  background: #898989;
 }
 .contact-form {
   clear: both;
@@ -1500,12 +1500,12 @@ embed, iframe, object {
   float: right;
   font-weight: bold;
   margin-bottom: 1.5em;
-  background: #999;
+  background: #898989;
   border: none;
   color: #fff;
 }
 .contact-form input[type="submit"]:hover {
-  opacity: 0.9;
+  background: #bcbcbc;
 }
 .contact-form div.wpcf7 .ajax-loader {
   display: block;
