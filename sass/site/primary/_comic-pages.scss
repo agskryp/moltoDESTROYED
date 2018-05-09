@@ -21,7 +21,7 @@
 
 .comic-navigation-container {
   line-height: 1;
-  margin-bottom: 1em;
+  margin-bottom: $grid-padding;
 
   .comic-navigation {
     max-width: 567px;
@@ -32,16 +32,27 @@
     }
     
     a {
-      font-size: 1.2em;
-      letter-spacing: -3px;
-      padding-right: 7px;
+      font-size: 1.1em;
+      letter-spacing: -2px;
+      background: $color__link;
+      color: $color__text-light;
+      padding: 6px 2px 6px 0;
+      border-radius: 4px;
+      display: block;
+      margin: 0 4px;
+      &:hover {
+        background: $color__link-hover;
+      }
+      
       @media all and ( min-width: $screen-xs ) {
-        font-size: 1.5em;
+        font-size: 1.2em;
+        letter-spacing: -3px;
       }
     
       @media all and ( min-width: $screen-md ) {
-        font-size: 2em;
-        letter-spacing: -6px;
+        font-size: 1.6em;
+        padding: 6px 6px 6px 0;
+        letter-spacing: -4px;
       }
     }
   }
