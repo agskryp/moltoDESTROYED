@@ -29,7 +29,7 @@
   
   <?php require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>
 
-  <div class="contact-form">
+  <div id="contactForm" class="contact-form">
     <span class="contact-notice">NOTE: all fields are required</span>
 
     <?php echo do_shortcode( '[contact-form-7 id="1741" title="Contact form 1"]' ); ?>
