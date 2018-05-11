@@ -28,7 +28,9 @@
     <?php endif; ?>
   </header>
 
-  <?php moltodestroyed_post_thumbnail(); ?>
+  <div class="text-center">
+    <?php moltodestroyed_post_thumbnail(); ?>
+  </div>
 
   <div class="entry-content">
     <?php
