@@ -82,13 +82,15 @@
   }
 }
 
-.entry-header {
-  display: flex;
-  
-  .entry-meta {
-    font-size: .75em;
-    padding-left: 2em;
+.blog-post {
+  h2, h3 {
+    margin-top: 1em;
   }
+}
+
+.entry-header .entry-meta {
+  font-size: .75em;
+  padding-left: 2em;
 }
 
 .blog-title {
