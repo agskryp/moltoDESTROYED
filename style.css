@@ -804,11 +804,19 @@ a:hover, a:active {
   border-bottom: 2px solid #000;
 }
 .blog-posts-list .post-thumbnail, .blog-post .post-thumbnail {
-  display: table;
+  border: 2px solid BLACK;
   margin: 0 auto 0.5em;
+  display: inline-block;
 }
 .blog-posts-list .entry-content, .blog-post .entry-content {
   margin: 0;
+}
+.blog-posts-list .entry-header, .blog-post .entry-header {
+  display: flex;
+}
+.blog-posts-list .entry-header .entry-meta, .blog-post .entry-header .entry-meta {
+  font-size: 0.75em;
+  padding-left: 2em;
 }
 .blog-posts-list h2 {
   font-size: 2em;
@@ -823,6 +831,10 @@ a:hover, a:active {
 }
 .blog-posts-list h2 a:hover, .blog-posts-list h2 a:active, .blog-posts-list h2 a:focus {
   color: #898989;
+}
+.blog-posts-list .post-thumbnail {
+  max-height: 400px;
+  overflow: hidden;
 }
 .blog-posts-list .post-thumbnail:hover {
   opacity: 0.8;
@@ -842,10 +854,6 @@ a:hover, a:active {
 }
 .blog-post h2, .blog-post h3 {
   margin-top: 1em;
-}
-.entry-header .entry-meta {
-  font-size: 0.75em;
-  padding-left: 2em;
 }
 .blog-title {
   display: inline-block;

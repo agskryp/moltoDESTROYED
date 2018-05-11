@@ -33,12 +33,22 @@
   }
 
   .post-thumbnail {
-    display: table;
-    margin: 0 auto .5em;
+    border: $border-2px;
+    margin: 0 auto 0.5em;
+    display: inline-block;
   }
   
   .entry-content {
     margin: 0;
+  }
+  
+  .entry-header {
+    display: flex; // To keep post date within header and pushed to the right
+
+    .entry-meta {
+      font-size: .75em;
+      padding-left: 2em;
+    }
   }
 }
 
@@ -59,9 +69,13 @@
       }
     }
   }
-
-  .post-thumbnail:hover {
-    opacity: .8;
+  
+  .post-thumbnail {
+    max-height: 400px;
+    overflow: hidden;
+    &:hover {
+      opacity: .8;
+    }
   }
   
   .entry-content {
@@ -86,11 +100,6 @@
   h2, h3 {
     margin-top: 1em;
   }
-}
-
-.entry-header .entry-meta {
-  font-size: .75em;
-  padding-left: 2em;
 }
 
 .blog-title {
