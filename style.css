@@ -1050,7 +1050,7 @@ a:hover, a:active {
 }
 .site-footer .footer-info {
   background: #000;
-  padding-top: 1em;
+  padding-top: 0.5em;
 }
 .site-footer .footer-info .container {
   display: block;
@@ -1064,7 +1064,7 @@ a:hover, a:active {
   color: #fff;
   font-size: 0.6em;
   line-height: 1.2;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 .site-footer .footer-info .privacy {
   padding-right: 3em;
