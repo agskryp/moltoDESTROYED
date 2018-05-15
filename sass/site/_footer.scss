@@ -72,19 +72,48 @@
     }
   }
 
-  .footer-copyright {
+  .footer-info {
     background: $color__background-dark;
-    padding-top: .5em;
+    padding-top: 1em;
+    
+    .container {
+      display: block;
+      @media all and ( min-width: $screen-sm ) {
+        display: flex;
+      }
+    }
     
     span {
       color: $color__text-light;
       font-size: .6em;
       line-height: 1.2;
-      padding-bottom: .5em;
+      padding-bottom: 1em;
+    }
+    
+    .privacy {
+      padding-right: $grid-padding * 2;
+      float: left;
+      @media all and ( min-width: $screen-sm ) {
+        flex-grow: 1;
+        order: 1;
+      }
+    }
+    
+    .copyright {
+      display: block;      
+      @media all and ( min-width: $screen-sm ) {
+        flex-grow: 2;
+        order: 2;
+      }
     }
 
-    .pull-right {
-      padding-left: $grid-padding;
+    .designer {
+      padding-left: $grid-padding * 2;
+      float: right;
+      @media all and ( min-width: $screen-sm ) {
+        flex-grow: 1;
+        order: 3;
+      }
     }
   }
 }

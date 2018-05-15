@@ -804,7 +804,7 @@ a:hover, a:active {
   border-bottom: 2px solid #000;
 }
 .blog-posts-list .post-thumbnail, .blog-post .post-thumbnail {
-  border: 2px solid BLACK;
+  border: 2px solid #000;
   margin: 0 auto 0.5em;
   display: inline-block;
 }
@@ -853,7 +853,7 @@ a:hover, a:active {
   display: inline-block;
 }
 .blog-post h2, .blog-post h3 {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 .blog-title {
   display: inline-block;
@@ -876,6 +876,12 @@ a:hover, a:active {
 }
 .right-character {
   transform: scaleX(-1);
+}
+/*********************************
+ * Privacy Policy Page
+ ********************************/
+.privacy-page h2 {
+  margin-top: 1.5em;
 }
 .comic-header {
   line-height: 1;
@@ -1042,18 +1048,52 @@ a:hover, a:active {
 .site-footer .footer-menu h2 {
   color: #fff;
 }
-.site-footer .footer-copyright {
+.site-footer .footer-info {
   background: #000;
-  padding-top: 0.5em;
+  padding-top: 1em;
 }
-.site-footer .footer-copyright span {
+.site-footer .footer-info .container {
+  display: block;
+}
+@media all and (min-width: 480px) {
+  .site-footer .footer-info .container {
+    display: flex;
+  }
+}
+.site-footer .footer-info span {
   color: #fff;
   font-size: 0.6em;
   line-height: 1.2;
-  padding-bottom: 0.5em;
+  padding-bottom: 1em;
 }
-.site-footer .footer-copyright .pull-right {
-  padding-left: 1.5em;
+.site-footer .footer-info .privacy {
+  padding-right: 3em;
+  float: left;
+}
+@media all and (min-width: 480px) {
+  .site-footer .footer-info .privacy {
+    flex-grow: 1;
+    order: 1;
+  }
+}
+.site-footer .footer-info .copyright {
+  display: block;
+}
+@media all and (min-width: 480px) {
+  .site-footer .footer-info .copyright {
+    flex-grow: 2;
+    order: 2;
+  }
+}
+.site-footer .footer-info .designer {
+  padding-left: 3em;
+  float: right;
+}
+@media all and (min-width: 480px) {
+  .site-footer .footer-info .designer {
+    flex-grow: 1;
+    order: 3;
+  }
 }
 .site {
   display: flex;

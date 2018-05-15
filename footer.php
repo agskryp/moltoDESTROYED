@@ -86,18 +86,22 @@
     </div> <?php // .container // ?>
   </div> <?php // .footer-menu // ?>
 
-  <div class="footer-copyright">
+  <div class="footer-info">
     <div class="container">
-      <span class="pull-left">
+      <span class="copyright text-center">
         moltoDESTROYED &amp; moltodestroyed.com is Copyright &copy; 2014-2018 <a href="mailto:moltodestroyed@gmail.com">molto D. stroyed</a>
       </span>
+      
+      <span class="privacy">
+        <a href="<?php echo esc_url( __( MOLTO_PRIVACY_POLICY, 'moltodestroyed' ) ); ?>">Privacy Policy</a>
+      </span>
 
-      <span class="pull-right">
+      <span class="designer text-right">
         Designed by <a href="<?php echo esc_url( __( 'http://agskryp.com', 'moltodestroyed' ) ); ?>"  target="_blank">A.G. Skryp</a>
       </span>
     </div>
-  </div> <?php // .footer-copyright // ?>
-</footer> <?php // #colophon .site-footer // ?>
+  </div> 
+</footer>
 
 </div> <?php // #page // ?>
 

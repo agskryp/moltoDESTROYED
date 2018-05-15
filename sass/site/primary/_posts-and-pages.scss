@@ -21,6 +21,8 @@
   margin: 0 0 $grid-padding;
 }
 
+
+
 /*********************************
  * .blog-posts-list = index.php
  * .blog-post       = single.php
@@ -98,7 +100,7 @@
 
 .blog-post {
   h2, h3 {
-    margin-top: 1em;
+    margin-top: $grid-padding;
   }
 }
 
@@ -124,4 +126,13 @@
 
 .right-character {
   transform: scaleX( -1 );
+}
+
+
+
+/*********************************
+ * Privacy Policy Page
+ ********************************/
+.privacy-page h2 {
+  margin-top: $grid-padding;
 }
