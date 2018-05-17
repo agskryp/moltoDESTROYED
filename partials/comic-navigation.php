@@ -4,8 +4,12 @@
 ?>
 
 <div class="comic-navigation-container">
-  <nav class="comic-navigation text-center row">
-    <div class="col-xs-offset-1 col-xs-2">
+  <h2 class="sr-only">
+    Comic navigation menu
+  </h2>
+  
+  <nav class="comic-navigation text-center row">    
+    <div title="First Comic">
       <?php
         // First Comic
         $first = get_posts( array(
@@ -17,23 +21,23 @@
         $first_url = get_permalink( $first[0] -> ID );
 
         if ( $post -> ID !== $first[0] -> ID ) {
-          echo "<a href='" . $first_url . "'> &lt; &lt; &lt; </a>";
+          echo "<a href='" . $first_url . "'><span class='sr-only'>First Comic</span> &lt; &lt; &lt; </a>";
         }
       ?>
     </div>
 
-    <div class="col-xs-2">
+    <div title="Previous Comic">
       <?php
         // Previous Comic
         $previous = get_previous_post_link(
-		  '%link', ' &lt; ', false, '', 'category'
+		  '%link', ' <span class="sr-only">Previous Comic</span> &lt; ', false, '', 'category'
         );
 
         echo $previous;
       ?>
     </div>
 
-    <div class="col-xs-2">
+    <div title="Random Comic">
       <?php
         // Random Comic
         $random = get_posts( array(
@@ -45,22 +49,22 @@
 
         $random_url = get_permalink( $random[0] -> ID );
 
-        echo "<a href='" . $random_url . "'> ? ? ? </a>";
+        echo "<a href='" . $random_url . "'><span class='sr-only'>Random Comic</span> &#63; &#63; &#63; </a>";
       ?>
     </div>
 
-    <div class="col-xs-2">
+    <div title="Next Comic">
       <?php
         // Next Comic
         $next = get_next_post_link(
-          '%link', ' &gt; ', false, '', 'category'
+          '%link', ' <span class="sr-only">Next Comic</span> &gt; ', false, '', 'category'
         );
 
         echo $next;
       ?>
     </div>
 
-    <div class="col-xs-2">
+    <div title="Latest Comic">
       <?php
         // Latest Comic
         $latest = get_posts( array(
@@ -72,7 +76,7 @@
         $latest_url = get_permalink( $latest[0] -> ID );
 
         if ( $post -> ID !== $latest[0] -> ID ) {
-          echo "<a href='" . $latest_url . "'> &gt; &gt; &gt; </a>";
+          echo "<a href='" . $latest_url . "'><span class='sr-only'>Latest Comic</span> &gt; &gt; &gt; </a>";
         }
       ?>
     </div>

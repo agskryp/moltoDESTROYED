@@ -1,5 +1,11 @@
 <div class="social-container">
-  <a href="https://www.instagram.com/moltodestroyed/" target="_blank">
+  <h2 class="sr-only">
+    Follow Us
+  </h2>
+  
+  <a href="https://www.instagram.com/moltodestroyed/"
+     target="_blank"
+     title="Instagram">
     <span class="sr-only">
       Instagram
     </span>
@@ -9,7 +15,9 @@
     </svg>
   </a>
 
-  <a href="https://twitter.com/moltodestroyed" target="_blank">
+  <a href="https://twitter.com/moltodestroyed"
+     target="_blank"
+     title="Twitter">
     <span class="sr-only">
       Twitter
     </span>
@@ -19,7 +27,9 @@
     </svg>
   </a>
 
-  <a href="https://www.facebook.com/molto-DESTROYED-621021044638414/" target="_blank">
+  <a href="https://www.facebook.com/molto-DESTROYED-621021044638414/"
+     target="_blank"
+     title="Facebook">
     <span class="sr-only">
       Facebook
     </span>
