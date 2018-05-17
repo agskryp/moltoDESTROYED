@@ -69,12 +69,12 @@
             MENU
           </b>
 
-          <div id="main-menu-icon" class="main-menu-icon">
+          <span id="main-menu-icon" class="main-menu-icon">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-          </div>
+          </span>
         </button>
 
         <div class="collapse navbar-collapse" id="mainNavMenu">
