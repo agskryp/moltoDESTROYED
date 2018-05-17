@@ -17,7 +17,9 @@
         <div class="col-xs-12 col-md-6 text-center">
           <img class="footer-banner"
                src="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-inversed-xs.png"
-               srcset="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-inversed-sm.png 360w" alt="moltoDESTROYED Banner">
+               srcset="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-inversed-sm.png 360w" alt="moltoDESTROYED Banner"
+               height="125"
+               width="500">
 
           <div class="footer-characters bottom-cushion">
             <div class="left flex-center">

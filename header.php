@@ -54,7 +54,9 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-xs.png"
                      srcset="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-sm.png 480w,
                              <?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-md.png 768w,"
-                     alt="moltoDESTROYED Banner">
+                     alt="moltoDESTROYED Banner"
+                     width="760"
+                     height="190">
               </a>
 
               <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
