@@ -4,7 +4,7 @@
  Author: A.G. Skryp
  Author URI: http://agskryp.com
  Description: Wordpress theme for the moltodestroyed web comic
- Version: 1.0.2
+ Version: 1.0.3
  License: GNU General Public License v2 or later
  License URI: LICENSE
  Text Domain: moltodestroyed
@@ -596,7 +596,7 @@ a:hover, a:active {
 }
 .main-menu-icon {
   width: 20px;
-  height: 12px;
+  height: 14px;
   display: inline-block;
   margin-left: 6px;
   -webkit-transform: rotate(0deg);
