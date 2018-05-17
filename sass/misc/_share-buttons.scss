@@ -1,5 +1,9 @@
 .social-share-container {
   margin-bottom: 1em;
+  
+  h3 {
+    margin-bottom: .125em;
+  }
 
   .social-share-button {
     background: $color__background-dark;  
@@ -10,6 +14,10 @@
     border-radius: 4px;
     &:hover {
       background: $color__link;
+    }
+    
+    @media all and ( min-width: $screen-md ) {
+      padding: 8px;
     }
 
     svg {
