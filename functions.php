@@ -167,6 +167,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
   require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
 ////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                    //
 //                              Custom functions below                                //
@@ -181,12 +183,27 @@ function wpb_filter_query( $query, $error = true ) {
     $query -> is_search = false;
     $query -> query_vars[s] = false;
     $query -> query[s] = false;
-    if ( $error == true )
+    
+    if ( $error == true ) {
       $query -> is_404 = true;
     }
   }
+}
 add_action( 'parse_query', 'wpb_filter_query' );
 add_filter( 'get_search_form', create_function( '$a', "return null;" ) );
+
+/**
+ * Disable the author and category pages
+ */
+function disable_unstyled_pages() {
+  global $wp_query;
+  
+  if ( is_author() || is_category() ) {
+    $wp_query -> set_404();
+    status_header( 404 );
+  }
+}
+add_action( 'template_redirect', 'disable_unstyled_pages' );
 
 /**
  * Disable the search feature
