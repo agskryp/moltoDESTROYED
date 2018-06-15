@@ -58,8 +58,10 @@
                      width="760"
                      height="190">
               </a>
-
-              <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
+              
+              <div class="visible-xs">
+                <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
+              </div>
             </div>
           </div>
         </div>
@@ -79,15 +81,19 @@
           </span>
         </button>
 
-        <div class="collapse navbar-collapse" id="mainNavMenu">
+        <div class="collapse navbar-collapse flex-center" id="mainNavMenu">
           <?php
             wp_nav_menu( array(
               'theme_location' => 'menu-1',
               'menu_id'        => 'primary-menu',
             ) );
           ?>
+          
+          <div class="hidden-xs">
+            <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
+          </div>
         </div>
-      </nav> <?php // #site-navigation // ?>
-    </header><?php // #masthead // ?>
+      </nav> 
+    </header> <?php // #masthead // ?>
 
     <div id="content" class="site-content">

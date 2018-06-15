@@ -6,6 +6,14 @@
   @media all and ( min-width: $screen-md ) {
     border-bottom: $border-2px;
   }
+  
+  .menu-main-menu-container {
+    display: inline-block;
+    width: 100%;
+    @media all and ( min-width: $screen-md ) {
+      width: inherit;
+    }
+  }  
 
   ul {
     display: none;
@@ -50,11 +58,12 @@
     position: relative;
     display: block;
     text-align: center;
-    border-bottom: $border-2px;
+    border: $border-2px;
+    border-top: none;
     @media all and ( min-width: $screen-md ) {
       display: inline-block;
       text-align: left;
-      border-bottom: none;
+      border: none;
     }
 
     a {
@@ -156,6 +165,9 @@
 .navbar-collapse {
   padding: 0;
   border-top: none;
+  &.collapse {
+    display: flex !important; // necessary to override bootstrap
+  }
 }
 
 .collapsing {

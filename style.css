@@ -448,6 +448,15 @@ a:hover, a:active {
     border-bottom: 2px solid #000;
   }
 }
+.main-navigation .menu-main-menu-container {
+  display: inline-block;
+  width: 100%;
+}
+@media all and (min-width: 768px) {
+  .main-navigation .menu-main-menu-container {
+    width: inherit;
+  }
+}
 .main-navigation ul {
   display: none;
   list-style: none;
@@ -485,13 +494,14 @@ a:hover, a:active {
   position: relative;
   display: block;
   text-align: center;
-  border-bottom: 2px solid #000;
+  border: 2px solid #000;
+  border-top: none;
 }
 @media all and (min-width: 768px) {
   .main-navigation li {
     display: inline-block;
     text-align: left;
-    border-bottom: none;
+    border: none;
   }
 }
 .main-navigation li a {
@@ -584,6 +594,9 @@ a:hover, a:active {
 .navbar-collapse {
   padding: 0;
   border-top: none;
+}
+.navbar-collapse.collapse {
+  display: flex !important;
 }
 .collapsing {
   position: relative;
@@ -809,9 +822,8 @@ a:hover, a:active {
   display: inline-block;
 }
 .blog-posts-list .entry-content, .blog-post .entry-content {
-  margin: 0;
+  margin: 1em 0 0;
   clear: both;
-  margin-top: 1em;
 }
 .blog-posts-list .entry-header h2, .blog-post .entry-header h2 {
   display: contents;
@@ -1142,33 +1154,10 @@ a:hover, a:active {
   max-height: 190px;
 }
 .social-container {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin-left: -124px;
-  padding: 3px 3px 0 0;
-  line-height: 1.4;
-  width: 65px;
-}
-@media all and (min-width: 480px) {
-  .social-container {
-    width: 90px;
-  }
-}
-@media all and (min-width: 768px) {
-  .social-container {
-    line-height: 1;
-    width: auto;
-  }
-}
-@media all and (min-width: 992px) {
-  .social-container {
-    right: inherit;
-  }
+  padding-top: 6px;
 }
 .social-container a {
-  margin-right: 4px;
+  margin: 0 12px;
   text-decoration: none;
 }
 .social-container a:hover {
@@ -1197,22 +1186,11 @@ a:hover, a:active {
     width: 26px;
   }
 }
-@media all and (min-width: 480px) {
-  .social-container a svg {
-    height: 30px;
-    width: 30px;
-  }
-}
-@media all and (min-width: 768px) {
-  .social-container a svg {
-    height: 36px;
-  }
-}
 .site-branding {
   background: #fff;
 }
 .site-branding .col-xs-12 {
-  padding: 0 0 30px;
+  padding: 0;
   margin-top: 30px;
 }
 @media all and (min-width: 768px) {
@@ -1316,7 +1294,7 @@ a:hover, a:active {
 }
 .header-characters .center-right {
   top: 41%;
-  right: 19%;
+  right: 5%;
 }
 @media all and (min-width: 360px) {
   .header-characters .center-right {
@@ -1331,17 +1309,16 @@ a:hover, a:active {
 @media all and (min-width: 768px) {
   .header-characters .center-right {
     top: 55%;
-    right: 19%;
   }
 }
 @media all and (min-width: 992px) {
   .header-characters .center-right {
-    right: 26%;
+    right: 17%;
   }
 }
 @media all and (min-width: 1200px) {
   .header-characters .center-right {
-    right: 30%;
+    right: 24%;
   }
 }
 .header-characters .large {
