@@ -36,16 +36,21 @@
 
   .post-thumbnail {
     border: $border-2px;
-    margin: 0 auto 0.5em;
+    margin: 1em auto 0;
     display: inline-block;
   }
   
   .entry-content {
-    margin: 0;
+    margin: 1em 0 0;
+    clear: both;
   }
   
   .entry-header {
-    display: flex; // To keep post date within header and pushed to the right
+    
+    h2 {
+      display: contents;
+      float: left;
+    }
 
     .entry-meta {
       font-size: .75em;
@@ -81,7 +86,7 @@
   }
   
   .entry-content {
-    margin: 0 0 $grid-padding;
+    margin: 1em 0 $grid-padding;
   }
 
   article {
@@ -105,9 +110,8 @@
 }
 
 .blog-title {
-  display: inline-block;
+  display: contents;
   word-break: break-word;
-  flex-grow: 2;
 }
 
 /**

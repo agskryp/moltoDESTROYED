@@ -11,6 +11,12 @@
   <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
   
   <header class="entry-header">
+        <?php if ( get_post_type() === 'post' ) :
+    ?>
+      <div class="entry-meta pull-right">
+        <?php molto_post_date(); ?>
+      </div>
+    <?php endif; ?>
     <?php
       if ( is_singular() ) :
         the_title( '<h1 class="entry-title blog-title">', '</h1>' );
@@ -20,12 +26,7 @@
 
       endif;
 
-      if ( get_post_type() === 'post' ) :
-    ?>
-      <div class="entry-meta pull-right">
-        <?php molto_post_date(); ?>
-      </div>
-    <?php endif; ?>
+  ?>
   </header>
 
   <div class="text-center">

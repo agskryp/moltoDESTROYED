@@ -805,14 +805,17 @@ a:hover, a:active {
 }
 .blog-posts-list .post-thumbnail, .blog-post .post-thumbnail {
   border: 2px solid #000;
-  margin: 0 auto 0.5em;
+  margin: 1em auto 0;
   display: inline-block;
 }
 .blog-posts-list .entry-content, .blog-post .entry-content {
   margin: 0;
+  clear: both;
+  margin-top: 1em;
 }
-.blog-posts-list .entry-header, .blog-post .entry-header {
-  display: flex;
+.blog-posts-list .entry-header h2, .blog-post .entry-header h2 {
+  display: contents;
+  float: left;
 }
 .blog-posts-list .entry-header .entry-meta, .blog-post .entry-header .entry-meta {
   font-size: 0.75em;
@@ -840,7 +843,7 @@ a:hover, a:active {
   opacity: 0.8;
 }
 .blog-posts-list .entry-content {
-  margin: 0 0 1.5em;
+  margin: 1em 0 1.5em;
 }
 .blog-posts-list article {
   margin: 0 0 1.5em;
@@ -856,9 +859,8 @@ a:hover, a:active {
   margin-top: 1.5em;
 }
 .blog-title {
-  display: inline-block;
+  display: contents;
   word-break: break-word;
-  flex-grow: 2;
 }
 /**
  * Style for characters within main body of site
