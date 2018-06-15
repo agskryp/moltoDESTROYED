@@ -1052,9 +1052,12 @@ a:hover, a:active {
 .site-footer .footer-menu h2 {
   color: #fff;
 }
+.site-footer .footer-menu .connect-container li {
+  display: inline-block;
+}
 .site-footer .footer-info {
   background: #000;
-  padding-top: 0.5em;
+  padding-top: 0.7em;
 }
 .site-footer .footer-info .container {
   display: block;
@@ -1066,9 +1069,9 @@ a:hover, a:active {
 }
 .site-footer .footer-info span {
   color: #fff;
-  font-size: 0.6em;
+  font-size: 0.7em;
   line-height: 1.2;
-  padding-bottom: 0.5em;
+  padding-bottom: 1em;
 }
 .site-footer .footer-info .privacy {
   padding-right: 3em;
