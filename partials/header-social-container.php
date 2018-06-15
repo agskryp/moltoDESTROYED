@@ -1,4 +1,4 @@
-<div class="social-container">
+<div class="social-container flex-center">
   <h2 class="sr-only">
     Follow Us
   </h2>
