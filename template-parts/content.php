@@ -11,13 +11,14 @@
   <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
   
   <header class="entry-header">
-        <?php if ( get_post_type() === 'post' ) :
-    ?>
+    <?php if ( get_post_type() === 'post' ) : ?>
       <div class="entry-meta pull-right">
         <?php molto_post_date(); ?>
       </div>
-    <?php endif; ?>
+    
     <?php
+      endif;
+    
       if ( is_singular() ) :
         the_title( '<h1 class="entry-title blog-title">', '</h1>' );
 
@@ -25,8 +26,7 @@
         the_title( '<h2 class="entry-title blog-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
       endif;
-
-  ?>
+    ?>
   </header>
 
   <div class="text-center">
