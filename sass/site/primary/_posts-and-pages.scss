@@ -138,7 +138,8 @@
  * Textified Comic Settings
  ********************************/
 .textified {
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   margin: 0 auto;
   
   p {
@@ -152,24 +153,32 @@
   }
   
   button {
-    background: none;
     cursor: pointer;
     margin: 1em auto 0;
     border: none;
     font-weight: bold;
+    background: $color__link;
+    color: $color__text-light;
+    padding: 8px;
+    border-radius: 4px;
     &:hover {
-      color: $color__link;
-      
-      svg {
-        fill: $color__link;
-      }
+      background: $color__link-hover;
     }
     
     svg {
       transform: rotate( 90deg );
-      fill: $color__text-main;
+      fill: $color__text-light;
       margin-left: .5em;
+      &.textified-arrow {
+        transform: rotate( 270deg );
+      }
     }
+  }
+  
+  .textified-text {
+    padding-bottom: 1em;
+    border-bottom: $border-2px;
+    margin-bottom: 1em;
   }
 }
 

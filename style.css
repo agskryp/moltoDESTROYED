@@ -895,7 +895,8 @@ a:hover, a:active {
  * Textified Comic Settings
  ********************************/
 .textified {
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   margin: 0 auto;
 }
 .textified p {
@@ -907,22 +908,30 @@ a:hover, a:active {
   padding: 0;
 }
 .textified button {
-  background: none;
   cursor: pointer;
   margin: 1em auto 0;
   border: none;
   font-weight: bold;
+  background: #898989;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
 }
 .textified button:hover {
-  color: #898989;
-}
-.textified button:hover svg {
-  fill: #898989;
+  background: #bcbcbc;
 }
 .textified button svg {
   transform: rotate(90deg);
-  fill: #000;
+  fill: #fff;
   margin-left: 0.5em;
+}
+.textified button svg.textified-arrow {
+  transform: rotate(270deg);
+}
+.textified .textified-text {
+  padding-bottom: 1em;
+  border-bottom: 2px solid #000;
+  margin-bottom: 1em;
 }
 /*********************************
  * Privacy Policy Page
