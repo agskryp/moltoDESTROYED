@@ -135,6 +135,46 @@
 
 
 /*********************************
+ * Textified Comic Settings
+ ********************************/
+.textified {
+  width: 600px;
+  margin: 0 auto;
+  
+  p {
+    margin: 1em 0 0;
+    padding: 0;
+  }
+  
+  h3 {
+    margin: 1.5em 0 0;
+    padding: 0;
+  }
+  
+  button {
+    background: none;
+    cursor: pointer;
+    margin: 1em auto 0;
+    border: none;
+    font-weight: bold;
+    &:hover {
+      color: $color__link;
+      
+      svg {
+        fill: $color__link;
+      }
+    }
+    
+    svg {
+      transform: rotate( 90deg );
+      fill: $color__text-main;
+      margin-left: .5em;
+    }
+  }
+}
+
+
+/*********************************
  * Privacy Policy Page
  ********************************/
 .privacy-page h2 {
