@@ -30,7 +30,11 @@
   </header>
 
   <div class="text-center">
-    <?php moltodestroyed_post_thumbnail(); ?>
+    <?php
+      moltodestroyed_post_thumbnail(); 
+    
+      require_once get_template_directory() . '/partials/textified-comic.php';
+    ?>
   </div>
 
   <div class="entry-content">
