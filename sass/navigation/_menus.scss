@@ -116,13 +116,15 @@
   margin: 0 auto;
 }
 
+
+
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
   
   .site-main & {
     overflow: hidden;
-    margin: 0 0 $grid-padding;
+    margin: 0;
   }
 
   .nav-previous,
