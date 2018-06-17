@@ -505,7 +505,7 @@ a:hover, a:active {
   }
 }
 .main-navigation li a {
-  padding: 8px 16px;
+  padding: 8px 12px;
 }
 .main-navigation li a:hover, .main-navigation li a:focus, .main-navigation li a:active {
   color: #000;
@@ -895,17 +895,23 @@ a:hover, a:active {
  * Textified Comic Settings
  ********************************/
 .textified {
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
   margin: 0 auto;
+}
+.textified h3 {
+  margin: 1em 0 0;
+  padding: 0;
 }
 .textified p {
   margin: 1em 0 0;
   padding: 0;
+  font-size: 85%;
 }
-.textified h3 {
-  margin: 1.5em 0 0;
-  padding: 0;
+.textified hr {
+  background-color: white;
+  margin-bottom: -1px;
+  border-top: 2px dashed #000;
 }
 .textified button {
   cursor: pointer;
@@ -916,6 +922,7 @@ a:hover, a:active {
   color: #fff;
   padding: 8px;
   border-radius: 4px;
+  font-size: 75%;
 }
 .textified button:hover {
   background: #bcbcbc;
@@ -929,9 +936,11 @@ a:hover, a:active {
   transform: rotate(270deg);
 }
 .textified .textified-text {
-  padding-bottom: 1em;
-  border-bottom: 2px solid #000;
-  margin-bottom: 1em;
+  padding: 1em;
+  border: 2px dashed #000;
+  padding-top: 0;
+  margin-top: 1em;
+  background: white;
 }
 /*********************************
  * Privacy Policy Page

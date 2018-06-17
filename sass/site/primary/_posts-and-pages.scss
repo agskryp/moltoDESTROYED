@@ -138,18 +138,25 @@
  * Textified Comic Settings
  ********************************/
 .textified {
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
   margin: 0 auto;
   
-  p {
+  h3 {
     margin: 1em 0 0;
     padding: 0;
   }
   
-  h3 {
-    margin: 1.5em 0 0;
+  p {
+    margin: 1em 0 0;
     padding: 0;
+    font-size: 85%;
+  }
+  
+  hr {
+    background-color: white;
+    margin-bottom: -1px;
+    border-top: 2px dashed #000;
   }
   
   button {
@@ -161,6 +168,7 @@
     color: $color__text-light;
     padding: 8px;
     border-radius: 4px;
+    font-size: 75%;
     &:hover {
       background: $color__link-hover;
     }
@@ -176,9 +184,11 @@
   }
   
   .textified-text {
-    padding-bottom: 1em;
-    border-bottom: $border-2px;
-    margin-bottom: 1em;
+    padding: 1em;
+    border: 2px dashed #000;
+    padding-top: 0;
+    margin-top: 1em;
+    background: white;
   }
 }
 
