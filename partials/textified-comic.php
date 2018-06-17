@@ -1,7 +1,7 @@
 <?php
   $textified = get_field( 'textify_comic' );
 
-  if( !empty( $textified ) ):    
+  if( !empty( $textified ) && !is_home() ):    
 ?>
   <div class="textified text-left">
     <button id="textified-toggle" class="flex-center">
