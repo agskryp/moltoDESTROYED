@@ -16,7 +16,6 @@
     
     svg {
       fill: $color__link-hover;
-      margin-right: .5em;
     }
   }
 
@@ -71,8 +70,16 @@
       color: $color__text-light;
     }
     
-    .connect-container li {
-      display: inline-block;
+    .connect-container {
+      
+      a {
+        margin-right: .5em;
+        padding: 2px;
+      }
+      
+      li {
+        display: inline-block;
+      }
     }
   }
 
