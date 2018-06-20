@@ -17,12 +17,15 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    &:hover,
+    &:focus {
+      svg {
+        fill: $color__link;
+      }
+    }
 
     svg {
       fill: $color__background-dark;
-      &:hover {
-        fill: $color__link;
-      }
     }
   }
 }
