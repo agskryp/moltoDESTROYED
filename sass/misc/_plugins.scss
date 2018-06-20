@@ -39,7 +39,8 @@
     background: $color__background-button;
     border: none;
     color: $color__text-light;
-    &:hover {
+    &:hover,
+    &:focus {
       background: $color__link-hover;
     }
   }
