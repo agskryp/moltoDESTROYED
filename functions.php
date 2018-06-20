@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'moltodestroyed_widgets_init' );
  */
 function moltodestroyed_scripts() {
   wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Bangers|Open+Sans:400,600' );
-  wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/sass/bootstrap/bootstrap.min.css', array(), '3.3.7' );
+  wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap/bootstrap.min.css', array(), '3.3.7' );
   wp_enqueue_style( 'moltodestroyed-style', get_stylesheet_uri(), array(), THEME_VERSION_NUMBER );
   
   wp_enqueue_script( 'google-scripts',  get_template_directory_uri() . '/js/google-scripts.js', array(), THEME_VERSION_NUMBER, false );
