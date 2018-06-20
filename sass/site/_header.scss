@@ -7,30 +7,23 @@
 }
 
 .social-container {
-  padding-top: 6px;
+//  padding-top: 6px;
 
   a {
-    margin: 0 12px;
+    padding: 10px 12px 2px;
     text-decoration: none;
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: none;
-    }
-
-    @media all and ( min-width: $screen-xs ) {
-      margin-right: 5px;
-    }
-
-    @media all and ( min-width: $screen-sm ) {
-      margin-right: 6px;
+     
+      svg {
+        fill: $color__link;
+      }
     }
 
     svg {
       height: 22px;
       width: 22px;
-      &:hover {
-        fill: $color__link;
-      }
-
       @media all and ( min-width: $screen-xs ) {
         height: 26px;
         width: 26px;
