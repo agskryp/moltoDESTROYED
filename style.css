@@ -851,7 +851,7 @@ a:hover, a:active {
   max-height: 400px;
   overflow: hidden;
 }
-.blog-posts-list .post-thumbnail:hover {
+.blog-posts-list .post-thumbnail:hover, .blog-posts-list .post-thumbnail:focus {
   opacity: 0.8;
 }
 .blog-posts-list .entry-content {
@@ -924,8 +924,12 @@ a:hover, a:active {
   border-radius: 4px;
   font-size: 75%;
 }
-.textified button:hover {
+.textified button:hover, .textified button:focus {
   background: #bcbcbc;
+}
+.textified button:focus {
+  outline: 1px dotted #fff;
+  outline-offset: -2px;
 }
 .textified button svg {
   transform: rotate(90deg);
@@ -989,7 +993,7 @@ a:hover, a:active {
   display: block;
   margin: 0 4px;
 }
-.comic-navigation-container .comic-navigation a:hover {
+.comic-navigation-container .comic-navigation a:hover, .comic-navigation-container .comic-navigation a:focus {
   background: #bcbcbc;
 }
 @media all and (min-width: 360px) {
@@ -1068,7 +1072,6 @@ a:hover, a:active {
 }
 .site-footer a svg {
   fill: #bcbcbc;
-  margin-right: 0.5em;
 }
 .site-footer .footer-banner {
   max-width: 500px;
@@ -1116,6 +1119,10 @@ a:hover, a:active {
 }
 .site-footer .footer-menu h2 {
   color: #fff;
+}
+.site-footer .footer-menu .connect-container a {
+  margin-right: 0.5em;
+  padding: 2px;
 }
 .site-footer .footer-menu .connect-container li {
   display: inline-block;
@@ -1204,32 +1211,19 @@ a:hover, a:active {
 .site-banner img {
   max-height: 190px;
 }
-.social-container {
-  padding-top: 6px;
-}
 .social-container a {
-  margin: 0 12px;
+  padding: 10px 12px 2px;
   text-decoration: none;
 }
-.social-container a:hover {
+.social-container a:hover, .social-container a:focus {
   text-decoration: none;
 }
-@media all and (min-width: 360px) {
-  .social-container a {
-    margin-right: 5px;
-  }
-}
-@media all and (min-width: 480px) {
-  .social-container a {
-    margin-right: 6px;
-  }
+.social-container a:hover svg, .social-container a:focus svg {
+  fill: #898989;
 }
 .social-container a svg {
   height: 22px;
   width: 22px;
-}
-.social-container a svg:hover {
-  fill: #898989;
 }
 @media all and (min-width: 360px) {
   .social-container a svg {
@@ -1588,7 +1582,7 @@ embed, iframe, object {
   border: none;
   color: #fff;
 }
-.contact-form input[type="submit"]:hover {
+.contact-form input[type="submit"]:hover, .contact-form input[type="submit"]:focus {
   background: #bcbcbc;
 }
 .contact-form div.wpcf7 .ajax-loader {
@@ -1637,11 +1631,11 @@ embed, iframe, object {
   justify-content: center;
   align-items: center;
 }
+.social-share-container .social-share-button:hover svg, .social-share-container .social-share-button:focus svg {
+  fill: #898989;
+}
 .social-share-container .social-share-button svg {
   fill: #000;
-}
-.social-share-container .social-share-button svg:hover {
-  fill: #898989;
 }
 .ad-container {
   margin-bottom: 1.5em;

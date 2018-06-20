@@ -80,7 +80,8 @@
   .post-thumbnail {
     max-height: 400px;
     overflow: hidden;
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: .8;
     }
   }
@@ -169,8 +170,14 @@
     padding: 8px;
     border-radius: 4px;
     font-size: 75%;
-    &:hover {
+    &:hover,
+    &:focus {
       background: $color__link-hover;
+    }
+    
+    &:focus {
+      outline: 1px dotted $color__text-light;
+      outline-offset: -2px;
     }
     
     svg {
