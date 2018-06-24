@@ -24,7 +24,7 @@
   </div>
 
   <p>
-    All site content is written, illustrated, created, and produced by molto D. stroyed. You can get in contact with me using the form below. I'm also available on <a href="<?php echo esc_url( __( 'https://www.facebook.com/molto-DESTROYED-621021044638414/', 'moltodestroyed' ) ); ?>" target="_blank">Facebook</a> and <a href="<?php echo esc_url( __( 'https://twitter.com/moltodestroyed', 'moltodestroyed' ) ); ?>" target="_blank">Twitter</a>.
+    All site content is created, written, illustrated, and produced by the molto D. stroyed collective. You can get in contact with us using the form below.  We're also available on <a href="<?php echo esc_url( __( 'https://www.facebook.com/molto-DESTROYED-621021044638414/', 'moltodestroyed' ) ); ?>" target="_blank">Facebook</a> and <a href="<?php echo esc_url( __( 'https://twitter.com/moltodestroyed', 'moltodestroyed' ) ); ?>" target="_blank">Twitter</a>.
   </p>
   
   <?php require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>
