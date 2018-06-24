@@ -26,7 +26,7 @@
   }
 
   .footer-characters {
-    display: flex;
+    @include flex;
     align-content: center;
     justify-content: space-around;
     
@@ -90,7 +90,7 @@
     .container {
       display: block;
       @media all and ( min-width: $screen-sm ) {
-        display: flex;
+        @include flex;
       }
     }
     
@@ -105,16 +105,16 @@
       padding-right: $grid-padding * 2;
       float: left;
       @media all and ( min-width: $screen-sm ) {
-        flex-grow: 1;
-        order: 1;
+        @include flex-grow(1);
+        @include flex-order(1);
       }
     }
     
     .copyright {
       display: block;      
       @media all and ( min-width: $screen-sm ) {
-        flex-grow: 2;
-        order: 2;
+        @include flex-grow(3);
+        @include flex-order(2);
       }
     }
 
@@ -122,8 +122,8 @@
       padding-left: $grid-padding * 2;
       float: right;
       @media all and ( min-width: $screen-sm ) {
-        flex-grow: 1;
-        order: 3;
+        @include flex-grow(1);
+        @include flex-order(3);
       }
     }
   }
