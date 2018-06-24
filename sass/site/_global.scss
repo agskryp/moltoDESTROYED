@@ -1,23 +1,22 @@
 .site {
-  display: flex;
+  @include flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
 }
 
-.site-header {
-  flex-grow: 0;
+.site-header,
+.site-footer {
+  height: 20%;
+  @include flex-grow(1);
 }
 
 .site-content {
-  flex-grow: 1;
-}
-
-.site-footer {
-  flex-grow: 0;
+  height: 60%;
+  @include flex-grow(2);
 }
 
 .narrow-container {
-  max-width: 970px; // Billboard ads have a width of 970px //750px;
+  max-width: 970px; // Billboard ads have a width of 970px // Ideally have content be 750px (?);
   margin: 0 auto;
   padding: 0 15px;
 }
