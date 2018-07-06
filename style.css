@@ -295,7 +295,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  background: pink;
+  background: #ededed;
   overflow-x: hidden;
   font-size: 16px;
 }
@@ -1265,9 +1265,6 @@ a:hover, a:active {
     /* NEW, Spec - Opera 12.1, Firefox 20+ */
   }
 }
-/**
- * Flex breaks site on ipod touch safari
- */
 .site {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
