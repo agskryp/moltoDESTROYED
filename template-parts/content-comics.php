@@ -8,8 +8,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
-  
   <header>
     <?php the_title( '<h1 class="entry-title text-center comic-header">', '</h1>' ); ?>
   </header>

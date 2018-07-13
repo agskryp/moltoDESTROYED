@@ -4,10 +4,11 @@
   get_header(); 
 ?>
 
-<div class="narrow-container">
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main">
-      <?php
+<div id="primary" class="content-area">
+  <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
+  
+  <main id="main" class="site-main narrow-container">
+    <?php
       $wp_query = new WP_Query ( array( 
         'post_type'       => 'comics',
         'posts_per_page'  => 1 
@@ -24,9 +25,8 @@
         endif;
       endwhile; // End of the loop.
     ?>
-    </main> <?php // #main // ?>
-  </div> <?php // #primary // ?>
-</div> <?php // .narrow-container // ?>
+  </main>
+</div>
 
 <?php 
   get_footer();

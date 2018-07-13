@@ -14,42 +14,38 @@
   get_header();
 ?>
 
-<div class="narrow-container">
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main blog-posts-list">
-      <?php 
-        require_once get_template_directory() . '/partials/ads/top-of-main-area.php';
-      
-        if ( have_posts() ) :
-      ?>
-        <h1 class="page-title screen-reader-text">
-          <?php single_post_title(); ?>
-        </h1>
+<div id="primary" class="content-area">
+  <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
 
-        <?php
-          /* Start the Loop */
-          while ( have_posts() ) :
-            the_post();
+  <main id="main" class="site-main blog-posts-list narrow-container">
+    <?php if ( have_posts() ) : ?>
+      <h1 class="page-title screen-reader-text">
+        <?php single_post_title(); ?>
+      </h1>
 
-            /*
-             * Include the Post-Format-specific template for the content.
-             * If you want to override this in a child theme, then include a file
-             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-             */
-            get_template_part( 'template-parts/content', get_post_format() );
-          endwhile;
-      
-        require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
-        
-        molto_posts_navigation();
+      <?php
+        /* Start the Loop */
+        while ( have_posts() ) :
+          the_post();
 
-        else :
-          get_template_part( 'template-parts/content', 'none' );
-      
-        endif;
-      ?>
-    </main>
-  </div>
+          /*
+           * Include the Post-Format-specific template for the content.
+           * If you want to override this in a child theme, then include a file
+           * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+           */
+          get_template_part( 'template-parts/content', get_post_format() );
+        endwhile;
+
+      require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
+
+      molto_posts_navigation();
+
+      else :
+        get_template_part( 'template-parts/content', 'none' );
+
+      endif;
+    ?>
+  </main>
 </div>
 
 <?php
