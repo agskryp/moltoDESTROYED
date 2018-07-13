@@ -54,7 +54,7 @@
     </div> <?php // .row // ?>
   </main> <?php // #main // ?>
   
-  <?php require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>
+  <?php // require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>
 </div> <?php // #primary // ?>
 
 <?php 
