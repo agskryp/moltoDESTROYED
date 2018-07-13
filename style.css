@@ -1306,7 +1306,7 @@ a:hover, a:active {
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 .narrow-container {
-  max-width: 970px;
+  max-width: 750px;
   margin: 0 auto;
   padding: 0 15px;
 }
