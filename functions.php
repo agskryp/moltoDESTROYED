@@ -247,3 +247,23 @@ function wpdocs_theme_add_editor_styles() {
   add_editor_style( get_stylesheet_uri() );
 }
 add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+
+/**
+ * Deregisters contact form 7 script unless on about page
+ */
+function deregister_javascript() {
+  if ( ! is_page( 'about' ) ) {
+    wp_deregister_script( 'contact-form-7' );
+  }
+}
+add_action( 'wp_print_scripts', 'deregister_javascript', 100 );
+
+/**
+ * Deregisters contact form 7 stylesheet unless on about page
+ */
+function deregister_stylesheet() {
+  if ( ! is_page( 'about' ) ) {
+    wp_deregister_style( 'contact-form-7' );
+  }
+}
+add_action( 'wp_enqueue_scripts', 'deregister_stylesheet', 20 );
