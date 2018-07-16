@@ -42,10 +42,11 @@
 
         else :
           get_template_part( 'template-parts/content', 'none' );
+      
         endif;
       ?>
-    </main> <?php // #main // ?>
-  </div> <?php // #primary // ?>
+    </main>
+  </div>
 
   <?php get_sidebar(); ?>      
 </div>
