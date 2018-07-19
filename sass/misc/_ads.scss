@@ -4,13 +4,6 @@
   position: relative;
   margin: 0 auto;
   
-  span {
-    font-size: 50%;
-    display: block;
-    padding: 0; 
-    margin: 0;
-  }
-  
   ins.adsbygoogle {
     margin: 0 0 $grid-padding;
     &::before {

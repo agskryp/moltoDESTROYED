@@ -1796,12 +1796,6 @@ embed, iframe, object {
   position: relative;
   margin: 0 auto;
 }
-.ad-container span {
-  font-size: 50%;
-  display: block;
-  padding: 0;
-  margin: 0;
-}
 .ad-container ins.adsbygoogle {
   margin: 0 0 1.5em;
 }
