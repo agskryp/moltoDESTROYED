@@ -1,8 +1,4 @@
 <div class="ad-container">
-  <span class="text-center">
-    Advertisement
-  </span>
-
   <ins id="header-ad"
        class="adsbygoogle"
        style="display:block"
@@ -11,7 +7,5 @@
        data-ad-format="auto">
   </ins>
   
-  <script> 
-    (adsbygoogle = window.adsbygoogle || []).push({}); 
-  </script> 
+
 </div>
