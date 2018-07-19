@@ -1799,7 +1799,7 @@ embed, iframe, object {
 .ad-container ins.adsbygoogle {
   margin: 0 0 1.5em;
 }
-.ad-container ins.adsbygoogle::before {
+.ad-container ins.adsbygoogle ins::before {
   content: "Advertisement";
   font-size: 50%;
   display: block;
