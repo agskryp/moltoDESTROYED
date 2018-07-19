@@ -7,5 +7,7 @@
        data-ad-format="auto">
   </ins>
   
-
+  <script> 
+    (adsbygoogle = window.adsbygoogle || []).push({}); 
+  </script> 
 </div>

@@ -6,4 +6,8 @@
        data-ad-slot="2291116454"
        data-ad-format="auto">
   </ins>
+  
+  <script> 
+    (adsbygoogle = window.adsbygoogle || []).push({}); 
+  </script> 
 </div>
