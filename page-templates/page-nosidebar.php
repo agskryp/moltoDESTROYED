@@ -21,7 +21,7 @@
           endif;
         endwhile; // End of the loop.
 
-      //  require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
+        require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
       ?>
     </main> 
   </div> 
