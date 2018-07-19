@@ -1791,15 +1791,30 @@ embed, iframe, object {
   fill: #000;
 }
 .ad-container {
-  max-width: 970px;
-  margin: 0 auto 1.5em;
+  max-width: 1000px;
   clear: both;
+  position: relative;
+  margin: 0 auto;
 }
 .ad-container span {
   font-size: 50%;
   display: block;
   padding: 0;
   margin: 0;
+}
+.ad-container ins.adsbygoogle {
+  margin: 0 0 1.5em;
+}
+.ad-container ins.adsbygoogle::before {
+  content: "Advertisement";
+  font-size: 50%;
+  display: block;
+  color: #898989;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: -15px;
 }
 .wp-editor {
   background: #fff;

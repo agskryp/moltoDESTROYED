@@ -1,12 +1,28 @@
 .ad-container {
-  max-width: 970px;
-  margin: 0 auto $grid-padding;
+  max-width: 1000px;
   clear: both;
+  position: relative;
+  margin: 0 auto;
   
   span {
     font-size: 50%;
     display: block;
     padding: 0; 
     margin: 0;
+  }
+  
+  ins.adsbygoogle {
+    margin: 0 0 $grid-padding;
+    &::before {
+      content: "Advertisement";
+      font-size: 50%;
+      display: block;
+      color: $color__link;
+      position: absolute;
+      text-align: center;
+      left: 0;
+      right: 0;
+      top: -15px;
+    }
   }
 }
