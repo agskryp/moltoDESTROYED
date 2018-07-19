@@ -125,6 +125,10 @@
 
 </div> <?php // #page // ?>
 
+  <script> 
+    (adsbygoogle = window.adsbygoogle || []).push({}); 
+  </script> 
+
 <?php wp_footer(); ?>
 
 </body>
