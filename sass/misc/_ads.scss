@@ -16,7 +16,10 @@
       text-align: center;
       left: 0;
       right: 0;
-      top: -15px;
+      top: -12px;
+      @media all and ( min-width: $screen-ms ) {
+        top: -15px;
+      }
     }
   }
 }
