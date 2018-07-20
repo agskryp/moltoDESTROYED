@@ -297,14 +297,19 @@ html {
 body {
   background: #ededed;
   overflow-x: hidden;
-  font-size: 16px;
+  font-size: 15px;
 }
 @media all and (min-width: 360px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media all and (min-width: 480px) {
   body {
     font-size: 18px;
   }
 }
-@media all and (min-width: 480px) {
+@media all and (min-width: 600px) {
   body {
     font-size: 20px;
   }
@@ -845,7 +850,6 @@ a:hover, a:active {
   clear: both;
 }
 .blog-posts-list .entry-header h2, .blog-post .entry-header h2 {
-  display: contents;
   float: left;
 }
 .blog-posts-list .entry-header .entry-meta, .blog-post .entry-header .entry-meta {
@@ -890,7 +894,6 @@ a:hover, a:active {
   margin-top: 1.5em;
 }
 .blog-title {
-  display: contents;
   word-break: break-word;
 }
 /**
