@@ -875,8 +875,8 @@ a:hover, a:active {
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 .blog-posts-list .entry-header .entry-meta, .blog-post .entry-header .entry-meta {
-  font-size: 70%;
-  padding-left: 1em;
+  font-size: 65%;
+  padding-left: 1.5em;
 }
 .blog-posts-list h2 {
   font-size: 2em;
