@@ -45,14 +45,16 @@
   }
   
   .entry-header {
+    @include flex;
+    flex-direction: row-reverse;
     
-    h2 {
-      float: left;
+    .entry-title {
+      @include flex-grow( 6 );
     }
 
     .entry-meta {
-      font-size: .75em;
-      padding-left: 2em;
+      font-size: 70%;
+      padding-left: 1em;
     }
   }
 }
@@ -151,9 +153,9 @@
   }
   
   hr {
-    background-color: white;
+    background-color: WHITE;
     margin-bottom: -1px;
-    border-top: 2px dashed #000;
+    border-top: 2px dashed BLACK;
   }
   
   button {

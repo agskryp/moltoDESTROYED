@@ -849,12 +849,34 @@ a:hover, a:active {
   margin: 1em 0 0;
   clear: both;
 }
-.blog-posts-list .entry-header h2, .blog-post .entry-header h2 {
-  float: left;
+.blog-posts-list .entry-header, .blog-post .entry-header {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row-reverse;
+}
+.blog-posts-list .entry-header .entry-title, .blog-post .entry-header .entry-title {
+  -webkit-box-flex: 6;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 6;
+  /* OLD - Firefox 19- */
+  -webkit-flex: 6;
+  /* Chrome */
+  -ms-flex: 6;
+  /* IE 10 */
+  flex: 6;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 .blog-posts-list .entry-header .entry-meta, .blog-post .entry-header .entry-meta {
-  font-size: 0.75em;
-  padding-left: 2em;
+  font-size: 70%;
+  padding-left: 1em;
 }
 .blog-posts-list h2 {
   font-size: 2em;
@@ -931,9 +953,9 @@ a:hover, a:active {
   font-size: 85%;
 }
 .textified hr {
-  background-color: white;
+  background-color: WHITE;
   margin-bottom: -1px;
-  border-top: 2px dashed #000;
+  border-top: 2px dashed BLACK;
 }
 .textified button {
   cursor: pointer;
@@ -1811,7 +1833,12 @@ embed, iframe, object {
   text-align: center;
   left: 0;
   right: 0;
-  top: -15px;
+  top: -12px;
+}
+@media all and (min-width: 600px) {
+  .ad-container ins.adsbygoogle ins::before {
+    top: -15px;
+  }
 }
 .wp-editor {
   background: #fff;
