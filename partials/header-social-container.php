@@ -15,7 +15,7 @@
     </svg>
   </a>
 
-  <a href="https://twitter.com/moltodestroyed"
+  <a href="https://twitter.com/moltodestroyed/"
      target="_blank"
      title="Twitter">
     <span class="sr-only">
@@ -27,7 +27,7 @@
     </svg>
   </a>
 
-  <a href="https://www.facebook.com/molto-DESTROYED-621021044638414/"
+  <a href="https://www.facebook.com/moltoDESTROYED/"
      target="_blank"
      title="Facebook">
     <span class="sr-only">
