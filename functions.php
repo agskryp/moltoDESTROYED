@@ -129,6 +129,7 @@ function moltodestroyed_scripts() {
   wp_enqueue_script( 'moltodestroyed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
   wp_enqueue_script( 'moltodestroyed-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
   wp_enqueue_script( 'moltodestroyed-toggle-animation', get_template_directory_uri() . '/js/toggle-animation.js', array(), THEME_VERSION_NUMBER, true );
+  wp_enqueue_script( 'moltodestroyed-blocked-ads', get_template_directory_uri() . '/js/blocked-js.js', array(), THEME_VERSION_NUMBER, false );
 
   if ( is_singular( 'comics' ) || is_page_template( 'page-templates/page-front.php' ) ) {
     wp_enqueue_script( 'moltodestroyed-pop-up-window', get_template_directory_uri() . '/js/pop-up-window.js', array(), THEME_VERSION_NUMBER, true );
