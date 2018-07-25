@@ -16,6 +16,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png" />
   
+  <script>
+    var moltoConfig = {
+      'themeDirectory': '<?php echo get_template_directory_uri(); ?>',
+    }
+  </script>
+  
   <?php wp_head(); ?>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64750314-1"></script>
