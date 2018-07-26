@@ -7,12 +7,12 @@
 .site-header,
 .site-footer {
   height: 20%;
-  @include flex-grow(1);
+  @include flex-grow( 1 );
 }
 
 .site-content {
   height: 60%;
-  @include flex-grow(2);
+  @include flex-grow( 2 );
 }
 
 .narrow-container {

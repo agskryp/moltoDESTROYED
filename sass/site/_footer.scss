@@ -1,5 +1,4 @@
-.site-footer {
-  
+.site-footer {  
   a {
     color: $color__link-hover;
     display: inline-flex;
@@ -52,7 +51,7 @@
   }
 
   .footer-menu {
-    background: lighten($color__background-dark, 20%);
+    background: lighten( $color__background-dark, 20% );
     border-top: $border-2px;
     padding-top: $grid-padding;
     
@@ -70,8 +69,7 @@
       color: $color__text-light;
     }
     
-    .connect-container {
-      
+    .connect-container {  
       a {
         margin-right: .5em;
         padding: 2px;
@@ -105,16 +103,16 @@
       padding-right: $grid-padding * 2;
       float: left;
       @media all and ( min-width: $screen-sm ) {
-        @include flex-grow(1);
-        @include flex-order(1);
+        @include flex-grow( 1 );
+        @include flex-order( 1 );
       }
     }
     
     .copyright {
       display: block;      
       @media all and ( min-width: $screen-sm ) {
-        @include flex-grow(3);
-        @include flex-order(2);
+        @include flex-grow( 3 );
+        @include flex-order( 2 );
       }
     }
 
@@ -122,8 +120,8 @@
       padding-left: $grid-padding * 2;
       float: right;
       @media all and ( min-width: $screen-sm ) {
-        @include flex-grow(1);
-        @include flex-order(3);
+        @include flex-grow( 1 );
+        @include flex-order( 3 );
       }
     }
   }

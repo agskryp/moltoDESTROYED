@@ -632,17 +632,21 @@ a:hover, a:active {
   transition: 0.35s ease-in-out;
 }
 .main-menu-icon {
-  width: 20px;
-  height: 14px;
-  display: inline-block;
-  margin-left: 6px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
+  width: 20px;
+  height: 14px;
+  display: inline-block;
+  margin-left: 6px;
   cursor: pointer;
 }
 .main-menu-icon span {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
   display: block;
   position: absolute;
   height: 3px;
@@ -651,10 +655,6 @@ a:hover, a:active {
   border-radius: 9px;
   opacity: 1;
   left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;

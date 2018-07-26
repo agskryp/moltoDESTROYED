@@ -121,7 +121,6 @@
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-  
   .site-main & {
     overflow: hidden;
     margin: 0;
@@ -167,6 +166,7 @@
 .navbar-collapse {
   padding: 0;
   border-top: none;
+  
   &.collapse {
     @include flex;
     display: flex !important; // necessary to override bootstrap
@@ -181,14 +181,15 @@
 }
 
 .main-menu-icon {
+  @include transform-rotate( 0deg );
   width: 20px;
   height: 14px;
   display: inline-block;
   margin-left: 6px;
-  @include zero-degree();
   cursor: pointer;
 
   span {
+    @include transform-rotate( 0deg );
     display: block;
     position: absolute;
     height: 3px;
@@ -197,7 +198,6 @@
     border-radius: 9px;
     opacity: 1;
     left: 0;
-    @include zero-degree();
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
@@ -230,16 +230,10 @@
   }
 
   &:nth-child( 2 ) {
-    -webkit-transform: rotate( 45deg );
-    -moz-transform: rotate( 45deg );
-    -o-transform: rotate( 45deg );
-    transform: rotate( 45deg );
+    @include transform-rotate( 45deg );
   }
 
   &:nth-child( 3 ) {
-    -webkit-transform: rotate( -45deg );
-    -moz-transform: rotate( -45deg );
-    -o-transform: rotate( -45deg );
-    transform: rotate( -45deg );
+    @include transform-rotate( -45deg );
   }
 }

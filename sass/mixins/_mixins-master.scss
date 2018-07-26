@@ -1,6 +1,6 @@
 // Rem output with px fallback
 @mixin font-size( $sizeValue: 1 ) {
-  font-size: ($sizeValue * 16) * 1px;
+  font-size: ( $sizeValue * 16 ) * 1px;
   font-size: $sizeValue * 1rem;
 }
 
@@ -36,12 +36,12 @@
   transition: .35s ease-in-out;
 }
 
-// Default transform state
-@mixin zero-degree() {
-  -webkit-transform: rotate( 0deg );
-  -moz-transform: rotate( 0deg );
-  -o-transform: rotate( 0deg );
-  transform: rotate( 0deg );
+// Transform support for rotate
+@mixin transform-rotate( $value ) {
+  -webkit-transform: rotate( $value );
+  -moz-transform: rotate( $value );
+  -o-transform: rotate( $value );
+  transform: rotate( $value );
 }
 
 // Flex support for older browsers
