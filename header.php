@@ -25,7 +25,7 @@
   <?php wp_head(); ?>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64750314-1"></script>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" onerror="adsMessage();"></script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" onerror="blockerMessage();"></script>
   <script>
        (adsbygoogle = window.adsbygoogle || []).push({
             google_ad_client: "ca-pub-5942635838820429",
