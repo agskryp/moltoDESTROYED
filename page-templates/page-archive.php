@@ -5,7 +5,7 @@
 ?>
 
 <div id="primary" class="content-area">
-  <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
+  <?php require get_template_directory() . '/partials/ads/comic-rocket-promo.php'; ?>
 
   <main id="main" class="site-main archive-page narrow-container">
     <div class="row">
@@ -51,10 +51,10 @@
         ?>
         </ul>
       </section>
-    </div> <?php // .row // ?>
-  </main> <?php // #main // ?>
+    </div>
+  </main>
   
-  <?php require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>
+  <?php require get_template_directory() . '/partials/ads/comic-rocket-promo.php'; ?>
 </div> <?php // #primary // ?>
 
 <?php 
