@@ -1819,7 +1819,7 @@ embed, iframe, object {
   margin: 0 0 1.5em;
 }
 .ad-container ins.adsbygoogle ins::before {
-  content: "Advertisement";
+  content: "Advertisement by Google";
   font-size: 50%;
   display: block;
   color: #898989;
@@ -1833,6 +1833,31 @@ embed, iframe, object {
   .ad-container ins.adsbygoogle ins::before {
     top: -15px;
   }
+}
+.promo-container {
+  max-width: 970px;
+  clear: both;
+  position: relative;
+  margin: 0 auto;
+}
+.promo-container::before {
+  content: "Promo by Comic Rocket";
+  font-size: 50%;
+  display: block;
+  color: #898989;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: -12px;
+}
+@media all and (min-width: 600px) {
+  .promo-container::before {
+    top: -15px;
+  }
+}
+.promo-container img {
+  margin: 0 0 1.5em;
 }
 .wp-editor {
   background: #fff;

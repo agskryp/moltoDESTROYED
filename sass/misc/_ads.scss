@@ -8,7 +8,7 @@
     margin: 0 0 $grid-padding;
     
     ins::before {
-      content: "Advertisement";
+      content: "Advertisement by Google";
       font-size: 50%;
       display: block;
       color: $color__link;
@@ -21,5 +21,31 @@
         top: -15px;
       }
     }
+  }
+}
+
+.promo-container {
+  max-width: 970px;
+  clear: both;
+  position: relative;
+  margin: 0 auto;
+  
+  &::before {
+    content: "Promo by Comic Rocket";
+    font-size: 50%;
+    display: block;
+    color: $color__link;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: -12px;
+    @media all and ( min-width: $screen-ms ) {
+      top: -15px;
+    }
+  }
+  
+  img {
+    margin: 0 0 $grid-padding;
   }
 }
