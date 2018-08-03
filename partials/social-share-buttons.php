@@ -59,16 +59,16 @@
   </a>
 
   <a class="social-share-button"
-     href="http://www.stumbleupon.com/submit?url=<?php echo get_permalink(); ?>&title=<?php echo get_the_title(); ?>"
-     target="popupStumbleUpon" 
-     onclick="PopupCenter('','popupStumbleUpon','546','600');"
-     title="StumbleUpon">
+     href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>&title=<?php echo get_the_title(); ?>"
+     target="popupGooglePlus"
+     onclick="PopupCenter('','popupGooglePlus','546','600');"
+     title="Google+">
     <span class="sr-only">
-      StumbleUpon
+      Google Plus
     </span>
     
     <svg width="24" height="24" viewBox="0 0 24 24">
-      <path d="M13.271 9.231l1.581.88 2.502-.846v-1.696c0-2.925-2.445-5.202-5.354-5.202-2.897 0-5.354 2.129-5.354 5.17v7.749c0 .702-.568 1.27-1.27 1.27s-1.271-.568-1.271-1.27v-3.284h-4.105v3.328c0 2.963 2.402 5.365 5.365 5.365 2.937 0 5.323-2.361 5.364-5.288v-7.653c0-.702.569-1.27 1.271-1.27s1.271.568 1.271 1.27v1.477zm6.624 2.772v3.437c0 .702-.569 1.27-1.271 1.27s-1.271-.568-1.271-1.27v-3.372l-2.502.847-1.581-.881v3.344c.025 2.941 2.418 5.317 5.364 5.317 2.963 0 5.365-2.402 5.365-5.365v-3.328h-4.104z"/>
+      <path d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z" fill-rule="evenodd" clip-rule="evenodd"/>
     </svg>
   </a>
 
