@@ -61,7 +61,7 @@
   <a class="social-share-button"
      href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>&title=<?php echo get_the_title(); ?>"
      target="popupGooglePlus"
-     onclick="PopupCenter('','popupGooglePlus','546','600');"
+     onclick="PopupCenter('','popupGooglePlus','400','525');"
      title="Google+">
     <span class="sr-only">
       Google Plus
