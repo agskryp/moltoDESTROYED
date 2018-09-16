@@ -1818,7 +1818,7 @@ embed, iframe, object {
 .ad-container ins.adsbygoogle {
   margin: 0 0 1.5em;
 }
-.ad-container ins.adsbygoogle ins::before {
+ins.adsbygoogle ins::before, .google-auto-placed ins::before {
   content: "Advertisement by Google";
   font-size: 50%;
   display: block;
@@ -1830,7 +1830,7 @@ embed, iframe, object {
   top: -12px;
 }
 @media all and (min-width: 600px) {
-  .ad-container ins.adsbygoogle ins::before {
+  ins.adsbygoogle ins::before, .google-auto-placed ins::before {
     top: -15px;
   }
 }
