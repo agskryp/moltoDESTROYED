@@ -27,7 +27,7 @@
     </p>
   </div>
   
-  <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
+  <?php require get_template_directory() . '/partials/ads/comic-rocket-promo.php'; ?>
 
   <div id="contactForm" class="contact-form narrow-container">
     <h2 class="text-center">
