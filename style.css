@@ -1783,14 +1783,14 @@ embed, iframe, object {
   border: 4px solid #000;
 }
 .social-share-container {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 .social-share-container h3 {
   font-size: 26px;
   display: block;
-  margin: 0 0 2px;
+  margin: 0 0 6px;
 }
-@media all and (min-width: 360px) {
+@media all and (min-width: 406px) {
   .social-share-container h3 {
     display: inline-block;
     margin: 0 12px 6px 0;

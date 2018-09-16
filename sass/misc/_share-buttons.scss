@@ -1,11 +1,11 @@
 .social-share-container {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   
   h3 {
     font-size: 26px; // don't use em
     display: block;
-    margin: 0 0 2px;
-    @media all and ( min-width: $screen-xs ) {
+    margin: 0 0 6px;
+    @media all and ( min-width: 406px ) { // Custom width prevents icon overflow on small devices
       display: inline-block;
       margin: 0 12px 6px 0;
     }
