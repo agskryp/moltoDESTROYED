@@ -44,6 +44,7 @@ if ( ! function_exists( 'moltodestroyed_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'moltodestroyed' ),
+            'menu-2' => esc_html__( 'Footer', 'moltodestroyed' ),
 		) );
 
 		/*
