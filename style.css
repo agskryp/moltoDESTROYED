@@ -531,7 +531,7 @@ a:hover, a:active {
 .menu-toggle {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
+  display: -moz-box !important;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
   /* TWEENER - IE 10 */
@@ -606,7 +606,7 @@ a:hover, a:active {
 .navbar-collapse.collapse {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
+  display: -moz-box !important;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
   /* TWEENER - IE 10 */
@@ -846,7 +846,7 @@ a:hover, a:active {
 .blog-posts-list .entry-header, .blog-post .entry-header {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
+  display: -moz-box !important;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
   /* TWEENER - IE 10 */
@@ -1119,7 +1119,7 @@ a:hover, a:active {
 .site-footer .footer-characters {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
+  display: -moz-box !important;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
   /* TWEENER - IE 10 */
@@ -1185,7 +1185,7 @@ a:hover, a:active {
   .site-footer .footer-info .container {
     display: -webkit-box;
     /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;
+    display: -moz-box !important;
     /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;
     /* TWEENER - IE 10 */
@@ -1287,7 +1287,7 @@ a:hover, a:active {
 .site {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
+  display: -moz-box !important;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
   /* TWEENER - IE 10 */
@@ -1339,7 +1339,7 @@ a:hover, a:active {
 .flex-center {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
+  display: -moz-box !important;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
   /* TWEENER - IE 10 */
@@ -1529,7 +1529,7 @@ a:hover, a:active {
   .header-characters .far-right, .header-characters .far-left {
     display: -webkit-box;
     /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;
+    display: -moz-box !important;
     /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;
     /* TWEENER - IE 10 */
@@ -1581,7 +1581,7 @@ a:hover, a:active {
   .header-characters .right {
     display: -webkit-box;
     /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;
+    display: -moz-box !important;
     /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;
     /* TWEENER - IE 10 */
@@ -1613,7 +1613,7 @@ a:hover, a:active {
   .header-characters .far-far-right {
     display: -webkit-box;
     /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;
+    display: -moz-box !important;
     /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;
     /* TWEENER - IE 10 */
@@ -1799,9 +1799,6 @@ embed, iframe, object {
 .social-share-container .social-share-button {
   background: none;
   margin: 2px 6px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
 }
 .social-share-container .social-share-button:hover svg, .social-share-container .social-share-button:focus svg {
   fill: #898989;
