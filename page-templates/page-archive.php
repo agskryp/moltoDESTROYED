@@ -53,8 +53,6 @@
       </section>
     </div>
   </main>
-  
-  <?php require get_template_directory() . '/partials/ads/comic-rocket-promo.php'; ?>
 </div> <?php // #primary // ?>
 
 <?php 
