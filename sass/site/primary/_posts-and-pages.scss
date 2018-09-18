@@ -159,6 +159,7 @@
   }
   
   button {
+    display: -moz-box !important; // Required for firefox on windows
     cursor: pointer;
     margin: 1em auto 0;
     border: none;
@@ -168,7 +169,6 @@
     padding: 8px;
     border-radius: 4px;
     font-size: 75%;
-    display: -moz-box !important; // Required for firefox on windows
     &:hover,
     &:focus {
       background: $color__link-hover;
