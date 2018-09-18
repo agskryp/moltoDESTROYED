@@ -168,6 +168,7 @@
     padding: 8px;
     border-radius: 4px;
     font-size: 75%;
+    display: -moz-box !important; // Required for firefox on windows
     &:hover,
     &:focus {
       background: $color__link-hover;

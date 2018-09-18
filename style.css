@@ -529,6 +529,7 @@ a:hover, a:active {
   color: #bcbcbc;
 }
 .menu-toggle {
+  display: -moz-box !important;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -961,6 +962,7 @@ a:hover, a:active {
   padding: 8px;
   border-radius: 4px;
   font-size: 75%;
+  display: -moz-box !important;
 }
 .textified button:hover, .textified button:focus {
   background: #bcbcbc;
@@ -1295,7 +1297,6 @@ a:hover, a:active {
   /* NEW - Chrome */
   display: flex;
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  display: -moz-box !important;
   flex-direction: column;
   height: 100%;
 }

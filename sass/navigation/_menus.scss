@@ -98,6 +98,7 @@
 }
 
 .menu-toggle {
+  display: -moz-box !important; // Required for firefox on windows
   @include flex-center;
   width: 100%;
   border: none;
