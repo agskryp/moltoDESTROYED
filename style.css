@@ -1353,6 +1353,9 @@ a:hover, a:active {
 .site-header {
   margin-bottom: 1.5em;
 }
+a.site-banner:hover, a.site-banner:focus {
+  opacity: 0.55;
+}
 .site-banner img {
   max-height: 190px;
 }
@@ -1399,6 +1402,7 @@ a:hover, a:active {
   width: 60px;
   height: 60px;
   position: absolute;
+  z-index: 16;
 }
 @media all and (min-width: 360px) {
   .header-characters .small {
