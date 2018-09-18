@@ -108,7 +108,7 @@
   padding: 10px;
   font-size: 1em;
   @media all and ( min-width: $screen-md ) {
-    display: none;
+    display: none !important; // !important required for firefox on windows
   }
 }
 
