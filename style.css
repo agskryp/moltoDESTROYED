@@ -1790,7 +1790,7 @@ embed, iframe, object {
   display: block;
   margin: 0 0 6px;
 }
-@media all and (min-width: 406px) {
+@media all and (min-width: 450px) {
   .social-share-container h3 {
     display: inline-block;
     margin: 0 12px 6px 0;
