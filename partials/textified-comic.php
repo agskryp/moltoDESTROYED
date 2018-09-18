@@ -3,7 +3,7 @@
 
   if( !empty( $textified ) && !is_home() ):    
 ?>
-  <div class="textified text-left">
+  <div class="textified">
     <button id="textified-toggle" class="flex-center">
       <span id="textified-button">
         View text version
@@ -14,7 +14,7 @@
       </svg>
     </button>
 
-    <div id="textified-text" class="textified-text sr-only">
+    <div id="textified-text text-left" class="textified-text sr-only">
       <?php echo $textified; ?>
     </div>
   </div>
