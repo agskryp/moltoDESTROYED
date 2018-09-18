@@ -62,7 +62,7 @@
      href="https://mix.com/add?url=<?php echo get_permalink(); ?>"
      target="popupMix"
      onclick="PopupCenter('','popupMix','600','760');"
-     title="Google+">
+     title="Mix.com">
     <span class="sr-only">
       Mix.com
     </span>
