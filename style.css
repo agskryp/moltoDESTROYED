@@ -531,7 +531,7 @@ a:hover, a:active {
 .menu-toggle {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box !important;
+  display: -moz-box;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
   /* TWEENER - IE 10 */
@@ -606,7 +606,7 @@ a:hover, a:active {
 .navbar-collapse.collapse {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box !important;
+  display: -moz-box;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
   /* TWEENER - IE 10 */
@@ -846,7 +846,7 @@ a:hover, a:active {
 .blog-posts-list .entry-header, .blog-post .entry-header {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box !important;
+  display: -moz-box;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
   /* TWEENER - IE 10 */
@@ -1119,7 +1119,7 @@ a:hover, a:active {
 .site-footer .footer-characters {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box !important;
+  display: -moz-box;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
   /* TWEENER - IE 10 */
@@ -1185,7 +1185,7 @@ a:hover, a:active {
   .site-footer .footer-info .container {
     display: -webkit-box;
     /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box !important;
+    display: -moz-box;
     /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;
     /* TWEENER - IE 10 */
@@ -1287,7 +1287,7 @@ a:hover, a:active {
 .site {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box !important;
+  display: -moz-box;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
   /* TWEENER - IE 10 */
@@ -1295,6 +1295,7 @@ a:hover, a:active {
   /* NEW - Chrome */
   display: flex;
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  display: -moz-box !important;
   flex-direction: column;
   height: 100%;
 }
@@ -1339,7 +1340,7 @@ a:hover, a:active {
 .flex-center {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box !important;
+  display: -moz-box;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
   /* TWEENER - IE 10 */
@@ -1533,7 +1534,7 @@ a.site-banner:hover, a.site-banner:focus {
   .header-characters .far-right, .header-characters .far-left {
     display: -webkit-box;
     /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box !important;
+    display: -moz-box;
     /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;
     /* TWEENER - IE 10 */
@@ -1585,7 +1586,7 @@ a.site-banner:hover, a.site-banner:focus {
   .header-characters .right {
     display: -webkit-box;
     /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box !important;
+    display: -moz-box;
     /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;
     /* TWEENER - IE 10 */
@@ -1617,7 +1618,7 @@ a.site-banner:hover, a.site-banner:focus {
   .header-characters .far-far-right {
     display: -webkit-box;
     /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box !important;
+    display: -moz-box;
     /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;
     /* TWEENER - IE 10 */
