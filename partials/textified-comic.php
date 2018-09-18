@@ -14,7 +14,7 @@
       </svg>
     </button>
 
-    <div id="textified-text text-left" class="textified-text sr-only">
+    <div id="textified-text" class="textified-text text-left sr-only">
       <?php echo $textified; ?>
     </div>
   </div>

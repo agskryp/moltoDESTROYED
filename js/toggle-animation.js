@@ -12,10 +12,10 @@ var jQuery;
     
     $( '#textified-arrow' ).toggleClass( 'textified-arrow' );
     
-  if ( textifiedButton.innerHTML === "Close text version" ) {
-    textifiedButton.innerHTML = "View text version";
-  } else {
-    textifiedButton.innerHTML = "Close text version";
-  } 
+    if ( textifiedButton.innerHTML === "Close text version" ) {
+      textifiedButton.innerHTML = "View text version";
+    } else {
+      textifiedButton.innerHTML = "Close text version";
+    } 
   } );
 } )( jQuery );
