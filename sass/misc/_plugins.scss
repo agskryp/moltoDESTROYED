@@ -1,12 +1,19 @@
 #sb_instagram .sbi_follow_btn a {
-  background: $color__background-button; // Follow on Instagram button
+  background: $color__background-button;
 }
+
+#sb_instagram .sbi_follow_btn a:focus,
+#sb_instagram .sbi_follow_btn a:hover {
+    box-shadow: inset 0 0 10px 20px $color__link-hover;
+}
+
+
 
 .contact-form {
   clear: both;
 
   .contact-notice {
-    font-size: 70%;
+    font-size: 59%;
     font-style: italic;
   }
 
