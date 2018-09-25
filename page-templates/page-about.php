@@ -26,18 +26,6 @@
       All site content is created, written, illustrated, and produced by cartoonist molto D. stroyed.  Get in touch by using the contact form below.  Also available on <a href="<?php echo esc_url( __( 'https://www.facebook.com/molto-DESTROYED-621021044638414/', 'moltodestroyed' ) ); ?>" target="_blank">Facebook</a> and <a href="<?php echo esc_url( __( 'https://twitter.com/moltodestroyed', 'moltodestroyed' ) ); ?>" target="_blank">Twitter</a> for social messaging and public discourse.
     </p>
   </div>
-  
-  <?php require get_template_directory() . '/partials/ads/comic-rocket-promo.php'; ?>
-
-  <div id="contactForm" class="contact-form narrow-container">
-    <h2 class="text-center">
-      Contact
-    </h2>
-
-    <span class="contact-notice">NOTE: all fields are required</span>
-
-    <?php echo do_shortcode( '[contact-form-7 id="1741" title="Contact form 1"]' ); ?>
-  </div>
 </main>
 
 <?php
