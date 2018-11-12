@@ -23,7 +23,7 @@
     </div>
 
     <p>
-      All site content is created, written, illustrated, and produced by cartoonist molto D. stroyed.  Get in touch by using the contact form below.  Also available on <a href="<?php echo esc_url( __( 'https://www.facebook.com/molto-DESTROYED-621021044638414/', 'moltodestroyed' ) ); ?>" target="_blank">Facebook</a> and <a href="<?php echo esc_url( __( 'https://twitter.com/moltodestroyed', 'moltodestroyed' ) ); ?>" target="_blank">Twitter</a> for social messaging and public discourse.
+      All site content is created, written, illustrated, and produced by cartoonist molto D. stroyed.  Also available on <a href="<?php echo esc_url( __( 'https://www.facebook.com/molto-DESTROYED-621021044638414/', 'moltodestroyed' ) ); ?>" target="_blank">Facebook</a> and <a href="<?php echo esc_url( __( 'https://twitter.com/moltodestroyed', 'moltodestroyed' ) ); ?>" target="_blank">Twitter</a> for social messaging and public discourse.
     </p>
   </div>
 </main>
