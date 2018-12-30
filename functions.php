@@ -239,6 +239,11 @@ require get_template_directory() . '/inc/character-image-randomizer.php';
 require get_template_directory() . '/inc/constants.php';
 
 /**
+ * Import custom post types
+ */
+require get_template_directory() . '/inc/post-types.php';
+
+/**
  * Remove WP Emoji settings
  */
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
