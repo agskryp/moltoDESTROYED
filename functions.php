@@ -260,6 +260,8 @@ add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 function deregister_javascript() {
   if ( ! is_page( 'contact' ) ) {
     wp_deregister_script( 'contact-form-7' );
+    
+    wp_enqueue_script( 'moltodestroyed-hide-captcha', get_template_directory_uri() . '/js/hide-captcha.js', array(), THEME_VERSION_NUMBER, true );
   }
 }
 add_action( 'wp_print_scripts', 'deregister_javascript', 100 );
