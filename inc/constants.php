@@ -9,4 +9,4 @@ define( 'MOLTO_PRIVACY_POLICY', '/privacy' );
 /**
  * Functions
  */
-define( 'THEME_VERSION_NUMBER', '1.1.5' );
+define( 'THEME_VERSION_NUMBER', '1.1.6' );
