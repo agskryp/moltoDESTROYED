@@ -6,8 +6,8 @@
    * @package moltodestroyed
    */
 
-  // TODO: What's this?  If the sidebar features are hardcoded is this needed?
-  if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+  // If sidebar isn't active, return
+  if ( !is_active_sidebar( 'sidebar-1' ) ) {
 	return;
   }
 ?>
@@ -51,7 +51,7 @@
   
     <?php
       /**
-       * Avoid using customize sidebar options and just hardcode what's needed
+       * Avoid using dynamic sidebar options and just hardcode what's needed
        *
        * // dynamic_sidebar( 'sidebar-1' );
        */
