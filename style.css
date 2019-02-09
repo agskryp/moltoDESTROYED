@@ -4,7 +4,7 @@
  Author: A.G. Skryp
  Author URI: http://agskryp.com
  Description: Wordpress theme for the moltodestroyed web comic
- Version: 1.1.5
+ Version: 1.1.6
  License: GNU General Public License v2 or later
  License URI: LICENSE
  Text Domain: moltodestroyed
@@ -457,7 +457,7 @@ a:hover, a:active {
   }
 }
 .main-navigation ul {
-  display: none;
+  border: 2px solid #000;
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -466,6 +466,7 @@ a:hover, a:active {
   .main-navigation ul {
     display: block;
     text-align: center;
+    border: none;
   }
 }
 .main-navigation ul ul {
@@ -493,8 +494,6 @@ a:hover, a:active {
   position: relative;
   display: block;
   text-align: center;
-  border: 2px solid #000;
-  border-top: none;
 }
 @media all and (min-width: 768px) {
   .main-navigation li {
@@ -504,7 +503,7 @@ a:hover, a:active {
   }
 }
 .main-navigation li a {
-  padding: 8px 12px;
+  padding: 10px 12px;
 }
 .main-navigation li a:hover, .main-navigation li a:focus, .main-navigation li a:active {
   color: #000;
@@ -555,6 +554,10 @@ a:hover, a:active {
     display: none !important;
   }
 }
+.menu-toggle span {
+  text-transform: uppercase;
+  font-weight: bold;
+}
 .main-navigation.toggled ul {
   display: block;
   margin: 0 auto;
@@ -600,6 +603,16 @@ a:hover, a:active {
   font-size: 1em;
   padding: 6px;
 }
+@media all and (min-width: 768px) {
+  .main-nav-menu {
+    display: flex;
+    height: auto !important;
+    justify-content: center;
+  }
+}
+.main-nav-menu.in {
+  display: flex;
+}
 .navbar-collapse {
   padding: 0;
   border-top: none;
@@ -642,6 +655,10 @@ a:hover, a:active {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
   display: block;
   position: absolute;
   height: 3px;
@@ -650,10 +667,6 @@ a:hover, a:active {
   border-radius: 9px;
   opacity: 1;
   left: 0;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  transition: none;
 }
 .main-menu-icon span:nth-child( 1) {
   top: 0px;

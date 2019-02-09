@@ -9,7 +9,7 @@
 ?>
 
 <!doctype html>
-<html <?php language_attributes(); ?> >
+<html <?php language_attributes(); ?>>
 
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -25,7 +25,7 @@
   <?php require get_template_directory() . '/partials/head/google-scripts.php'; ?>
 </head>
 
-<body <?php body_class(); ?> >
+<body <?php body_class(); ?>>
   <?php require get_template_directory() . '/partials/head/tag-manager-noscript.php'; ?>
 
   <div id="page" class="site">
@@ -45,7 +45,6 @@
                   <h1 class="site-title sr-only">
                     <?php bloginfo( 'name' ); ?>
                   </h1>
-
                 <?php else : ?>
                   <p class="site-title sr-only">
                     <?php bloginfo( 'name' ); ?>
@@ -69,20 +68,24 @@
       </div>
 
       <nav id="site-navigation" class="main-navigation">
-        <button class="navbar-toggler menu-toggle" type="button" data-toggle="collapse" data-target="#mainNavMenu" aria-controls="mainNavMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <b>
-            MENU
-          </b>
+        <button class="menu-toggle" 
+                type="button"
+                data-toggle="collapse"
+                data-target="#mainNavMenu"
+                aria-controls="mainNavMenu" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+          <span>Menu</span>
 
-          <span id="main-menu-icon" class="main-menu-icon">
+          <div id="main-menu-icon" class="main-menu-icon">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-          </span>
+          </div>
         </button>
 
-        <div class="collapse navbar-collapse flex-center" id="mainNavMenu">
+        <div class="collapse main-nav-menu" id="mainNavMenu">
           <?php
             wp_nav_menu( array(
               'theme_location' => 'menu-1',

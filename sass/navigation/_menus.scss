@@ -16,17 +16,18 @@
   }  
 
   ul {
-    display: none;
+    border: $border-2px;
     list-style: none;
     margin: 0;
     padding-left: 0;
     @media screen and ( min-width: $screen-md ) {
       display: block;
       text-align: center;
+      border: none;
     }
 
     ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 3px 3px rgba( 0, 0, 0, 0.2 );
       float: left;
       position: absolute;
       top: 100%;
@@ -58,8 +59,6 @@
     position: relative;
     display: block;
     text-align: center;
-    border: $border-2px;
-    border-top: none;
     @media all and ( min-width: $screen-md ) {
       display: inline-block;
       text-align: left;
@@ -67,7 +66,7 @@
     }
 
     a {
-      padding: 8px 12px;
+      padding: 10px 12px;
       &:hover,
       &:focus,
       &:active {
@@ -109,6 +108,11 @@
   font-size: 1em;
   @media all and ( min-width: $screen-md ) {
     display: none !important; // !important required for firefox on windows
+  }
+  
+  span {
+    text-transform: uppercase;
+    font-weight: bold;
   }
 }
 
@@ -164,6 +168,18 @@
   padding: 6px;
 }
 
+.main-nav-menu {
+  @media all and ( min-width: $screen-md ) { 
+    display: flex;
+    height: auto !important;
+    justify-content: center;
+  }  
+  
+  &.in {
+    display: flex;
+  }
+}
+
 .navbar-collapse {
   padding: 0;
   border-top: none;
@@ -191,6 +207,7 @@
 
   span {
     @include transform-rotate( 0deg );
+    @include transform-menu-speed();
     display: block;
     position: absolute;
     height: 3px;
@@ -199,10 +216,6 @@
     border-radius: 9px;
     opacity: 1;
     left: 0;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -o-transition: none;
-    transition: none;
     &:nth-child( 1 ) {
       top: 0px;
       opacity: 1;
