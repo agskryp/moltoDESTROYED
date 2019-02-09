@@ -24,7 +24,6 @@
       </h1>
 
       <?php
-        /* Start the Loop */
         while ( have_posts() ) :
           the_post();
 
@@ -35,7 +34,6 @@
            */
           get_template_part( 'template-parts/content', get_post_format() );
         endwhile;
-
       require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
 
       molto_posts_navigation();
