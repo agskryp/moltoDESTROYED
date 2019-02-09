@@ -12,13 +12,11 @@
 <div id="primary" class="content-area">
   <main id="main" class="site-main narrow-container">  
     <section class="error-404 not-found">
-      <h1 class="page-title text-center">
-        4OH4!!
-      </h1>
+      <h1 class="page-title text-center">4OH4!!</h1>
 
       <div class="page-content">
         <p class="text-center h3 bottom-cushion">
-          <?php esc_html_e( 'We\'re sorry, but this page doesn\'t exist.', 'moltodestroyed' ); ?>
+          We're Sorry, but this page doesn't exist.
         </p>
 
         <div class="left-character pull-left">
@@ -51,6 +49,6 @@
 </div>
 
 <?php
-  dynamic_sidebar( 'sidebar-1' ); 
+  // dynamic_sidebar( 'sidebar-1' ); 
 
   get_footer();

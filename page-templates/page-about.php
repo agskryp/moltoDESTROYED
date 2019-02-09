@@ -6,9 +6,7 @@
 
 <main class="about-page">  
   <div class="narrow-container">
-    <h1 class="text-center">
-      About
-    </h1>
+    <h1 class="text-center">About</h1>
 
     <div class="right-character pull-right">
       <?php require get_template_directory() . '/partials/random-character-image.php'; ?>

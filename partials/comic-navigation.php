@@ -4,14 +4,11 @@
 ?>
 
 <div class="comic-navigation-container">
-  <h2 class="sr-only">
-    Comic navigation menu
-  </h2>
+  <h2 class="sr-only">Comic navigation menu</h2>
   
   <nav class="comic-navigation text-center row">    
     <div title="First Comic">
       <?php
-        // First Comic
         $first = get_posts( array(
           'numberposts' => 1,
           'order'       => 'asc',
@@ -28,7 +25,6 @@
 
     <div title="Previous Comic">
       <?php
-        // Previous Comic
         $previous = get_previous_post_link(
 		  '%link', ' <span class="sr-only">Previous Comic</span> &lt; ', false, '', 'category'
         );
@@ -39,7 +35,6 @@
 
     <div title="Random Comic">
       <?php
-        // Random Comic
         $random = get_posts( array(
           'numberposts' => 1,
           'orderby'     => 'rand',
@@ -55,7 +50,6 @@
 
     <div title="Next Comic">
       <?php
-        // Next Comic
         $next = get_next_post_link(
           '%link', ' <span class="sr-only">Next Comic</span> &gt; ', false, '', 'category'
         );
@@ -66,7 +60,6 @@
 
     <div title="Latest Comic">
       <?php
-        // Latest Comic
         $latest = get_posts( array(
           'numberposts' => 1,
           'order'       => 'desc',
