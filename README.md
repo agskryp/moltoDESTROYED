@@ -7,5 +7,4 @@ This theme was built using the starter theme `underscores`, you can download and
 ## Required Plugins
 
 * `Advanced Custom Fields` by Elliot Condon
-* `Custom Post Type UI` by WebDevStudios
 * `WP-SCSS` by Connect Think
