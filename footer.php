@@ -54,9 +54,7 @@
 
               <ul>
                 <li>
-                  <a href="https://www.facebook.com/moltoDESTROYED/"
-                     target="_blank"
-                     title="Facebook">
+                  <a href="https://www.facebook.com/moltoDESTROYED/" target="_blank" title="Facebook">
                     <span class="sr-only">Facebook</span>
                     
                     <svg width="26" height="26" viewBox="0 0 24 24">
@@ -66,9 +64,7 @@
                 </li>
 
                 <li>
-                  <a href="https://twitter.com/moltodestroyed/"
-                     target="_blank"
-                     title="Twitter">
+                  <a href="https://twitter.com/moltodestroyed/" target="_blank" title="Twitter">
                     <span class="sr-only">Twitter</span>
                     
                     <svg width="26" height="26" viewBox="0 0 24 24">
@@ -78,9 +74,7 @@
                 </li>
 
                 <li>
-                  <a href="https://www.instagram.com/moltodestroyed/"
-                     target="_blank"
-                     title="Instagram">
+                  <a href="https://www.instagram.com/moltodestroyed/" target="_blank" title="Instagram">
                     <span class="sr-only">Instagram</span>
                     
                     <svg width="26" height="26" viewBox="0 0 24 24">
@@ -99,25 +93,19 @@
   <div id="pagefin" class="footer-info">
     <div class="container">
       <span class="copyright text-center">
-        moltoDESTROYED &amp; moltodestroyed.com is Copyright &copy; 2014-2018
+        moltoDESTROYED &amp; moltodestroyed.com is Copyright &copy; 2014-2019
         
-        <a href="mailto:moltodestroyed@gmail.com">
-          molto D. stroyed
-        </a>
+        <a href="mailto:moltodestroyed@gmail.com">molto D. stroyed</a>
       </span>
       
       <span class="privacy">
-        <a href="<?php echo esc_url( __( MOLTO_PRIVACY_POLICY, 'moltodestroyed' ) ); ?>">
-          Privacy Policy
-        </a>
+        <a href="<?php echo esc_url( __( MOLTO_PRIVACY_POLICY, 'moltodestroyed' ) ); ?>">Privacy Policy</a>
       </span>
 
       <span class="designer text-right">
         Designed by
         
-        <a href="<?php echo esc_url( __( 'http://agskryp.com', 'moltodestroyed' ) ); ?>"  target="_blank">
-          A.G. Skryp
-        </a>
+        <a href="<?php echo esc_url( __( 'http://agskryp.com', 'moltodestroyed' ) ); ?>"  target="_blank">A.G. Skryp</a>
       </span>
     </div>
   </div> 
