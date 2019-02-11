@@ -6,7 +6,7 @@
 ( function() {
   var isIe = /(trident|msie)/i.test( navigator.userAgent );
 
-  if ( isIe && document.getElementById && window.addEventListener ) {
+  if( isIe && document.getElementById && window.addEventListener ) {
     window.addEventListener( 'hashchange', function() {
       var element, id = location.hash.substring( 1 );
 
@@ -17,7 +17,7 @@
       element = document.getElementById( id );
 
       if( element ) {
-        if ( !( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
+        if( !( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
           element.tabIndex = -1;
         }
 
