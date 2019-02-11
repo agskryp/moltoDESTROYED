@@ -48,11 +48,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Initalize
 --------------------------------------------------------------*/
 @import "normalize";
-@import "variables/colors";
-@import "variables/columns";
-@import "variables/mixins";
-@import "variables/structure";
-@import "variables/typography";
+@import "common/colors";
+@import "common/columns";
+@import "common/mixins";
+@import "common/structure";
+@import "common/typography";
+@import "common/utilities";
 
 
 
