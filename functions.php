@@ -55,7 +55,6 @@ if ( ! function_exists( 'moltodestroyed_setup' ) ) :
 			'search-form',
 			'comment-form',
 			'comment-list',
-			'gallery',
 			'caption',
 		) );
 
