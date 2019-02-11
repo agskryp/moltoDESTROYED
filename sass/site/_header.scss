@@ -2,13 +2,16 @@
   margin-bottom: $grid-padding;
 }
 
-a.site-banner:hover,
-a.site-banner:focus {
-  opacity: .55;
-}
+a.site-banner {
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: .55;
+  }
 
-.site-banner img {
-  max-height: 190px;
+  img {
+    max-height: 190px;
+  }
 }
 
 .social-container {

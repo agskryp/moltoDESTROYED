@@ -35,7 +35,7 @@
               'class' => array(),
             ),
           )
-        ), get_the_title() ), '<span class="edit-link pull-right bottom-cushion">', '</span>'	);
+        ), get_the_title() ), '<span class="edit-link pull-right bottom-cushion">', '</span>' );
       ?>
     </footer>
   <?php endif; ?>

@@ -8,7 +8,7 @@
  License: GNU General Public License v2 or later
  License URI: LICENSE
  Text Domain: moltodestroyed
- Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+ Tags: custom-theme
  This theme, like WordPress, is licensed under the GPL.
  Use it to make something cool, have fun, and share what you've learned with others.
  moltodestroyed is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
@@ -19,7 +19,7 @@
 /*--------------------------------------------------------------
  >>> TABLE OF CONTENTS:
  ----------------------------------------------------------------
- # Normalize
+ # Initalize
  # Typography
  # Elements
  # Forms
@@ -34,13 +34,10 @@
  ## Posts and pages
  ## Comments
  # Infinite scroll
- # Media
- ## Captions
- ## Galleries
  # Misc
  --------------------------------------------------------------*/
 /*--------------------------------------------------------------
- # Normalize
+ # Initalize
  --------------------------------------------------------------*/
 html {
   font-family: sans-serif;
@@ -179,6 +176,9 @@ table {
 td, th {
   padding: 0;
 }
+/**
+ * Pallet
+ */
 /*--------------------------------------------------------------
  # Typography
  --------------------------------------------------------------*/
@@ -372,7 +372,7 @@ td, th {
 /*--------------------------------------------------------------
  # Forms
  --------------------------------------------------------------*/
-button, input[type="button"], input[type="reset"], input[type="submit"] {
+button, input[ type="button"], input[ type="reset"], input[ type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
@@ -383,10 +383,10 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   line-height: 1;
   padding: 0.5em 1em;
 }
-button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+button:hover, input[ type="button"]:hover, input[ type="reset"]:hover, input[ type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
 }
-button:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {
+button:active, input[ type="button"]:active, input[ type="reset"]:active, input[ type="submit"]:active, button:focus, input[ type="button"]:focus, input[ type="reset"]:focus, input[ type="submit"]:focus {
   border-color: #aaa #bbb #bbb;
 }
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
@@ -554,6 +554,9 @@ a:hover, a:active {
     display: none !important;
   }
 }
+.menu-toggle:hover {
+  background: #343434;
+}
 .menu-toggle span {
   text-transform: uppercase;
   font-weight: bold;
@@ -561,41 +564,6 @@ a:hover, a:active {
 .main-navigation.toggled ul {
   display: block;
   margin: 0 auto;
-}
-.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
-  overflow: hidden;
-  margin: 0;
-}
-.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous, .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
-  text-align: center;
-  width: 100%;
-  margin: 0 0 1.5em;
-  line-height: 1.25;
-}
-@media all and (min-width: 480px) {
-  .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous, .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
-    width: 50%;
-  }
-}
-.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
-  float: left;
-  padding-right: 0;
-}
-@media all and (min-width: 480px) {
-  .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
-    text-align: left;
-    padding-right: 10px;
-  }
-}
-.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
-  float: right;
-  padding-left: 0;
-}
-@media all and (min-width: 480px) {
-  .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
-    text-align: right;
-    padding-left: 10px;
-  }
 }
 .main-menu-button {
   border: none;
@@ -702,6 +670,41 @@ a:hover, a:active {
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
+  overflow: hidden;
+  margin: 0;
+}
+.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous, .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
+  text-align: center;
+  width: 100%;
+  margin: 0 0 1.5em;
+  line-height: 1.25;
+}
+@media all and (min-width: 480px) {
+  .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous, .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
+    width: 50%;
+  }
+}
+.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
+  float: left;
+  padding-right: 0;
+}
+@media all and (min-width: 480px) {
+  .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
+    text-align: left;
+    padding-right: 10px;
+  }
+}
+.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
+  float: right;
+  padding-left: 0;
+}
+@media all and (min-width: 480px) {
+  .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
+    text-align: right;
+    padding-left: 10px;
+  }
 }
 /*--------------------------------------------------------------
  # Accessibility
@@ -1368,10 +1371,10 @@ a:hover, a:active {
 .site-header {
   margin-bottom: 1.5em;
 }
-a.site-banner:hover, a.site-banner:focus {
+a.site-banner:hover, a.site-banner:focus, a.site-banner:active {
   opacity: 0.55;
 }
-.site-banner img {
+a.site-banner img {
   max-height: 190px;
 }
 .social-container a {
@@ -1658,84 +1661,6 @@ a.site-banner:hover, a.site-banner:focus {
   display: block;
 }
 /*--------------------------------------------------------------
- # Media
- --------------------------------------------------------------*/
-.page-content .wp-smiley, .entry-content .wp-smiley, .comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-}
-/* Make sure embeds and iframes fit their containers. */
-embed, iframe, object {
-  max-width: 100%;
-}
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-  display: inline-block;
-}
-/*--------------------------------------------------------------
- ## Captions
- --------------------------------------------------------------*/
-.wp-caption {
-  margin-bottom: 1.5em;
-  max-width: 100%;
-}
-.wp-caption img[class*="wp-image-"] {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.wp-caption .wp-caption-text {
-  margin: 0;
-  font-size: 90%;
-  line-height: 1.25;
-}
-.wp-caption-text {
-  text-align: center;
-  font-size: 90%;
-  line-height: 1.25;
-}
-/*--------------------------------------------------------------
- ## Galleries
- --------------------------------------------------------------*/
-.gallery {
-  margin-bottom: 1.5em;
-}
-.gallery-item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  width: 100%;
-}
-.gallery-columns-2 .gallery-item {
-  max-width: 50%;
-}
-.gallery-columns-3 .gallery-item {
-  max-width: 33.33%;
-}
-.gallery-columns-4 .gallery-item {
-  max-width: 25%;
-}
-.gallery-columns-5 .gallery-item {
-  max-width: 20%;
-}
-.gallery-columns-6 .gallery-item {
-  max-width: 16.66%;
-}
-.gallery-columns-7 .gallery-item {
-  max-width: 14.28%;
-}
-.gallery-columns-8 .gallery-item {
-  max-width: 12.5%;
-}
-.gallery-columns-9 .gallery-item {
-  max-width: 11.11%;
-}
-.gallery-caption {
-  display: block;
-}
-/*--------------------------------------------------------------
  # Misc
  --------------------------------------------------------------*/
 #sb_instagram .sbi_follow_btn a {
@@ -1837,7 +1762,7 @@ embed, iframe, object {
 .ad-container ins.adsbygoogle {
   margin: 0 0 1.5em;
 }
-ins.adsbygoogle ins::before, .google-auto-placed ins::before {
+.ad-container ins.adsbygoogle .google-auto-placed ins::before {
   content: "Advertisement by Google";
   font-size: 50%;
   display: block;
@@ -1849,7 +1774,7 @@ ins.adsbygoogle ins::before, .google-auto-placed ins::before {
   top: -12px;
 }
 @media all and (min-width: 600px) {
-  ins.adsbygoogle ins::before, .google-auto-placed ins::before {
+  .ad-container ins.adsbygoogle .google-auto-placed ins::before {
     top: -15px;
   }
 }

@@ -21,13 +21,12 @@
   
   ins.adsbygoogle {
     margin: 0 0 $grid-padding;
-  }
-}
-
-ins.adsbygoogle,
-.google-auto-placed {
-  ins::before {
-    @include global-ad-settings( "Advertisement by Google", $color__link );
+    
+    .google-auto-placed {
+      ins::before {
+        @include global-ad-settings( "Advertisement by Google", $color__link );
+      }
+    }
   }
 }
 
