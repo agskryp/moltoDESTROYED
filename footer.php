@@ -99,13 +99,13 @@
       </span>
       
       <span class="privacy">
-        <a href="<?php echo esc_url( __( MOLTO_PRIVACY_POLICY, 'moltodestroyed' ) ); ?>">Privacy Policy</a>
+        <a href="<?php echo esc_url( MOLTO_PRIVACY_POLICY ); ?>">Privacy Policy</a>
       </span>
 
       <span class="designer text-right">
         Designed by
         
-        <a href="<?php echo esc_url( __( 'http://agskryp.com', 'moltodestroyed' ) ); ?>"  target="_blank">A.G. Skryp</a>
+        <a href="<?php echo esc_url( 'http://agskryp.com' ); ?>"  target="_blank">A.G. Skryp</a>
       </span>
     </div>
   </div> 

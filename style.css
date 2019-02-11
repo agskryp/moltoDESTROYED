@@ -623,9 +623,10 @@ a:hover, a:active {
 .menu-toggle:hover, .menu-toggle:active, .menu-toggle:focus {
   background: #343434;
 }
-.menu-toggle span {
+.menu-toggle h3 {
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 1em;
 }
 .main-navigation.toggled ul {
   display: block;

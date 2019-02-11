@@ -29,9 +29,7 @@
   <?php require get_template_directory() . '/partials/head/tag-manager-noscript.php'; ?>
 
   <div id="page" class="site">
-    <a class="skip-link screen-reader-text" href="#content">
-      <?php esc_html_e( 'Skip to content', 'moltodestroyed' ); ?>
-    </a>
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
     <header id="masthead" class="site-header">
       <div class="site-branding text-center">
@@ -41,15 +39,19 @@
               <?php require get_template_directory() . '/partials/header-characters.php'; ?>
 
               <a class="site-banner" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <?php if ( is_front_page() ) : ?>
+                <?php if ( is_front_page() ) { ?>
                   <h1 class="site-title sr-only">
                     <?php bloginfo( 'name' ); ?>
                   </h1>
-                <?php else : ?>
+                <?php
+                  }
+                
+                  else {
+                ?>
                   <p class="site-title sr-only">
                     <?php bloginfo( 'name' ); ?>
                   </p>
-                <?php endif; ?>
+                <?php } ?>
 
                 <img src="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-xs.png"
                      srcset="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-sm.png 480w,
@@ -75,7 +77,7 @@
                 aria-controls="mainNavMenu" 
                 aria-expanded="false" 
                 aria-label="Toggle navigation">
-          <span>Menu</span>
+          <h3>Menu</h3>
 
           <div id="main-menu-icon" class="main-menu-icon">
             <span></span>

@@ -18,30 +18,26 @@
   <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
 
   <main id="main" class="site-main blog-posts-list narrow-container">
-    <?php if ( have_posts() ) : ?>
+    <?php if( have_posts() ) { ?>
       <h1 class="page-title screen-reader-text">
         <?php single_post_title(); ?>
       </h1>
 
       <?php
-        while ( have_posts() ) :
+        while ( have_posts() ) {
           the_post();
 
-          /*
-           * Include the Post-Format-specific template for the content.
-           * If you want to override this in a child theme, then include a file
-           * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-           */
           get_template_part( 'template-parts/content', get_post_format() );
-        endwhile;
-      require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
+        }
 
-      molto_posts_navigation();
+        require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
 
-      else :
+        molto_posts_navigation();
+      }
+
+      else {
         get_template_part( 'template-parts/content', 'none' );
-
-      endif;
+      }
     ?>
   </main>
 </div>
