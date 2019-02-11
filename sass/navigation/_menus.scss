@@ -110,12 +110,12 @@
     display: none !important; // !important required for firefox on windows
   }
   
-  &:hover {
+  &:hover,
+  &:active {
     background: $color__text-input;
   }
   
-  &:focus,
-  &:active {
+  &:focus {
     background: $darkest_shade;
   }
   

@@ -1,4 +1,3 @@
-@import "global";
 /*!
  Theme Name: moltodestroyed
  Theme URI: https://underscores.me/
@@ -620,10 +619,10 @@ a:hover, a:active {
     display: none !important;
   }
 }
-.menu-toggle:hover {
+.menu-toggle:hover, .menu-toggle:active {
   background: #343434;
 }
-.menu-toggle:focus, .menu-toggle:active {
+.menu-toggle:focus {
   background: #000;
 }
 .menu-toggle span {
@@ -1718,6 +1717,9 @@ a.site-banner img {
 }
 .contact-form div.wpcf7-response-output, .contact-form div.wpcf7-validation-errors, .contact-form div.wpcf7-acceptance-missing {
   border: 4px solid #000;
+}
+.grecaptcha-badge {
+  visibility: collapse !important;
 }
 .social-share-container {
   margin-bottom: 1.5em;
