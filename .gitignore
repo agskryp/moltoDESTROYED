@@ -7,6 +7,13 @@ wp-content/upgrade/
 wp-includes/
 
 
+#######################################
+#   Local WordPress Plugins Folders   #
+#######################################
+wp-content/plugins/show-current-template/
+wp-content/plugins/wp-scss/
+
+
 
 #######################
 #   WordPress Files   #
