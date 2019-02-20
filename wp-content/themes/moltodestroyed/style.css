@@ -627,6 +627,9 @@ a:hover, a:active {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1em;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 .main-navigation.toggled ul {
   display: block;

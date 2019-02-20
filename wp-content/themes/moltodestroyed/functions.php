@@ -119,6 +119,8 @@ add_action( 'widgets_init', 'moltodestroyed_widgets_init' );
  * Enqueue scripts and styles.
  */
 function moltodestroyed_scripts() {
+  
+  // CSS
   wp_enqueue_style( 
     'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Bangers|Open+Sans:400,600'
   );
@@ -137,8 +139,7 @@ function moltodestroyed_scripts() {
     );
   }
   
-  
-  
+  // JS
   wp_enqueue_script( 
     'analytics-scripts',  get_template_directory_uri() . '/js/analytics-scripts.js', array(), THEME_VERSION_NUMBER, false
   );
