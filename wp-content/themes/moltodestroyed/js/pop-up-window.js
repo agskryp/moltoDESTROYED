@@ -11,7 +11,7 @@ function PopupCenter( url, title, w, h ) {
   var newWindow = window.open( url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left );
 
   // Puts focus on the newWindow
-  if ( window.focus ) {
+  if( window.focus ) {
     newWindow.focus();
   }
 }

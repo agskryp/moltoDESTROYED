@@ -1,15 +1,15 @@
 <?php
 
-$root = get_template_directory();
-$path = '/images/characters/';
+$root         = get_template_directory();
+$path         = '/images/characters/';
 $imageURLRoot = get_template_directory_uri() . $path;
 
 function getImagesFromDir( $path ) {
   $images = array();
   
-  if ( $img_dir = opendir( $path ) ) {
-    while ( false !== ( $img_file = readdir( $img_dir ) ) ) {
-      if ( preg_match("/(\.png)$/", $img_file ) ) {
+  if( $img_dir = opendir( $path ) ) {
+    while( false !== ( $img_file = readdir( $img_dir ) ) ) {
+      if( preg_match( "/(\.png)$/", $img_file ) ) {
         $images[] = $img_file;
       }
     }

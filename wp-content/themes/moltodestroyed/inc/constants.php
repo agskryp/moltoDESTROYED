@@ -1,12 +1,8 @@
 <?php
 
-/**
- * Pages 
- */
+//Pages 
 define( 'MOLTO_BLOG', '/blog' );
 define( 'MOLTO_PRIVACY_POLICY', '/privacy' );
 
-/**
- * Functions
- */
+// Functions
 define( 'THEME_VERSION_NUMBER', '1.2.0' );

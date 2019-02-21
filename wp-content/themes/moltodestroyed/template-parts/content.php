@@ -9,14 +9,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>  
   <header class="entry-header">
-    <?php if ( get_post_type() === 'post' ) : ?>
+    <?php if( get_post_type() === 'post' ) : ?>
       <div class="entry-meta pull-right">
         <?php molto_post_date(); ?>
       </div>
     <?php
       endif;
 
-      if ( is_singular() ) {
+      if( is_singular() ) {
         the_title( '<h1 class="entry-title blog-title">', '</h1>' );
       }
 
@@ -40,7 +40,7 @@
 
   <div class="entry-content">
     <?php
-      if ( is_singular() ) {
+      if( is_singular() ) {
         the_content( );
 
         require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';

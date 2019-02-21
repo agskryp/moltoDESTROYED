@@ -1,6 +1,5 @@
-( function( $ ) {
+( function($) {
   $( document ).ready( function() {
-    
     
     // Display support images if user is running an ad blocker
     function blockerMessage() {

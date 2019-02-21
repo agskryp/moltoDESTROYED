@@ -15,9 +15,7 @@
       <h1 class="page-title text-center">4OH4!!</h1>
 
       <div class="page-content">
-        <p class="text-center h3 bottom-cushion">
-          We're Sorry, but this page doesn't exist.
-        </p>
+        <p class="text-center h3 bottom-cushion">We're Sorry, but this page doesn't exist.</p>
 
         <div class="left-character pull-left">
           <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
@@ -31,9 +29,7 @@
           <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
         </div>
 
-        <p>
-          Or maybe it never <em>ever</em> existed!
-        </p>
+        <p>Or maybe it never <em>ever</em> existed!</p>
 
         <p>
           Perhaps it may exist one day, but today isn't that day. You could always try again tomorrow if you want, we won't stop you.
