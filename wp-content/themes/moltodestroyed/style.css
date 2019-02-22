@@ -756,6 +756,10 @@ a:hover, a:active {
     width: 50%;
   }
 }
+.comment-navigation .nav-previous a, .posts-navigation .nav-previous a, .post-navigation .nav-previous a, .comment-navigation .nav-next a, .posts-navigation .nav-next a, .post-navigation .nav-next a {
+  display: inline-flex;
+  flex-direction: column;
+}
 .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
   float: left;
   padding-right: 0;
@@ -775,6 +779,14 @@ a:hover, a:active {
     text-align: right;
     padding-left: 10px;
   }
+}
+.comment-navigation .blog-nav-text, .posts-navigation .blog-nav-text, .post-navigation .blog-nav-text {
+  font-size: 70%;
+  display: inline-block;
+  line-height: 1.5;
+}
+.comment-navigation .blog-title, .posts-navigation .blog-title, .post-navigation .blog-title {
+  display: inline-block;
 }
 /*--------------------------------------------------------------
  # Accessibility
