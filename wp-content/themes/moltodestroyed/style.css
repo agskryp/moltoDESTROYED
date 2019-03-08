@@ -1784,6 +1784,14 @@ a.site-banner img {
     top: -15px;
   }
 }
+.ad-container ins.top-of-page-ad {
+  display: none !important;
+}
+@media all and (min-width: 480px) {
+  .ad-container ins.top-of-page-ad {
+    display: block !important;
+  }
+}
 .promo-container {
   max-width: 970px;
   clear: both;

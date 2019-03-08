@@ -28,6 +28,14 @@
       }
     }
   }
+  
+  ins.top-of-page-ad {
+    display: none !important;
+    
+    @media all and ( min-width: $screen-sm ) {
+      display: block !important;
+    }
+  }
 }
 
 .promo-container {
