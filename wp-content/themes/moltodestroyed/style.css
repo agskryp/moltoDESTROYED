@@ -1768,7 +1768,7 @@ a.site-banner img {
 .ad-container ins.adsbygoogle {
   margin: 0 0 1.5em;
 }
-.ad-container ins.adsbygoogle .google-auto-placed ins::before {
+.ad-container ins.adsbygoogle::before {
   content: "Advertisement by Google";
   font-size: 50%;
   display: block;
@@ -1780,7 +1780,7 @@ a.site-banner img {
   top: -12px;
 }
 @media all and (min-width: 600px) {
-  .ad-container ins.adsbygoogle .google-auto-placed ins::before {
+  .ad-container ins.adsbygoogle::before {
     top: -15px;
   }
 }
