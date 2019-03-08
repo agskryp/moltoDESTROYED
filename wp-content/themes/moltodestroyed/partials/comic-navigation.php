@@ -17,7 +17,7 @@
 
         $first_url = get_permalink( $first[0] -> ID );
 
-        if ( $post -> ID !== $first[0] -> ID ) {
+        if( $post -> ID !== $first[0] -> ID ) {
           echo "<a href='" . $first_url . "' rel='first'><span class='sr-only'>First Comic</span> &lt; &lt; &lt; </a>";
         }
       ?>
@@ -68,7 +68,7 @@
 
         $latest_url = get_permalink( $latest[0] -> ID );
 
-        if ( $post -> ID !== $latest[0] -> ID ) {
+        if( $post -> ID !== $latest[0] -> ID ) {
           echo "<a href='" . $latest_url . "' rel='last'><span class='sr-only'>Latest Comic</span> &gt; &gt; &gt; </a>";
         }
       ?>
