@@ -7,9 +7,9 @@ wp-content/upgrade/
 wp-includes/
 
 
-#######################################
-#   Local WordPress Plugins Folders   #
-#######################################
+###############################
+#   Local WordPress Plugins   #
+###############################
 wp-content/plugins/show-current-template/
 wp-content/plugins/wp-scss/
 
@@ -63,3 +63,4 @@ Thumbs.db
 #####################
 *.log
 .htaccess
+ads.txt
