@@ -90,7 +90,7 @@
   }
 
   article {
-    margin: 0 0 $grid-padding;
+    margin: 0 0 $grid-padding !important; // Necessary for google-auto-ads
 
     p {
       margin-bottom: 0;
