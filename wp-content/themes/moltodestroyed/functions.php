@@ -122,10 +122,6 @@ function moltodestroyed_scripts() {
   
   // CSS
   wp_enqueue_style( 
-    'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Bangers|Open+Sans:400,600'
-  );
-  
-  wp_enqueue_style( 
     'bootstrap-style', get_template_directory_uri() . '/css/bootstrap/bootstrap.min.css', array(), '3.3.7' 
   );
   
@@ -190,6 +186,28 @@ require get_template_directory() . '/inc/customizer.php';                 // Cus
 require get_template_directory() . '/inc/character-image-randomizer.php'; // Choose a random character image
 require get_template_directory() . '/inc/constants.php';                  // Import PHP constants
 require get_template_directory() . '/inc/post-types.php';                 // Import custom post types
+
+
+
+
+
+
+
+// Best embedding of google fonts
+function moltodestroyed_load_fonts() { 
+  ?> 
+    <!-- Code snippet to speed up Google Fonts rendering: googlefonts.3perf.com --> 
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"> 
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Bangers|Open+Sans:400,600" as="fetch" crossorigin="anonymous"> 
+    <script type="text/javascript"> 
+    !function(e,n,t){"use strict";var o="https://fonts.googleapis.com/css?family=Bangers|Open+Sans:400,600",r="__3perf_googleFontsStylesheet";function c(e){(n.head||n.body).appendChild(e)}function a(){var e=n.createElement("link");e.href=o,e.rel="stylesheet",c(e)}function f(e){if(!n.getElementById(r)){var t=n.createElement("style");t.id=r,c(t)}n.getElementById(r).innerHTML=e}e.FontFace&&e.FontFace.prototype.hasOwnProperty("display")?(t[r]&&f(t[r]),fetch(o).then(function(e){return e.text()}).then(function(e){return e.replace(/@font-face {/g,"@font-face{font-display:swap;")}).then(function(e){return t[r]=e}).then(f).catch(a)):a()}(window,document,localStorage); 
+    </script>
+    <!-- End of code snippet for Google Fonts -->
+  <?php
+}
+add_action( 'wp_head', 'moltodestroyed_load_fonts' ); 
+
 
 
 
