@@ -40,6 +40,7 @@
   <a class="social-share-button"
      href="http://www.reddit.com/submit?url=<?php echo get_permalink(); ?>&title=<?php echo get_the_title(); ?>"
      target="_blank"
+     rel="noopener"
      title="Reddit">
     <span class="sr-only">Reddit</span>
 
@@ -75,6 +76,7 @@
   <a class="social-share-button"
      href="https://wa.me/?text=<?php echo get_permalink(); ?>"
      target="_blank"
+     rel="noopener"
      title="WhatsApp">
     <span class="sr-only">WhatsApp</span>
 

@@ -19,7 +19,7 @@
     </p>
     
     <p>
-      If you find this 1970s style of communcation too outdated, you can send me a message through <a href="https://www.facebook.com/moltoDESTROYED/" target="_blank">Facebook</a> or <a href="https://twitter.com/moltodestroyed/" target="_blank">Twitter</a>.
+      If you find this 1970s style of communcation too outdated, you can send me a message through <a href="https://www.facebook.com/moltoDESTROYED/" target="_blank" rel="noopener">Facebook</a> or <a href="https://twitter.com/moltodestroyed/" target="_blank" rel="noopener">Twitter</a>.
     </p>    
 
     <span class="contact-notice">NOTE: all fields are required</span>

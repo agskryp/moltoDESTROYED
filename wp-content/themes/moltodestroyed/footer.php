@@ -54,7 +54,7 @@
 
               <ul>
                 <li>
-                  <a href="https://www.facebook.com/moltoDESTROYED/" target="_blank" title="Facebook">
+                  <a href="https://www.facebook.com/moltoDESTROYED/" target="_blank" rel="noopener" title="Facebook">
                     <span class="sr-only">Facebook</span>
                     
                     <svg width="26" height="26" viewBox="0 0 24 24">
@@ -64,7 +64,7 @@
                 </li>
 
                 <li>
-                  <a href="https://twitter.com/moltodestroyed/" target="_blank" title="Twitter">
+                  <a href="https://twitter.com/moltodestroyed/" target="_blank" rel="noopener" title="Twitter">
                     <span class="sr-only">Twitter</span>
                     
                     <svg width="26" height="26" viewBox="0 0 24 24">
@@ -74,7 +74,7 @@
                 </li>
 
                 <li>
-                  <a href="https://www.instagram.com/moltodestroyed/" target="_blank" title="Instagram">
+                  <a href="https://www.instagram.com/moltodestroyed/" target="_blank" rel="noopener" title="Instagram">
                     <span class="sr-only">Instagram</span>
                     
                     <svg width="26" height="26" viewBox="0 0 24 24">
@@ -105,7 +105,7 @@
       <span class="designer text-right">
         Designed by
         
-        <a href="<?php echo esc_url( 'http://agskryp.com' ); ?>"  target="_blank">A.G. Skryp</a>
+        <a href="<?php echo esc_url( 'http://agskryp.com' ); ?>"  target="_blank" rel="noopener">A.G. Skryp</a>
       </span>
     </div>
   </div> 

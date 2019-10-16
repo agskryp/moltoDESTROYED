@@ -3,6 +3,7 @@
   
   <a href="https://www.instagram.com/moltodestroyed/"
      target="_blank"
+     rel="noopener"
      title="Instagram">
     <span class="sr-only">Instagram</span>
     
@@ -13,6 +14,7 @@
 
   <a href="https://twitter.com/moltodestroyed/"
      target="_blank"
+     rel="noopener"
      title="Twitter">
     <span class="sr-only">Twitter</span>
     
@@ -23,6 +25,7 @@
 
   <a href="https://www.facebook.com/moltoDESTROYED/"
      target="_blank"
+     rel="noopener"
      title="Facebook">
     <span class="sr-only">Facebook</span>
     
