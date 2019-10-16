@@ -39,19 +39,10 @@
               <?php require get_template_directory() . '/partials/header-characters.php'; ?>
 
               <a class="site-banner" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <?php if ( is_front_page() ) { ?>
-                  <h1 class="site-title sr-only">
-                    <?php bloginfo( 'name' ); ?>
-                  </h1>
                 <?php
-                  }
-                
-                  else {
+                  if ( is_front_page() ) echo '<h1 class="site-title sr-only">' . get_bloginfo( 'name' ) . '</h1>';   
+                  else echo '<p class="site-title sr-only">' . get_bloginfo( 'name' ) . '</p>';
                 ?>
-                  <p class="site-title sr-only">
-                    <?php bloginfo( 'name' ); ?>
-                  </p>
-                <?php } ?>
 
                 <img src="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-xs.png"
                      srcset="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-sm.png 480w,

@@ -19,9 +19,7 @@
 
   <main id="main" class="site-main blog-posts-list narrow-container">
     <?php if( have_posts() ) { ?>
-      <h1 class="page-title screen-reader-text">
-        <?php single_post_title(); ?>
-      </h1>
+      <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 
       <?php
         while ( have_posts() ) {
