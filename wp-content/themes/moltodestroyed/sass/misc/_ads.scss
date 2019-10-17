@@ -20,7 +20,7 @@
   margin: 0 auto;
   
   ins.adsbygoogle,
-  div.google-auto-placed {
+  .google-auto-placed {
     margin: 0 0 $grid-padding;
     &::before {
       @include global-ad-settings( "Advertisement by Google", $color__link );

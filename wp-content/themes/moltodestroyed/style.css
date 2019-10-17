@@ -1723,10 +1723,10 @@ a.site-banner img {
   position: relative;
   margin: 0 auto;
 }
-.ad-container ins.adsbygoogle, .ad-container div.google-auto-placed {
+.ad-container ins.adsbygoogle, .ad-container .google-auto-placed {
   margin: 0 0 1.5em;
 }
-.ad-container ins.adsbygoogle::before, .ad-container div.google-auto-placed::before {
+.ad-container ins.adsbygoogle::before, .ad-container .google-auto-placed::before {
   content: "Advertisement by Google";
   font-size: 50%;
   display: block;
@@ -1738,7 +1738,7 @@ a.site-banner img {
   top: -12px;
 }
 @media all and (min-width: 600px) {
-  .ad-container ins.adsbygoogle::before, .ad-container div.google-auto-placed::before {
+  .ad-container ins.adsbygoogle::before, .ad-container .google-auto-placed::before {
     top: -15px;
   }
 }
