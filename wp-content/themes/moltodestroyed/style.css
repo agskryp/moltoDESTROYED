@@ -863,48 +863,6 @@ a:hover, a:active {
   clear: both;
 }
 /*--------------------------------------------------------------
- # Widgets
- --------------------------------------------------------------*/
-.widget-area {
-  max-width: 420px;
-  margin: 0 auto;
-  border-top: none;
-}
-@media all and (min-width: 768px) {
-  .widget-area {
-    max-width: none;
-    border-top: 2px solid #000;
-  }
-}
-.widget-area .row {
-  margin: 0;
-}
-.widget-area li {
-  line-height: 1.25;
-  margin-bottom: 0.5em;
-}
-.widget-area ol, .widget-area ul {
-  list-style: none;
-  padding: 0;
-}
-.widget-area section {
-  padding: 1.5em 0 0;
-  border-top: 2px solid #000;
-}
-@media all and (min-width: 768px) {
-  .widget-area section {
-    border-top: none;
-    padding: 1.5em 15px 0;
-  }
-}
-.widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */
-}
-.widget select {
-  max-width: 100%;
-}
-/*--------------------------------------------------------------
  # Content
  --------------------------------------------------------------*/
 /*--------------------------------------------------------------
