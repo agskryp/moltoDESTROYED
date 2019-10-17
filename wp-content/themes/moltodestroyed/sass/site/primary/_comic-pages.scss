@@ -38,7 +38,7 @@
     a {
       font-size: 1.1em;
       letter-spacing: -2px;
-      background: $color__background-button;
+      background: BLACK;
       color: $color__text-light;
       padding: 8px 2px 8px 0;
       border-radius: 4px;
@@ -46,7 +46,7 @@
       margin: 0 4px;
       &:hover,
       &:focus {
-        background: $color__link-hover;
+        background: $color__background-button;
       }
       
       @media all and ( min-width: $screen-xs ) {

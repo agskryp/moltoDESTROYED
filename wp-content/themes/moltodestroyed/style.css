@@ -1124,7 +1124,7 @@ a:hover, a:active {
 .comic-navigation-container .comic-navigation a {
   font-size: 1.1em;
   letter-spacing: -2px;
-  background: #898989;
+  background: BLACK;
   color: #fff;
   padding: 8px 2px 8px 0;
   border-radius: 4px;
@@ -1132,7 +1132,7 @@ a:hover, a:active {
   margin: 0 4px;
 }
 .comic-navigation-container .comic-navigation a:hover, .comic-navigation-container .comic-navigation a:focus {
-  background: #bcbcbc;
+  background: #898989;
 }
 @media all and (min-width: 360px) {
   .comic-navigation-container .comic-navigation a {
