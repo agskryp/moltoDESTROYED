@@ -137,6 +137,10 @@ function moltodestroyed_scripts() {
   
   // JS
   wp_enqueue_script( 
+    'jquery-1-12-4',  'https://code.jquery.com/jquery-1.12.4.min.js', array(), '1.12.4', false
+  );
+  
+  wp_enqueue_script( 
     'analytics-scripts',  get_template_directory_uri() . '/js/analytics-scripts.js', array(), THEME_VERSION_NUMBER, false
   );
   
