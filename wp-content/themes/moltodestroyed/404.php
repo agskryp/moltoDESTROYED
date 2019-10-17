@@ -21,9 +21,7 @@
           <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
         </div>
 
-        <p>
-          It's possible that it did exist once upon a time, and we've decided to change something to inconvience you for a moment.
-        </p>
+        <p>It's possible that it did exist once upon a time, and we've decided to change something to inconvience you for a moment.</p>
 
         <div class="right-character pull-right">
           <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
@@ -31,14 +29,9 @@
 
         <p>Or maybe it never <em>ever</em> existed!</p>
 
-        <p>
-          Perhaps it may exist one day, but today isn't that day. You could always try again tomorrow if you want, we won't stop you.
-        </p>
+        <p>Perhaps it may exist one day, but today isn't that day. You could always try again tomorrow if you want, we won't stop you.</p>
 
-        <p>
-          In the mean time, you can <a href="<?php echo get_site_url(); ?>">return to the homepage</a>, or see if there's a reason you're seeing this page in one of the
-          <a href="<?php echo get_site_url() . MOLTO_BLOG; ?>">blog postings</a>.
-        </p>
+        <p>In the mean time, you can <a href="<?php echo get_site_url(); ?>">return to the homepage</a>, or see if there's a reason you're seeing this page in one of the <a href="<?php echo get_site_url() . MOLTO_BLOG; ?>">blog postings</a>.</p>
       </div> 
     </section>
   </main>

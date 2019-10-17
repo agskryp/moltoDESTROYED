@@ -33,9 +33,7 @@
         molto_posts_navigation();
       }
 
-      else {
-        get_template_part( 'template-parts/content', 'none' );
-      }
+      else get_template_part( 'template-parts/content', 'none' );
     ?>
   </main>
 </div>

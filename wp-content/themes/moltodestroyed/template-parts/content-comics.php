@@ -18,15 +18,15 @@
     <?php
       $image = get_field( 'comic_strip' );
 
-      if( !empty( $image ) ): 
+      if( !empty( $image ) ) {
     ?>
-      <img src="<?php echo $image[ 'url' ]; ?>" alt="<?php echo the_title(); ?>" />
+      <img src="<?php echo $image[ 'url' ]; ?>" alt="<?php the_title(); ?>" />
 
       <div id="comicfin" class="entry-meta">
         <span class="posted-on">Posted on <?php molto_post_date(); ?></span>
       </div>
     <?php 
-      endif;
+      }
     
       require_once get_template_directory() . '/partials/textified-comic.php';
     ?>

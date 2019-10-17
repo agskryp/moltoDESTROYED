@@ -1,5 +1,6 @@
 <?php
   global $post;
+
   ob_start();
 ?>
 
@@ -78,6 +79,7 @@
 
 <?php
   $comic_navigation = ob_get_contents();
+
   ob_end_flush();
 
   return $comic_navigation;

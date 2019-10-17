@@ -21,9 +21,7 @@
 
         molto_blog_navigation();
 
-        if( comments_open() || get_comments_number() ) {
-          comments_template();
-        }
+        if( comments_open() || get_comments_number() ) comments_template();
       }
     ?>
   </main>

@@ -1,11 +1,8 @@
 <div class="social-share-container text-center">
   <h3>Share!</h3>
 
-  <a class="social-share-button"
-     href="https://twitter.com/intent/tweet?text=Check out the comic &#39;<?php echo get_the_title(); ?>&#39; @ moltoDESTROYED: <?php echo get_permalink(); ?>"
-     target="popupTwitter" 
-     onclick="PopupCenter('','popupTwitter','600','253');"
-     title="Twitter">
+  <a class="social-share-button" target="popupTwitter" onclick="PopupCenter('','popupTwitter','600','253');" title="Twitter"
+     href="https://twitter.com/intent/tweet?text=Check out the comic &#39;<?php echo get_the_title(); ?>&#39; @ moltoDESTROYED: <?php echo get_permalink(); ?>">
     <span class="sr-only">Twitter</span>
 
     <svg width="24" height="24" viewBox="0 0 24 24">
@@ -13,11 +10,8 @@
     </svg>
   </a>
 
-  <a class="social-share-button"
-     href="http://www.facebook.com/share.php?u=<?php echo get_permalink(); ?>"
-     target="popupFacebook" 
-     onclick="PopupCenter('','popupFacebook','600','500');"
-     title="Facebook">
+  <a class="social-share-button" target="popupFacebook" onclick="PopupCenter('','popupFacebook','600','500');" title="Facebook"
+     href="http://www.facebook.com/share.php?u=<?php echo get_permalink(); ?>">
     <span class="sr-only">Facebook</span>
 
     <svg width="24" height="24" viewBox="0 0 24 24">
@@ -25,11 +19,8 @@
     </svg>
   </a>
 
-  <a class="social-share-button"
-     href=" https://www.tumblr.com/widgets/share/tool?canonicalUrl=<?php echo get_permalink(); ?>posttype=photo&content=<?php echo get_the_post_thumbnail_url(); ?>&caption=&#39;<?php echo get_the_title(); ?>&#39; @ moltoDESTROYED: <?php echo get_permalink(); ?>"
-     target="popupTumblr" 
-     onclick="PopupCenter('','popupTumblr','540','600');"
-     title="Tumblr">
+  <a class="social-share-button" target="popupTumblr" onclick="PopupCenter('','popupTumblr','540','600');" title="Tumblr"
+     <?php echo 'href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=' . get_permalink() . 'posttype=photo&content=' . get_the_post_thumbnail_url() . '&caption=&#39;' . get_the_title() . '&#39; @ moltoDESTROYED: ' . get_permalink() . '"'; ?>>
     <span class="sr-only">Tumblr</span>
 
     <svg width="24" height="24" viewBox="0 0 24 24">
@@ -61,11 +52,8 @@
     </svg>
   </a>
 
-  <a class="social-share-button"
-     href="https://wa.me/?text=<?php echo get_permalink(); ?>"
-     target="_blank"
-     rel="noopener"
-     title="WhatsApp">
+  <a class="social-share-button" target="_blank" rel="noopener" title="WhatsApp"
+     href="https://wa.me/?text=<?php echo get_permalink(); ?>">
     <span class="sr-only">WhatsApp</span>
 
     <svg width="24" height="24" viewBox="0 0 24 24">

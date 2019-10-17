@@ -25,7 +25,7 @@
     ?>
   </div>
 
-  <?php if ( get_edit_post_link() ) : ?>
+  <?php if( get_edit_post_link() ) : ?>
     <footer class="entry-footer">
       <?php
         edit_post_link(	sprintf( wp_kses(

@@ -61,13 +61,8 @@
       </div>
 
       <nav id="site-navigation" class="main-navigation">
-        <button class="menu-toggle" 
-                type="button"
-                data-toggle="collapse"
-                data-target="#mainNavMenu"
-                aria-controls="mainNavMenu" 
-                aria-expanded="false" 
-                aria-label="Toggle navigation">
+        <button class="menu-toggle" type="button" data-toggle="collapse" data-target="#mainNavMenu"
+                aria-controls="mainNavMenu" aria-expanded="false" aria-label="Toggle navigation">
           <h3>Menu</h3>
 
           <div id="main-menu-icon" class="main-menu-icon">

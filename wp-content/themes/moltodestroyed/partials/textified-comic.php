@@ -1,7 +1,7 @@
 <?php
   $textified = get_field( 'textify_comic' );
 
-  if( !empty( $textified ) && !is_home() ):    
+  if( !empty( $textified ) && !is_home() ) {
 ?>
   <div class="textified">
     <button id="textified-toggle" class="flex-center">
@@ -12,8 +12,7 @@
       </svg>
     </button>
 
-    <div id="textified-text" class="textified-text text-left sr-only">
-      <?php echo $textified; ?>
-    </div>
+    <?php echo '<div id="textified-text" class="textified-text text-left sr-only">' . $textified . '</div>'; ?>
   </div>
-<?php endif;
+<?php 
+  }

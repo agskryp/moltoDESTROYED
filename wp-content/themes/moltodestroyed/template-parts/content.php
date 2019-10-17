@@ -16,15 +16,11 @@
     <?php
       endif;
 
-      if( is_singular() ) {
-        the_title( '<h1 class="entry-title blog-title">', '</h1>' );
-      }
+      if( is_singular() ) the_title( '<h1 class="entry-title blog-title">', '</h1>' );
 
       else {
         the_title(
-          '<h2 class="entry-title blog-title">
-            <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>
-          </h2>'
+          '<h2 class="entry-title blog-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>'
         );
       }
     ?>
