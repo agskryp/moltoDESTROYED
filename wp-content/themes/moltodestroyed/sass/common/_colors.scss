@@ -4,7 +4,7 @@
 
 $darkest_shade:  #000000;
 $darker_shade:   #343434;
-$dark_shade:     #898989;
+$dark_shade:     #676767;
 $light_shade:    #bcbcbc;
 $lighter_shade:  #ededed;
 $lightest_shade: #ffffff;
@@ -15,7 +15,7 @@ $lightest_shade: #ffffff;
 $color__background-body:      #ededed;
 $color__background-screen:    #f1f1f1;
 $color__background-hr:        #ccc;
-$color__background-button:    #898989;
+$color__background-button:    $dark_shade;
 $color__background-pre:       #eee;
 $color__background-ins:       #f9f9f9;
 $color__background-dark:      #000;
@@ -23,9 +23,9 @@ $color__background-light:     #fff;
 
 $color__text-screen:          purple; // #21759b;
 $color__text-input:           #343434; 
-$color__text-input-focus:     #898989;
-$color__link:                 #898989;
-$color__link-visited:         #898989;
+$color__text-input-focus:     $dark_shade;
+$color__link:                 $dark_shade;
+$color__link-visited:         $dark_shade;
 $color__link-hover:           #bcbcbc;
 $color__text-main:            #000;
 $color__text-light:           #fff;
