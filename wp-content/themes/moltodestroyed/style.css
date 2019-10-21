@@ -1726,6 +1726,10 @@ ins.adsbygoogle::before, .google-auto-placed::before {
     top: -15px;
   }
 }
+.adsbygoogle.adsbygoogle-noablate::before {
+  content: "";
+  display: none;
+}
 .promo-container {
   max-width: 970px;
   clear: both;
