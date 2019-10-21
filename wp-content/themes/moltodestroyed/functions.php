@@ -149,7 +149,7 @@ function moltodestroyed_scripts() {
   );
   
   wp_enqueue_script( 
-    'bootstrap-collapse',  get_template_directory_uri() . '/js/bootstrap-collapse-min.js', array(), '3.3.7', true
+    'bootstrap-collapse',  get_template_directory_uri() . '/js/bootstrap-collapse-min.js', array(), '3.4.1', true
   );
   
   wp_enqueue_script( 
