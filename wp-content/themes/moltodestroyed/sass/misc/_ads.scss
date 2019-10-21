@@ -19,20 +19,22 @@
   position: relative;
   margin: 0 auto;
   
-  ins.adsbygoogle,
-  .google-auto-placed {
-    margin: 0 0 $grid-padding;
-    &::before {
-      @include global-ad-settings( "Advertisement by Google", $color__link );
-    }
-  }
-  
   ins.top-of-page-ad {
     display: none !important;
     
     @media all and ( min-width: $screen-sm ) {
       display: block !important;
     }
+  }
+}
+
+ins.adsbygoogle,
+.google-auto-placed {
+  position: relative;
+  margin: 0 0 $grid-padding;
+  
+  &::before {
+    @include global-ad-settings( "Advertisement by Google", $color__link );
   }
 }
 
