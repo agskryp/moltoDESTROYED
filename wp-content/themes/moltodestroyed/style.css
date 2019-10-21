@@ -395,6 +395,23 @@ figure {
 button {
   outline: none;
 }
+a {
+  color: #676767;
+  font-weight: 600;
+}
+a:visited {
+  color: #676767;
+}
+a:hover, a:focus, a:active {
+  color: #bcbcbc;
+  text-decoration: none;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
+}
 ul, ol {
   margin: 0 0 1.5em;
 }
@@ -484,23 +501,6 @@ textarea {
 /*--------------------------------------------------------------
  # Navigation
  --------------------------------------------------------------*/
-a {
-  color: #676767;
-  font-weight: 600;
-}
-a:visited {
-  color: #676767;
-}
-a:hover, a:focus, a:active {
-  color: #bcbcbc;
-  text-decoration: none;
-}
-a:focus {
-  outline: thin dotted;
-}
-a:hover, a:active {
-  outline: 0;
-}
 .main-navigation {
   clear: both;
   float: left;
