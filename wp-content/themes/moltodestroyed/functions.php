@@ -136,8 +136,12 @@ function moltodestroyed_scripts() {
   }
   
   // JS
+//  wp_enqueue_script( 
+//    'jquery-1-12-4',  'https://code.jquery.com/jquery-1.12.4.min.js', array(), '1.12.4', false
+//  );
+  
   wp_enqueue_script( 
-    'jquery-1-12-4',  'https://code.jquery.com/jquery-1.12.4.min.js', array(), '1.12.4', false
+    'jquery-3-4-1',  get_template_directory_uri() . '/js/jquery-3-4-1.js', array(), '3.4.1', false
   );
   
   wp_enqueue_script( 
