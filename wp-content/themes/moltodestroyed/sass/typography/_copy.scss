@@ -2,26 +2,11 @@ p {
   margin-bottom: $grid-padding;
 }
 
-dfn, cite, em, i {
-  font-style: italic;
-}
-
-cite {
-  margin-left: 6px;
-}
-
 blockquote {
   margin: 0 0 $grid-padding;
   border-left: 4px solid #000;
   font-style: italic;
   background: $color__background-screen;
-}
-
-address {
-  margin: 0 0 $grid-padding;
-  margin-left: $grid-padding;
-  font-size: 1.1em;
-  line-height: 1.25;
 }
 
 pre {
@@ -52,21 +37,7 @@ code {
   line-height: 1.25
 }
 
-abbr, acronym {
-  border-bottom: none !important;
-  cursor: help;
-}
-
 mark, ins {
   background: $color__background-ins;
   text-decoration: none;
-}
-
-big {
-  font-size: 125%;
-}
-
-q {
-  font-style: italic;
-  font-size: 110%;
 }

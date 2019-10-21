@@ -289,23 +289,11 @@ h2 {
 p {
   margin-bottom: 1.5em;
 }
-dfn, cite, em, i {
-  font-style: italic;
-}
-cite {
-  margin-left: 6px;
-}
 blockquote {
   margin: 0 0 1.5em;
   border-left: 4px solid #000;
   font-style: italic;
   background: #f1f1f1;
-}
-address {
-  margin: 0 0 1.5em;
-  margin-left: 1.5em;
-  font-size: 1.1em;
-  line-height: 1.25;
 }
 pre {
   background: #eee;
@@ -334,20 +322,9 @@ code {
   white-space: pre;
   line-height: 1.25;
 }
-abbr, acronym {
-  border-bottom: none !important;
-  cursor: help;
-}
 mark, ins {
   background: #f9f9f9;
   text-decoration: none;
-}
-big {
-  font-size: 125%;
-}
-q {
-  font-style: italic;
-  font-size: 110%;
 }
 /*--------------------------------------------------------------
  # Elements
