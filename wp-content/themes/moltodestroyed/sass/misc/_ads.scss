@@ -38,12 +38,14 @@ ins.adsbygoogle,
   }
 }
 
-.adsbygoogle.adsbygoogle-noablate {
+.adsbygoogle.adsbygoogle-noablate,
+.google-auto-placed ins.adsbygoogle {
   &::before {
     content: "";
     display: none;
   }
 }
+
 
 .promo-container {
   max-width: 970px;
