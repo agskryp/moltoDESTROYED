@@ -3,7 +3,7 @@
  Plugin Name: Social Media Auto Publish
 Plugin URI: https://xyzscripts.com/wordpress-plugins/social-media-auto-publish/
 Description:   Publish posts automatically from your blog to social media networks like Facebook, Twitter and LinkedIn. The plugin supports filtering posts by post-types and categories.
-Version: 2.2.1
+Version: 2.3
 Author: xyzscripts.com
 Author URI: https://xyzscripts.com/
 License: GPLv2 or later
@@ -38,6 +38,8 @@ if (!defined('XYZ_SMAP_SOLUTION_AUTH_URL'))
 define('XYZ_SMAP_SOLUTION_AUTH_URL','https://authorize.smapsolutions.com/');
 if (!defined('XYZ_SMAP_SOLUTION_PUBLISH_URL'))
 define('XYZ_SMAP_SOLUTION_PUBLISH_URL','https://free-publish.smapsolutions.com/');
+if (!defined('XYZ_SMAP_SOLUTION_LN_PUBLISH_URL'))
+	define('XYZ_SMAP_SOLUTION_LN_PUBLISH_URL','https://li-publish.smapsolutions.com/');
 global $wpdb;
 if(isset($_POST) && isset($_POST['fb_auth'] ) ||isset($_GET['page']) && ($_GET['page']=='social-media-auto-publish-suggest-features')|| (isset($_GET['page']) && ($_GET['page']=='social-media-auto-publish-settings')) || isset($_GET['page']) && ($_GET['page']=='social-media-auto-publish-manage-authorizations'))
 {
@@ -76,4 +78,11 @@ function xyz_smap_credit() {
 }
 if(!function_exists('get_post_thumbnail_id'))
 	add_theme_support( 'post-thumbnails' );
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'xyz_smap_add_action_links' );
+function xyz_smap_add_action_links( $links ) {
+	$xyz_smap_links = array(
+			'<a href="' . admin_url( 'admin.php?page=social-media-auto-publish-settings' ) . '">Settings</a>',
+	);
+	return array_merge( $links, $xyz_smap_links);
+}
 ?>

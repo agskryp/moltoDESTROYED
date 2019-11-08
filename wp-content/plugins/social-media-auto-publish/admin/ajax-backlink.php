@@ -30,6 +30,7 @@ add_action('wp_ajax_xyz_smap_selected_pages_auto_update', 'xyz_smap_free_selecte
 
 function xyz_smap_free_selected_pages_auto_update_fn() {
 	global $wpdb;
+	if(current_user_can('administrator')){
 	if($_POST){
 		if (! isset( $_POST['_wpnonce'] )|| ! wp_verify_nonce( $_POST['_wpnonce'],'xyz_smap_selected_pages_nonce' ))
 		{
@@ -48,11 +49,13 @@ function xyz_smap_free_selected_pages_auto_update_fn() {
 			update_option('xyz_smap_smapsoln_userid', $xyz_smap_smapsoln_userid);
 		}
 	}
+}
 	die();
 }
 add_action('wp_ajax_xyz_smap_xyzscripts_accinfo_auto_update', 'xyz_smap_xyzscripts_accinfo_auto_update_fn');
 function xyz_smap_xyzscripts_accinfo_auto_update_fn() {
 	global $wpdb;
+	if(current_user_can('administrator')){
 	if($_POST){
 		if (! isset( $_POST['_wpnonce'] )|| ! wp_verify_nonce( $_POST['_wpnonce'],'xyz_smap_xyzscripts_accinfo_nonce' ))
 		{
@@ -66,11 +69,13 @@ function xyz_smap_xyzscripts_accinfo_auto_update_fn() {
 			update_option('xyz_smap_xyzscripts_hash_val', $xyzscripts_hash_val);
 		}
 	}
+}
 	die();
 }
 add_action('wp_ajax_xyz_smap_del_entries', 'xyz_smap_del_entries_fn');
 function xyz_smap_del_entries_fn() {
 	global $wpdb;
+	if(current_user_can('administrator')){
 	if($_POST){
 		if (! isset( $_POST['_wpnonce'] )|| ! wp_verify_nonce( $_POST['_wpnonce'],'xyz_smap_del_entries_nonce' ))
 		{
@@ -97,9 +102,137 @@ function xyz_smap_del_entries_fn() {
 			update_option('xyz_smap_af', 1);
 			update_option('xyz_smap_secret_key', '');
 			update_option('xyz_smap_smapsoln_userid', 0);
+			update_option('xyz_smap_fb_numericid', 0);
  			}
+		}
+	}
+}
+	die();
+}
+/////////////////////////////////////////LINKEDIN//////////////////////////////////////////
+add_action('wp_ajax_xyz_smap_ln_selected_pages_auto_update', 'xyz_smap_free_selected_pages_auto_update_ln_fn');
+function xyz_smap_free_selected_pages_auto_update_ln_fn() {
+	global $wpdb;
+	if(current_user_can('administrator')){
+	if($_POST){
+		if (! isset( $_POST['_wpnonce'] )|| ! wp_verify_nonce( $_POST['_wpnonce'],'xyz_smap_ln_selected_pages_nonce' ))
+		{
+			echo 1;die;
+		}
+		if(isset($_POST)){
+			$pages=array();$ln_total_pages0='';
+			$xyz_smap_ln_share_post_profile=0;
+			if (isset($_POST['pages']))
+				$pages=$_POST['pages'];
+				if (array_key_exists('-1', $pages)){
+					$xyz_smap_ln_share_post_profile=1;
+					unset($pages['-1']);
+				}
+			if(!empty($pages)){
+				$ln_total_pages0=base64_encode(serialize($pages));
+				foreach ($pages as $sel_pageid=>$sel_pagename)
+				{
+					if ($sel_pageid!='-1'){
+						$page_id[]=$sel_pageid;
+					}
+				}
+				$page_id=implode(',', $page_id);
+			}
+			$smap_sec_key=$_POST['smap_secretkey'];
+			$xyz_smap_smapsoln_userid=$_POST['smapsoln_userid'];
+			update_option('xyz_smap_ln_page_names',$ln_total_pages0);
+			update_option('xyz_smap_lnaf', 0);
+			update_option('xyz_smap_secret_key_ln', $smap_sec_key);
+			update_option('xyz_smap_lnshare_to_profile', $xyz_smap_ln_share_post_profile);
+			update_option('xyz_smap_smapsoln_userid_ln', $xyz_smap_smapsoln_userid);
+			update_option('xyz_smap_ln_company_ids', $page_id);
+			update_option('xyz_smap_lnappscoped_userid', $_POST['xyz_ln_user_id']);
+		}
+	}
+}
+	die();
+}
+add_action('wp_ajax_xyz_smap_del_ln_entries', 'xyz_smap_del_entries_ln_fn');
+function xyz_smap_del_entries_ln_fn() {
+	global $wpdb;
+	if(current_user_can('administrator')){
+	if($_POST){
+		if (! isset( $_POST['_wpnonce'] )|| ! wp_verify_nonce( $_POST['_wpnonce'],'xyz_smap_del_entries_ln_nonce' ))
+		{
+			echo 1;die;
+		}
+		$ln_auth_id=$_POST['ln_auth_id'];
+		$xyz_smap_xyzscripts_user_id = $_POST['xyzscripts_id'];
+		$xyz_smap_xyzscripts_hash_val= $_POST['xyzscripts_user_hash'];
+		$delete_entry_details=array('smap_ln_auth_id'=>$ln_auth_id,
+				'xyzscripts_user_id' =>$xyz_smap_xyzscripts_user_id);
+		$url=XYZ_SMAP_SOLUTION_AUTH_URL.'authorize_linkedIn/delete-ln-auth.php';//save-selected-pages-test.php
+		$content=xyz_smap_post_to_smap_api($delete_entry_details, $url,$xyz_smap_xyzscripts_hash_val);
+		echo $content;
+		$result=json_decode($content);$delete_flag=0;
+		if(!empty($result))
+		{
+			if (isset($result->status))
+				$delete_flag =$result->status;
+		}
+		if ($delete_flag===1)
+		{
+			if ($ln_auth_id==get_option('xyz_smap_smapsoln_userid_ln')){
+				update_option('xyz_smap_ln_company_ids','');
+				update_option('xyz_smap_lnaf', 1);
+				update_option('xyz_smap_secret_key_ln', '');
+				update_option('xyz_smap_smapsoln_userid_ln', 0);
+				update_option('xyz_smap_ln_page_names', '');
+				update_option('xyz_smap_lnappscoped_userid', '');
+			}
+			}
 		}
 	}
 	die();
 }
+add_action('wp_ajax_xyz_smap_del_fb_entries', 'xyz_smap_del_fb_entries_fn');
+function xyz_smap_del_fb_entries_fn() {
+	global $wpdb;
+	if(current_user_can('administrator')){
+	if($_POST){
+		if (! isset( $_POST['_wpnonce'] )|| ! wp_verify_nonce( $_POST['_wpnonce'],'xyz_smap_del_fb_entries_nonce' ))
+		{
+			echo 1;die;
+		}
+		$fb_userid=$_POST['fb_userid'];
+		$xyz_smap_xyzscripts_user_id = $_POST['xyzscripts_id'];
+		$xyz_smap_xyzscripts_hash_val= $_POST['xyzscripts_user_hash'];
+		$tr_iterationid=$_POST['tr_iterationid'];
+		$delete_entry_details=array('fb_userid'=>$fb_userid,
+				'xyzscripts_user_id' =>$xyz_smap_xyzscripts_user_id);
+		$url=XYZ_SMAP_SOLUTION_AUTH_URL.'authorize/delete-fb-auth.php';// save-selected-pages-test.php
+		$content=xyz_smap_post_to_smap_api($delete_entry_details, $url,$xyz_smap_xyzscripts_hash_val);
+		echo $content;
+	}
+}
+	die();
+}
+add_action('wp_ajax_xyz_smap_del_lnuser_entries', 'xyz_smap_del_lnuser_entries_fn');
+function xyz_smap_del_lnuser_entries_fn() {
+	global $wpdb;
+	if(current_user_can('administrator')){
+	if($_POST){
+		if (! isset( $_POST['_wpnonce'] )|| ! wp_verify_nonce( $_POST['_wpnonce'],'xyz_smap_del_lnuser_entries_nonce' ))
+		{
+			echo 1;die;
+		}
+		$ln_userid=$_POST['ln_userid'];
+		$xyz_smap_xyzscripts_user_id = $_POST['xyzscripts_id'];
+		$xyz_smap_xyzscripts_hash_val= $_POST['xyzscripts_user_hash'];
+// 		$tr_iterationid=$_POST['tr_iterationid'];
+		$delete_entry_details=array('ln_userid'=>$ln_userid,
+				'xyzscripts_user_id' =>$xyz_smap_xyzscripts_user_id);
+		$url=XYZ_SMAP_SOLUTION_AUTH_URL.'authorize_linkedIn/delete-ln-auth.php';//delete-fb-auth.php save-selected-pages-test.php
+		$content=xyz_smap_post_to_smap_api($delete_entry_details, $url,$xyz_smap_xyzscripts_hash_val);
+		echo $content;
+	}
+}
+	die();
+}
+////////////////////////////////////////////////////////////////////////////////////////////
 ?>

@@ -30,7 +30,6 @@ if( !defined('ABSPATH') ){ exit();}
 				$post_tw_logsmain = get_option('xyz_smap_twap_post_logs' );
 				$post_ln_logsmain = get_option('xyz_smap_lnap_post_logs' );
 				
-				
                                 if(is_array($post_fb_logsmain))
                                 {
                                 $post_fb_logsmain_array = array();
@@ -39,16 +38,30 @@ if( !defined('ABSPATH') ){ exit();}
 					$post_fb_logsmain_array[]=$logval1;
 				
 				}
+                 }
+                 if(is_array($post_tw_logsmain))
+                 {
+                 	$post_tw_logsmain_array = array();
+                 	foreach ($post_tw_logsmain as $logkey2 => $logval2)
+                 	{
+                 		$post_tw_logsmain_array[]=$logval2;
+                 	}
+                 }
+                 if(is_array($post_ln_logsmain))
+                 {
+                 	$post_ln_logsmain_array = array();
+                 	foreach ($post_ln_logsmain as $logkey3 => $logval3)
+                 	{
+                 		$post_ln_logsmain_array[]=$logval3;
+                 	}
+                 }
 				
 				
-				
-				
-				
-				if(is_array($post_fb_logsmain_array))
+                if((is_array($post_fb_logsmain_array))||(is_array($post_tw_logsmain_array))||(is_array($post_ln_logsmain_array)))
 				{
 					for($i=9;$i>=0;$i--)
 					{
-						if(array_key_exists($i,$post_fb_logsmain_array)){
+						if(!empty($post_fb_logsmain_array) && array_key_exists($i,$post_fb_logsmain_array)){
 						if($post_fb_logsmain_array[$i]!='')
 							{
 								$post_fb_logs=$post_fb_logsmain_array[$i];
@@ -96,24 +109,7 @@ if( !defined('ABSPATH') ){ exit();}
 							</tr>
 							<?php  
 							}}
-						}
-					}
-					
-			           }
-
-                    if(is_array($post_tw_logsmain))
-                     {	
-					$post_tw_logsmain_array = array();
-					foreach ($post_tw_logsmain as $logkey2 => $logval2)
-					{
-						$post_tw_logsmain_array[]=$logval2;
-					}
-					
-					if(is_array($post_tw_logsmain_array))
-					{
-						for($i=9;$i>=0;$i--)
-						{
-							if(array_key_exists($i,$post_tw_logsmain_array)){
+							if(!empty($post_tw_logsmain_array) && array_key_exists($i,$post_tw_logsmain_array)){
 							if($post_tw_logsmain_array[$i]!='')
 							{
 								$post_tw_logs=$post_tw_logsmain_array[$i];
@@ -162,35 +158,19 @@ if( !defined('ABSPATH') ){ exit();}
 								</tr>
 								<?php  
 							}}
-						}
-					}
-                                     }
-
-								
-                                       if(is_array($post_ln_logsmain))
-                                   {
-					$post_ln_logsmain_array = array();
-					foreach ($post_ln_logsmain as $logkey3 => $logval3)
-					{
-						$post_ln_logsmain_array[]=$logval3;
-					
-					}
-					if(is_array($post_ln_logsmain_array))
-					{
-						for($i=9;$i>=0;$i--)
-						{
-							if(array_key_exists($i,$post_ln_logsmain_array)){
-							if($post_ln_logsmain_array[$i]!='')
-							{
-								$post_ln_logs=$post_ln_logsmain_array[$i];		
-								$postid=$post_ln_logs['postid'];
-								$acc_type=$post_ln_logs['acc_type'];
-								$publishtime=$post_ln_logs['publishtime'];
-								if($publishtime!="")
-									$publishtime=xyz_smap_local_date_time('Y/m/d g:i:s A',$publishtime);
-								$status=$post_ln_logs['status'];
 							
-								?>
+							if(!empty($post_ln_logsmain_array) && array_key_exists($i,$post_ln_logsmain_array)){
+								if($post_ln_logsmain_array[$i]!='')
+								{
+									$post_ln_logs=$post_ln_logsmain_array[$i];
+									$postid=$post_ln_logs['postid'];
+									$acc_type=$post_ln_logs['acc_type'];
+									$publishtime=$post_ln_logs['publishtime'];
+									if($publishtime!="")
+										$publishtime=xyz_smap_local_date_time('Y/m/d g:i:s A',$publishtime);
+										$status=$post_ln_logs['status'];
+										
+										?>
 								<tr>
 									<td>&nbsp;</td>
 									 <td  style="vertical-align: middle !important;">
@@ -231,9 +211,8 @@ if( !defined('ABSPATH') ){ exit();}
 								<?php  
 							}}
 						}
-					}
+						
                                      }
-
 					if($post_fb_logsmain=="" && $post_tw_logsmain=="" && $post_ln_logsmain==""){?>
 						<tr><td colspan="5" style="padding: 5px;">No logs Found</td></tr>
 					<?php }?>

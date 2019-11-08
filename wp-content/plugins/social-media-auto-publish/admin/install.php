@@ -70,7 +70,7 @@ function smap_install_free()
 	
 	add_option('xyz_smap_application_lnarray', '');
 	add_option('xyz_smap_ln_shareprivate', '0');
-	add_option('xyz_smap_ln_sharingmethod', '0');
+// 	add_option('xyz_smap_ln_sharingmethod', '0');
 	add_option('xyz_smap_lnapikey', '');
 	add_option('xyz_smap_lnapisecret', '');
 // 	add_option('xyz_smap_lnoauth_verifier', '');
@@ -119,6 +119,10 @@ function smap_install_free()
 	add_option('xyz_smap_lnpost_method',2);
 	add_option('xyz_smap_lnappscoped_userid','');
 	add_option('xyz_smap_ln_api_permission',0);
+	add_option('xyz_smap_smapsoln_userid_ln','0');
+	add_option('xyz_smap_secret_key_ln','');//54
+	add_option('xyz_smap_ln_page_names','');
+	add_option('xyz_smap_free_enforce_og_tags',1);
 }
 
 register_activation_hook(XYZ_SMAP_PLUGIN_FILE,'smap_free_network_install');

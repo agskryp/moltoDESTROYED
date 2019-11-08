@@ -204,10 +204,10 @@ function xyz_link_publish($post_ID) {
   $xyz_smap_ln_shareprivate=get_option('xyz_smap_ln_shareprivate'); 
   if(isset($_POST['xyz_smap_ln_shareprivate']))
   $xyz_smap_ln_shareprivate=intval($_POST['xyz_smap_ln_shareprivate']);
- if ($xyz_smap_lnpost_method==0)
-  $xyz_smap_ln_sharingmethod=get_option('xyz_smap_ln_sharingmethod');
-  if(isset($_POST['xyz_smap_lnpost_method']))
-  $xyz_smap_ln_sharingmethod=intval($_POST['xyz_smap_lnpost_method']);
+//  if ($xyz_smap_lnpost_method==0)
+//   $xyz_smap_ln_sharingmethod=get_option('xyz_smap_ln_sharingmethod');
+//   if(isset($_POST['xyz_smap_ln_sharingmethod']))
+//   $xyz_smap_ln_sharingmethod=intval($_POST['xyz_smap_ln_sharingmethod']);
 
     $lnaf=get_option('xyz_smap_lnaf');
 	
@@ -933,7 +933,7 @@ function xyz_link_publish($post_ID) {
 			
 		}
 	   
-		if($lnappikey!="" && $lnapisecret!=""  && $lnpost_permission==1 && $lnaf==0 && (get_option('xyz_smap_ln_company_ids')!=''|| get_option('xyz_smap_lnshare_to_profile')==1))
+		if((($lnappikey!="" && $lnapisecret!="" && get_option('xyz_smap_ln_api_permission')!=2)|| get_option('xyz_smap_ln_api_permission')==2 ) && $lnpost_permission==1 && $lnaf==0 && (get_option('xyz_smap_ln_company_ids')!=''|| get_option('xyz_smap_lnshare_to_profile')==1))
 		{	
 			$contentln=array();
 			
@@ -953,15 +953,16 @@ function xyz_link_publish($post_ID) {
 			$message5=str_replace('{POST_ID}', $post_ID, $message5);
 			$message5=str_replace('{USER_DISPLAY_NAME}', $display_name, $message5);
 			$message5=str_replace("&nbsp;","",$message5);
-// 			$message5=xyz_smap_string_limit($message5, 700);
+ 			$message5=xyz_smap_string_limit($message5, 1300);
 		
 		$xyz_smap_application_lnarray=get_option('xyz_smap_application_lnarray');
 	
-		
+		if (get_option('xyz_smap_ln_api_permission')!=2){
 		$ln_acc_tok_arr=json_decode($xyz_smap_application_lnarray);
 		$xyz_smap_application_lnarray=$ln_acc_tok_arr->access_token;
 
 		$ObjLinkedin = new SMAPLinkedInOAuth2($xyz_smap_application_lnarray);
+		}
 			$contentln['author'] ='urn:li:person:'.get_option('xyz_smap_lnappscoped_userid');
 			$contentln['lifecycleState'] ='PUBLISHED';
 				$ln_text=array('text'=>$message5);
@@ -981,7 +982,7 @@ function xyz_link_publish($post_ID) {
 				$contentln['specificContent']=$com_linkedin_ugc_ShareContent;
 			}
 		$ln_publish_status["new"]='';
-		if($xyz_smap_ln_sharingmethod==0)
+// 		if($xyz_smap_ln_sharingmethod==0)
 		{
 			if (get_option('xyz_smap_lnshare_to_profile')==1)
 			{
@@ -993,6 +994,41 @@ function xyz_link_publish($post_ID) {
 				{
 					$contentln['visibility']['com.linkedin.ugc.MemberNetworkVisibility']='PUBLIC';
 				}
+				//////////////////////////////////////////
+				if (get_option('xyz_smap_ln_api_permission')==2)
+				{
+					$xyz_smap_smapsoln_userid=get_option('xyz_smap_smapsoln_userid_ln');
+					////smap api
+					$xyz_smap_xyzscripts_userid=get_option('xyz_smap_xyzscripts_user_id');
+					$post_details=array('xyz_smap_userid'=>$xyz_smap_smapsoln_userid,
+							'xyz_smap_attachment'=>$contentln,
+							'xyz_smap_page_id'=>-1,
+							'xyz_smap_xyzscripts_userid'=>$xyz_smap_xyzscripts_userid,
+					);
+					$xyz_smap_smapsoln_sec_key=get_option('xyz_smap_secret_key_ln');
+					$url=XYZ_SMAP_SOLUTION_LN_PUBLISH_URL.'api/publish.php';
+					$result=xyz_smap_post_to_smap_api($post_details,$url,$xyz_smap_smapsoln_sec_key);
+					//print_r($result);die;
+					$result=json_decode($result);
+					if(!empty($result))
+					{
+						if (isset($result->postid) && !empty($result->postid))
+						{
+							$postid =$result->postid;
+							$linkedin_post="https://www.linkedin.com/feed/update/".$postid;
+							$post_link='<br/><span style="color:#21759B;text-decoration:underline;"><a target="_blank" href="'.$linkedin_post.'">View Post</a></span>';
+						}
+						else
+							$err=$result->msg;
+							$ln_api_count=$result->ln_api_count;
+							if($result->status==0)
+								$ln_publish_status["new"].="<span style=\"color:red\">".$err."</span><br/><span style=\"color:#21759B\">No. of api calls used: ".$ln_api_count."</span><br/>";
+								elseif ($result->status==1)
+								$ln_publish_status["new"].="<span style=\"color:green\">Success.</span>".$post_link."<br/><span style=\"color:#21759B\">No. of api calls used: ".$ln_api_count."</span><br/>";
+					}
+				}
+				else{
+				//////////////////////////////////////////////
 				try{
 				$arrResponse = $ObjLinkedin->shareStatus($contentln);
 				$post_link='';
@@ -1015,8 +1051,9 @@ function xyz_link_publish($post_ID) {
 				$ln_publish_status["new"]=$e->getMessage();
 				}
 			}
+			}
 			////////////////////////////////////////////////////////////////////////////////////////////////
-			$xyz_smap_ln_company_id1=$ln_publish_status_comp=array();
+			$xyz_smap_ln_company_id1=$ln_publish_status_comp=array();$ln_publish_status_comp["new"]='';
 			if(get_option('xyz_smap_ln_company_ids')!='')//company
 				$xyz_smap_ln_company_id1=explode(",",get_option('xyz_smap_ln_company_ids'));
 			if (!empty($xyz_smap_ln_company_id1)){
@@ -1038,12 +1075,43 @@ function xyz_link_publish($post_ID) {
 				}
 				foreach ($xyz_smap_ln_company_id1 as $xyz_smap_ln_company_id)
 				{
-					if($xyz_smap_ln_company_id!=-1)
-						try
-						{
 							$contentln['lifecycleState'] ='PUBLISHED';
 							$contentln['author'] ='urn:li:organization:'.$xyz_smap_ln_company_id;
 							$contentln['visibility']['com.linkedin.ugc.MemberNetworkVisibility']='PUBLIC';
+				//	if($xyz_smap_ln_company_id!=-1)
+				if (get_option('xyz_smap_ln_api_permission')==2){
+					$xyz_smap_smapsoln_userid=get_option('xyz_smap_smapsoln_userid_ln');
+					////smap api
+					$xyz_smap_xyzscripts_userid=get_option('xyz_smap_xyzscripts_user_id');
+					$post_details=array('xyz_smap_userid'=>$xyz_smap_smapsoln_userid,
+							'xyz_smap_attachment'=>$contentln,
+							'xyz_smap_page_id'=>$xyz_smap_ln_company_id,
+							'xyz_smap_xyzscripts_userid'=>$xyz_smap_xyzscripts_userid,
+					);
+					$xyz_smap_smapsoln_sec_key=get_option('xyz_smap_secret_key_ln');
+					$url=XYZ_SMAP_SOLUTION_LN_PUBLISH_URL.'api/publish.php';
+					$result=xyz_smap_post_to_smap_api($post_details,$url,$xyz_smap_smapsoln_sec_key);
+					//	die;
+					$result=json_decode($result);
+					if(!empty($result))
+					{
+						if (isset($result->postid) && !empty($result->postid))
+						{
+							$postid =$result->postid;
+							$linkedin_post="https://www.linkedin.com/feed/update/".$postid;
+							$post_link='<br/><span style="color:#21759B;text-decoration:underline;"><a target="_blank" href="'.$linkedin_post.'">View Post</a></span>';
+						}
+						else
+							$err=$result->msg;
+							$ln_api_count=$result->ln_api_count;
+							if($result->status==0)
+								$ln_publish_status_comp["new"].="<span style=\"color:red\">".$err."</span><br/><span style=\"color:#21759B\">No. of api calls used: ".$ln_api_count."</span><br/>";
+								elseif ($result->status==1)
+								$ln_publish_status_comp["new"].="<span style=\"color:green\">Success.</span>".$post_link."<br/><span style=\"color:#21759B\">No. of api calls used: ".$ln_api_count."</span><br/>";
+					}
+				}
+				else{	try
+						{
 							$response2 = $ObjLinkedin->shareStatus($contentln);
 							$post_link='';
 							if (isset($response2['updateUrl'])&& $response2['updateKey']){
@@ -1056,16 +1124,17 @@ function xyz_link_publish($post_ID) {
 								$post_link='<br/><span style="color:#21759B;text-decoration:underline;"> <a target="_blank" href="https://www.linkedin.com/feed/update/'.$response2['id'].'">View Post</a></span>';
 							if ( isset($response2['errorCode']) && isset($response2['message']) && ($response2['message']!='') )
 							{
-								$ln_publish_status_comp["new"]="<span style=\"color:red\"> company/".$xyz_smap_ln_company_id.":".$response2['message'].".</span><br/>";
+								$ln_publish_status_comp["new"].="<span style=\"color:red\"> company/".$xyz_smap_ln_company_id.":".$response2['message'].".</span><br/>";
 							}
 							else
 							{
-								$ln_publish_status_comp["new"]="<span style=\"color:green\"> company/".$xyz_smap_ln_company_id.":Success.</span> ".$post_link."<br/>";
+								$ln_publish_status_comp["new"].="<span style=\"color:green\"> company/".$xyz_smap_ln_company_id.":Success.</span> ".$post_link."<br/>";
 							}
 					}
 					catch(Exception $e)
 					{
-						$ln_publish_status_comp["new"]="<span style=\"color:red\">company/".$xyz_smap_ln_company_id.":".$e->getMessage().".</span><br/>";
+						$ln_publish_status_comp["new"].="<span style=\"color:red\">company/".$xyz_smap_ln_company_id.":".$e->getMessage().".</span><br/>";
+					}
 					}
 				}
 			}

@@ -3,8 +3,8 @@ Contributors: f1logic
 Donate link: https://xyzscripts.com/donate/
 Tags:  social media auto publish, social media publishing, post to facebook, post to twitter, post to linkedin, social network auto publish, social media, social network, add link to facebook, add link to twitter, add link to linkedin, publish to facebook, publish to twitter, publish to linkedin, post to linkedIn company pages,linkedin companies
 Requires at least: 3.0
-Tested up to: 5.2.2
-Stable tag: 2.2.1
+Tested up to: 5.2.4
+Stable tag: 2.3
 License: GPLv2 or later
 
 Publish posts automatically to social media networks like Facebook, Twitter and LinkedIn.
@@ -128,6 +128,13 @@ SSL peer verification may not be functioning in your server. Please turn off SSL
 6. Auto publish logs.
 
 == Changelog ==
+
+= Social Media Auto Publish 2.3 =
+* Support for free trial of SMAPSOLUTION's api 
+* Added LinkedIn authorization and publishing using SMAPSolutions.com
+* Added option to upgrade SMAPSOLUTION's subscription package
+* Option to enable enforcing og meta tags in auto publish
+* Option to remove in-active facebook/linkedin authorizations
 
 = Social Media Auto Publish 2.2.1 =
 * Option to reuse last used auto publish settings on edit posts

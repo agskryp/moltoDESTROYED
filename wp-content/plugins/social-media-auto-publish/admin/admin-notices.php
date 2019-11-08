@@ -58,7 +58,7 @@ $smap_installed_date = get_option('smap_installed_date');
 if ($smap_installed_date=="") {
 	$smap_installed_date = time();
 }
-if($smap_installed_date < ( time() - (30*24*60*60) ))
+if($smap_installed_date < ( time() - (20*24*60*60) ))
 {
 	if (get_option('xyz_smap_dnt_shw_notice') != "hide")
 	{

@@ -10,6 +10,8 @@ function xyz_smap_add_admin_scripts()
 	
 	wp_register_style('xyz_smap_style', plugins_url('social-media-auto-publish/css/style.css'));
 	wp_enqueue_style('xyz_smap_style');
+	wp_register_style( 'xyz_smap_font_style',plugins_url('social-media-auto-publish/css/font-awesome.min.css'));
+	wp_enqueue_style('xyz_smap_font_style');
 }
 
 add_action("admin_enqueue_scripts","xyz_smap_add_admin_scripts");
@@ -77,9 +79,9 @@ function xyz_smap_insert_og_image_tag_for_fb(){
  	global $post;
  	if (empty($post))
  		$post=get_post();
- 	if (!empty($post)){
+ 		if (!empty($post) && get_option('xyz_smap_free_enforce_og_tags')==1){
 	$postid= $post->ID;
-	$excerpt='';$attachmenturl='';
+	$excerpt='';$attachmenturl='';$name='';
 	if(isset($postid ) && $postid>0)
 	{
 		$xyz_smap_apply_filters=get_option('xyz_smap_std_apply_filters');
@@ -115,7 +117,15 @@ function xyz_smap_insert_og_image_tag_for_fb(){
 					$excerpt=strip_shortcodes($excerpt);
 				}
 				$excerpt=str_replace("&nbsp;","",$excerpt);
+				$name = $post->post_title;
+				if(in_array(3, $ar2))
+					$name = apply_filters('the_title', $name);
+					$name = html_entity_decode($name, ENT_QUOTES, get_bloginfo('charset'));
+					$name=strip_tags($name);
+					$name=strip_shortcodes($name);
 			$attachmenturl=xyz_smap_getimage($postid, $post->post_content);
+			if(!empty( $name ))
+				echo '<meta property="og:title" content="'.$name.'" />';
 			if (!empty($excerpt))
 				echo '<meta property="og:description" content="'.$excerpt.'" />';
 			if(!empty($attachmenturl))

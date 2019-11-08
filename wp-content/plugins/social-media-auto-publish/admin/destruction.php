@@ -52,7 +52,7 @@ function smap_free_destroy()
 	
 	delete_option('xyz_smap_application_lnarray');
 	delete_option('xyz_smap_ln_shareprivate');
-	delete_option('xyz_smap_ln_sharingmethod');
+	delete_option('xyz_smap_ln_sharingmethod');//removed in 2.2.2
 	delete_option('xyz_smap_lnapikey');
 	delete_option('xyz_smap_lnapisecret');
 // 	delete_option('xyz_smap_lnoauth_verifier');
@@ -89,6 +89,11 @@ function smap_free_destroy()
 	delete_option('xyz_smap_smapsoln_userid');
 	delete_option('xyz_smap_lnpost_method');
 	delete_option('xyz_smap_lnappscoped_userid');
+	delete_option('xyz_smap_ln_api_permission');
+	delete_option('xyz_smap_smapsoln_userid_ln');
+	delete_option('xyz_smap_secret_key_ln');
+	delete_option('xyz_smap_ln_page_names');
+	delete_option('xyz_smap_free_enforce_og_tags');
 }
 
 register_uninstall_hook(XYZ_SMAP_PLUGIN_FILE,'smap_free_network_destroy');

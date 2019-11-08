@@ -154,7 +154,7 @@ function dethide_smap(id)
 	document.getElementById(id).style.display='none';
 }
 
-function drpdisplay()
+/*function drpdisplay()
 {
 	var shmethod= document.getElementById('xyz_smap_ln_sharingmethod').value;
 	if(shmethod==1)	
@@ -165,7 +165,7 @@ function drpdisplay()
 	{
 		document.getElementById('shareprivate').style.display="";
 	}
-}
+}*/
 
 jQuery(document).ready(function() {
 	displaycheck();
@@ -532,7 +532,7 @@ if((get_option('xyz_smap_af')==0 && get_option('xyz_smap_fb_token')!="" && get_o
 	</tr>
 	<?php if ( get_option('xyz_smap_lnshare_to_profile')==1){?>
 	<tr valign="top" id="shareprivate">
-	<input type="hidden" name="xyz_smap_ln_sharingmethod" id="xyz_smap_ln_sharingmethod" value="0">
+<!-- 	<input type="hidden" name="xyz_smap_ln_sharingmethod" id="xyz_smap_ln_sharingmethod" value="0"> -->
 	<td class="xyz_smap_pleft15">Share post content with</td>
 	<td>
 		<select id="xyz_smap_ln_shareprivate" name="xyz_smap_ln_shareprivate" >
