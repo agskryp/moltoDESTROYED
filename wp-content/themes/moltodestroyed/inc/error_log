@@ -1,0 +1,2 @@
+[04-Dec-2018 01:46:25 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/agskryp/public_html/moltodestroyed-prod/wp-content/themes/moltodestroyed/inc/customizer.php on line 29
+[04-Dec-2018 19:54:06 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home1/agskryp/public_html/moltodestroyed-prod/wp-content/themes/moltodestroyed/inc/customizer.php on line 29
