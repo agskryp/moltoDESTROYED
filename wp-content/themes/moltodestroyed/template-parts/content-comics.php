@@ -20,7 +20,9 @@
 
       if( !empty( $image ) ) {
     ?>
-      <div class="placeholder-image"></div>
+      <div class="placeholder-image">
+        <span>Loading...</span>
+      </div>
       
       <img src="<?php echo $image[ 'url' ]; ?>" alt="<?php the_title(); ?>" />
 

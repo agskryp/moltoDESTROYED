@@ -18,6 +18,13 @@
     height: 400px;
     z-index: -1;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    padding: 30px;
+    line-height: 1;
+    font-weight: 900;
   }
   
   img {
