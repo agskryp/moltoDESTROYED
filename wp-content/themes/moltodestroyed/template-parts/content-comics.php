@@ -20,6 +20,8 @@
 
       if( !empty( $image ) ) {
     ?>
+      <div class="placeholder-image"></div>
+      
       <img src="<?php echo $image[ 'url' ]; ?>" alt="<?php the_title(); ?>" />
 
       <div id="comicfin" class="entry-meta">
