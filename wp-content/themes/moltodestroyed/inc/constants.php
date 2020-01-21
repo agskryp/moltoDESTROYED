@@ -5,4 +5,4 @@ define( 'MOLTO_BLOG', '/blog' );
 define( 'MOLTO_PRIVACY_POLICY', '/privacy' );
 
 // Functions
-define( 'THEME_VERSION_NUMBER', '1.2.3' );
+define( 'THEME_VERSION_NUMBER', '1.3.0' );
