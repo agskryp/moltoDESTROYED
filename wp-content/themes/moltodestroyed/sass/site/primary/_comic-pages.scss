@@ -4,10 +4,10 @@
 }
 
 .comic-strip {
-  margin: 0 0 1em;
+  margin: 0 0 1.5em;
   position: relative;
   
-  .placeholder-image {
+  .placeholder-image span {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,6 +25,16 @@
     padding: 30px;
     line-height: 1;
     font-weight: 900;
+    text-shadow: 0px 0px 0px $darkest_shade;
+    color: $darkest_shade;
+    animation: loadingText .4s ease-in-out infinite alternate;
+  }
+  
+  @keyframes loadingText {
+    to {
+      text-shadow: 0 0 3px $dark_shade; 
+      color: $dark_shade;
+    }
   }
   
   img {
