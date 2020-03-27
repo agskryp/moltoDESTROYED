@@ -103,7 +103,7 @@ function xyz_link_publish($post_ID) {
 	$_POST_CPY=$_POST;
 	$_POST=stripslashes_deep($_POST);
 	$get_post_meta_future_data_fb=get_post_meta($post_ID,"xyz_smap_fb_future_to_publish",true);
-	$post_twitter_image_permission=$posting_method=$ln_posting_method=$xyz_smap_lnpost_method=$xyz_smap_ln_shareprivate=0;
+	$post_twitter_image_permission=$posting_method=$ln_posting_method=$xyz_smap_ln_shareprivate=0;
 	$message=$messagetopost=$lmessagetopost='';
 	$post_permissin=get_option('xyz_smap_post_permission');
 	if(isset($_POST['xyz_smap_post_permission']))
@@ -134,7 +134,7 @@ function xyz_link_publish($post_ID) {
 	{
 		$lnpost_permission=$get_post_meta_future_data_ln['post_ln_permission'];
 		$xyz_smap_ln_shareprivate=$get_post_meta_future_data_ln['xyz_smap_ln_shareprivate'];
-		$xyz_smap_lnpost_method=$get_post_meta_future_data_ln['xyz_smap_lnpost_method'];
+		$ln_posting_method=$get_post_meta_future_data_ln['xyz_smap_lnpost_method'];
 		$lmessagetopost=$get_post_meta_future_data_ln['xyz_smap_lnmessage'];
 	}
 	
@@ -363,7 +363,7 @@ function xyz_link_publish($post_ID) {
 		if((($useracces_token!="" && $appsecret!="" && $appid!=""&& $xyz_smap_app_sel_mode==0) || $xyz_smap_app_sel_mode==1) && $post_permissin==1 && $af ==0)
 		{
 			$descriptionfb_li=xyz_smap_string_limit($description, 10000);
-			
+			$xyz_smap_clear_fb_cache=get_option('xyz_smap_clear_fb_cache');
 			$user_page_id=get_option('xyz_smap_fb_numericid');
 			if ($xyz_smap_app_sel_mode==1){
 				$xyz_smap_page_names=json_decode(stripslashes(get_option('xyz_smap_page_names')));
@@ -396,6 +396,10 @@ function xyz_link_publish($post_ID) {
 						'cookie' => true
 				));
 					}
+				if($xyz_smap_clear_fb_cache==1 && $xyz_smap_app_sel_mode== 0 && ($posting_method==2 || $posting_method==1))
+				{
+					xyz_smap_clear_open_graph_cache($link,$acces_token,$appid,$appsecret);
+				}
 				$message1=str_replace('{POST_TITLE}', $name, $message);
 				$message2=str_replace('{BLOG_TITLE}', $caption,$message1);
 				$message3=str_replace('{PERMALINK}', $link, $message2);
@@ -562,7 +566,8 @@ function xyz_link_publish($post_ID) {
 								'xyz_smap_page_id'=>$page_id,
 								'xyz_smap_app_name'=>$app_name,
 								'xyz_fb_numericid' => $xyz_smap_fb_numericid,
-								'xyz_smap_xyzscripts_userid'=>$xyz_smap_xyzscripts_userid
+								'xyz_smap_xyzscripts_userid'=>$xyz_smap_xyzscripts_userid,
+								'xyz_smap_clear_fb_cache'=>$xyz_smap_clear_fb_cache
 						);
 						$url=XYZ_SMAP_SOLUTION_PUBLISH_URL.'api/facebook.php';
 						$result_smap_solns=xyz_smap_post_to_smap_api($post_details,$url,$xyz_smap_secret_key);
@@ -936,7 +941,7 @@ function xyz_link_publish($post_ID) {
 		if((($lnappikey!="" && $lnapisecret!="" && get_option('xyz_smap_ln_api_permission')!=2)|| get_option('xyz_smap_ln_api_permission')==2 ) && $lnpost_permission==1 && $lnaf==0 && (get_option('xyz_smap_ln_company_ids')!=''|| get_option('xyz_smap_lnshare_to_profile')==1))
 		{	
 			$contentln=array();
-			
+			$image_upload_err='';
 			$description_li=xyz_smap_string_limit($description, 100);
 // 			$caption_li=xyz_smap_string_limit($caption, 200);
 			$name_li=xyz_smap_string_limit($name, 200);
@@ -966,7 +971,8 @@ function xyz_link_publish($post_ID) {
 			$contentln['author'] ='urn:li:person:'.get_option('xyz_smap_lnappscoped_userid');
 			$contentln['lifecycleState'] ='PUBLISHED';
 				$ln_text=array('text'=>$message5);
-			if ($ln_posting_method==1)//if simple text message
+			$ln_title=array('text'=>$name_li);	
+			if ($ln_posting_method==1 || ($attachmenturl=="" && $ln_posting_method==3))//if simple text message
 			{
 				$shareCommentary=array('shareCommentary'=>$ln_text,'shareMediaCategory'=>'NONE');
 				$com_linkedin_ugc_ShareContent=array('com.linkedin.ugc.ShareContent'=>$shareCommentary);
@@ -975,7 +981,6 @@ function xyz_link_publish($post_ID) {
 			elseif ($ln_posting_method==2)//link share
 			{
 				update_post_meta($post_ID, "xyz_smap_insert_og", "1");
-				$ln_title=array('text'=>$name_li);				
 				$media_array=array( 'status'=> 'READY','description'=>array('text'=>$description_li),'originalUrl'=>$link,'title'=>$ln_title);
 				$shareCommentary=array('shareCommentary'=>$ln_text,'shareMediaCategory'=>'ARTICLE','media'=>array($media_array));
 				$com_linkedin_ugc_ShareContent=array('com.linkedin.ugc.ShareContent'=>$shareCommentary);
@@ -986,6 +991,52 @@ function xyz_link_publish($post_ID) {
 		{
 			if (get_option('xyz_smap_lnshare_to_profile')==1)
 			{
+				if ($ln_posting_method==3)
+			{
+				$image_upload_flag=0;
+				if ($attachmenturl!="")
+				{
+					if(get_option('xyz_smap_ln_api_permission')!=2)
+					{
+						$servicerelationships=array("relationshipType"=>"OWNER","identifier"=> "urn:li:userGeneratedContent");
+						$registerupload['registerUploadRequest']=array('recipes'=>array('urn:li:digitalmediaRecipe:feedshare-image'),"owner"=>'urn:li:person:'.get_option('xyz_smap_lnappscoped_userid'),'serviceRelationships'=>array($servicerelationships));
+						$arrResponse = $ObjLinkedin->getImagePostResponses($registerupload);
+						$urn_li_digitalmediaAsset=$uploadUrl='';
+						if (isset($arrResponse['value']['asset']) && isset($arrResponse['value']['uploadMechanism']['com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest']['uploadUrl']))
+						{
+							$uploadUrl=$arrResponse['value']['uploadMechanism']['com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest']['uploadUrl'];
+							$urn_li_digitalmediaAsset=$arrResponse['value']['asset'];
+						}
+						if ($uploadUrl!='')
+						{
+							$arrResponse = $ObjLinkedin->getUploadUrlResponses($uploadUrl,$attachmenturl,array());
+							$media_array=array( 'status'=> 'READY','description'=>array('text'=>$description_li),'media'=>$urn_li_digitalmediaAsset,'title'=>$ln_title);
+							$shareCommentary=array('shareCommentary'=>$ln_text,'shareMediaCategory'=>'IMAGE','media'=>array($media_array));//,'thumbnails'=>array('url'=>$attachmenturl)
+							$com_linkedin_ugc_ShareContent=array('com.linkedin.ugc.ShareContent'=>$shareCommentary);
+							$contentln['specificContent']=$com_linkedin_ugc_ShareContent;
+							$asset_val= substr($urn_li_digitalmediaAsset,25);
+							$status_check=$ObjLinkedin->check_status_linkedin_asset('https://api.linkedin.com/v2/assets/'.$asset_val);
+							$upload_status_arr=$status_check['recipes'][0];
+							if (isset($upload_status_arr['status']) && $upload_status_arr['status'] =="AVAILABLE")
+							{
+								$image_upload_flag=1;
+							}
+							else
+							{
+								$ln_image_status='';
+								if (isset($upload_status_arr['status']))
+									$ln_image_status="-upload status:".$upload_status_arr['status'];
+									$image_upload_err.='<br/><span style="color:red">Image upload failed '.$ln_image_status.'</span>';
+							}
+						}
+						else {
+								$image_upload_err.='<br/><span style="color:red">Image Upload Failed</span>';
+						}
+					}
+				}
+					
+					
+			}
 				if($xyz_smap_ln_shareprivate==1)
 			{
 					$contentln['visibility']['com.linkedin.ugc.MemberNetworkVisibility']='CONNECTIONS';
@@ -1004,6 +1055,12 @@ function xyz_link_publish($post_ID) {
 							'xyz_smap_attachment'=>$contentln,
 							'xyz_smap_page_id'=>-1,
 							'xyz_smap_xyzscripts_userid'=>$xyz_smap_xyzscripts_userid,
+							'xyz_smap_ln_postmethod' =>$ln_posting_method,
+							'xyz_smap_ln_post_title'=> $ln_title,
+							'xyz_smap_ln_post_description' => $description_li,
+							'xyz_smap_ln_image_url' =>$attachmenturl,
+							'xyz_smap_ln_shareprivate'=>$xyz_smap_ln_shareprivate,
+							'message' =>$message5
 					);
 					$xyz_smap_smapsoln_sec_key=get_option('xyz_smap_secret_key_ln');
 					$url=XYZ_SMAP_SOLUTION_LN_PUBLISH_URL.'api/publish.php';
@@ -1026,6 +1083,7 @@ function xyz_link_publish($post_ID) {
 								elseif ($result->status==1)
 								$ln_publish_status["new"].="<span style=\"color:green\">Success.</span>".$post_link."<br/><span style=\"color:#21759B\">No. of api calls used: ".$ln_api_count."</span><br/>";
 					}
+					
 				}
 				else{
 				//////////////////////////////////////////////
@@ -1045,6 +1103,8 @@ function xyz_link_publish($post_ID) {
 				if (( isset($arrResponse['errorCode'])|| isset($arrResponse['serviceErrorCode'])) && isset($arrResponse['message']) && ($arrResponse['message']!='') ) {//as per old api ; need to confirm which is correct
 								$ln_publish_status["new"].="<span style=\"color:red\"> profile:".$arrResponse['message'].".</span><br/>";//$arrResponse['message'];
 						}
+					if ($image_upload_err!='')
+					$ln_publish_status["new"].=$image_upload_err;
 				}
 				catch(Exception $e)
 				{
@@ -1057,27 +1117,59 @@ function xyz_link_publish($post_ID) {
 			if(get_option('xyz_smap_ln_company_ids')!='')//company
 				$xyz_smap_ln_company_id1=explode(",",get_option('xyz_smap_ln_company_ids'));
 			if (!empty($xyz_smap_ln_company_id1)){
-				$contentln=array();
-				if ($ln_posting_method==1)//if simple text message
-				{
-					$shareCommentary=array('shareCommentary'=>$ln_text,'shareMediaCategory'=>'NONE');
-					$com_linkedin_ugc_ShareContent=array('com.linkedin.ugc.ShareContent'=>$shareCommentary);
-					$contentln['specificContent']=$com_linkedin_ugc_ShareContent;
-				}
-				elseif ($ln_posting_method==2)//link share
-				{
-					update_post_meta($post_ID, "xyz_smap_insert_og", "1");
-					$ln_title=array('text'=>$name_li);
-					$media_array=array( 'status'=> 'READY','description'=>array('text'=>$description_li),'originalUrl'=>$link,'title'=>$ln_title);
-					$shareCommentary=array('shareCommentary'=>$ln_text,'shareMediaCategory'=>'ARTICLE','media'=>array($media_array));
-					$com_linkedin_ugc_ShareContent=array('com.linkedin.ugc.ShareContent'=>$shareCommentary);
-					$contentln['specificContent']=$com_linkedin_ugc_ShareContent;
-				}
 				foreach ($xyz_smap_ln_company_id1 as $xyz_smap_ln_company_id)
 				{
 							$contentln['lifecycleState'] ='PUBLISHED';
 							$contentln['author'] ='urn:li:organization:'.$xyz_smap_ln_company_id;
 							$contentln['visibility']['com.linkedin.ugc.MemberNetworkVisibility']='PUBLIC';
+					if ($ln_posting_method==3)
+					{
+						$image_upload_flag=0;
+						if ($attachmenturl!="")
+						{
+							if(get_option('xyz_smap_ln_api_permission')!=2)
+							{
+								$servicerelationships=array("relationshipType"=>"OWNER","identifier"=> "urn:li:userGeneratedContent");
+								$registerupload['registerUploadRequest']=array('recipes'=>array('urn:li:digitalmediaRecipe:feedshare-image'),"owner"=>'urn:li:organization:'.$xyz_smap_ln_company_id,'serviceRelationships'=>array($servicerelationships));
+								$arrResponse = $ObjLinkedin->getImagePostResponses($registerupload);
+								$urn_li_digitalmediaAsset=$uploadUrl='';
+								if (isset($arrResponse['value']['asset']) && isset($arrResponse['value']['uploadMechanism']['com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest']['uploadUrl']))
+								{
+									$uploadUrl=$arrResponse['value']['uploadMechanism']['com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest']['uploadUrl'];
+									$urn_li_digitalmediaAsset=$arrResponse['value']['asset'];
+								}
+								if ($uploadUrl!='')
+								{
+									$arrResponse = $ObjLinkedin->getUploadUrlResponses($uploadUrl,$attachmenturl,array());
+									$media_array=array( 'status'=> 'READY','description'=>array('text'=>$description_li),'media'=>$urn_li_digitalmediaAsset,'title'=>$ln_title);
+									$shareCommentary=array('shareCommentary'=>$ln_text,'shareMediaCategory'=>'IMAGE','media'=>array($media_array));//,'thumbnails'=>array('url'=>$attachmenturl)
+									$com_linkedin_ugc_ShareContent=array('com.linkedin.ugc.ShareContent'=>$shareCommentary);
+									$contentln['specificContent']=$com_linkedin_ugc_ShareContent;
+									$asset_val= substr($urn_li_digitalmediaAsset,25);
+									$status_check=$ObjLinkedin->check_status_linkedin_asset('https://api.linkedin.com/v2/assets/'.$asset_val);
+									$upload_status_arr=$status_check['recipes'][0];
+									if (isset($upload_status_arr['status']) && $upload_status_arr['status'] =="AVAILABLE")
+									{
+										$image_upload_flag=1;
+									}
+									else
+									{
+										$ln_image_status='';
+										if (isset($upload_status_arr['status']))
+											$ln_image_status="-upload status:".$upload_status_arr['status'];
+											$image_upload_err.='<br/><span style="color:red">Image upload failed '.$ln_image_status.'</span>';
+									}
+								}
+								else {
+									$image_upload_err.='<br/><span style="color:red">Image Upload Failed</span>';
+								}
+							}
+						}
+// 						else
+// 						{
+// 							$image_upload_err.='<br/><span style="color:red">No images</span>';
+// 						}
+					}
 				//	if($xyz_smap_ln_company_id!=-1)
 				if (get_option('xyz_smap_ln_api_permission')==2){
 					$xyz_smap_smapsoln_userid=get_option('xyz_smap_smapsoln_userid_ln');
@@ -1087,6 +1179,12 @@ function xyz_link_publish($post_ID) {
 							'xyz_smap_attachment'=>$contentln,
 							'xyz_smap_page_id'=>$xyz_smap_ln_company_id,
 							'xyz_smap_xyzscripts_userid'=>$xyz_smap_xyzscripts_userid,
+							'xyz_smap_ln_postmethod' =>$ln_posting_method,
+							'xyz_smap_ln_post_title'=> $ln_title,
+							'xyz_smap_ln_post_description' => $description_li,
+							'xyz_smap_ln_image_url' =>$attachmenturl,
+							'xyz_smap_ln_shareprivate'=>$xyz_smap_ln_shareprivate,
+							'message' =>$message5
 					);
 					$xyz_smap_smapsoln_sec_key=get_option('xyz_smap_secret_key_ln');
 					$url=XYZ_SMAP_SOLUTION_LN_PUBLISH_URL.'api/publish.php';
@@ -1105,12 +1203,13 @@ function xyz_link_publish($post_ID) {
 							$err=$result->msg;
 							$ln_api_count=$result->ln_api_count;
 							if($result->status==0)
-								$ln_publish_status_comp["new"].="<span style=\"color:red\">".$err."</span><br/><span style=\"color:#21759B\">No. of api calls used: ".$ln_api_count."</span><br/>";
+								$ln_publish_status_comp["new"].="<span style=\"color:red\">".$xyz_smap_ln_company_id."/".$err."</span><br/><span style=\"color:#21759B\">No. of api calls used: ".$ln_api_count."</span><br/>";
 								elseif ($result->status==1)
-								$ln_publish_status_comp["new"].="<span style=\"color:green\">Success.</span>".$post_link."<br/><span style=\"color:#21759B\">No. of api calls used: ".$ln_api_count."</span><br/>";
+								$ln_publish_status_comp["new"].="<span style=\"color:green\">".$xyz_smap_ln_company_id."/Success.</span>".$post_link."<br/><span style=\"color:#21759B\">No. of api calls used: ".$ln_api_count."</span><br/>";
 					}
 				}
-				else{	try
+				else{
+					try
 						{
 							$response2 = $ObjLinkedin->shareStatus($contentln);
 							$post_link='';
@@ -1130,6 +1229,8 @@ function xyz_link_publish($post_ID) {
 							{
 								$ln_publish_status_comp["new"].="<span style=\"color:green\"> company/".$xyz_smap_ln_company_id.":Success.</span> ".$post_link."<br/>";
 							}
+							if ($image_upload_err!='')
+								$ln_publish_status_comp["new"].=$image_upload_err;
 					}
 					catch(Exception $e)
 					{

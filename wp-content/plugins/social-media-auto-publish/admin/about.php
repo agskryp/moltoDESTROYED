@@ -262,7 +262,7 @@ Social Media Auto Publish automatically publishes posts from your blog to your  
 	</tr>
 	
 	<tr>
-		<td>Publish multiple images to facebook, tumblr and twitter along with post content</td>
+		<td>Publish multiple images to facebook, tumblr, linkedin and twitter along with post content</td>
 		<td><img src="<?php echo plugins_url("images/cross.png",XYZ_SMAP_PLUGIN_FILE);?>">
 		</td>
 		<td><img src="<?php echo plugins_url("images/tick.png",XYZ_SMAP_PLUGIN_FILE);?>">
@@ -324,7 +324,7 @@ Social Media Auto Publish automatically publishes posts from your blog to your  
 	<!-- Filter Options  -->
 		
 	<tr>
-	<td rowspan="7"><h4>Filter Options</h4></td>
+	<td rowspan="9"><h4>Filter Options</h4></td>
 		<td>Filter posts to publish based on categories</td>
 		<td><img src="<?php echo plugins_url("images/tick.png",XYZ_SMAP_PLUGIN_FILE);?>">
 		</td>
@@ -343,7 +343,15 @@ Social Media Auto Publish automatically publishes posts from your blog to your  
 		<td><img src="<?php echo plugins_url("images/tick.png",XYZ_SMAP_PLUGIN_FILE);?>">
 		</td>
 	</tr>
-	
+	<tr>
+		<td>Filter posts to publish based on sticky posts</td>
+		<td><img src="<?php echo plugins_url("images/cross.png",XYZ_SMAP_PLUGIN_FILE);?>">
+		</td>
+		<td><img src="<?php echo plugins_url("images/tick.png",XYZ_SMAP_PLUGIN_FILE);?>">
+		</td>
+		<td><img src="<?php echo plugins_url("images/tick.png",XYZ_SMAP_PLUGIN_FILE);?>">
+		</td>
+	</tr>
 	<tr>
 		<td>Configuration to enable/disable page publishing</td>
 		<td><img src="<?php echo plugins_url("images/tick.png",XYZ_SMAP_PLUGIN_FILE);?>">
@@ -392,7 +400,15 @@ Social Media Auto Publish automatically publishes posts from your blog to your  
 		<td><img src="<?php echo plugins_url("images/tick.png",XYZ_SMAP_PLUGIN_FILE);?>">
 		</td>
 	</tr>
-	
+	<tr>
+		<td>Override auto publish based on sticky posts for individual accounts</td>
+		<td><img src="<?php echo plugins_url("images/cross.png",XYZ_SMAP_PLUGIN_FILE);?>">
+		</td>
+		<td><img src="<?php echo plugins_url("images/tick.png",XYZ_SMAP_PLUGIN_FILE);?>">
+		</td>
+		<td><img src="<?php echo plugins_url("images/tick.png",XYZ_SMAP_PLUGIN_FILE);?>">
+		</td>
+	</tr>
 	<!-- Scheduling  -->
 		
 	<tr>
@@ -532,7 +548,7 @@ Social Media Auto Publish automatically publishes posts from your blog to your  
 	<tr>
 		<td rowspan="3"><h4>Other</h4></td>
 		<td>SMAPSOLUTIONS API package for 1 year, worth 20 USD(1 fb account @ 10 api calls per hour, 1 linkedin account @ 25 api per day)</td>
-		<td><img src="<?php echo plugins_url("images/cross.png",XYZ_SMAP_PLUGIN_FILE);?>">
+		<td>1 month free subscription
 		</td>
 		<td>3 months free subscription
 		</td>

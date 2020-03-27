@@ -94,6 +94,7 @@ function smap_free_destroy()
 	delete_option('xyz_smap_secret_key_ln');
 	delete_option('xyz_smap_ln_page_names');
 	delete_option('xyz_smap_free_enforce_og_tags');
+	delete_option('xyz_smap_clear_fb_cache');
 }
 
 register_uninstall_hook(XYZ_SMAP_PLUGIN_FILE,'smap_free_network_destroy');

@@ -76,6 +76,51 @@ class SMAPOAuth2{
             }
             curl_setopt($ch,CURLOPT_HTTPHEADER,$headers_arr);
         }
+        $sslverify=(get_option('xyz_smap_peer_verification')=='1') ? TRUE : FALSE;
+        curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,$sslverify);
+        $result = curl_exec($ch);
+        curl_close($ch);
+        return $result;
+    }
+    protected function makeRequestToAssetAPI($params=array()){
+    	$this->error = '';
+    	$method=isset($params['method'])?$params['method']:'get';
+    	$headers = isset($params['headers'])?$params['headers']:array();
+    	$args = isset($params['args'])?$params['args']:'';
+    	$url = $params['url'];
+    	//     	$url.='?'; do not add ? at post request to asset api
+    	/* if($this->access_token){////////////////////commented for v2 edge compatibility
+    	 $url .= $this->access_token_name.'='.$this->access_token;
+    	 }*/
+    	if($method=='get'){
+    		$url.='&'.$this->preparePostFields($args);
+    	}
+    	$ch = curl_init();
+    	curl_setopt($ch, CURLOPT_URL, $url);
+    	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    	if($method=='post'){
+    		curl_setopt($ch, CURLOPT_POST, TRUE);
+    		if (isset($params['smap']))
+    		{
+    			$url.='?';
+    			curl_setopt($ch, CURLOPT_POSTFIELDS, $args);
+    		}
+    		else
+    			curl_setopt($ch, CURLOPT_POSTFIELDS, $this->preparePostFields($args));
+    	}elseif($method=='delete'){
+    		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+    	}elseif($method=='put'){
+    		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+    	}
+    	if(is_array($headers) && !empty($headers)){
+    		$headers_arr=array();
+    		foreach($headers as $k=>$v){
+    			$headers_arr[]=$k.': '.$v;
+    		}
+    		curl_setopt($ch,CURLOPT_HTTPHEADER,$headers_arr);
+    	}
+    	$sslverify=(get_option('xyz_smap_peer_verification')=='1') ? TRUE : FALSE;
+    	curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,$sslverify);
         $result = curl_exec($ch);
         curl_close($ch);
         return $result;
@@ -365,6 +410,74 @@ class SMAPLinkedInOAuth2 extends SMAPOAuth2 {
 		$params['args']['event-type']='status-update';
 		$params['args']['twitter-post']='false';
 		$result =  $this->makeRequest($params);
+		return json_decode($result,true);
+	}
+	public function getImagePostResponses($args=array()){
+		$params['url'] = "https://api.linkedin.com/v2/assets?action=registerUpload";
+		$params['method']='post';
+		$params['headers']['Authorization']='Bearer '.$this->access_token;
+		$params['headers']['Content-Type']='application/json';//application/binary
+		$params['headers']['X-Restli-Protocol-Version']='2.0.0';
+		$params['headers']['Connection']='Keep-Alive';
+		$params['args']=json_encode($args);
+		$result =  $this->makeRequestToAssetAPI($params);
+		return json_decode($result,true);
+	}
+	public function getUploadUrlResponses($uploadUrl,$image,$args=array())
+	{
+		$headers = array();
+		$headers[] = 'Authorization: Bearer '.$this->access_token;// token generated above code
+		$headers[] = 'X-Restli-Protocol-Version: 2.0.0';
+		$headers[] = 'Content-Type: application/octet-stream';
+		$ch = curl_init($uploadUrl);
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+		// 		curl_setopt($ch,CURLOPT_USERAGENT,'curl/7.35.0');
+		curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);
+		curl_setopt($ch, CURLOPT_POST, true);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+		$sslverify=(get_option('xyz_smap_peer_verification')=='1') ? TRUE : FALSE;
+		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,$sslverify);
+		curl_setopt($ch, CURLOPT_SAFE_UPLOAD, true);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, file_get_contents($image));
+		$response = curl_exec($ch);
+		curl_close($ch);
+		return json_decode($response,true);
+	}
+	public function check_status_linkedin_asset($url){
+		$params['url'] = $url;
+		$params['method']='get';
+		$params['headers']['Content-Type']='application/json';
+		$params['headers']['x-li-format']='json';
+		$params['headers']['Connection']='Keep-Alive';
+		$params['headers']['X-RestLi-Protocol-Version']='2.0.0';
+		$this->error = '';
+		$method=isset($params['method'])?$params['method']:'get';
+		$headers = isset($params['headers'])?$params['headers']:array();
+		$args = isset($params['args'])?$params['args']:'';
+		$url = $params['url'];
+		$url.='?oauth2_access_token='.$this->access_token;
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+		if($method=='post'){
+			curl_setopt($ch, CURLOPT_POST, TRUE);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $this->preparePostFields($args));
+		}elseif($method=='delete'){
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+		}elseif($method=='put'){
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+		}
+		if(is_array($headers) && !empty($headers)){
+			$headers_arr=array();
+			foreach($headers as $k=>$v){
+				$headers_arr[]=$k.': '.$v;
+			}
+			curl_setopt($ch,CURLOPT_HTTPHEADER,$headers_arr);
+		}
+		$result = curl_exec($ch);
+		curl_close($ch);
 		return json_decode($result,true);
 	}
 	//returns as ARRAY, if chaning to object change in getGroupPostResponses

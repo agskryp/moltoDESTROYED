@@ -581,6 +581,8 @@ Public</option><option value="1" <?php  if($xyz_smap_ln_shareprivate==1) echo 's
 	<?php  if($xyz_smap_lnpost_method==1) echo 'selected';?>>Simple text message</option>
 				<option value="2"
 	<?php  if($xyz_smap_lnpost_method==2) echo 'selected';?>>Attach your blog post </option>
+				<option value="3"
+	<?php  if($xyz_smap_lnpost_method==3) echo 'selected';?>>Text message with image</option>	
 		</select>
 		</td>
 	</tr>

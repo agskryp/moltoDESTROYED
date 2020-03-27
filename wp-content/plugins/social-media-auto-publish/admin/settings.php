@@ -101,6 +101,7 @@ if(isset($_POST['fb']))
 	$appsecret=sanitize_text_field($_POST['xyz_smap_application_secret']);
 	}
 	$messagetopost=$_POST['xyz_smap_message'];
+	$xyz_smap_clear_fb_cache=$_POST['xyz_smap_clear_fb_cache'];
 	//$fbid=$_POST['xyz_smap_fb_id'];
 	if($app_name=="" && $posting_permission==1)
 	{
@@ -145,6 +146,7 @@ if(isset($_POST['fb']))
 		
 		update_option('xyz_smap_po_method',$posting_method);
 		update_option('xyz_smap_message',$messagetopost);
+		update_option('xyz_smap_clear_fb_cache', $xyz_smap_clear_fb_cache);
 
 
 	}
@@ -669,6 +671,14 @@ function dethide_smap(id)
 		<textarea id="xyz_smap_message"  name="xyz_smap_message" style="height:80px !important;" ><?php 
 								echo esc_textarea(get_option('xyz_smap_message'));?></textarea>
 	</td></tr>
+	<tr valign="top">
+					<td>Clear facebook cache before publishing to facebook
+					</td>
+					<td  class="switch-field">
+						<label id="xyz_smap_clear_fb_cache_yes"><input type="radio" name="xyz_smap_clear_fb_cache" value="1" <?php  if(get_option('xyz_smap_clear_fb_cache')==1) echo 'checked';?>/>Yes</label>
+						<label id="xyz_smap_clear_fb_cache_no"><input type="radio" name="xyz_smap_clear_fb_cache" value="0" <?php  if(get_option('xyz_smap_clear_fb_cache')==0) echo 'checked';?>/>No</label>
+					</td>
+				</tr>
 
 				<?php 
 
@@ -1122,6 +1132,8 @@ else{
 	<?php  if(get_option('xyz_smap_lnpost_method')==1) echo 'selected';?>>Simple text message</option>
 				<option value="2"
 	<?php  if(get_option('xyz_smap_lnpost_method')==2) echo 'selected';?>>Attach your blog post </option>
+					<option value="3"
+	<?php  if(get_option('xyz_smap_lnpost_method')==3) echo 'selected';?>>Text message with image </option>
 		</select>
 		</td>
 	</tr>
@@ -1632,7 +1644,7 @@ jQuery(document).ready(function() {
 
    var smap_toggle_element_ids=['xyz_smap_post_permission','xyz_smap_include_categories','xyz_smap_default_selection_edit','xyz_smap_peer_verification',
 		'xyz_smap_twpost_image_permission','xyz_smap_twpost_permission','xyz_smap_ln_shareprivate',
-		 'xyz_smap_lnpost_permission','xyz_smap_include_pages','xyz_smap_include_posts','xyz_credit_link','xyz_smap_premium_version_ads','xyz_smap_lnshare_to_profile','xyz_smap_free_enforce_og_tags'];
+		 'xyz_smap_lnpost_permission','xyz_smap_include_pages','xyz_smap_include_posts','xyz_credit_link','xyz_smap_premium_version_ads','xyz_smap_lnshare_to_profile','xyz_smap_free_enforce_og_tags','xyz_smap_clear_fb_cache'];
 
    jQuery.each(smap_toggle_element_ids, function( index, value ) {
 		   checkedval= jQuery("input[name='"+value+"']:checked").val();
@@ -1776,7 +1788,7 @@ function xyz_smap_show_visibility(val)
 }
 var smap_toggle_element_ids=['xyz_smap_post_permission','xyz_smap_include_categories','xyz_smap_default_selection_edit','xyz_smap_peer_verification',
 	'xyz_smap_twpost_image_permission','xyz_smap_twpost_permission','xyz_smap_ln_shareprivate',
-	 'xyz_smap_lnpost_permission','xyz_smap_include_pages','xyz_smap_include_posts','xyz_credit_link','xyz_smap_premium_version_ads','xyz_smap_lnshare_to_profile','xyz_smap_free_enforce_og_tags'];
+	 'xyz_smap_lnpost_permission','xyz_smap_include_pages','xyz_smap_include_posts','xyz_credit_link','xyz_smap_premium_version_ads','xyz_smap_lnshare_to_profile','xyz_smap_free_enforce_og_tags','xyz_smap_clear_fb_cache'];
 
 jQuery.each(smap_toggle_element_ids, function( index, value ) {
 	jQuery("#"+value+"_no").click(function(){

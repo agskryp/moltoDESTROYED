@@ -29,10 +29,9 @@ if( !defined('ABSPATH') ){ exit();}
 				$post_fb_logsmain = get_option('xyz_smap_fbap_post_logs' );
 				$post_tw_logsmain = get_option('xyz_smap_twap_post_logs' );
 				$post_ln_logsmain = get_option('xyz_smap_lnap_post_logs' );
-				
+				$post_fb_logsmain_array = array();$post_tw_logsmain_array = array();$post_ln_logsmain_array = array();
                                 if(is_array($post_fb_logsmain))
                                 {
-                                $post_fb_logsmain_array = array();
 				foreach ($post_fb_logsmain as $logkey1 => $logval1)
 				{
 					$post_fb_logsmain_array[]=$logval1;
@@ -41,7 +40,7 @@ if( !defined('ABSPATH') ){ exit();}
                  }
                  if(is_array($post_tw_logsmain))
                  {
-                 	$post_tw_logsmain_array = array();
+                 	
                  	foreach ($post_tw_logsmain as $logkey2 => $logval2)
                  	{
                  		$post_tw_logsmain_array[]=$logval2;
@@ -49,7 +48,7 @@ if( !defined('ABSPATH') ){ exit();}
                  }
                  if(is_array($post_ln_logsmain))
                  {
-                 	$post_ln_logsmain_array = array();
+                 
                  	foreach ($post_ln_logsmain as $logkey3 => $logval3)
                  	{
                  		$post_ln_logsmain_array[]=$logval3;
@@ -222,6 +221,9 @@ if( !defined('ABSPATH') ){ exit();}
 		</fieldset>
 
 	</form>
+	<div style="padding: 5px;color: #e67939;font-size: 14px;">For publishing a simple text message, it will take 1 API call,
+	 Upload image option will take 2-3 API calls in Facebook and 4 api calls in Linkedin and<br>
+	 attach link option take 1 API call(2 api calls for facebook if enabled option for clearing cache).</div>
 
 </div>
 				

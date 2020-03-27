@@ -102,7 +102,7 @@ function smap_install_free()
 		add_option("xyz_smap_credit_dismiss",0);
 	}
 	add_option('xyz_smap_page_names','');
-	add_option('xyz_smap_app_sel_mode','0');
+	add_option('xyz_smap_app_sel_mode','1');
 	add_option('xyz_smap_ln_company_ids', '');
 	$xyz_smap_ln_company_ids_arr=array();
 	$xyz_smap_ln_company_ids=get_option('xyz_smap_ln_company_ids');
@@ -118,11 +118,12 @@ function smap_install_free()
 	add_option('xyz_smap_smapsoln_userid','0');
 	add_option('xyz_smap_lnpost_method',2);
 	add_option('xyz_smap_lnappscoped_userid','');
-	add_option('xyz_smap_ln_api_permission',0);
+	add_option('xyz_smap_ln_api_permission',2);
 	add_option('xyz_smap_smapsoln_userid_ln','0');
 	add_option('xyz_smap_secret_key_ln','');//54
 	add_option('xyz_smap_ln_page_names','');
 	add_option('xyz_smap_free_enforce_og_tags',1);
+	add_option('xyz_smap_clear_fb_cache',0);
 }
 
 register_activation_hook(XYZ_SMAP_PLUGIN_FILE,'smap_free_network_install');

@@ -332,8 +332,41 @@ if(!function_exists('xyz_smap_post_to_smap_api'))
 		curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER,(get_option('xyz_smap_peer_verification')=='1') ? true : false);
 		$content = curl_exec($ch);
 		curl_close($ch);
+		if (empty($content))
+		{
+			if ($url==XYZ_SMAP_SOLUTION_LN_PUBLISH_URL.'api/publish.php')
+				$response=array('status'=>0,'ln_api_count'=>0,'msg'=>'Error:unable to connect');
+				elseif ($url==XYZ_SMAP_SOLUTION_PUBLISH_URL.'api/facebook.php')
+				$response=array('status'=>0,'fb_api_count'=>0,'msg'=>'Error:unable to connect');
+				$content=json_encode($response);
+		}
 		return $content;
 	}
 }
+}
+if (!function_exists("xyz_smap_clear_open_graph_cache")) {
+	function xyz_smap_clear_open_graph_cache($url,$access_tocken,$appid,$appsecret) {
+		$fb=new Facebook\Facebook(array(
+				'app_id'  => $appid,
+				'app_secret' => $appsecret,
+				'default_graph_version' => XYZ_SMAP_FB_API_VERSION,
+				'cookie' => true
+		));
+		try {
+			$params = array(
+					'id' => $url,
+					'scrape' => 'true',
+					'access_token' => $access_tocken
+			);
+			$response = $fb->post('/', $params);
+			return $response;
+		} catch(\Facebook\Exceptions\FacebookResponseException $e) {
+			// When Graph returns an error
+			return 'Graph returned an error: ' . $e->getMessage();
+		} catch(\Facebook\Exceptions\FacebookSDKException $e) {
+			// When validation fails or other local issues
+			return 'Facebook SDK returned an error: ' . $e->getMessage();
+		}
+	}
 }
 ?>
