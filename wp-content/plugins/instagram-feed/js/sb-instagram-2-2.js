@@ -324,6 +324,10 @@ if(!sbi_js_exists) {
                 var $self = $(this.el),
                     feed = this;
 
+                $self.find('.sbi-screenreader').each(function() {
+                    $(this).find('img').remove();
+                });
+
                 // Call Custom JS if it exists
                 if (typeof sbi_custom_js == 'function') setTimeout(function(){ sbi_custom_js(); }, 100);
 
