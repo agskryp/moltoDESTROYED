@@ -1,0 +1,22 @@
+{
+  "name": "moltodestroyed",
+  "version": "1.0.0",
+  "description": "This is the moltoDESTROYED Wordpress Theme used for the [moltodestoyred.com](https://moltodestroyed.com) web comic.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agskryp/moltoDESTROYED.git"
+  },
+  "author": "agskryp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agskryp/moltoDESTROYED/issues"
+  },
+  "homepage": "https://github.com/agskryp/moltoDESTROYED#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
