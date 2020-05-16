@@ -90,7 +90,7 @@
 
   <div id="pagefin" class="footer-info">
     <div class="container">
-      <span class="copyright text-center">moltoDESTROYED &amp; moltodestroyed.com is Copyright &copy; 2014-2019 <a href="mailto:moltodestroyed@gmail.com">molto D. stroyed</a></span>
+      <span class="copyright text-center">moltoDESTROYED &amp; moltodestroyed.com is Copyright &copy; 2014-2019 <a href="mailto:molto@moltodestroyed.com">molto D. stroyed</a></span>
       
       <span class="privacy"><a href="<?php echo esc_url( MOLTO_PRIVACY_POLICY ); ?>">Privacy Policy</a></span>
 
