@@ -307,7 +307,9 @@ class SB_Instagram_About {
 	 */
 	protected function output_about_addons() {
 
-		if ( ! current_user_can( 'manage_instagram_feed_options' ) || 	version_compare( PHP_VERSION,  '5.3.0' ) <= 0 ) {
+		if ( ! current_user_can( 'manage_instagram_feed_options' ) || 	version_compare( PHP_VERSION,  '5.3.0' ) <= 0
+		    || version_compare( PHP_VERSION,  '5.3.0' ) <= 0
+		    || version_compare( get_bloginfo('version'), '4.6' , '<' ) ){
 			return;
 		}
 
@@ -323,9 +325,9 @@ class SB_Instagram_About {
 
 					$plugin_data = $this->get_plugin_data( $plugin, $details, $all_plugins );
 
-				if ( $plugin === 'wpforms-lite/wpforms.php' ) {
-				    echo '<h3>' .__( 'Plugins We Recommend', 'instagram-feed' ). '</h3>';
-                }
+					if ( $plugin === 'wpforms-lite/wpforms.php' ) {
+					    echo '<h3>' .__( 'Plugins We Recommend', 'instagram-feed' ). '</h3>';
+	                }
 
 					?>
 					<div class="addon-container">
@@ -845,7 +847,7 @@ class SB_Instagram_About {
 				),
 			),
 
-			'feeds-for-youtube/youtube-feed.php' => array(
+			'youtube-feed/youtube-feed.php' => array(
 				'icon' => $images_url . 'plugin-yt.png',
 				'name' => esc_html__( 'Feeds for YouTube', 'instagram-feed' ),
 				'desc' => esc_html__( 'Feeds for YouTube is a simple yet powerful way to display videos from YouTube on your website. Increase engagement with your channel while keeping visitors on your website.', 'instagram-feed' ),
