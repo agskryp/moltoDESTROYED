@@ -1,27 +1,53 @@
 <?php
   /**
    * The template for displaying all single posts
-   *
-   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
-   * @package moltodestroyed
    */
 
   get_header(); 
 ?>
 
-<div id="primary" class="content-area">
+<div class="blog-post-container">
   <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
 
-  <main id="main" class="site-main blog-post narrow-container">
+  <main class="narrow-container">
     <?php
       while( have_posts() ) {
         the_post();
+    ?>
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>  
+        <header class="entry-header">
+          <?php the_title( '<h1>', '</h1>' ); ?>
 
-        get_template_part( 'template-parts/content', get_post_type() );
+          <div class="entry-meta">
+            <?php          
+            
+              echo '<span class="entry-date published">Posted ' . get_the_date( 'M d, Y' ) . '</span>';
+            
+            ?>
+          </div>
+        </header>
 
+        <div class="text-center">
+          <?php
+            moltodestroyed_post_thumbnail(); 
+
+            require_once get_template_directory() . '/partials/textified-comic.php';
+          ?>
+        </div>
+
+        <div class="entry-content">
+          <?php     
+            the_content( );
+
+            require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
+          ?>
+        </div>
+      </article>
+
+      <?php
         molto_blog_navigation();
 
-        if( comments_open() || get_comments_number() ) comments_template();
+        // if( comments_open() || get_comments_number() ) comments_template();
       }
     ?>
   </main>
