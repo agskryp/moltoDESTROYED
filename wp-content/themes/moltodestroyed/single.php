@@ -15,36 +15,34 @@
         the_post();
     ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>  
-        <header class="entry-header">
-          <?php the_title( '<h1>', '</h1>' ); ?>
-
-          <div class="entry-meta">
-            <?php          
+        <header>
+          <?php 
+            the_title( '<h1>', '</h1>' );
             
-              echo '<span class="entry-date published">Posted ' . get_the_date( 'M d, Y' ) . '</span>';
-            
-            ?>
-          </div>
+            echo '<span>Posted ' . get_the_date( 'M d, Y' ) . '</span>';
+          ?>
         </header>
 
-        <div class="text-center">
-          <?php
-            moltodestroyed_post_thumbnail(); 
+        <div class="blog-content">
+          <?php if( has_post_thumbnail() ) { ?>
+            <div class="image-container">
+              <?php
+                the_post_thumbnail();
 
-            require_once get_template_directory() . '/partials/textified-comic.php';
-          ?>
-        </div>
+                require_once get_template_directory() . '/partials/textified-comic.php'; 
+              ?>
+            </div>
+          <?php } ?>
 
-        <div class="entry-content">
-          <?php     
-            the_content( );
-
-            require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
-          ?>
+          <div class="content-container">
+            <?php the_content( ); ?>
+          </div>
         </div>
       </article>
 
       <?php
+        require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
+
         molto_blog_navigation();
 
         // if( comments_open() || get_comments_number() ) comments_template();

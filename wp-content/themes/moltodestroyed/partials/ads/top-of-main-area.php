@@ -1,4 +1,4 @@
-<div class="ad-container">
+<div class="ad-container" style="max-width: 740px; width: 100%;">
   <ins id="header-ad"
        class="adsbygoogle top-of-page-ad"
        style="display:block"
