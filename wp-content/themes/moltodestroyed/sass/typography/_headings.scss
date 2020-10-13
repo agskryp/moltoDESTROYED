@@ -5,16 +5,21 @@ h1, h2, h3, h4, h5, h6 {
   color: $color__text-main;
   line-height: 1;
   margin: 0 0 .5em;
+  transform: scale( 1, 0.80 );
 }
 
 h1 {
   font-size: 2.5em;
   @media all and ( min-width: 400px ) {
     font-size: 3em;
+    letter-spacing: 2px;
+    
   }
 
   @media all and ( min-width: $screen-md ) {
-    font-size: 3.5em;
+    font-size: 76px;
+    letter-spacing: 2px;
+    // transform: scale( 1, 0.80 );
   }
 }
 

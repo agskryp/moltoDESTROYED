@@ -1,12 +1,8 @@
-@import "menus";
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-  .site-main & {
-    overflow: hidden;
-    margin: 0;
-  }
+.blog-navigation-container {
+  clear: both;
+  border-top: 2px solid $black;
+  margin-top: 24px;
+  padding-top: 24px;
 
   .nav-previous,
   .nav-next {
@@ -24,7 +20,7 @@
       // border: 2px solid black;
       // padding: 24px;
       // background: white;
-      color: black;
+      // color: black;
     }
   }
 
@@ -56,3 +52,5 @@
     display: inline-block;
   }
 }
+
+

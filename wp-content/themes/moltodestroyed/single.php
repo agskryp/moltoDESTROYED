@@ -18,7 +18,7 @@
         <header>
           <?php 
             the_title( '<h1>', '</h1>' );
-            
+
             echo '<span>Posted ' . get_the_date( 'M d, Y' ) . '</span>';
           ?>
         </header>
@@ -37,13 +37,47 @@
           <div class="content-container">
             <?php the_content( ); ?>
           </div>
+
+          <?php
+$args = wp_parse_args( $args, array(
+  'prev_text'          => 
+      '<span class="blog-nav-text">&larr; View previous post</span><span class="blog-title">%title</span>',
+  'next_text'          => 
+      '<span class="blog-nav-text">View next post &rarr;</span><span class="blog-title">%title</span>',
+  'in_same_term'       => false,
+  'screen_reader_text' => 'Post navigation',
+  ) );
+
+  $navigation = '';
+
+  $previous = get_previous_post_link(
+  '<div class="nav-previous">%link</div>',
+  $args[ 'prev_text' ],
+  $args[ 'in_same_term' ]
+  );
+
+  $next = get_next_post_link(
+    '<div class="nav-next">%link</div>',
+    $args[ 'next_text' ],
+    $args[ 'in_same_term' ]
+  );
+
+  // Only add markup if there's somewhere to navigate to.
+  if( $previous || $next ) {
+    $navigation = _navigation_markup( $previous . $next, 'blog-navigation-container', $args[ 'screen_reader_text' ] );
+  }
+
+  echo $navigation;
+          ?>
         </div>
       </article>
 
       <?php
+          
+
         require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
 
-        molto_blog_navigation();
+        
 
         // if( comments_open() || get_comments_number() ) comments_template();
       }
