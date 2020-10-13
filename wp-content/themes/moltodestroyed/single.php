@@ -3,7 +3,30 @@
    * The template for displaying all single posts
    */
 
-  get_header(); 
+  $navigation = '';
+
+  $previous = get_previous_post_link(
+    '%link',
+    '<span class="blog-nav-arrow">&larr;</span>' . 
+    
+    '<div class="blog-text-container">' .
+      '<span class="nav-text">View previous post</span>' . 
+      '<span class="title">%title</span>' . 
+    '</div>'
+  );
+
+  $next = get_next_post_link(
+    '%link',     
+    
+    '<div class="blog-text-container text-right">' .
+      '<span class="nav-text">View Next post</span>' . 
+      '<span class="title">%title</span>' . 
+    '</div>' .
+
+    '<span class="blog-nav-arrow">&rarr;</span>'
+  );
+
+  get_header();
 ?>
 
 <div class="blog-post-container">
@@ -39,35 +62,18 @@
           </div>
 
           <?php
-$args = wp_parse_args( $args, array(
-  'prev_text'          => 
-      '<span class="blog-nav-text">&larr; View previous post</span><span class="blog-title">%title</span>',
-  'next_text'          => 
-      '<span class="blog-nav-text">View next post &rarr;</span><span class="blog-title">%title</span>',
-  'in_same_term'       => false,
-  'screen_reader_text' => 'Post navigation',
-  ) );
 
-  $navigation = '';
 
-  $previous = get_previous_post_link(
-  '<div class="nav-previous">%link</div>',
-  $args[ 'prev_text' ],
-  $args[ 'in_same_term' ]
-  );
-
-  $next = get_next_post_link(
-    '<div class="nav-next">%link</div>',
-    $args[ 'next_text' ],
-    $args[ 'in_same_term' ]
-  );
+ 
 
   // Only add markup if there's somewhere to navigate to.
   if( $previous || $next ) {
-    $navigation = _navigation_markup( $previous . $next, 'blog-navigation-container', $args[ 'screen_reader_text' ] );
+    echo _navigation_markup( $previous . $next, 'blog-navigation-container', 'Post Navigation' );
+
+    // $navigation = $previous . $next;
   }
 
-  echo $navigation;
+  // echo $navigation;
           ?>
         </div>
       </article>
