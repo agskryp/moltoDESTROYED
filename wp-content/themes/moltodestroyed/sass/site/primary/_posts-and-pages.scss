@@ -161,14 +161,14 @@
   button {
     display: -moz-box !important; // Required for firefox on windows
     cursor: pointer;
-    margin: 1em auto 0;
+    margin: 16px auto;
     border: none;
-    font-weight: bold;
+    font-weight: 600;
     background: BLACK;
-    color: $color__text-light;
-    padding: 8px;
+    color: #fff;
+    padding: 8px 16px;
     border-radius: 4px;
-    font-size: 75%;
+    font-size: 80%;
     &:hover,
     &:focus {
       background: $color__link;

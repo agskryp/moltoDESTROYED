@@ -7,8 +7,11 @@
     header {
       margin-bottom: 32px;
 
-      h1 { margin: 0 0 8px; }  
-      span { font-size: 75%; }
+      h1 { margin: 0 0 16px; }  
+      span { 
+        font-size: 70%;
+        font-weight: 100;
+      }
     }
   }
 
@@ -22,7 +25,8 @@
 
       img {
         border: 2px solid $black;
-        box-shadow: 0 0 4px $black;        
+        box-shadow: 0 0 4px $black;
+        margin-bottom: 16px;      
       }
 
       .textified {
@@ -30,16 +34,6 @@
       }
     }
     
-    .content-container {
-      h1, h2, h3, h4, h5 {
-        font-family: 'Open Sans', sans-serif;
-        letter-spacing: -1px;
-        font-weight: 800;
-        color: #000;
-        line-height: 1;
-        margin: 0 0 .5em;
-        transform: none;
-      }
-    }
+    .content-container { }
   }
 }
