@@ -16,7 +16,7 @@
     ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header>
-          <?php the_title( '<h1 class="entry-title text-center comic-header">', '</h1>' ); ?>
+          <?php the_title( '<h1 class="text-center comic-header">', '</h1>' ); ?>
         </header>
 
         <?php require get_template_directory() . '/partials/comic-navigation.php'; ?>
@@ -51,8 +51,6 @@
       </article>
 
       <?php
-
-        // if( comments_open() || get_comments_number() ) comments_template();
       }
     ?>
   </main>

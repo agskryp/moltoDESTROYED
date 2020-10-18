@@ -298,3 +298,23 @@ function deregister_stylesheet() {
   }
 }
 add_action( 'wp_enqueue_scripts', 'deregister_stylesheet', 20 );
+
+
+
+// Redirect to first comic post on front page
+function front_page_redirect() {
+  if( is_front_page() ) {
+    $latest = get_posts( array(
+      'numberposts' => 1,
+      'order'       => 'desc',
+      'post_type'   => 'comics'
+    ) );
+
+    $latest_url = get_permalink( $latest[0] -> ID );
+
+    wp_redirect( $latest_url );
+    exit;
+
+  }
+}
+add_action( 'template_redirect', 'front_page_redirect' );

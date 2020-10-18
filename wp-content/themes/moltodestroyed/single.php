@@ -65,30 +65,15 @@
           </div>
 
           <?php
-
-
- 
-
-  // Only add markup if there's somewhere to navigate to.
-  if( $previous || $next ) {
-    echo _navigation_markup( $previous . $next, 'blog-navigation-container', 'Post Navigation' );
-
-    // $navigation = $previous . $next;
-  }
-
-  // echo $navigation;
+            if( $previous || $next ) {
+              echo _navigation_markup( $previous . $next, 'blog-navigation-container', 'Post Navigation' );
+            }
           ?>
         </div>
       </article>
-
-      <?php
-          
-
-        require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
-
-        
-
-        // if( comments_open() || get_comments_number() ) comments_template();
+    <?php
+      require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
+      
       }
     ?>
   </main>
