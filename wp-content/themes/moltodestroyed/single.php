@@ -4,16 +4,19 @@
    */
 
   $navigation = '';
+  $previous   = '<div></div>';    // For first post
 
-  $previous = get_previous_post_link(
-    '%link',
-    '<span class="blog-nav-arrow">&larr;</span>' . 
-    
-    '<div class="blog-text-container">' .
-      '<span class="nav-text">View previous post</span>' . 
-      '<span class="title">%title</span>' . 
-    '</div>'
-  );
+  if( !empty( get_previous_post_link() ) ) {
+    $previous = get_previous_post_link(
+      '%link',
+      '<span class="blog-nav-arrow">&larr;</span>' . 
+      
+      '<div class="blog-text-container">' .
+        '<span class="nav-text">View previous post</span>' . 
+        '<span class="title">%title</span>' . 
+      '</div>'
+    );
+  }
 
   $next = get_next_post_link(
     '%link',     

@@ -10,13 +10,25 @@ a {
   }
 }
 
+blockquote {
+  margin: 0 0 24px;
+  border-left: 4px solid $black;
+  font-style: italic;
+  background: $lighter_grey;
+  padding: 16px;
+}
+
 h1, h2, h3, h4, h5 {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: -2px;
   font-weight: 700;
   color: $black;
   line-height: 1;
-  margin: 48px 0 16px;
+  margin: 48px 0 24px;
+  
+  a {
+    font-weight: 700;
+  }
 }
 
 h1 {
@@ -37,9 +49,24 @@ h2 {
   }
 }
 
+
+h3 {
+  font-size: 32px;
+  @media all and ( min-width: $screen-md ) {
+    font-size: 40px;
+  }
+}
+
 p {
   margin-bottom: 24px;
   line-height: 32px;
   font-weight: 100;
   font-size: 24px;
+}
+
+ol, ul {
+  font-weight: 100;
+  font-size: 20px;
+  margin-bottom: 24px;
+  padding-left: 40px;
 }

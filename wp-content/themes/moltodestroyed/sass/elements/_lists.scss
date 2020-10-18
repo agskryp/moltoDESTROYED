@@ -1,33 +1,33 @@
-ul, ol {
-  margin: 0 0 $grid-padding;
-}
+// ul, ol {
+//   margin: 0 0 $grid-padding;
+// }
 
-ul {
-  list-style: disc;
-}
+// ul {
+//   list-style: disc;
+// }
 
-ol {
-  list-style: decimal;
+// ol {
+//   list-style: decimal;
 
-  li {
-    padding-left: 3px;
-  }
-}
+//   li {
+//     padding-left: 3px;
+//   }
+// }
 
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 0;
-}
+// li > ul,
+// li > ol {
+//   margin-bottom: 0;
+//   margin-left: 0;
+// }
 
-li {
-  font-weight: normal;
-}
+// li {
+//   font-weight: normal;
+// }
 
-dt {
-  font-weight: bold;
-}
+// dt {
+//   font-weight: bold;
+// }
 
-dd {
-  margin: 0 $grid-padding $grid-padding;
-}
+// dd {
+//   margin: 0 $grid-padding $grid-padding;
+// }

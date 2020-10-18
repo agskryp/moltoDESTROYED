@@ -14,6 +14,10 @@
       align-items: center;
       width: 50%;
 
+      &[ rel=next ] {
+        justify-content: flex-end;
+      }
+
       .blog-nav-arrow {
         font-size: 32px;
       }

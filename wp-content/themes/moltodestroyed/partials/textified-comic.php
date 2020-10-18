@@ -12,7 +12,11 @@
       </svg>
     </button>
 
-    <?php echo '<div id="textified-text" class="textified-text text-left sr-only">' . $textified . '</div>'; ?>
+    <?php 
+      echo '<div id="textified-text" class="textified-text-container text-left sr-only">';
+        echo  $textified;
+      echo '</div>';
+    ?>
   </div>
 <?php 
   }
