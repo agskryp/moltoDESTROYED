@@ -21,7 +21,7 @@
 
         <?php require get_template_directory() . '/partials/comic-navigation.php'; ?>
 
-        <div class="entry-content comic-strip text-center">
+        <div class="comic-strip text-center">
           <?php
             $image = get_field( 'comic_strip' );
 
@@ -45,13 +45,14 @@
 
         <?php
           require_once get_template_directory() . '/partials/social-share-buttons.php';
-          require get_template_directory() . '/partials/comic-navigation.php';
-          require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';    
+          require get_template_directory() . '/partials/comic-navigation.php';    
         ?>
       </article>
 
       <?php
       }
+
+      require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
     ?>
   </main>
 </div>
