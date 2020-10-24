@@ -3,6 +3,12 @@
    * The template for displaying all single comics
    */
 
+  $image = get_post_meta( get_the_ID(), 'comic_strip', true );
+
+  if( !is_numeric( $image ) ) {
+    $image = get_post_meta( get_the_ID(), 'comic_strip_id', true );
+  }
+  
   get_header(); 
 ?>
 
@@ -22,17 +28,12 @@
         <?php require get_template_directory() . '/partials/comic-navigation.php'; ?>
 
         <div class="comic-strip text-center">
-          <?php
-            // $image = get_field( 'comic_strip' );
-            $image = '';
-
-            if( !empty( $image ) ) {
-          ?>
+          <?php if( !empty( $image ) ) { ?>
             <div class="placeholder-image">
               <span>Loading...</span>
             </div>
             
-            <img src="<?php echo $image[ 'url' ]; ?>" alt="<?php the_title(); ?>" />
+            <?php echo wp_get_attachment_image( $image, 'full' ); ?>
 
             <div id="comicfin" class="entry-meta">
               <span class="posted-on">Posted on <?php molto_post_date(); ?></span>
