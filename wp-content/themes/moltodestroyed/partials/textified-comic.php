@@ -1,5 +1,6 @@
 <?php
-  $textified = get_field( 'textify_comic' );
+  // $textified = get_field( 'textify_comic' );
+  $textified = '';
 
   if( !empty( $textified ) && !is_home() ) {
 ?>

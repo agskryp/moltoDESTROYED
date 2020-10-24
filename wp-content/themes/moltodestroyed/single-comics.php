@@ -23,7 +23,8 @@
 
         <div class="comic-strip text-center">
           <?php
-            $image = get_field( 'comic_strip' );
+            // $image = get_field( 'comic_strip' );
+            $image = '';
 
             if( !empty( $image ) ) {
           ?>
