@@ -26,15 +26,13 @@
         <?php require get_template_directory() . '/partials/comic-navigation.php'; ?>
 
         <div class="comic-strip-container text-center">
-          <?php if( !empty( $image ) ) { ?>
-            <div class="placeholder-image">Loading...</div>
-            
-            <?php echo wp_get_attachment_image( $image, 'full' ); ?>
-
-            <div id="comicfin" class="entry-meta">
-              <span class="posted-on">Posted on <?php molto_post_date(); ?></span>
-            </div>
           <?php 
+            if( !empty( $image ) ) { 
+              echo '<div class="placeholder-image">Loading...</div>';
+            
+              echo wp_get_attachment_image( $image, 'full' ); 
+
+              echo '<span class="posted-on">Posted on ' . get_the_date( 'F jS, Y' ) . '</span>';
             }
           
             require_once get_template_directory() . '/partials/textified-comic.php';
@@ -46,8 +44,7 @@
           require get_template_directory() . '/partials/comic-navigation.php';    
         ?>
       </article>
-
-      <?php
+    <?php
       }
 
       require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';

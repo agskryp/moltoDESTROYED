@@ -1,13 +1,12 @@
 <?php
-
   function comic_template_metaboxes() {
     $cmb2 = new_cmb2_box( array(
-      'id'            => 'test_metabox',
-      'title'         => 'Test Metabox',
-      'object_types'  => array( 'comics' ),
-      'context'       => 'normal',
-      'priority'      => 'high',
-      'show_names'    => true,
+      'id'           => 'test_metabox',
+      'title'        => 'Test Metabox',
+      'object_types' => array( 'comics' ),
+      'context'      => 'normal',
+      'priority'     => 'high',
+      'show_names'   => true,
     ) );
     
     $cmb2 -> add_field( array(
@@ -24,7 +23,7 @@
           'image/png',
         ),
       ),
-      'preview_size' => 'medium', // Image size to use when previewing in the admin.
+      'preview_size' => 'medium',
     ) );
 
   $cmb2 ->  add_field( array (
@@ -33,11 +32,8 @@
     'id'      => 'textify_comic',
     'type'    => 'wysiwyg',
     'options' => array(
-      // 'wpautop'       => true,
       'media_buttons' => false, 
     ),
-  ) );
-
-  
+  ) );  
 }
 add_action( 'cmb2_admin_init', 'comic_template_metaboxes' );

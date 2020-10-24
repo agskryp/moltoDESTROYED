@@ -45,7 +45,7 @@
           <?php 
             the_title( '<h1>', '</h1>' );
 
-            echo '<span>Posted ' . get_the_date( 'M d, Y' ) . '</span>';
+            echo '<span>Posted on ' . get_the_date( 'F jS, Y' ) . '</span>';
           ?>
         </header>
 

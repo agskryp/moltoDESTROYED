@@ -42,8 +42,6 @@
         }
       }
       
-      
-      
       img {
         border: $border-2px;
         min-height: 400px;
@@ -51,12 +49,9 @@
         position: relative;
       }
       
-      .entry-meta {
-        line-height: 1;
-      }
-      
       .posted-on {
-        font-size: .75em;
+        display: block;
+        font-size: 75%;
       }
     }
   }  
