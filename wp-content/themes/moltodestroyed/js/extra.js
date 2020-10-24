@@ -13,25 +13,33 @@ function blockerMessage() {
 
 ( function($) {
   $( document ).ready( function() {
-        
+
     // Toggle open class when menu button's clicked
     $( '.menu-toggle' ).click( function () {
       $( '#main-menu-icon' ).toggleClass( 'open' );
     } );
 
+
+
+
+
+    var container = document.querySelector( '.textified-container' );
+    var button    = container.querySelector( 'button' );
+    var text      = container.querySelector( 'span' );
+    var arrow     = container.querySelector( 'svg' );
+    var textified = container.querySelector( '.textified-text-container' );
+        
     // Toggle comic texted version button
-    $( '#textified-toggle' ).click( function () {
-      var textifiedButton = document.getElementById( "textified-button" );
+    button.addEventListener( 'click', function () {
+      textified.classList.toggle( 'sr-only' );
+      arrow.classList.toggle( 'flip' );
 
-      $( '#textified-text' ).toggleClass( 'sr-only' );
-      $( '#textified-arrow' ).toggleClass( 'textified-arrow' );
-
-      if( textifiedButton.innerHTML === "Close text version" ) {
-        textifiedButton.innerHTML = "View text version";
+      if( text.innerHTML === "Close the text version" ) {
+        text.innerHTML = "Read the text version";
       }
 
       else {
-        textifiedButton.innerHTML = "Close text version";
+        text.innerHTML = "Close the text version";
       } 
     } );
   } );

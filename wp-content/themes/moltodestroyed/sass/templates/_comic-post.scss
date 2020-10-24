@@ -43,7 +43,8 @@
       }
       
       img {
-        border: $border-2px;
+        border: 2px solid $black;
+        box-shadow: 0 0 4px $black;
         min-height: 400px;
         z-index: 1;
         position: relative;
@@ -52,6 +53,7 @@
       .posted-on {
         display: block;
         font-size: 75%;
+        margin-top: 4px;
       }
     }
   }  
