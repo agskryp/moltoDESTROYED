@@ -1,6 +1,5 @@
 <?php
-  // $textified = get_field( 'textify_comic' );
-  $textified = '';
+  $textified = get_post_meta( get_the_ID(), 'textify_comic', true );
 
   if( !empty( $textified ) && !is_home() ) {
 ?>
@@ -15,7 +14,7 @@
 
     <?php 
       echo '<div id="textified-text" class="textified-text-container text-left sr-only">';
-        echo  $textified;
+        echo  wpautop( $textified );
       echo '</div>';
     ?>
   </div>

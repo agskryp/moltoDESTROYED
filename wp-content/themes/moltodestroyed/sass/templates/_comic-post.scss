@@ -12,44 +12,43 @@
       font-size: 72px;
     }
     
-    .comic-strip {
-      margin: 0 0 1.5em;
+    .comic-strip-container {
+      margin: 0 0 16px;
       position: relative;
-      
-      .placeholder-image span {
+
+      .placeholder-image {
+        font-family: 'Bangers', sans-serif;
         position: absolute;
-        top: 0;
         left: 0;
         right: 0;
-        background: $lightest_shade;
-        border: 2px solid $darkest_shade;
+        background: $white;
+        border: 2px solid $black;
+        letter-spacing: 4px;
         max-width: 500px;
-        width: 100%;
         height: 400px;
-        z-index: -1;
         margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 60px;
-        padding: 30px;
-        line-height: 1;
-        font-weight: 900;
-        text-shadow: 0px 0px 0px $darkest_shade;
-        color: $darkest_shade;
+        text-shadow: 0px 0px 0px $black;
+        color: $black;
         animation: loadingText .4s ease-in-out infinite alternate;
-      }
-      
-      @keyframes loadingText {
-        to {
-          text-shadow: 0 0 3px $dark_shade; 
-          color: $dark_shade;
+        @keyframes loadingText {
+          to {
+            text-shadow: 0 0 3px $grey; 
+            color: $grey;
+          }
         }
       }
+      
+      
       
       img {
         border: $border-2px;
         min-height: 400px;
+        z-index: 1;
+        position: relative;
       }
       
       .entry-meta {

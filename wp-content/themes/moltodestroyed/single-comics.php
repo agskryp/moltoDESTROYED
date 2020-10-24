@@ -5,9 +5,7 @@
 
   $image = get_post_meta( get_the_ID(), 'comic_strip', true );
 
-  if( !is_numeric( $image ) ) {
-    $image = get_post_meta( get_the_ID(), 'comic_strip_id', true );
-  }
+  if( !is_numeric( $image ) ) $image = get_post_meta( get_the_ID(), 'comic_strip_id', true );
   
   get_header(); 
 ?>
@@ -27,11 +25,9 @@
 
         <?php require get_template_directory() . '/partials/comic-navigation.php'; ?>
 
-        <div class="comic-strip text-center">
+        <div class="comic-strip-container text-center">
           <?php if( !empty( $image ) ) { ?>
-            <div class="placeholder-image">
-              <span>Loading...</span>
-            </div>
+            <div class="placeholder-image">Loading...</div>
             
             <?php echo wp_get_attachment_image( $image, 'full' ); ?>
 
