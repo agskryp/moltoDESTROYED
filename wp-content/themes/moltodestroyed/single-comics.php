@@ -1,6 +1,6 @@
 <?php
   /**
-   * The template for displaying all single comics
+   * The comic post template
    */
 
   $image = get_post_meta( get_the_ID(), 'comic_strip', true );
@@ -45,12 +45,10 @@
           require_once get_template_directory() . '/partials/social-share-buttons.php';
         ?>
       </article>
-    <?php
-      }
-
-      require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
-    ?>
+    <?php } ?>
   </main>
+  
+  <?php require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>
 </div>
 
 <?php

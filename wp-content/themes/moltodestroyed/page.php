@@ -1,6 +1,6 @@
 <?php
   /**
-   * The template for displaying all pages
+   * The default page template
    */
 
   get_header();
