@@ -6,7 +6,7 @@
   button {
     display: -moz-box !important; // Required for firefox on windows
     cursor: pointer;
-    margin: 16px auto;
+    margin: 32px auto;
     border: none;
     font-weight: 600;
     background: $black;
@@ -39,28 +39,25 @@
   .textified-text-container {
     padding: 16px;
     border: 2px dashed $black;
-    margin: 32px 0 24px;
-    background: $white;
+    margin: 32px 0;
 
     h3 {
       font-family: 'Bangers', sans-serif;
       letter-spacing: 2px;
       font-size: 32px;
       margin: 0;
-      padding: 0;
     }
     
     p {
       margin: 16px 0 0;
-      padding: 0;
       font-size: 90%;
       line-height: 24px;
     }
     
     hr {
-      background-color: $white;
       margin: 24px 0;
       border-top: 2px dashed $black;
+      background: $white;
     }
   }
 }

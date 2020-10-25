@@ -1,4 +1,4 @@
-<div class="social-share-container text-center">
+<div class="social-share-container flex-center">
   <h3>Share!</h3>
 
   <a class="social-share-button" target="popupTwitter" onclick="PopupCenter('','popupTwitter','600','253');" title="Twitter"

@@ -28,11 +28,11 @@
         <div class="comic-strip-container text-center">
           <?php 
             if( !empty( $image ) ) { 
+              echo '<span class="posted-on">Posted on ' . get_the_date( 'F jS, Y' ) . '</span>';
+
               echo '<div class="placeholder-image">Loading...</div>';
             
-              echo wp_get_attachment_image( $image, 'full' ); 
-
-              echo '<span class="posted-on">Posted on ' . get_the_date( 'F jS, Y' ) . '</span>';
+              echo wp_get_attachment_image( $image, 'full' );              
             }
           
             require_once get_template_directory() . '/partials/textified-comic.php';
@@ -40,8 +40,8 @@
         </div>
 
         <?php
-          require_once get_template_directory() . '/partials/social-share-buttons.php';
           require get_template_directory() . '/partials/comic-navigation.php';    
+          require_once get_template_directory() . '/partials/social-share-buttons.php';
         ?>
       </article>
     <?php
