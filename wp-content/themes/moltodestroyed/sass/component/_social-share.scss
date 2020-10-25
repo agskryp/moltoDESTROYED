@@ -1,34 +1,42 @@
-.social-share-container {
-  margin: 32px 0 24px;
+.social-share-background {
+  background: $black;
+  padding: 16px;
+  margin-top: 32px;
   
-  h3 {
-    font-family: 'Bangers', sans-serif;
-    letter-spacing: 2px;
-    font-size: 24px;
-    display: block;
-    margin: 0 0 8px;
-    @media all and ( min-width: 450px ) {
-      display: inline-block;
-      margin: 0 16px 0 0;
-    }
-  }
-
-  .social-share-button {
-    background: none;
-    margin: 0 12px;
-    display: inherit;
-
-    &:hover,
-    &:focus {
-      svg {
-        fill: $grey;
+  .social-share-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: $black;
+    justify-content: space-between;
+    
+    h3 {
+      font-family: 'Bangers', sans-serif;
+      letter-spacing: 2px;
+      color: $white;
+      font-size: 24px;
+      display: block;
+      margin: 0;
+      @media all and ( min-width: 450px ) {
+        display: inline-block;
       }
     }
 
-    svg {
-      fill: $black;
-      width: 24px;
-      height: 24px;
+    .social-share-button {
+      background: none;
+      display: inherit;
+
+      &:hover,
+      &:focus {
+        svg {
+          fill: $grey;
+        }
+      }
+
+      svg {
+        fill: $white;
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 }
