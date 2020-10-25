@@ -1,0 +1,21 @@
+.default-page-container {
+  article {
+    background: $white;
+    border: 2px solid $black;
+    padding: 16px 16px 0;
+
+    .page-title {
+      font-family: 'Bangers', sans-serif;
+      letter-spacing: 4px;
+      line-height: 1;
+      margin: 8px 0 24px;
+      font-size: 72px;
+    }
+
+    .feature-image-container {
+      border: 2px solid $black;
+      box-shadow: 0 0 4px $black;
+      margin: 0 auto 24px;
+    }
+  }  
+}

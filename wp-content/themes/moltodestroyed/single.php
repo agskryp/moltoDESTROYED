@@ -40,14 +40,12 @@
       while( have_posts() ) {
         the_post();
     ?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>  
-        <header>
-          <?php 
-            the_title( '<h1>', '</h1>' );
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <?php 
+          the_title( '<header><h1>', '</h1>' );
 
-            echo '<span>Posted on ' . get_the_date( 'F jS, Y' ) . '</span>';
-          ?>
-        </header>
+          echo '<span>Posted on ' . get_the_date( 'F jS, Y' ) . '</span></header>';
+        ?>        
 
         <div class="blog-content">
           <?php if( has_post_thumbnail() ) { ?>

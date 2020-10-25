@@ -19,11 +19,11 @@
         the_post();
     ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header>
-          <?php the_title( '<h1 class="text-center comic-header">', '</h1>' ); ?>
-        </header>
-
-        <?php require get_template_directory() . '/partials/comic-navigation.php'; ?>
+        <?php
+          the_title( '<header><h1 class="text-center comic-header">', '</h1></header>' ); 
+          
+          require get_template_directory() . '/partials/comic-navigation.php'; 
+        ?>
 
         <div class="comic-strip-container text-center">
           <?php 

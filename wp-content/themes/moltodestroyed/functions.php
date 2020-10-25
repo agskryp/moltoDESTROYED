@@ -194,7 +194,10 @@ require get_template_directory() . '/inc/customizer.php';                 // Cus
 require get_template_directory() . '/inc/character-image-randomizer.php'; // Choose a random character image
 require get_template_directory() . '/inc/constants.php';                  // Import PHP constants
 require get_template_directory() . '/inc/post-types.php';                 // Import custom post types
+
+
 require get_template_directory() . '/inc/metaboxes.php';                  // Metaboxes
+require get_template_directory() . '/inc/shortcodes.php';                  // Metaboxes
 
 
 
