@@ -48,21 +48,19 @@
         ?>        
 
         <div class="blog-content">
-          <?php if( has_post_thumbnail() ) { ?>
-            <div class="image-container">
-              <?php
+          <?php 
+            if( has_post_thumbnail() ) {
+              echo '<div class="image-container">';
                 the_post_thumbnail();
 
                 require_once get_template_directory() . '/partials/textified-comic.php'; 
-              ?>
-            </div>
-          <?php } ?>
+              echo '</div>';
+            }
+          
+            echo '<div class="content-container">';
+              the_content( );
+            echo '</div>';
 
-          <div class="content-container">
-            <?php the_content( ); ?>
-          </div>
-
-          <?php
             if( $previous || $next ) {
               echo _navigation_markup( $previous . $next, 'blog-navigation-container', 'Post Navigation' );
             }

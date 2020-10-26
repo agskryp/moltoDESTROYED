@@ -1,0 +1,72 @@
+.blog-page-container {
+  .blog-posts-list {
+    background: $white;
+    border: 2px solid $black;
+
+    h1 {
+      font-family: 'Bangers', sans-serif;
+      letter-spacing: 4px;
+      line-height: 1;
+      margin: 16px 0;
+      font-size: 72px;
+    }
+
+    article {
+      border-bottom: 2px solid $black;
+      margin: 0 0 32px !important; // Necessary for google-auto-ads
+
+      h2 {
+        font-size: 40px;
+        margin: 0;
+        @media all and ( min-width: $screen-xs ) {
+          font-size: 48px;
+        }
+  
+        a {
+          color: $black;
+  
+          &:hover,
+          &:active,
+          &:focus {
+            color: $grey;
+          }
+        }
+      }
+
+      .feature-image-container {
+        a {
+          border: 2px solid $black;
+          margin: 16px auto 0;
+          display: inline-block;
+          max-height: 400px;
+          overflow: hidden;
+
+          &:hover,
+          &:focus {
+            opacity: .7;
+          }
+        }
+      }
+
+
+
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .read-more {
+        margin-top: .5em;
+        display: inline-block;
+      }
+    }
+
+    .entry-content {
+      margin: 1em 0 0;
+      clear: both;
+      margin: 1em 0 $grid-padding;
+    }
+
+    
+  }
+}
