@@ -260,12 +260,17 @@ add_action( 'widgets_init', 'remove_search_widget' );
 
 
 // Replace the default link text for excerpts
-function new_excerpt_more($more) {
-  global $post;
-  
-  return '... <br> <a class="read-more pull-right" href="' . get_permalink( $post -> ID ) . '"> Continue Reading &rarr;</a>';
+function new_excerpt_more() {
+  $continue = '... <div>';
+  $continue .= '<a class="read-more pull-right" href="' . esc_url( get_permalink() ) . '">';
+  $continue .= 'Continue Reading &rarr;';
+  $continue .= '</a>';
+  $continue .= '</div>';
+
+  return $continue;
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
 
 
 

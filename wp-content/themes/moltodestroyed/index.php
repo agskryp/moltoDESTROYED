@@ -26,13 +26,19 @@
             
           echo '<div class="content-container">';
             if( has_post_thumbnail() ) {
-              echo '<a class="feature-image-container" href="' . esc_url( get_permalink() ) . '" aria-hidden="true">';
+              echo '<a class="feature-image-container" href="' . esc_url( get_permalink() ) . '">';
                 the_post_thumbnail( 'medium-large' );  
               echo '</a>';
             }
             
-            echo '<div>';
-              the_excerpt(); 
+            echo '<div class="excerpt-container">';
+              the_excerpt();
+
+              if( str_word_count( $post -> post_content ) <= 55 ) {
+                echo '<div><a class="read-more pull-right" href="' . esc_url( get_permalink() ) . '">';
+                  echo 'View Post &rarr;'; 
+                echo '</a></div>';
+              }
             echo '</div>';
           echo '</div>';
         ?>
@@ -40,37 +46,41 @@
     <?php
       }
   
+?>
+
+
+<?php 
 
 
 
 
-      
       $navigation = '';
 
-  // Don't print empty markup if there's only one page.
-  if ( $GLOBALS[ 'wp_query' ] -> max_num_pages > 1 ) {
-    $args = wp_parse_args( $args, array(
-      'prev_text'          => esc_html__( '&larr; View older posts', 'moltodestroyed' ),
-      'next_text'          => esc_html__( 'View newer posts &rarr;', 'moltodestroyed' ),
-      'screen_reader_text' => esc_html__( 'Posts navigation', 'moltodestroyed' ),
-    ) );
+      // Don't print empty markup if there's only one page.
+      if ( $GLOBALS[ 'wp_query' ] -> max_num_pages > 1 ) {
+        $args = wp_parse_args( $args, array(
+          'prev_text'          => '&larr; View older posts',
+          'next_text'          => 'View newer posts &rarr;',
+          'screen_reader_text' => 'Posts navigation',
+        ) );
 
-    $next_link = get_previous_posts_link( $args[ 'next_text' ] );
-    $prev_link = get_next_posts_link( $args[ 'prev_text' ] );
+        $next_link = get_previous_posts_link( $args[ 'next_text' ] );
+        $prev_link = get_next_posts_link( $args[ 'prev_text' ] );
 
-    if ( $prev_link ) {
-      $navigation .= '<div class="nav-previous">' . $prev_link . '</div>';
-    }
+        if ( $prev_link ) {
+          $navigation .= '<div class="nav-previous">' . $prev_link . '</div>';
+        }
 
-    if ( $next_link ) {
-      $navigation .= '<div class="nav-next">' . $next_link . '</div>';
-    }
+        if ( $next_link ) {
+          $navigation .= '<div class="nav-next">' . $next_link . '</div>';
+        }
 
-    $navigation = _navigation_markup( $navigation, 'posts-navigation', $args[ 'screen_reader_text' ] );
-  }
+        $navigation = _navigation_markup( $navigation, 'posts-navigation', $args[ 'screen_reader_text' ] );
+      }
 
-  echo $navigation;
+      echo $navigation;
     ?>
+    
   </main>
 
   <?php require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>
