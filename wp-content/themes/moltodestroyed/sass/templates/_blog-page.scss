@@ -1,4 +1,8 @@
 .blog-page-container {
+  header.blog-page-header {
+    margin-bottom: 32px;
+  }
+
   .blog-posts-list {
     background: $white;
     border: 2px solid $black;
@@ -17,10 +21,7 @@
 
       h2 {
         font-size: 40px;
-        margin: 0;
-        @media all and ( min-width: $screen-xs ) {
-          font-size: 48px;
-        }
+        margin: 0 0 32px;
   
         a {
           color: $black;
@@ -33,40 +34,31 @@
         }
       }
 
-      .feature-image-container {
-        a {
+      .content-container {
+        display: flex;
+        margin-bottom: 16px;
+
+        a.feature-image-container {      
           border: 2px solid $black;
-          margin: 16px auto 0;
-          display: inline-block;
-          max-height: 400px;
+          margin: 0 16px 16px 0;
+          box-shadow: 0 0 4px $black;
+          width: 100%;
+          max-height: 300px;
           overflow: hidden;
 
           &:hover,
           &:focus {
-            opacity: .7;
+            opacity: .7;        
           }
         }
+
+        p { margin-bottom: 0; }
+
+        .read-more {
+          margin: 16px 0;
+          display: inline-block;
+        }
       }
-
-
-
-
-      p {
-        margin-bottom: 0;
-      }
-
-      .read-more {
-        margin-top: .5em;
-        display: inline-block;
-      }
-    }
-
-    .entry-content {
-      margin: 1em 0 0;
-      clear: both;
-      margin: 1em 0 $grid-padding;
-    }
-
-    
+    }    
   }
 }
