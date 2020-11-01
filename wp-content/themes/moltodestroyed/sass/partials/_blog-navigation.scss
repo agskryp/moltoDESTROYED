@@ -1,4 +1,5 @@
-.blog-navigation-container {
+.blog-page-navigation-container,
+.blog-post-navigation-container {
   clear: both;
   border-top: 4px solid $black;
   margin-top: 40px;
@@ -12,9 +13,8 @@
     a {
       display: inline-flex;
       align-items: center;
-      width: 50%;
 
-      &[ rel=next ] {
+      &:nth-child( even ) {
         justify-content: flex-end;
       }
 
@@ -44,51 +44,55 @@
       }
     }
   }
+}
+
+.blog-page-navigation-container {
+  border-top: none;
+  padding-top: 0;
+}
 
 
 
 
 
-
-
-  .nav-previous,
-  .nav-next {
-    text-align: center;
-    width: 100%;
-    margin: 0 0 $grid-padding;
-    line-height: 1.25;
-    @media all and ( min-width: $screen-sm ) {
-      width: 50%;
-    }
+  // .nav-previous,
+  // .nav-next {
+  //   text-align: center;
+  //   width: 100%;
+  //   margin: 0 0 $grid-padding;
+  //   line-height: 1.25;
+  //   @media all and ( min-width: $screen-sm ) {
+  //     width: 50%;
+  //   }
     
 
-  }
+  // }
 
-  .nav-previous {
-    float: left;
-    padding-right: 0;
-    @media all and ( min-width: $screen-sm ) {
-      text-align: left;
-      padding-right: 10px;
-    }
-  }
+  // .nav-previous {
+  //   float: left;
+  //   padding-right: 0;
+  //   @media all and ( min-width: $screen-sm ) {
+  //     text-align: left;
+  //     padding-right: 10px;
+  //   }
+  // }
 
-  .nav-next {
-    float: right;
-    padding-left: 0;
-    @media all and ( min-width: $screen-sm ) {
-      text-align: right;
-      padding-left: 10px;
-    }
-  }
+  // .nav-next {
+  //   float: right;
+  //   padding-left: 0;
+  //   @media all and ( min-width: $screen-sm ) {
+  //     text-align: right;
+  //     padding-left: 10px;
+  //   }
+  // }
   
-  .blog-nav-text {
-    font-size: 70%;
-    display: inline-block;
-    line-height: 1.5;
-  }
+  // .blog-nav-text {
+  //   font-size: 70%;
+  //   display: inline-block;
+  //   line-height: 1.5;
+  // }
   
-  .blog-title {
-    display: inline-block;
-  }
-}
+  // .blog-title {
+  //   display: inline-block;
+  // }
+

@@ -3,12 +3,12 @@
    * The blog post template
    */
 
-  $navigation = '';
-  $previous   = '<div></div>';    // For first post
+  $previous = '<div></div>';  // For first post
 
   if( !empty( get_previous_post_link() ) ) {
     $previous = get_previous_post_link(
       '%link',
+
       '<span class="blog-nav-arrow">&larr;</span>' . 
       
       '<div class="blog-text-container">' .
@@ -22,7 +22,7 @@
     '%link',     
     
     '<div class="blog-text-container text-right">' .
-      '<span class="nav-text">View Next post</span>' . 
+      '<span class="nav-text">View next post</span>' . 
       '<span class="title">%title</span>' . 
     '</div>' .
 
@@ -62,7 +62,11 @@
             echo '</div>';
 
             if( $previous || $next ) {
-              echo _navigation_markup( $previous . $next, 'blog-navigation-container', 'Post Navigation' );
+              echo _navigation_markup(
+                $previous . $next,
+                'blog-post-navigation-container',
+                'Post Navigation'
+              );
             }
           ?>
         </div>
