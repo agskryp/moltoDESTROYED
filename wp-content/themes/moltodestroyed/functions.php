@@ -8,7 +8,7 @@ if( !function_exists( 'moltodestroyed_setup' ) ) {
 
     register_nav_menus( array(
       'menu-1' => 'Primary',
-      'menu-2' => 'Footer',
+      'footer' => 'Footer Menu',
     ) );
   }
 }

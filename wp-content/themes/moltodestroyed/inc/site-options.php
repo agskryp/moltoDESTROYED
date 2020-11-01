@@ -29,6 +29,26 @@ function moltodestroyed_theme_options_metabox() {
     ),
     'preview_size' => 'small', // Image size to use when previewing in the admin.
   ) );
+
+    /************************************ 
+   * Site Footer
+   ************************************/ 
+  $cmb_options -> add_field( array(
+    'name' => 'Site Footer',
+    'id'   => 'site_footer',
+    'type' => 'title',
+  ) );
+
+  $cmb_options -> add_field( array(
+    'name'       => 'Footer Banner',
+    'id'         => 'footer_banner_image',
+    'type'       => 'file',
+    'options'    => array( 'url' => false ),
+    'query_args' => array(
+      'type' => array( 'image/gif', 'image/jpeg', 'image/png' ),
+    ),
+    'preview_size' => 'small', // Image size to use when previewing in the admin.
+  ) );
 }
 add_action( 'cmb2_admin_init', 'moltodestroyed_theme_options_metabox' );
 
