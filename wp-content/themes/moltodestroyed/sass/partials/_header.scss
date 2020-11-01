@@ -1,5 +1,17 @@
 .header-container {
   margin-bottom: 40px;
+
+  .header-background {
+    background: $white;
+    padding-top: 16px;
+  
+    .content-container {
+      max-width: 1170px;
+      width: 100%;
+      position: relative;
+      margin: 0 auto;
+    }
+  }
 }
 
 a.site-banner {
@@ -38,17 +50,6 @@ a.site-banner {
   }
 }
 
-// .site-branding {
-//   background: $white;
 
-// //   .col-xs-12 {
-// //     padding: 0;
-// //     margin-top: 30px;
-// //     @media all and ( min-width: $screen-md ) {
-// //       padding: 0;
-// //       margin-top: 10px;
-// //     }
-// //   }
-// }
 
 @import "misc/header-characters";
