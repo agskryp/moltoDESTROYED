@@ -97,6 +97,15 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
 .menu-toggle {
   display: -moz-box !important; // Required for firefox on windows
   @include flex-center;
@@ -117,7 +126,7 @@
     background: $color__text-input;
   }
     
-  h3 {
+  p {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1em;

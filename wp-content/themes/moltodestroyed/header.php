@@ -1,3 +1,7 @@
+<?php
+  $banner_image = moltodestroyed_theme_site_option( 'header_banner_image_id', false );
+?>
+
 <!doctype html>
 
 <html <?php language_attributes(); ?>>
@@ -29,23 +33,11 @@
               require get_template_directory() . '/partials/header-characters.php'; 
               
               echo '<a class="site-banner" href="' . esc_url( home_url( '/' ) ) . '" rel="home">';
-                if( is_front_page() ) {
-                  echo '<h1 class="screen-reader-text">' . get_bloginfo( 'name' ) . '</h1>';
-                }
-                
-                else echo '<p class="screen-reader-text">' . get_bloginfo( 'name' ) . '</p>';
-              ?>
+                echo '<p class="screen-reader-text">' . get_bloginfo( 'name' ) . '</p>';
 
-
-
-
-              <img src="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-xs.png"
-                  srcset="<?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-sm.png 480w,
-                          <?php echo get_template_directory_uri(); ?>/images/banner/molto-banner-template-md.png 768w,"
-                  alt="moltoDESTROYED Banner"
-                  width="760"
-                  height="190">
-            </a>
+                if( !empty( $banner_image ) ) echo wp_get_attachment_image( $banner_image, 'medium_large' );
+              echo '</a>';
+            ?>
             
             <div class="visible-xs">
               <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
@@ -53,12 +45,12 @@
           </div>
         </div>
 
-        <nav id="site-navigation" class="main-navigation">
-          <button class="menu-toggle" type="button" data-toggle="collapse" data-target="#mainNavMenu"
-                  aria-controls="mainNavMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <h3>Menu</h3>
+        <nav class="main-navigation">
+          <button class="menu-toggle" type="button" data-toggle="collapse" data-target="#mainMenu"
+                  aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle Navigation">
+            <p>Menu</p>
 
-            <div id="main-menu-icon" class="main-menu-icon">
+            <div class="main-menu-icon">
               <span></span>
               <span></span>
               <span></span>
@@ -66,7 +58,7 @@
             </div>
           </button>
 
-          <div class="collapse main-nav-menu" id="mainNavMenu">
+          <div class="collapse main-nav-menu" id="mainMenu">
             <?php
               wp_nav_menu( array(
                 'theme_location' => 'menu-1',
@@ -79,6 +71,6 @@
             </div>
           </div>
         </nav> 
-      </header> <?php // #masthead // ?>
+      </header>
 
       <div id="content" class="site-content">
