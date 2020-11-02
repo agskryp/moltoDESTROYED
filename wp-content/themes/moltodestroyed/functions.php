@@ -7,8 +7,9 @@ if( !function_exists( 'moltodestroyed_setup' ) ) {
     add_theme_support( 'post-thumbnails' );
 
     register_nav_menus( array(
-      'menu-1' => 'Primary',
-      'footer' => 'Footer Menu',
+      'menu-1'  => 'Primary Menu',
+      'footer'  => 'Footer Menu',
+      'privacy' => 'Privacy Menu'
     ) );
   }
 }

@@ -29,14 +29,17 @@
         </div>
 
         <div class="col-md-6">
-          <nav class="row">
-            <div class="col-xs-6 zero-cushion">
+
+
+
+          <nav class="footer-menu-container">
+            <div class="column-container">
               <h2>Explore</h2>
 
               <?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
             </div>
 
-            <div class="col-xs-6 zero-cushion connect-container">
+            <div class="column-container">
               <h2>Connect</h2>
 
               <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
@@ -44,21 +47,31 @@
           </nav>
         </div>
       </div>
-    </div> <?php // .container // ?>
-  </div> <?php // .footer-menu // ?>
+    </div>
+  </div> 
 
-  <div class="footer-info">
-    <div class="container">
-      <span class="copyright text-center">moltoDESTROYED &amp; moltodestroyed.com is Copyright &copy; 2014-2019 <a href="mailto:molto@moltodestroyed.com">molto D. stroyed</a></span>
+  <div class="copyright-container">
+    <div class="content-container">
+      <div class="copyright-column">
+        <?php 
+          echo '<span>Copyright &copy; 2014-' . date( 'Y' ) . ' moltoDESTROYED.  All rights reserved.</span>';
+        ?>
+      </div>
       
-      <span class="privacy"><a href="<?php echo esc_url( MOLTO_PRIVACY_POLICY ); ?>">Privacy Policy</a></span>
+      <div class="privacy-column">
+        <?php wp_nav_menu( array( 'theme_location' => 'privacy' ) ); ?>
+      </div>
 
-      <span class="designer text-right">Designed by <a href="<?php echo esc_url( 'http://agskryp.com' ); ?>"  target="_blank" rel="noopener">A.G. Skryp</a></span>
+      <div class="designer-column">
+        <?php 
+          echo '<span>Site by ';
+            echo '<a href="' . esc_url( 'https://agskryp.com' ) . '" target="_blank">A.G. Skryp</a>';
+          echo '</span>';
+        ?>
+      </div>
     </div>
   </div> 
 </footer>
-
-</div>
 
 <?php wp_footer(); ?>
 

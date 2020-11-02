@@ -1,0 +1,142 @@
+.site-footer {  
+
+  .footer-menu-container {
+    display: flex;
+
+    .column-container {
+      margin: 0 32px;
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+  
+      h2 {
+        font-family: 'Bangers', sans-serif;
+        letter-spacing: 2px;
+        color: $white;
+        margin: 0 0 16px;
+      }
+    }
+  }
+
+  .copyright-container {
+    background: $black;
+    padding-top: 16px;
+
+    .content-container {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: block;
+      color: $white;
+      font-size: 70%;
+      line-height: 1.2;
+      padding-bottom: 16px;
+      @media all and ( min-width: $screen-sm ) {
+        @include flex;
+        align-items: center;
+      }
+    }
+    
+    .privacy-column {
+      padding-right: 32px;
+      float: left;
+      @media all and ( min-width: $screen-sm ) {
+        @include flex-grow(1);
+        @include flex-order(1);
+      }
+
+      ul, li {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+
+      a { font-size: 70%; }
+    }
+    
+    .copyright-column {
+      display: block;
+      text-align: center;      
+      @media all and ( min-width: $screen-sm ) {
+        @include flex-grow(3);
+        @include flex-order(2);
+      }
+    }
+
+    .designer-column {
+      padding-left: 32px;
+      float: right;
+      @media all and ( min-width: $screen-sm ) {
+        @include flex-grow(1);
+        @include flex-order(3);
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+  a {
+    color: $color__link-hover;
+    display: inline-flex;
+    align-items: center;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color__link;
+      
+      svg {
+        fill: $color__link;
+      }
+    }
+    
+    svg {
+      fill: $color__link-hover;
+    }
+  }
+
+  .footer-banner {
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: .5em;
+  }
+
+  .footer-characters {
+    @include flex;
+    align-content: center;
+    justify-content: space-around;
+    
+    div {
+      width: 80px;
+      height: 80px;
+      @media all and ( min-width: $screen-sm ) {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    img {
+      max-height: 100%;
+    }
+
+    .right {
+      transform: scaleX( -1 );
+      @media all and ( min-width: $screen-lg ) {
+        transform: none;
+      }
+    }
+  }
+
+  .footer-menu {
+    background: $dark_grey;
+    border-top: 2px solid $black;
+    padding-top: 40px;
+  }  
+}

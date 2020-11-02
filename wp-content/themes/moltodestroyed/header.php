@@ -23,54 +23,48 @@
   <body <?php body_class(); ?>>
     <?php require get_template_directory() . '/partials/head/tag-manager-noscript.php'; ?>
 
-    <div>
-      <a class="screen-reader-text" href="#content">Skip to content</a>
+    <a class="screen-reader-text" href="#content">Skip to content</a>
 
-      <header class="header-container">
-        <div class="header-background text-center">
-          <div class="content-container">
-            <?php 
-              require get_template_directory() . '/partials/header-characters.php'; 
-              
-              echo '<a class="site-banner" href="' . esc_url( home_url( '/' ) ) . '" rel="home">';
-                echo '<p class="screen-reader-text">' . get_bloginfo( 'name' ) . '</p>';
-
-                if( !empty( $banner_image ) ) echo wp_get_attachment_image( $banner_image, 'medium_large' );
-              echo '</a>';
-            ?>
+    <header class="header-container">
+      <div class="header-background text-center">
+        <div class="content-container">
+          <?php 
+            require get_template_directory() . '/partials/header-characters.php'; 
             
-            <div class="visible-xs">
-              <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
-            </div>
+            echo '<a class="site-banner" href="' . esc_url( home_url( '/' ) ) . '" rel="home">';
+              echo '<p class="screen-reader-text">' . get_bloginfo( 'name' ) . '</p>';
+
+              if( !empty( $banner_image ) ) echo wp_get_attachment_image( $banner_image, 'medium_large' );
+            echo '</a>';
+          ?>
+          
+          <div class="visible-xs">
+            <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
           </div>
         </div>
+      </div>
 
-        <nav class="main-navigation">
-          <button class="menu-toggle" type="button" data-toggle="collapse" data-target="#mainMenu"
-                  aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle Navigation">
-            <p>Menu</p>
+      <nav class="main-navigation">
+        <button class="menu-toggle" type="button" data-toggle="collapse" data-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle Navigation">
+          <p>Menu</p>
 
-            <div class="main-menu-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </button>
-
-          <div class="collapse main-nav-menu" id="mainMenu">
-            <?php
-              wp_nav_menu( array(
-                'theme_location' => 'menu-1',
-                'menu_id'        => 'primary-menu',
-              ) );
-            ?>
-            
-            <div class="hidden-xs">
-              <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
-            </div>
+          <div class="main-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-        </nav> 
-      </header>
+        </button>
 
-      <div id="content">
+        <div class="collapse main-nav-menu" id="mainMenu">
+          <?php wp_nav_menu( array( 'theme_location' => 'menu-1' ) ); ?>
+          
+          <div class="hidden-xs">
+            <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
+          </div>
+        </div>
+      </nav> 
+    </header>
+
+    <div id="content">
