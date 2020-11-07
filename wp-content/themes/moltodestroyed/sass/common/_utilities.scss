@@ -43,3 +43,7 @@
 .molto-flex-center {
   @include flex-center;
 }
+
+.molto-text-center {
+  text-align: center;
+}

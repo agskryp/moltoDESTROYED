@@ -1,0 +1,35 @@
+.four04-page-container {
+  main {
+    background: $white;
+    border: 2px solid $black;
+    padding: 16px 16px 0;
+    margin-bottom: 32px;
+
+    h1 {
+      font-family: 'Bangers', sans-serif;
+      letter-spacing: 4px;
+      line-height: 1;
+      margin: 16px 0;
+      font-size: 72px;
+    }
+
+    h2 {
+      font-weight: 100;
+      font-size: 40px;
+      margin: 0 0 40px;
+    }
+
+    img {
+      &:first-of-type {
+        float: left;
+        margin: 0 16px 16px 0;
+      }
+
+      &:last-of-type {
+        float: right;
+        margin: 0 0 16px 16px;
+        transform: scaleX(-1);
+      }
+    }
+  }
+}

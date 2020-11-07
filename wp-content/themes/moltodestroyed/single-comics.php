@@ -28,7 +28,7 @@
         <div class="comic-strip-container text-center">
           <?php 
             if( !empty( $image ) ) { 
-              echo '<span class="posted-on">Posted on ' . get_the_date( 'F jS, Y' ) . '</span>';
+              echo '<span class="posted-on">Published on ' . get_the_date( 'F jS, Y' ) . '</span>';
 
               echo '<div class="placeholder-image">Loading...</div>';
             
