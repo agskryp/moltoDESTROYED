@@ -1,69 +1,46 @@
 <?php
   /**
-   * The template for displaying comments
-   *
-   * This is the template that displays the area of the page that contains both the current comments
-   * and the comment form.
-   *
-   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
-   * @package moltodestroyed
+   * The comments template
+   * 
+   * Not currently being utilized
    */
 
-  /*
-   * If the current post is protected by a password and
-   * the visitor has not yet entered the password we will
-   * return early without loading the comments.
-   */
-  if ( post_password_required() ) {
-    return;
-  }
+  if( post_password_required() ) return;
 ?>
 
-<div id="comments" class="comments-area">
-  <?php	if ( have_comments() ) : ?>
+<div>
+  <?php	
+    if( have_comments() ) { 
+      echo '<h2>';
+        $comment_count = get_comments_number();
+      
+        if( 1 === $comment_count ) printf( '1 Comment' );
+            
+        else {        
+          printf( 
+            esc_html( _nx( 
+              '%1$s Comment', '%1$s Comments', $comment_count, 'comments title', 'moltodestroyed'
+            ) ),
+            
+            number_format_i18n( $comment_count )
+          );
+        }  
+      echo '</h2>';
   
-  <h2 class="comments-title">
-    <?php
-      $comment_count = get_comments_number();
-    
-      if ( 1 === $comment_count ) {
-        /* translators: 1: title. */
-        printf( esc_html_e( '1 Comment', 'moltodestroyed' ) );
+      echo '<ol>';
+        wp_list_comments( array(
+          'style'      => 'ol',
+          'short_ping' => true,
+        ) );
+      echo '</ol>';
+
+      the_comments_navigation();
+
+      if( !comments_open() ) {
+        echo '<p>Comments are closed.</p>';
       }
-    
-      else {
-        /* translators: 1: comment count number, 2: title. */
-        printf( // WPCS: XSS OK.
-          esc_html( _nx( '%1$s Comment', '%1$s Comments', $comment_count, 'comments title', 'moltodestroyed' ) ),
-          number_format_i18n( $comment_count )
-        );
-      }
-    ?>
-  </h2>
+    }
 
-  <ol class="comment-list">
-    <?php
-      wp_list_comments( array(
-        'style'      => 'ol',
-        'short_ping' => true,
-      ) );
-    ?>
-  </ol>
-
-  <?php the_comments_navigation(); ?>
-
-  <?php // If comments are closed and there are comments, let's leave a little note, shall we?
-    if ( ! comments_open() ) :
+    comment_form();
   ?>
-    <p class="no-comments">
-      <?php esc_html_e( 'Comments are closed.', 'moltodestroyed' ); ?>
-    </p>
-  <?php
-    endif;
-  endif;
-
-  // Check for have_comments().
-  comment_form();
-  ?>
-
-</div> <?php // #comments // ?>
+</div>

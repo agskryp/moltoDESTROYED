@@ -1,6 +1,4 @@
-<?php
-  $banner_image = moltodestroyed_theme_site_option( 'header_banner_image_id', false );
-?>
+<?php $banner_image = moltodestroyed_theme_site_option( 'header_banner_image_id', false ); ?>
 
 <!doctype html>
 
