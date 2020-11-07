@@ -1,3 +1,32 @@
+
+/*--------------------------------------------------------------
+# moltotheme v1.5
+--------------------------------------------------------------*/
+@import "common/variables";
+@import "common/mixins";
+@import "common/utilities";
+@import "common/elements";
+
+@import "component/textified";
+@import "component/social-share";
+
+@import "partials/blog-navigation";
+@import "partials/comic-navigation";
+@import "partials/footer";
+@import "partials/header";
+
+@import "templates/404-page";
+@import "templates/blog-post";
+@import "templates/blog-page";
+@import "templates/comic-post";
+@import "templates/default-page";
+
+
+
+
+
+
+
 /*!
 Theme Name: moltodestroyed
 Theme URI: https://underscores.me/
@@ -40,81 +69,62 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Initalize
 --------------------------------------------------------------*/
-@import "normalize";
-@import "common/colors";
-@import "common/columns";
-@import "common/mixins";
-@import "common/structure";
-@import "common/typography";
-@import "common/utilities";
+@import "aasass/normalize";
+@import "aasass/common/colors";
+@import "aasass/common/columns";
+@import "aasass/common/mixins";
+@import "aasass/common/structure";
+@import "aasass/common/typography";
+@import "aasass/common/utilities";
 
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-@import "typography/typography";
+@import "aasass/typography/typography";
 
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-@import "elements/elements";
+@import "aasass/elements/elements";
 
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-@import "forms/forms";
+@import "aasass/forms/forms";
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-@import "navigation/navigation";
+@import "aasass/navigation/navigation";
 
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
-@import "modules/accessibility";
+@import "aasass/modules/accessibility";
 
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-@import "modules/alignments";
+@import "aasass/modules/alignments";
 
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-@import "modules/clearings";
+@import "aasass/modules/clearings";
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-@import "site/site";
+@import "aasass/site/site";
 
 /*--------------------------------------------------------------
 # Misc
 --------------------------------------------------------------*/
-@import "misc/plugins";
-@import "misc/share-buttons";
-@import "misc/ads";
-@import "misc/wp-editor";
+@import "aasass/misc/plugins";
+@import "aasass/misc/share-buttons";
+@import "aasass/misc/ads";
+@import "aasass/misc/wp-editor";
 
 
-
-/*--------------------------------------------------------------
-# moltotheme v1.5
---------------------------------------------------------------*/
-@import "common/variables";
-@import "common/elements";
-
-@import "component/textified";
-@import "component/social-share";
-
-@import "partials/blog-navigation";
-@import "partials/comic-navigation";
-@import "partials/footer";
-@import "partials/header";
-
-@import "templates/404-page";
-@import "templates/blog-post";
-@import "templates/blog-page";
-@import "templates/comic-post";
-@import "templates/default-page";
+@import "aasass/misc/header-characters";

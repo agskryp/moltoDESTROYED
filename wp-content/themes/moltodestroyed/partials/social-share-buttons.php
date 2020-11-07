@@ -3,8 +3,8 @@
     <h3>Share!</h3>
 
     <a class="social-share-button" target="popupTwitter"
-      onclick="PopupCenter( '', 'popupTwitter', '600', '360' );" title="Share on Twitter"
-      href="https://twitter.com/intent/tweet?text=Check out the comic &#39;<?php echo get_the_title(); ?>&#39; by @moltoDESTROYED : <?php echo get_permalink(); ?>">
+       onclick="PopupCenter( '', 'popupTwitter', '600', '360' );" title="Share on Twitter"
+       href="https://twitter.com/intent/tweet?text=Check out the comic &#39;<?php echo get_the_title(); ?>&#39; by @moltoDESTROYED : <?php echo get_permalink(); ?>">
       <span class="sr-only">Share on Twitter</span>
 
       <svg width="24" height="24" viewBox="0 0 24 24">

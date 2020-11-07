@@ -4,7 +4,7 @@
   if( !empty( $textified ) ) {
 ?>
   <div class="textified-container">
-    <button class="flex-center">
+    <button class="molto-flex-center">
       <span>Read the text version</span>
 
       <svg width="12" height="12" viewBox="0 0 24 24">
@@ -12,7 +12,7 @@
       </svg>
     </button>
 
-    <div class="textified-text-container text-left sr-only">
+    <div class="textified-text-container molto-sr-text">
       <?php echo wpautop( $textified ); ?>
     </div>
   </div>

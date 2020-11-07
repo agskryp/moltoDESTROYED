@@ -31,7 +31,7 @@ function blockerMessage() {
         
     // Toggle comic texted version button
     button.addEventListener( 'click', function () {
-      textified.classList.toggle( 'sr-only' );
+      textified.classList.toggle( 'molto-sr-text' );
       arrow.classList.toggle( 'flip' );
 
       if( text.innerHTML === "Close the text version" ) {

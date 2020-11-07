@@ -1,6 +1,5 @@
 .textified-container {
   max-width: 500px;
-  width: 100%;
   margin: 0 auto;
 
   button {
@@ -11,18 +10,14 @@
     font-weight: 600;
     background: $black;
     color: $white;
-    padding: 8px 16px;
     border-radius: 4px;
     font-size: 80%;
 
-    &:hover,
-    &:focus {
-      background: $grey;
-    }
-    
+    &:hover { background: $grey; }
     &:focus {
       outline: 1px dotted $white;
       outline-offset: -2px;
+      background: $grey;
     }
     
     svg {
@@ -30,9 +25,7 @@
       fill: $white;
       margin-left: 8px;
 
-      &.flip {
-        transform: rotate( 270deg );
-      }
+      &.flip { transform: rotate( 270deg ); }
     }
   }
 
@@ -40,18 +33,19 @@
     padding: 16px;
     border: 2px dashed $black;
     margin: 32px 0;
+    text-align: left;
 
     h3 {
       font-family: 'Bangers', sans-serif;
       letter-spacing: 2px;
-      font-size: 32px;
+      font-size: 40px;
       margin: 0;
     }
     
     p {
-      margin: 16px 0 0;
-      font-size: 90%;
-      line-height: 24px;
+      margin: 24px 0 0;
+      font-size: 20px;
+      line-height: 28px;
     }
     
     hr {

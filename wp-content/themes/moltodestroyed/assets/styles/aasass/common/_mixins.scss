@@ -1,0 +1,81 @@
+// Rem output with px fallback
+@mixin font-size( $sizeValue: 1 ) {
+  font-size: ( $sizeValue * 16 ) * 1px;
+  font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+  clear: both;
+}
+
+// Transition speed for mobile menu icon
+@mixin transform-menu-speed() {
+  -webkit-transition: .35s ease-in-out;
+  -moz-transition: .35s ease-in-out;
+  -o-transition: .35s ease-in-out;
+  transition: .35s ease-in-out;
+}
+
+// Transform support for rotate
+@mixin transform-rotate( $value ) {
+  -webkit-transform: rotate( $value );
+  -moz-transform: rotate( $value );
+  -o-transform: rotate( $value );
+  transform: rotate( $value );
+}
+
+// Flex support for older browsers
+@mixin flex {
+  display: -webkit-box;                /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;                   /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;                /* TWEENER - IE 10 */
+  display: -webkit-flex;               /* NEW - Chrome */
+  display: flex;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+// Flex's order support for older browsers
+@mixin flex-order( $value ) {
+  -webkit-box-ordinal-group: $value;   /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-ordinal-group: $value;      /* OLD - Firefox 19- */
+  -ms-flex-order: $value;              /* TWEENER - IE 10 */
+  -webkit-order: $value;               /* NEW - Chrome */
+  order: $value;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+// Flex's grow value support for older browsers
+@mixin flex-grow( $value ) {
+  -webkit-box-flex: $value;            /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: $value;               /* OLD - Firefox 19- */
+  -webkit-flex: $value;                /* Chrome */
+  -ms-flex: $value;                    /* IE 10 */
+  flex: $value;                        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+// Display content to be flex-end
+@mixin flex-end {
+  @include flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+// Display content to be flex-center
+@mixin flex-center {
+  @include flex;
+  align-items: center;
+  justify-content: center;
+}

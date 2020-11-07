@@ -38,9 +38,9 @@ a.site-banner {
     &:focus {
       text-decoration: none;
      
-      svg {
-        fill: $color__link;
-      }
+      // svg {
+      //   fill: $color__link;
+      // }
     }
 
     svg {
@@ -56,4 +56,4 @@ a.site-banner {
 
 
 
-@import "misc/header-characters";
+

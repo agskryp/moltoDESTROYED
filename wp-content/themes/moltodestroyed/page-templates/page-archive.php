@@ -22,7 +22,13 @@
           ) );
 
           foreach( $recent_posts as $recent ) {
-            require get_template_directory() . '/partials/sidebar-loop-tmp.php'; 
+            // require get_template_directory() . '/partials/sidebar-loop-tmp.php'; 
+
+            ?>
+            <li>
+              <a href="<?php echo get_permalink( $recent[ 'ID' ] ); ?>"><?php echo $recent[ "post_title" ]; ?></a>
+            </li>
+            <?php
           }
         ?>
         </ul>
@@ -40,7 +46,12 @@
             ) );
 
             foreach( $recent_posts as $recent ) {
-              require get_template_directory() . '/partials/sidebar-loop-tmp.php'; 
+              // require get_template_directory() . '/partials/sidebar-loop-tmp.php'; 
+              ?>
+<li>
+  <a href="<?php echo get_permalink( $recent[ 'ID' ] ); ?>"><?php echo $recent[ "post_title" ]; ?></a>
+</li>
+              <?php
             }
           ?>
         </ul>
