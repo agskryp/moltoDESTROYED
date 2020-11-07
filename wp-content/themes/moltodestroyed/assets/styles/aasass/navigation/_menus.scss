@@ -77,6 +77,10 @@
           color: $color__link-hover;
           background: transparent;
         }
+
+        svg {
+          color: $color__link-hover;
+        }
       }
     }
   }
@@ -86,13 +90,14 @@
     text-decoration: none;
     text-transform: uppercase;
     color: $color__text-main;
-    &:visited {
-      color: $color__text-main;
-    }
     
     &:hover,
     &:focus {
       color: $color__link-hover;
+
+      svg {
+        fill: $color__link-hover;
+      }
     }
   }
 }
@@ -156,6 +161,7 @@
     display: flex;
     height: auto !important;
     justify-content: center;
+    align-items: center;
   }  
   
   &.in {

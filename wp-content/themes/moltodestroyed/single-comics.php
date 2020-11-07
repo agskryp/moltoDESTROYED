@@ -42,7 +42,7 @@
         <?php
           require get_template_directory() . '/partials/comic-navigation.php';
 
-          require_once get_template_directory() . '/partials/social-share-buttons.php';
+          require_once get_template_directory() . '/partials/share-buttons.php';
         ?>
       </article>
     <?php } ?>

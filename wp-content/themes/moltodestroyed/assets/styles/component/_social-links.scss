@@ -1,18 +1,9 @@
-.social-container {
+div.social-container {
   @include flex-center;
   
   a {
-    // padding: 10px 12px 2px;
+    display: flex;
     margin: 0 16px;
-    text-decoration: none;
-    &:hover,
-    &:focus {
-      text-decoration: none;
-     
-      svg {
-        fill: $black;
-      }
-    }
 
     svg {
       height: 22px;
