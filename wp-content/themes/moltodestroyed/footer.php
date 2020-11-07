@@ -29,7 +29,7 @@
         <div class="column-container">
           <h2>Connect</h2>
 
-          <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
+          <?php require get_template_directory() . '/partials/social-links.php'; ?>
         </div>
       </nav>
     </div>

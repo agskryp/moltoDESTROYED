@@ -14,29 +14,29 @@ a.site-banner {
   }
 }
 
-.social-container {
-  a {
-    padding: 10px 12px 2px;
-    text-decoration: none;
-    &:hover,
-    &:focus {
-      text-decoration: none;
+// .social-container {
+//   a {
+//     padding: 10px 12px 2px;
+//     text-decoration: none;
+//     &:hover,
+//     &:focus {
+//       text-decoration: none;
      
-      svg {
-        fill: $color__link;
-      }
-    }
+//       svg {
+//         fill: $color__link;
+//       }
+//     }
 
-    svg {
-      height: 22px;
-      width: 22px;
-      @media all and ( min-width: $screen-xs ) {
-        height: 26px;
-        width: 26px;
-      }
-    }
-  }
-}
+//     svg {
+//       height: 22px;
+//       width: 22px;
+//       @media all and ( min-width: $screen-xs ) {
+//         height: 26px;
+//         width: 26px;
+//       }
+//     }
+//   }
+// }
 
 // .site-branding {
 //   background: $white;

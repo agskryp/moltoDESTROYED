@@ -37,7 +37,7 @@
           ?>
           
           <div class="visible-xs">
-            <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
+            <?php require get_template_directory() . '/partials/social-links.php'; ?>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@
           <?php wp_nav_menu( array( 'theme_location' => 'menu-1' ) ); ?>
           
           <div class="hidden-xs">
-            <?php require get_template_directory() . '/partials/header-social-container.php'; ?>
+            <?php require get_template_directory() . '/partials/social-links.php'; ?>
           </div>
         </div>
       </nav> 
