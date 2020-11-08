@@ -46,11 +46,7 @@ function moltodestroyed_scripts() {
     );
   }
   
-  // JS
-//  wp_enqueue_script( 
-//    'jquery-1-12-4',  'https://code.jquery.com/jquery-1.12.4.min.js', array(), '1.12.4', false
-//  );
-  
+  // JS  
   wp_enqueue_script( 
     'jquery-3-4-1',  get_template_directory_uri() . '/js/jquery-3-4-1.js', array(), '3.4.1', false
   );
@@ -96,6 +92,24 @@ function moltodestroyed_scripts() {
   }
 }
 add_action( 'wp_enqueue_scripts', 'moltodestroyed_scripts' );
+
+
+
+// Register the script
+wp_register_script( 'some_handle', get_template_directory_uri() . '/js/extra.js' );
+ 
+// Localize the script with new data
+$config = array(
+    // 'some_string' => __( 'Some string to translate', 'plugin-domain' ),
+    // 'a_value' => '10',
+    'themeDirectory' => get_template_directory_uri(),
+    'thing' => 'bwahaha!'
+);
+wp_localize_script( 'some_handle', 'moltoConfig', $config );
+ 
+// Enqueued script with localized data.
+wp_enqueue_script( 'some_handle' );
+
 
 
 

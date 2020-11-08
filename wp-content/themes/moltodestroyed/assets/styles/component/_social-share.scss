@@ -1,42 +1,30 @@
-.social-share-background {
+.social-share-container {
+  @include flex-center();
   background: $black;
-  padding: 16px;
-  margin-top: 32px;
-  
-  .social-share-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: $black;
-    justify-content: space-between;
+  padding: 16px 40px;
+  margin: 32px auto 0;
+  justify-content: space-between;
     
-    h3 {
-      font-family: 'Bangers', sans-serif;
-      letter-spacing: 2px;
-      color: $white;
-      font-size: 24px;
-      display: block;
-      margin: 0;
-      @media all and ( min-width: 450px ) {
-        display: inline-block;
-      }
+  h3 {
+    font-family: 'Bangers', sans-serif;
+    letter-spacing: 2px;
+    color: $white;
+    font-size: 30px;
+    display: block;
+    margin: 0;
+    @media all and ( min-width: 450px ) {
+      display: inline-block;
     }
+  }
 
-    .social-share-button {
-      background: none;
-      display: inherit;
+  .social-share-button {
+    display: flex;
 
-      &:hover,
-      &:focus {
-        svg {
-          fill: $grey;
-        }
-      }
+    svg { fill: $white; }
 
-      svg {
-        fill: $white;
-        width: 32px;
-        height: 32px;
-      }
-    }
+    &:hover,
+    &:focus {
+      svg { fill: $grey; }
+    }    
   }
 }

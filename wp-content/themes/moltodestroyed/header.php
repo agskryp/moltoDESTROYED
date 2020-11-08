@@ -7,19 +7,23 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png" />
-    <?php
-      require get_template_directory() . '/partials/head/config.php'; 
-      
-      wp_head();
-    ?>  
+    <?php wp_head(); ?>  
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64750314-1"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
             onerror="blockerMessage();"></script>
-    <?php require get_template_directory() . '/partials/head/google-scripts.php'; ?>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({ 
+        google_ad_client: "ca-pub-5942635838820429", enable_page_level_ads: true 
+      });
+    </script>
   </head>
 
   <body <?php body_class(); ?>>
-    <?php require get_template_directory() . '/partials/head/tag-manager-noscript.php'; ?>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCG5RNG"
+              height="0" width="0" style="display:none;visibility:hidden">
+      </iframe>
+    </noscript> 
 
     <a class="screen-reader-text" href="#content">Skip to content</a>
 
