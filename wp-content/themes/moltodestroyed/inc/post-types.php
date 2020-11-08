@@ -54,5 +54,4 @@ function comics_post_type() {
 
   register_post_type( 'comics', $args );
 }
-
 add_action( 'init', 'comics_post_type', 0 );

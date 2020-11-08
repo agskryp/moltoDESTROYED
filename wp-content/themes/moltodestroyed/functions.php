@@ -96,19 +96,16 @@ add_action( 'wp_enqueue_scripts', 'moltodestroyed_scripts' );
 
 
 // Register the script
-wp_register_script( 'some_handle', get_template_directory_uri() . '/js/extra.js' );
+wp_register_script( 'js_config', get_template_directory_uri() . '/js/extra.js' );
  
 // Localize the script with new data
 $config = array(
-    // 'some_string' => __( 'Some string to translate', 'plugin-domain' ),
-    // 'a_value' => '10',
     'themeDirectory' => get_template_directory_uri(),
-    'thing' => 'bwahaha!'
 );
-wp_localize_script( 'some_handle', 'moltoConfig', $config );
+wp_localize_script( 'js_config', 'moltoConfig', $config );
  
 // Enqueued script with localized data.
-wp_enqueue_script( 'some_handle' );
+wp_enqueue_script( 'js_config' );
 
 
 

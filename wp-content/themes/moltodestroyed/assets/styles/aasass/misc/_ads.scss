@@ -55,11 +55,10 @@ ins.adsbygoogle,
   clear: both;
   position: relative;
   margin: 0 auto;
+  min-height: 90px;
+  margin-bottom: 32px;
+  
   &::before {
     @include global-ad-settings( "Promo by Comic Rocket", $color__link );
-  }
-  
-  img {
-    margin: 0 0 $grid-padding;
   }
 }
