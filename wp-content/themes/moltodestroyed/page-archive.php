@@ -1,6 +1,6 @@
 <?php
   /** 
-   *  Template Name: Archive Page
+   *  Template Name: Archive template
    */
 
   $comic_posts = get_posts( array( 
@@ -52,6 +52,8 @@
       </ul>
     </div>
   </div>
+
+  <?php require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>
 </main>
 
 <?php 

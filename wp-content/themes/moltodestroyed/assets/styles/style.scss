@@ -7,7 +7,7 @@
 @import "common/utilities";
 @import "common/elements";
 
-
+@import "component/ad-blocker";
 @import "component/social-links";
 @import "component/social-share";
 @import "component/textified";
@@ -17,6 +17,9 @@
 @import "partials/footer";
 @import "partials/header-characters";
 @import "partials/header";
+
+@import "plugins/contact-form";
+@import "plugins/instagram";
 
 @import "templates/404-page";
 @import "templates/archive-page";
