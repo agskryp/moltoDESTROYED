@@ -30,7 +30,9 @@ function moltodestroyed_theme_options_metabox() {
     'preview_size' => 'small', // Image size to use when previewing in the admin.
   ) );
 
-    /************************************ 
+
+
+  /************************************ 
    * Site Footer
    ************************************/ 
   $cmb_options -> add_field( array(
@@ -51,10 +53,6 @@ function moltodestroyed_theme_options_metabox() {
   ) );
 }
 add_action( 'cmb2_admin_init', 'moltodestroyed_theme_options_metabox' );
-
-
-
-
 
 
 

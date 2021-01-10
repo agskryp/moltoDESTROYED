@@ -48,14 +48,14 @@
       'preview_size' => 'medium',
     ) );
 
-  $cmb2 ->  add_field( array (
-    'name'    => 'Textify Comic',
-    'desc'    => 'Use &lt;h3&gt; for heading, &lt;p&gt; for content, &lt;hr /&gt; for panel break.',
-    'id'      => 'textify_comic',
-    'type'    => 'wysiwyg',
-    'options' => array(
-      'media_buttons' => false, 
-    ),
-  ) );  
-}
-add_action( 'cmb2_admin_init', 'comic_template_metaboxes' );
+    $cmb2 ->  add_field( array (
+      'name'    => 'Textify Comic',
+      'desc'    => 'Use &lt;h3&gt; for heading, &lt;p&gt; for content, &lt;hr /&gt; for panel break.',
+      'id'      => 'textify_comic',
+      'type'    => 'wysiwyg',
+      'options' => array(
+        'media_buttons' => false, 
+      ),
+    ) );  
+  }
+  add_action( 'cmb2_admin_init', 'comic_template_metaboxes' );
