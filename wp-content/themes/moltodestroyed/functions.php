@@ -110,9 +110,6 @@ wp_enqueue_script( 'js_config' );
 
 
 
-require get_template_directory() . '/inc/template-tags.php';        // Custom template tags for this theme.
-require get_template_directory() . '/inc/template-functions.php';    // Functions which enhance the theme.
-require get_template_directory() . '/inc/customizer.php';                 // Customizer additions.
 require get_template_directory() . '/inc/character-image-randomizer.php'; // Choose a random character image
 require get_template_directory() . '/inc/constants.php';                  // Import PHP constants
 require get_template_directory() . '/inc/post-types.php';                 // Import custom post types
