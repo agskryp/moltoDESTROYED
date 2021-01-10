@@ -45,7 +45,7 @@
         <?php
           foreach( $blog_posts as $blog_post ) {
             echo '<li>';
-              echo '<a href="' . get_permalink( $blog -> ID )  . '">' . $blog_post -> post_title . '</a>';
+              echo '<a href="' . get_permalink( $blog_post -> ID )  . '">' . $blog_post -> post_title . '</a>';
             echo '</li>';
           }
         ?>
