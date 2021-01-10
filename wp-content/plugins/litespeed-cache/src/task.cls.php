@@ -9,8 +9,7 @@ namespace LiteSpeed;
 
 defined( 'WPINC' ) || exit;
 
-class Task extends Instance
-{
+class Task extends Instance {
 	protected static $_instance;
 
 	private static $_triggers = array(
@@ -31,8 +30,7 @@ class Task extends Instance
 	 * @since  1.6
 	 * @access protected
 	 */
-	protected function __construct()
-	{
+	protected function __construct() {
 	}
 
 	/**
@@ -41,8 +39,7 @@ class Task extends Instance
 	 * @since 3.0
 	 * @access public
 	 */
-	public function init()
-	{
+	public function init() {
 		Debug2::debug2( '⏰ Task init' );
 
 		add_filter( 'cron_schedules', array( $this, 'lscache_cron_filter' ) );
@@ -76,8 +73,7 @@ class Task extends Instance
 	 * @since 3.0
 	 * @access public
 	 */
-	public static function destroy()
-	{
+	public static function destroy() {
 		Utility::compatibility();
 		array_map( 'wp_clear_scheduled_hook', array_column( self::$_triggers, 'name' ) );
 	}
@@ -88,17 +84,16 @@ class Task extends Instance
 	 * @since 3.0
 	 * @access public
 	 */
-	public static function try_clean( $id )
-	{
+	public static function try_clean( $id ) {
 		// Clean v2's leftover cron ( will remove in v3.1 )
-		foreach ( wp_get_ready_cron_jobs() as $hooks ) {
-			foreach ( $hooks as $hook => $v ) {
-				if ( strpos( $hook, 'litespeed_' ) === 0 && ( substr( $hook, -8 ) === '_trigger' || strpos( $hook, 'litespeed_task_' ) !== 0 ) ) {
-					Debug2::debug( '⏰ Cron clear legacy [hook] ' . $hook );
-					wp_clear_scheduled_hook( $hook );
-				}
-			}
-		}
+		// foreach ( wp_get_ready_cron_jobs() as $hooks ) {
+		// 	foreach ( $hooks as $hook => $v ) {
+		// 		if ( strpos( $hook, 'litespeed_' ) === 0 && ( substr( $hook, -8 ) === '_trigger' || strpos( $hook, 'litespeed_task_' ) !== 0 ) ) {
+		// 			Debug2::debug( '⏰ Cron clear legacy [hook] ' . $hook );
+		// 			wp_clear_scheduled_hook( $hook );
+		// 		}
+		// 	}
+		// }
 
 		if ( $id && ! empty( self::$_triggers[ $id ] ) ) {
 			if ( ! Conf::val( $id ) || ( $id == Base::O_CRAWLER && ! Router::can_crawl() ) ) {
@@ -117,8 +112,7 @@ class Task extends Instance
 	 * @since 1.6.1
 	 * @access public
 	 */
-	public function lscache_cron_filter( $schedules )
-	{
+	public function lscache_cron_filter( $schedules ) {
 		if ( ! array_key_exists( self::FITLER, $schedules ) ) {
 			$schedules[ self::FITLER ] = array(
 				'interval' => 60,
@@ -134,8 +128,7 @@ class Task extends Instance
 	 * @since 1.1.0
 	 * @access public
 	 */
-	public function lscache_cron_filter_crawler( $schedules )
-	{
+	public function lscache_cron_filter_crawler( $schedules ) {
 		$interval = Conf::val( Base::O_CRAWLER_RUN_INTERVAL );
 		// $wp_schedules = wp_get_schedules();
 		if ( ! array_key_exists( self::FITLER_CRAWLER, $schedules ) ) {
