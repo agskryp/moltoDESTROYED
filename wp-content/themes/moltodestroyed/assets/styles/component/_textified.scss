@@ -25,7 +25,9 @@
       fill: $white;
       margin-left: 8px;
 
-      &.flip { transform: rotate( 270deg ); }
+      &.flip {
+        transform: rotate( 270deg );
+      }
     }
   }
 

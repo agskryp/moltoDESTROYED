@@ -1,4 +1,4 @@
-<div class="header-characters">
+<div class="header-characters-container">
   <div class="large far-far-left">
     <?php require get_template_directory() . '/partials/random-character-image.php'; ?>
   </div>

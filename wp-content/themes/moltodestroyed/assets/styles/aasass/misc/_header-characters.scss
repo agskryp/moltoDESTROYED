@@ -1,191 +1,191 @@
-.header-characters {  
-  div {
-    position: absolute;
-  }
+// .header-characters {  
+//   div {
+//     position: absolute;
+//   }
 
-  img {
-    max-height: 100%;
-  }
+//   img {
+//     max-height: 100%;
+//   }
 
-  .small {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    z-index: 16;
-    @media all and ( min-width: $screen-xs ) {
-      width: 65px;
-      height: 65px;
-    }
+//   .small {
+//     width: 60px;
+//     height: 60px;
+//     position: absolute;
+//     z-index: 16;
+//     @media all and ( min-width: $screen-xs ) {
+//       width: 65px;
+//       height: 65px;
+//     }
 
-    @media all and ( min-width: $screen-sm ) {
-      width: 70px;
-      height: 70px;
-    }
+//     @media all and ( min-width: $screen-sm ) {
+//       width: 70px;
+//       height: 70px;
+//     }
 
-    @media all and ( min-width: $screen-ms ) {
-      width: 80px;
-      height: 80px;
-    }
-  }
+//     @media all and ( min-width: $screen-ms ) {
+//       width: 80px;
+//       height: 80px;
+//     }
+//   }
 
-  .center-left {
-    left: 0;
-    top: 44%;
-    @media all and ( min-width: $screen-xs ) {
-      left: 1%;
-    }
+//   .center-left {
+//     left: 0;
+//     top: 44%;
+//     @media all and ( min-width: $screen-xs ) {
+//       left: 1%;
+//     }
 
-    @media all and ( min-width: $screen-sm ) {
-      left: 3%;
-      top: 48%;
-    }
+//     @media all and ( min-width: $screen-sm ) {
+//       left: 3%;
+//       top: 48%;
+//     }
 
-    @media all and ( min-width: $screen-ms ) {
-      left: 5%;
-      top: 53%;
-    }
+//     @media all and ( min-width: $screen-ms ) {
+//       left: 5%;
+//       top: 53%;
+//     }
 
-    @media all and ( min-width: $screen-md ) {
-      left: 3%;
-      top: 60%;
-    }
+//     @media all and ( min-width: $screen-md ) {
+//       left: 3%;
+//       top: 60%;
+//     }
 
-    @media all and ( min-width: $screen-lg ) {
-      top: 62%;
-      left: 15%;
-    }
+//     @media all and ( min-width: $screen-lg ) {
+//       top: 62%;
+//       left: 15%;
+//     }
 
-    @media all and ( min-width: $screen-xl ) {
-      left: 21%;
-    }
-  }
+//     @media all and ( min-width: $screen-xl ) {
+//       left: 21%;
+//     }
+//   }
 
-  .center {
-    top: -29px;
-    left: 39%;
-    @media all and ( min-width: $screen-sm ) {
-      top: -20px;
-      left: 41%;
-    }
+//   .center {
+//     top: -29px;
+//     left: 39%;
+//     @media all and ( min-width: $screen-sm ) {
+//       top: -20px;
+//       left: 41%;
+//     }
 
-    @media all and ( min-width: $screen-md ) {
-      top: -5px;
-      left: 43%;
-    }
+//     @media all and ( min-width: $screen-md ) {
+//       top: -5px;
+//       left: 43%;
+//     }
 
-    @media all and ( min-width: $screen-lg ) {
-      left: 44%;
-    }
+//     @media all and ( min-width: $screen-lg ) {
+//       left: 44%;
+//     }
 
-    @media all and ( min-width: $screen-xl ) {
-      left: 45%;
-    }
-  }
+//     @media all and ( min-width: $screen-xl ) {
+//       left: 45%;
+//     }
+//   }
 
-  .center-right {
-    top: 41%;
-    right: 5%;
-    @media all and ( min-width: $screen-xs ) {
-      top: 43%;
-    }
+//   .center-right {
+//     top: 41%;
+//     right: 5%;
+//     @media all and ( min-width: $screen-xs ) {
+//       top: 43%;
+//     }
 
-    @media all and ( min-width: $screen-sm ) {
-      top: 47%
-    }
+//     @media all and ( min-width: $screen-sm ) {
+//       top: 47%
+//     }
 
-    @media all and ( min-width: $screen-md ) {
-      top: 55%;
-    }
+//     @media all and ( min-width: $screen-md ) {
+//       top: 55%;
+//     }
 
-    @media all and ( min-width: $screen-lg ) {
-      right: 17%;
-    }
+//     @media all and ( min-width: $screen-lg ) {
+//       right: 17%;
+//     }
 
-    @media all and ( min-width: $screen-xl ) {
-      right: 24%;
-    }
-  }
+//     @media all and ( min-width: $screen-xl ) {
+//       right: 24%;
+//     }
+//   }
 
-  .large {
-    width: 200px;
-    height: 200px;
-    display: none;
-    text-align: right;
-    @media all and ( min-width: $screen-lg ) {
-      display: block;
-    }
-  }
+//   .large {
+//     width: 200px;
+//     height: 200px;
+//     display: none;
+//     text-align: right;
+//     @media all and ( min-width: $screen-lg ) {
+//       display: block;
+//     }
+//   }
 
-  .far-right,
-  .far-left {
-    display: none;
-    @media all and ( min-width: $screen-xl ) {
-      @include flex-end;
-    }
-  }
+//   .far-right,
+//   .far-left {
+//     display: none;
+//     @media all and ( min-width: $screen-xl ) {
+//       @include flex-end;
+//     }
+//   }
   
-  .far-far-left,
-  .far-far-right {
-    display: none;
-    @media all and ( min-width: $screen-xg ) {
-      display: block;
-    }
-  }
+//   .far-far-left,
+//   .far-far-right {
+//     display: none;
+//     @media all and ( min-width: $screen-xg ) {
+//       display: block;
+//     }
+//   }
 
-  .right,
-  .far-right,
-  .far-far-right,
-  .center-right {
-    transform: scaleX( -1 );
-  }
+//   .right,
+//   .far-right,
+//   .far-far-right,
+//   .center-right {
+//     transform: scaleX( -1 );
+//   }
 
-  .far-far-left {
-    top: 6%;
-    left: -237px;
-    z-index: 2;
-  }
+//   .far-far-left {
+//     top: 6%;
+//     left: -237px;
+//     z-index: 2;
+//   }
 
-  .far-left {
-    top: 17%;
-    left: -108px;
-    z-index: 3;
-  }
+//   .far-left {
+//     top: 17%;
+//     left: -108px;
+//     z-index: 3;
+//   }
 
-  .left {
-    top: 3%;
-    left: -94px;
-    @media all and ( min-width: $screen-xl ) {
-      left: 8px;
-    }
-  }
+//   .left {
+//     top: 3%;
+//     left: -94px;
+//     @media all and ( min-width: $screen-xl ) {
+//       left: 8px;
+//     }
+//   }
 
-  .right {
-    top: 16%;
-    right: -94px;
-    z-index: 2;
-    display: none;
-    @media all and ( min-width: $screen-lg ) {
-      @include flex-end;
-    }
+//   .right {
+//     top: 16%;
+//     right: -94px;
+//     z-index: 2;
+//     display: none;
+//     @media all and ( min-width: $screen-lg ) {
+//       @include flex-end;
+//     }
     
-    @media all and ( min-width: $screen-xl ) {
-      right: 0;
-    }
-  }
+//     @media all and ( min-width: $screen-xl ) {
+//       right: 0;
+//     }
+//   }
 
-  .far-right {
-    top: 1%;
-    right: -123px;
-    align-items: flex-start;
-  }
+//   .far-right {
+//     top: 1%;
+//     right: -123px;
+//     align-items: flex-start;
+//   }
 
-  .far-far-right {
-    top: 13%;
-    right: -238px;
-    z-index: 2;
-    display: none;
-    @media all and ( min-width: $screen-xg ) {
-      @include flex-end;
-    }
-  }
-}
+//   .far-far-right {
+//     top: 13%;
+//     right: -238px;
+//     z-index: 2;
+//     display: none;
+//     @media all and ( min-width: $screen-xg ) {
+//       @include flex-end;
+//     }
+//   }
+// }
