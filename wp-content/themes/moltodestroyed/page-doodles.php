@@ -1,6 +1,6 @@
 <?php
   /** 
-   *  Template Name: Default ads template
+   *  Template Name: Doodles template
    */
 
   get_header();
@@ -8,18 +8,14 @@
   require_once get_template_directory() . '/partials/ads/top-of-main-area.php';
 ?>
 
-<main class="default-page-container molto-container">
-  <div class="">
-  
-      <div class=" ">
-      <?php
-
-      while( have_posts() ) {
-        the_post();
-    ?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class( ); ?>>
+<main class="default-page-container">
+  <?php
+    while( have_posts() ) {
+      the_post();
+  ?>
+    <article <?php post_class( ); ?>>
         <?php
-          the_title( '<header><h1 class="page-title text-center">', '</h1></header>' ); 
+          the_title( '<h1 class="page-title">', '</h1>' ); 
           
           if( has_post_thumbnail() ) { 
             echo '<div class="feature-image-container">';

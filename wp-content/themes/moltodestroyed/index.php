@@ -8,28 +8,24 @@
   if( !empty( get_next_posts_link() ) ) {
     $older = get_next_posts_link( 
       '<span class="blog-nav-arrow">&larr;</span>' . 
-  
-      '<div class="blog-text-container">' .
-        '<span class="title">View older posts</span>' .
-      '</div>'
+      '<span class="title">View older posts</span>'
     );
   }
 
   $newer = get_previous_posts_link(
-    '<div class="blog-text-container text-right">' .
-      '<span class="title">View newer posts</span>' . 
-    '</div>' .
-
+    '<span class="title">View newer posts</span>' . 
     '<span class="blog-nav-arrow">&rarr;</span>'
   );
 
   get_header();
+
+  require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; 
 ?>
 
-<div class="blog-page-container">
-  <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
+<div class="blog-page-container molto-container">
+  <?php ?>
 
-  <main class="blog-posts-list narrow-container">
+  <main class="blog-posts-list">
     <header class="blog-page-header">
       <h1 class="text-center"><?php single_post_title() ?></h1>
     </header>
@@ -68,11 +64,7 @@
 
       if( $GLOBALS[ 'wp_query' ] -> max_num_pages > 1 ) {      
         if( $older || $newer ) {
-          echo _navigation_markup( 
-            '<div>' . $older . '</div><div>' . $newer . '</div>',
-            'blog-page-navigation-container',
-            'Post Navigation'
-          );
+          echo '<div style="display: flex; justify-content: space-between;">' . $older . $newer . '</div>';
         }
       }
     ?>

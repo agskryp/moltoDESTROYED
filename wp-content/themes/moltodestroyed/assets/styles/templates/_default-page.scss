@@ -1,22 +1,21 @@
 .default-page-container {
-  article {
-    background: $white;
-    border: 2px solid $black;
-    padding: 16px 16px 0;
-    margin-bottom: 32px;
+  margin-bottom: 42px;
 
-    .page-title {
-      font-family: 'Bangers', sans-serif;
-      letter-spacing: 4px;
-      line-height: 1;
-      margin: 8px 0 24px;
-      font-size: 72px;
-    }
+  .page-title {
+    font-family: 'Bangers', sans-serif;
+    letter-spacing: 6px;
+    line-height: 1;
+    margin: 42px 0 36px;
+    font-size: 72px;
+    text-align: center;
+  }
 
-    .feature-image-container {
+  .feature-image-container {
+    margin: 36px auto;
+    text-align: center;
+
+    img {
       border: 2px solid $black;
-      box-shadow: 0 0 4px $black;
-      margin: 0 auto 24px;
     }
-  }  
+  }
 }

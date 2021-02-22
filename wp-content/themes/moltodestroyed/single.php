@@ -58,7 +58,7 @@
             }
           
             echo '<div class="content-container">';
-              the_content( );
+              the_content();
             echo '</div>';
 
             if( $previous || $next ) {
@@ -73,6 +73,7 @@
       </article>
     <?php } ?>
   </main>
+
   <?php require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>
 </div>
 

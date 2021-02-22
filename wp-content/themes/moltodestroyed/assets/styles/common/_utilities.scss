@@ -38,3 +38,16 @@
 		z-index: 100000;
 	}
 }
+
+.molto-container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 30px;
+	background: $soft_white;
+	border: 2px solid $black;
+}
+
+.content-container {
+	max-width: 690px;
+	margin: 0 auto; 
+}
