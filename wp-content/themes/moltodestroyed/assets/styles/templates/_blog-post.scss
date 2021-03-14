@@ -1,37 +1,58 @@
 .blog-post-container {
-  article {
-    background: $soft_white;
-    padding: 16px;
-    border: 2px solid $black;
-    margin-bottom: 32px;
+  header {
+    margin: 42px 0 30px;
 
-    header {
-      margin-bottom: 32px;
-
-      h1 { margin: 0 0 16px; }  
-      span { 
-        font-size: 75%;
-        font-weight: 400;
-      }
+    .page-title {
+      font-family: 'Bangers', sans-serif;
+      letter-spacing: 6px;
+      line-height: 1;
+      margin: 42px 0 6px;
+      font-size: 72px;
     }
 
-    .blog-content {
-      .image-container {
-        float: left;
-        text-align: center;
-        margin: 0 16px 16px 0;
-  
-        img {
-          border: 2px solid $black;
-          box-shadow: 0 0 4px $black;
-          margin-bottom: 16px;      
-        }
+    span { 
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
 
-        .textified-text-container {
-          margin: 40px 0 24px;
-          max-width: 400px;
-        }
+  .image-container {
+    text-align: center;
+
+    img {
+      border: 2px solid $black;
+      margin-bottom: 30px;
+    }
+
+    .textified-container {
+      button {
+        margin: 0 auto 30px;
+      }
+
+      .textified-text-container {
+        margin: 30px auto;
+        max-width: 400px;
       }
     }
+  }
+
+  h2, h3, h4 {
+    margin-top: 42px;
+    margin-bottom: 30px;
+  }
+
+  a {
+    img {
+      transition: none;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      img {
+        transition: none;
+        opacity: .7;
+      }  
+    }        
   }
 }

@@ -1,32 +1,30 @@
-main.page-not-found-container {
-  background: $soft_white;
-  border: 2px solid $black;
-  padding: 16px 16px 0;
-  margin-bottom: 32px;
+.page-not-found-container {
+  margin-bottom: 42px;
 
-  h1 {
+  .page-title {
     font-family: 'Bangers', sans-serif;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
     line-height: 1;
-    margin: 16px 0;
+    margin: 42px 0 36px;
     font-size: 72px;
+    text-align: center;
   }
 
   h2 {
     font-weight: 100;
     font-size: 40px;
-    margin: 0 0 40px;
+    margin: 0 0 36px;
   }
 
   img {
-    &:first-of-type {
+    &:nth-of-type( odd ) {
       float: left;
-      margin: 0 16px 16px 0;
+      margin: 0 18px 18px 0;
     }
 
-    &:last-of-type {
+    &:nth-of-type( even ) {
       float: right;
-      margin: 0 0 16px 16px;
+      margin: 0 0 18px 18px;
       transform: scaleX(-1);
     }
   }

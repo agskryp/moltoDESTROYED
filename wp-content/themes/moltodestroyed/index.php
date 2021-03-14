@@ -22,56 +22,47 @@
   require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; 
 ?>
 
-<div class="blog-page-container molto-container">
-  <?php ?>
+<main class="blog-page-container molto-container">
+  <?php
+    echo '<header>';
+      single_post_title( '<h1 class="page-title">', '</h1>');
+    echo '</header>';
 
-  <main class="blog-posts-list">
-    <header class="blog-page-header">
-      <h1 class="text-center"><?php single_post_title() ?></h1>
-    </header>
+    while( have_posts() ) {
+      the_post();
 
-    <?php      
-      while ( have_posts() ) {
-        the_post();
-    ?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>           
-        <?php 
-          echo '<header>';
-            the_title( '<h2><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' );
-          echo '</header>';
-            
-          echo '<div class="content-container">';
-            if( has_post_thumbnail() ) {
-              echo '<a class="feature-image-container" href="' . esc_url( get_permalink() ) . '">';
-                the_post_thumbnail( 'medium-large' );  
-              echo '</a>';
+      echo '<article class="' . esc_attr( implode( ' ', get_post_class() ) ) . '">';
+        echo '<header>';
+          the_title( '<h2><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' );
+        echo '</header>';
+          
+        echo '<div class="article-content-container">';
+          if( has_post_thumbnail() ) {
+            echo '<a class="feature-image-container" href="' . esc_url( get_permalink() ) . '">';
+              the_post_thumbnail( 'medium-large' );  
+            echo '</a>';
+          }
+
+          echo '<div class="excerpt-container">';
+            the_excerpt();
+
+            if( str_word_count( $post -> post_content ) < 55 ) {
+              echo '<a class="read-more" href="' . esc_url( get_permalink() ) . '">View Post &rarr;</a>';
             }
-            
-            echo '<div class="excerpt-container">';
-              the_excerpt();
-
-              if( str_word_count( $post -> post_content ) < 55 ) {
-                echo '<div><a class="read-more pull-right" href="' . esc_url( get_permalink() ) . '">';
-                  echo 'View Post &rarr;'; 
-                echo '</a></div>';
-              }
-            echo '</div>';
           echo '</div>';
-        ?>
-      </article>
-    <?php
-      }
+        echo '</div>';
+      echo '</article>';
 
-      if( $GLOBALS[ 'wp_query' ] -> max_num_pages > 1 ) {      
-        if( $older || $newer ) {
-          echo '<div style="display: flex; justify-content: space-between;">' . $older . $newer . '</div>';
-        }
-      }
-    ?>
-  </main>
+      echo '<hr class="blog-page-divider" />';
+    }
 
-  <?php require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>
-</div>
+    if( $GLOBALS[ 'wp_query' ] -> max_num_pages > 1 ) {      
+      if( $older || $newer ) echo '<nav class="blog-navigation-container">' . $older . $newer . '</nav>';
+    }
+  ?>
+</main>
 
 <?php
+  require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php';
+  
   get_footer();

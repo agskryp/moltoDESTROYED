@@ -1,8 +1,17 @@
-#sb_instagram .sbi_follow_btn a {
-  background: $black;
+#sb_instagram {
+  width: auto !important;
+  margin: 0 -160px;
 
-  &:focus,
-  &:hover {
-    box-shadow: inset 0 0 10px 20px $grey;
+  .sb_instagram_header {
+    display: none;
+  }
+
+  .sbi_follow_btn a {
+    background: $black;
+
+    &:focus,
+    &:hover {
+      box-shadow: inset 0 0 10px 20px $grey;
+    }
   }
 }

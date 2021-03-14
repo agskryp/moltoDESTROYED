@@ -1,21 +1,10 @@
 .default-page-container {
   margin-bottom: 42px;
 
-  .page-title {
-    font-family: 'Bangers', sans-serif;
-    letter-spacing: 6px;
-    line-height: 1;
-    margin: 42px 0 36px;
-    font-size: 72px;
-    text-align: center;
-  }
-
   .feature-image-container {
     margin: 36px auto;
     text-align: center;
 
-    img {
-      border: 2px solid $black;
-    }
+    img { border: 2px solid $black; }
   }
 }

@@ -16,37 +16,46 @@
   .main-footer-background {
     background: $dark_grey;
     border-top: 2px solid $black;
-    padding: 40px 0;
+    padding: 42px 0 18px;
 
     .main-footer-container {
-      display: flex;
-      max-width: 1170px;
+      display: block;
+      max-width: 660px;
       margin: 0 auto;
-
-      .images-container {
-        flex: 2;
-        text-align: center;
+      padding: 0 30px;
+      box-sizing: content-box;
+      @media all and ( min-width: $screen-lg ) {
+        display: flex;
+        max-width: 1060px;
       }
 
-      .characters-container {
-        margin-top: 16px;
-        display: flex;
-        align-content: center;
-        justify-content: space-around;
+      .images-container {
+        width: 100%;
+        text-align: center;
+        @media all and ( min-width: $screen-lg ) {
+          width: 50%;
+        }
+      
+        .characters-container {
+          margin-top: 42px;
+          display: flex;
+          align-content: center;
+          justify-content: space-around;
 
-        img {    
-          object-fit: contain;
-          max-width: 80px;
-          max-height: 80px;
-          @media all and ( min-width: $screen-sm ) {
-            max-width: 160px;
-            max-height: 160px;
-          }
+          img {    
+            object-fit: contain;
+            max-width: 80px;
+            max-height: 80px;
+            @media all and ( min-width: $screen-sm ) {
+              max-width: 160px;
+              max-height: 160px;
+            }
 
-          &:last-of-type {
-            transform: scaleX(-1);
-            @media all and ( min-width: $screen-lg ) {
-              transform: none;
+            &:last-of-type {
+              transform: scaleX(-1);
+              @media all and ( min-width: $screen-lg ) {
+                transform: none;
+              }
             }
           }
         }
@@ -55,45 +64,99 @@
 
     .menu-container {
       display: flex;
+      width: 100%;
+      flex-direction: column;
+      @media all and ( min-width: $screen-sm ) {
+        flex-direction: row;
+      }
+      
+      @media all and ( min-width: $screen-lg ) {
+        width: 50%;
+      }
   
       .column-container {
-        margin-left: 56px;
+        margin-left: 60px;
   
         ul {
           list-style: none;
           padding: 0;
+          margin: 0;
+
+          li {
+            line-height: 1;
+            margin-bottom: 24px;
+          }
         }
+
     
         h2 {
           font-family: 'Bangers', sans-serif;
           letter-spacing: 2px;
           color: $white;
-          margin: 0 0 16px;
+          margin: 0 0 30px;
+        }
+
+        div.social-container {
+          justify-content: flex-start;
+
+          a { margin: 0 24px 0 0; }
         }
       }
     }
   }  
 
+
+
+
+
+
+
+
+
   .ip-background {
     background: $black;
-    padding: 16px 0;
+    padding: 24px 30px;
 
     .ip-container {
-      max-width: 1170px;
+      @include flex;
+      align-items: center;
+      text-align: center;
+      max-width: 1060px;
       margin: 0 auto;
-      display: block;
       color: $white;
       font-size: 14px;
-      @media all and ( min-width: $screen-sm ) {
-        @include flex;
-        align-items: center;
+      flex-direction: column;
+      @media all and ( min-width: $screen-md ) {
+        
+        
+        flex-direction: row;
         justify-content: space-between;
+      }
+
+      .privacy-container {
+        margin: 18px 0;
+        @media all and ( min-width: $screen-md ) {
+          margin: 0;
+        }
+      }
+
+      .copyright-container {
+        order: -1;
+        @media all and ( min-width: $screen-md ) {
+          order: 0;
+        }
       }
 
       ul {
         padding: 0;
         margin: 0;
         list-style-type: none;
+
+        li { 
+          margin: 0;
+          line-height: 1;
+          font-size: 14px;   // Required for proper text alignment
+        }
 
         a { font-size: 14px; }
       }

@@ -1,246 +1,132 @@
 .main-navigation {
-  // clear: both;
-  // float: left;
-  // width: 100%;
-  background: #fff;
+  background: $white;
+  padding-top: 12px;
   @media all and ( min-width: $screen-md ) {
     border-bottom: $border-2px;
   }
-  
-  .menu-main-menu-container {
-    display: inline-block;
+
+  .menu-toggle {
+    display: -moz-box !important; // Required for firefox on windows
+    @include flex-center;
     width: 100%;
+    border: none;
+    border-radius: 0;
+    background: $black;
+    padding: 18px;
     @media all and ( min-width: $screen-md ) {
-      width: inherit;
+      display: none !important; // !important required for firefox on windows
     }
-  }  
-
-  ul {
-    border: $border-2px;
-    border-top: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-    @media screen and ( min-width: $screen-md ) {
-      display: block;
-      text-align: center;
-      border: none;
-    }
-
-    ul {
-      box-shadow: 0 3px 3px rgba( 0, 0, 0, 0.2 );
-      float: left;
-      position: absolute;
-      top: 100%;
-      left: -999em;
-      z-index: 99999;
-
-      ul {
-        left: -999em;
-        top: 0;
-      }
-
-      li:hover > ul,
-      li.focus > ul {
-        left: 100%;
-      }
-
-      a {
-        width: 200px;
-      }
-    }
-
-    li:hover > ul,
-    li.focus > ul {
-      left: auto;
-    }
-  }
-
-  li {
-    position: relative;
-    display: block;
-    text-align: center;
-    @media all and ( min-width: $screen-md ) {
-      display: inline-block;
-      text-align: left;
-      border: none;
-    }
-
-    a {
-      padding: 10px 12px;
-      &:hover,
-      &:focus,
-      &:active {
-        color: $color__text-main;
-        background: $color__background-screen;
-        @media all and ( min-width: $screen-md ) {
-          color: $color__link-hover;
-          background: transparent;
-        }
-
-        svg {
-          color: $color__link-hover;
-        }
-      }
-    }
-  }
-
-  a {
-    display: block;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: $color__text-main;
     
     &:hover,
     &:focus {
-      color: $color__link-hover;
+      background: $grey;
+    }
+      
+    span.button-text {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1;
+      color: $white;
+    }
 
-      svg {
-        fill: $color__link-hover;
+    .main-menu-icon {
+      @include transform-rotate( 0deg );
+      width: 18px;
+      height: 12px;
+      display: inline-block;
+      margin-left: 6px;
+      cursor: pointer;
+    
+      span {
+        @include transform-rotate( 0deg );
+        @include transform-menu-speed();
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: $white;
+        left: 0;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          top: 5px;
+        }
+
+        &:nth-child(1) { top: 0px; }
+        &:nth-child(4) { top: 10px; }
+      }
+    
+      &.open span {
+        @include transform-menu-speed();
+        &:nth-child(1),
+        &:nth-child(4) {
+          top: 5px;
+          width: 0%;
+          left: 50%;
+        }
+    
+        &:nth-child(2) { @include transform-rotate( 45deg ); }
+        &:nth-child(3) { @include transform-rotate( -45deg ); }
+      }
+    }    
+  }
+  
+  .main-nav-menu {
+    @media all and ( min-width: $screen-md ) { 
+      display: flex;
+      height: auto !important;
+      justify-content: center;
+      align-items: center;
+    }  
+    
+    &.in {
+      display: flex;
+    }
+
+    ul {
+      border: $border-2px;
+      border-top: none;
+      margin: 0;
+      padding-left: 0;
+      width: 100%;
+      @media screen and ( min-width: $screen-md ) {
+        border: none;
+        width: inherit;
+      }
+
+      li {
+        text-align: center;
+        margin-bottom: 0;
+        @media all and ( min-width: $screen-md ) {
+          display: inline-block;
+        }
+
+        a {
+          padding: 18px;
+          display: block;
+          text-transform: uppercase;
+          color: $black;
+    
+          &:hover,
+          &:focus,
+          &:active {
+            color: $black;
+            background: $lighter_grey;
+            @media all and ( min-width: $screen-md ) {
+              color: $grey;
+              background: transparent;
+            }
+          }
+        }
       }
     }
   }
-}
 
-
-
-
-
-
-
-
-
-
-.menu-toggle {
-  display: -moz-box !important; // Required for firefox on windows
-  @include flex-center;
-  width: 100%;
-  border: none;
-  border-radius: 0;
-  background: $color__background-dark;
-  color: $color__text-light;
-  padding: 10px;
-  font-size: 1em;
-  @media all and ( min-width: $screen-md ) {
-    display: none !important; // !important required for firefox on windows
-  }
-  
-  &:hover,
-  &:active,
-  &:focus {
-    background: $color__text-input;
-  }
-    
-  p {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1em;
-    color: $lightest_shade;
-    font-family: $font__main;
-    margin: 0;
-  }
-}
-
-.main-navigation.toggled ul {
-  display: block;
-  margin: 0 auto;
-}
-
-
-
-
-.main-menu-button {
-  border: none;
-  background: none;
-  font-size: 1em;
-  padding: 6px;
-}
-
-.main-nav-menu {
-  @media all and ( min-width: $screen-md ) { 
-    display: flex;
-    height: auto !important;
-    justify-content: center;
-    align-items: center;
-  }  
-  
-  &.in {
-    display: flex;
-  }
-}
-
-.navbar-collapse {
-  padding: 0;
-  border-top: none;
-  
-  &.collapse {
-    @include flex;
-    display: flex !important; // necessary to override bootstrap
-  }
-}
-
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  @include transform-menu-speed();
-}
-
-
-
-
-
-.main-menu-icon {
-  @include transform-rotate( 0deg );
-  width: 20px;
-  height: 14px;
-  display: inline-block;
-  margin-left: 6px;
-  cursor: pointer;
-
-  span {
-    @include transform-rotate( 0deg );
-    @include transform-menu-speed();
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: $color__background-light;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    &:nth-child( 1 ) {
-      top: 0px;
-      opacity: 1;
-    }
-  
-    &:nth-child( 2 ),
-    &:nth-child( 3 ) {
-      top: 5px;
-    }
-
-    &:nth-child( 4 ) {
-      top: 10px;
-      opacity: 1;
-    }
-  }
-
-  &.open span {
-    @include transform-menu-speed();
-    &:nth-child( 1 ),
-    &:nth-child( 4 ) {
-      top: 5px;
-      width: 0%;
-      left: 50%;
-      opacity: 0;
-    }
-
-    &:nth-child( 2 ) {
-      @include transform-rotate( 45deg );
-    }
-
-    &:nth-child( 3 ) {
-      @include transform-rotate( -45deg );
+  div.social-container a {
+    &:hover,
+    &:focus {
+      svg { fill: $grey; }
     }
   }
 }

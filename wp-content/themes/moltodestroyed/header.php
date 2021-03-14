@@ -3,22 +3,7 @@
 <!doctype html>
 
 <html <?php language_attributes(); ?>>
-  <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png" />
-    
-    <?php wp_head(); ?>  
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64750314-1"></script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-            onerror="blockerMessage();"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({ 
-        google_ad_client: "ca-pub-5942635838820429", enable_page_level_ads: true 
-      });
-    </script>
-  </head>
+  <?php require get_template_directory() . '/partials/head.php'; ?>
 
   <body <?php body_class(); ?>>
     <noscript>
@@ -51,7 +36,7 @@
       <nav class="main-navigation">
         <button class="menu-toggle" type="button" data-toggle="collapse" data-target="#mainMenu"
                 aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle Navigation">
-          <p>Menu</p>
+          <span class="button-text">Menu</span>
 
           <div class="main-menu-icon">
             <span></span>
@@ -62,7 +47,13 @@
         </button>
 
         <div class="collapse main-nav-menu" id="mainMenu">
-          <?php wp_nav_menu( array( 'theme_location' => 'menu-1' ) ); ?>
+          <?php 
+            wp_nav_menu( array(
+              'theme_location' => 'main-menu',
+              'depth'          => 1,
+              'container'      => false,
+            ) );
+          ?>
           
           <div class="hidden-xs">
             <?php require get_template_directory() . '/partials/social-links.php'; ?>

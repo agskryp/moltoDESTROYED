@@ -1,29 +1,37 @@
 div.wpcf7 {
   clear: both;
+  max-width: 600px;
 
-  br { display: none; } 
-  p { margin-bottom: 24px; }
-  label { display: inline; }
+  br { display: none; } // For errors
+  p { margin-bottom: 24px; } // For errors
+  label { 
+    display: block;
+    font-weight: 600;
+  }
 
   input,
   textarea {
     width: 100%;
-    font-size: 16px;
+    font-size: 18px;
     border-color: $dark_grey;
-    box-shadow: 0px 0px 2px $dark_grey;
+    margin-top: 6px;
 
     &:focus {
       outline-color: $black;
     }
   }
 
-  input[ type="submit" ] {
+  textarea {
+    margin-bottom: -6px;
+  }
+
+  input[ type=submit ] {
     width: 100px;
-    float: right;
-    font-weight: bold;
+    font-weight: 600;
     background: $black;
     border: none;
     color: $white;
+    margin-top: 0;
 
     &:hover,
     &:focus {
@@ -45,6 +53,8 @@ div.wpcf7 {
     color: $dark_grey;
     font-style: italic;
     font-size: 12px;
+    line-height: normal;
+    margin-top: 6px;
   }
 
   div.wpcf7-response-output {
@@ -69,8 +79,11 @@ div.wpcf7 {
   visibility: collapse !important;  
 }
 
-
-.contact-notice {
-  font-size: 59%;
+span.contact-notice {
+  font-size: 12px;
+  line-height: normal;
   font-style: italic;
+  margin-top: 42px;
+  margin-bottom: -18px;
+  display: block;
 }

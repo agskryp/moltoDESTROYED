@@ -1,36 +1,37 @@
 .header-container {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 
   .header-background {
     background: $white;
-    padding-top: 16px;
+    padding-top: 30px;
   
     .content-container {
       max-width: 1170px;
       width: 100%;
       position: relative;
       margin: 0 auto;
+
+      div.social-container a {
+        &:hover,
+        &:focus {
+          svg { fill: $grey; }
+        }
+      }
     }
   }
 }
 
-
-
-
-
 a.site-banner {
+  
+
   &:hover,
   &:focus,
   &:active {
-    opacity: .55;
+    opacity: .7;
   }
 
   img {
-    max-height: 190px;
+    max-height: 190px; 
+    padding: 6px 0;
   }
 }
-
-
-
-
-

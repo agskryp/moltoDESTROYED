@@ -1,6 +1,8 @@
-<?php $footer_banner = moltodestroyed_theme_site_option( 'footer_banner_image_id', false ); ?>
-
-</div>
+<?php 
+  $footer_banner = moltodestroyed_theme_site_option( 'footer_banner_image_id', false ); 
+  
+  echo '</div>'; // end of #content
+?>
 
 <footer class="site-footer">
   <div class="main-footer-background">
@@ -8,22 +10,26 @@
       <div class="images-container">
         <?php
           if( !empty( $footer_banner ) ) echo wp_get_attachment_image( $footer_banner, 'medium_large' );
-        ?>
 
-        <div class="characters-container">
-          <?php 
+          echo '<div class="characters-container">';
             require get_template_directory() . '/partials/random-character-image.php'; 
             require get_template_directory() . '/partials/random-character-image.php'; 
-            require get_template_directory() . '/partials/random-character-image.php';
-          ?>
-        </div>
+            require get_template_directory() . '/partials/random-character-image.php';          
+          echo '</div>';
+        ?>
       </div>
 
       <nav class="menu-container">
         <div class="column-container">
           <h2>Explore</h2>
 
-          <?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
+          <?php 
+            wp_nav_menu( array(
+              'theme_location' => 'footer',
+              'depth'          => 1,
+              'container'      => false,
+            ) );
+          ?>
         </div>
 
         <div class="column-container">
@@ -38,9 +44,14 @@
   <div class="ip-background">
     <div class="ip-container">
       <?php 
-        wp_nav_menu( array( 'theme_location' => 'privacy' ) );
+        wp_nav_menu( array( 
+          'theme_location' => 'privacy',
+          'menu_class'     => 'privacy-container',
+          'depth'          => 1,
+          'container'      => false,
+        ) );
         
-        echo '<span>Copyright &copy; 2014-' . date( 'Y' ) . ' moltoDESTROYED.  All rights reserved.</span>';
+        echo '<span class="copyright-container">Copyright &copy; 2014-' . date( 'Y' ) . ' moltoDESTROYED.  All rights reserved.</span>';
 
         echo '<span>Site by ';
           echo '<a href="' . esc_url( 'https://agskryp.com' ) . '" target="_blank">A.G. Skryp</a>';

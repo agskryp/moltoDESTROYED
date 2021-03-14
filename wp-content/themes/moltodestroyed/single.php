@@ -11,7 +11,7 @@
 
       '<span class="blog-nav-arrow">&larr;</span>' . 
       
-      '<div class="blog-text-container">' .
+      '<div class="blog-post-text-container">' .
         '<span class="nav-text">View previous post</span>' . 
         '<span class="title">%title</span>' . 
       '</div>'
@@ -21,7 +21,7 @@
   $next = get_next_post_link(
     '%link',     
     
-    '<div class="blog-text-container text-right">' .
+    '<div class="blog-post-text-container text-right">' .
       '<span class="nav-text">View next post</span>' . 
       '<span class="title">%title</span>' . 
     '</div>' .
@@ -30,52 +30,43 @@
   );
 
   get_header();
+
+  require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; 
 ?>
 
-<div class="blog-post-container">
-  <?php require_once get_template_directory() . '/partials/ads/top-of-main-area.php'; ?>
+<main class="blog-post-container molto-container">
+  <?php     
+    while( have_posts() ) {
+      the_post();
+  
+      echo '<article class="' . esc_attr( implode( ' ', get_post_class( 'content-container' ) ) ) . '">';
+        echo '<header>';
+          the_title( '<h1 class="page-title">', '</h1>' );
 
-  <main class="narrow-container">
-    <?php
-      while( have_posts() ) {
-        the_post();
-    ?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <?php 
-          the_title( '<header><h1>', '</h1>' );
+          echo '<span>Posted on ' . get_the_date( 'F jS, Y' ) . '</span>';
+        echo '</header>';
+      
+        echo '<div class="blog-content">';
+          if( has_post_thumbnail() ) {
+            echo '<div class="image-container">';
+              the_post_thumbnail();
 
-          echo '<span>Posted on ' . get_the_date( 'F jS, Y' ) . '</span></header>';
-        ?>        
-
-        <div class="blog-content">
-          <?php 
-            if( has_post_thumbnail() ) {
-              echo '<div class="image-container">';
-                the_post_thumbnail();
-
-                require_once get_template_directory() . '/partials/textified-comic.php'; 
-              echo '</div>';
-            }
-          
-            echo '<div class="content-container">';
-              the_content();
+              require_once get_template_directory() . '/partials/textified-comic.php'; 
             echo '</div>';
+          }
+        
+          the_content();
+        echo '</div>';
+      echo '</article>';
+    }
 
-            if( $previous || $next ) {
-              echo _navigation_markup(
-                $previous . $next,
-                'blog-post-navigation-container',
-                'Post Navigation'
-              );
-            }
-          ?>
-        </div>
-      </article>
-    <?php } ?>
-  </main>
-
-  <?php require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; ?>
-</div>
+    echo '<hr class="blog-page-divider" />';
+  
+    if( $previous || $next ) echo '<nav class="blog-navigation-container">' . $previous . $next . '</nav>';
+  ?>
+</main>
 
 <?php
+  require_once get_template_directory() . '/partials/ads/bottom-of-main-area.php'; 
+
   get_footer();

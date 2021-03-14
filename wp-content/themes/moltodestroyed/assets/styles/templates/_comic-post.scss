@@ -1,19 +1,21 @@
 .comic-post-container {
   article {
     background: $soft_white;
-    border: 2px solid $black;
-    margin-bottom: 32px;
 
     .comic-header {
       font-family: 'Bangers', sans-serif;
-      letter-spacing: 4px;
+      letter-spacing: 2px;
       line-height: 1;
-      margin: 16px 0;
-      font-size: 72px;
+      margin: 30px 0;
+      font-size: 48px;
+      @media all and ( min-width: $screen-sm ) {
+        font-size: 72px;
+        letter-spacing: 4px;
+      }
     }
     
     .comic-strip-container {
-      margin: 0 0 16px;
+      margin: 0 0 30px;
       position: relative;
 
       .placeholder-image {
@@ -24,6 +26,7 @@
         background: $white;
         border: 2px solid $black;
         letter-spacing: 4px;
+        width: 100%;
         max-width: 500px;
         height: 400px;
         margin: 0 auto;
@@ -44,7 +47,6 @@
       
       img {
         border: 2px solid $black;
-        box-shadow: 0 0 4px $black;
         min-height: 400px;
         z-index: 1;
         position: relative;
@@ -53,7 +55,7 @@
       .posted-on {
         display: block;
         font-size: 75%;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
       }
     }
   }  

@@ -42,12 +42,35 @@
 .molto-container {
   max-width: 1060px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 18px;
 	background: $soft_white;
 	border: 2px solid $black;
+	@media all and ( min-width: $screen-sm ) {
+		padding: 0 30px;
+	}
 }
 
 .content-container {
 	max-width: 690px;
-	margin: 0 auto; 
+	margin: 0 auto 42px; 
+}
+
+hr.blog-page-divider {
+	height: 1px;
+	background: $black;
+	margin: 42px 0;
+}
+
+.molto-title {
+	font-family: 'Bangers', sans-serif;
+	letter-spacing: 2px;
+	line-height: 1;
+	margin: 42px 0 24px;
+	font-size: 48px;
+	text-align: center;
+	@media all and ( min-width: $screen-sm ) {
+		letter-spacing: 6px;
+		margin: 42px 0 36px;
+		font-size: 72px;
+	}
 }

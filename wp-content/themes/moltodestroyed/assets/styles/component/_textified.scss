@@ -5,7 +5,7 @@
   button {
     display: -moz-box !important; // Required for firefox on windows
     cursor: pointer;
-    margin: 32px auto;
+    margin: 30px auto;
     border: none;
     font-weight: 600;
     background: $black;
@@ -23,7 +23,7 @@
     svg {
       transform: rotate( 90deg );
       fill: $white;
-      margin-left: 8px;
+      margin-left: 6px;
 
       &.flip {
         transform: rotate( 270deg );
@@ -32,9 +32,10 @@
   }
 
   .textified-text-container {
-    padding: 16px;
+    padding: 24px;
     border: 2px dashed $black;
-    margin: 32px 0;
+    background: $white;
+    margin: 30px 0;
     text-align: left;
 
     h3 {
@@ -45,14 +46,14 @@
     }
     
     p {
-      margin: 24px 0 0;
+      margin: 18px 0 0;
       font-size: 20px;
-      line-height: 28px;
+      line-height: normal;
     }
     
     hr {
       margin: 24px 0;
-      border-top: 2px dashed $black;
+      border-top: none;
       background: $white;
     }
   }
