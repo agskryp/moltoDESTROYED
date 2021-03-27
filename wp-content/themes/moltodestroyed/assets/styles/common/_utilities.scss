@@ -42,9 +42,13 @@
 .molto-container {
   max-width: 1060px;
   margin: 0 auto;
-  padding: 0 18px;
+  padding: 0 12px;
 	background: $soft_white;
 	border: 2px solid $black;
+	@media all and ( min-width: $screen-xs ) {
+		padding: 0 18px;
+	}
+
 	@media all and ( min-width: $screen-sm ) {
 		padding: 0 30px;
 	}

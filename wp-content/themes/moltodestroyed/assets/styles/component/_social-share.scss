@@ -1,9 +1,18 @@
 .social-share-container {
   @include flex-center();
   background: $black;
-  padding: 18px 30px;
-  margin: 30px -30px 0;
+  padding: 18px 12px;
+  margin: 30px -12px 0;
+  flex-direction: column;
   justify-content: space-between;
+  @media all and ( min-width: $screen-xs ) {    
+    padding: 18px 30px;
+    margin: 30px -30px 0;
+  }
+
+  @media all and ( min-width: $screen-sm ) {
+    flex-direction: row;
+  }
     
   h3 {
     font-family: 'Bangers', sans-serif;
@@ -17,14 +26,34 @@
     }
   }
 
-  .social-share-button {
+  .social-share-link-container {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 18px;
+    margin-left: 0;
+    @media all and ( min-width: $screen-sm ) {
+      margin-top: 0;
+      margin-left: 18px;
+    }
 
-    svg { fill: $white; }
+    .social-share-button {
+      display: flex;
 
-    &:hover,
-    &:focus {
-      svg { fill: $grey; }
-    }    
+      svg { 
+        fill: $white;
+        width: 24px;
+        height: 24px;
+        @media all and ( min-width: $screen-sm ) {
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        svg { fill: $grey; }
+      }    
+    }
   }
 }

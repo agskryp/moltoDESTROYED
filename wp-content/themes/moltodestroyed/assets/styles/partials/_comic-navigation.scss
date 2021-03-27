@@ -8,26 +8,27 @@
     width: 20%;
       
     a {
-      font-size: 24px;
+      font-size: 18px;
       letter-spacing: -2px;
       background: $black;
       color: $white;
-      padding: 8px 0;
-      border-radius: 4px;
+      padding: 12px 0;
+      border-radius: 6px;
       display: block;
-      margin: 0 8px;
-
-      &:hover,
-      &:focus {
-        background: $grey;
-      }
-      
-      @media all and ( min-width: $screen-xs ) {
+      margin: 0 3px;      
+      @media all and ( min-width: $screen-sm ) {
         font-size: 28px;
       }
     
       @media all and ( min-width: $screen-md ) {
         font-size: 32px;
+        padding: 6px 0;
+        margin: 0 6px;
+      }
+
+      &:hover,
+      &:focus {
+        background: $grey;
       }
     }
   }

@@ -25,7 +25,7 @@
 <main class="blog-page-container molto-container">
   <?php
     echo '<header>';
-      single_post_title( '<h1 class="page-title">', '</h1>');
+      single_post_title( '<h1 class="molto-title">', '</h1>');
     echo '</header>';
 
     while( have_posts() ) {

@@ -15,8 +15,11 @@
     }
     
     .comic-strip-container {
-      margin: 0 0 30px;
+      margin: 0 -6px 30px;
       position: relative;
+      @media all and ( min-width: $screen-sm ) {
+        margin: 0 0 30px;
+      }
 
       .placeholder-image {
         font-family: 'Bangers', sans-serif;

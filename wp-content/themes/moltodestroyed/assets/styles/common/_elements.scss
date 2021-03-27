@@ -11,11 +11,14 @@ a {
 }
 
 blockquote {
-  margin: 30px;
+  margin: 30px 6px;
   border-left: 4px solid $black;
   font-style: italic;
   background: $lighter_grey;
   padding: 24px;
+  @media all and ( min-width: $screen-sm ) {
+    margin: 30px;
+  }
 }
 
 h1, h2, h3, h4, h5 {
@@ -43,7 +46,11 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 32px;
+  @media all and ( min-width: $screen-sm ) {
+    font-size: 40px;
+  }
+
   @media all and ( min-width: $screen-md ) {
     font-size: 46px;
   }
@@ -51,8 +58,12 @@ h2 {
 
 
 h3 {
-  font-size: 32px;
-  @media all and ( min-width: $screen-md ) {
+  font-size: 26px;
+  @media all and ( min-width: $screen-sm ) {
+    font-size: 32px;
+  }
+
+  @media all and ( min-width: $screen-md ) {    
     font-size: 40px;
   }
 }
@@ -71,11 +82,17 @@ p {
 
 ol, ul {
   font-weight: 100;
-  font-size: 22px;
-  line-height: 28px;
-  padding-left: 30px;
+  font-size: 18px;
+  line-height: 24px;
+  padding-left: 24px;
   margin-bottom: 30px;
-  margin-left: 30px;
+  margin-left: 0;
+  @media all and ( min-width: $screen-sm ) {
+    margin-left: 30px;
+    padding-left: 30px;
+    font-size: 22px;
+    line-height: 28px;
+  }
 
   li {
     margin-bottom: 18px;

@@ -19,6 +19,10 @@
       outline-offset: -2px;
       background: $grey;
     }
+
+    span {
+      font-size: 14px;
+    }
     
     svg {
       transform: rotate( 90deg );
@@ -41,14 +45,22 @@
     h3 {
       font-family: 'Bangers', sans-serif;
       letter-spacing: 2px;
-      font-size: 40px;
+      font-size: 32px;
       margin: 0;
+      @media all and ( min-width: $screen-sm ) {
+        font-size: 40px;
+        margin: 0;
+      }
     }
     
     p {
+      line-height: 24px;
+      font-size: 18px;
       margin: 18px 0 0;
-      font-size: 20px;
-      line-height: normal;
+      @media all and ( min-width: $screen-sm ) {
+        font-size: 20px;
+        line-height: normal;
+      }
     }
     
     hr {

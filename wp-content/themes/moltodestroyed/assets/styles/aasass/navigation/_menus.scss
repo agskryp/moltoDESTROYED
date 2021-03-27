@@ -1,6 +1,7 @@
 .main-navigation {
   background: $white;
   padding-top: 12px;
+  margin-top: -1px;
   @media all and ( min-width: $screen-md ) {
     border-bottom: $border-2px;
   }

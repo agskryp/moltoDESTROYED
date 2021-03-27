@@ -15,7 +15,7 @@
 
       echo '<article class="' . esc_attr( implode( ' ', get_post_class( 'content-container' ) ) ) . '">';
         echo '<header>';
-          the_title( '<h1 class="page-title">', '</h1>' );
+        the_title( '<h1 class="molto-title">', '</h1>' );
         echo '</header>';
 
         if( has_post_thumbnail() ) { 
