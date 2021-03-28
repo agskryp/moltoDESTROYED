@@ -468,7 +468,7 @@ function xyz_link_publish($post_ID) {
 							if (isset($timeline_album) && isset($timeline_album["id"])) $page_id = $timeline_album["id"];
 							if($album_fount==0)
 							{
-								$attachment = array('name' => "Timeline Photos",
+								/*$attachment = array('name' => "Timeline Photos",
 										'access_token' => $acces_token,
 								);
 								try{
@@ -481,8 +481,8 @@ function xyz_link_publish($post_ID) {
 								{
 									$fb_publish_status[$page_id."/albums"]=$e->getMessage();
 										
-								}
-									
+								}*/
+									$fb_publish_status[$page_id."/albums"]='<span style=\"color:red\">Invalid album name<span>';
 							}
 						}
 						else
@@ -512,7 +512,7 @@ function xyz_link_publish($post_ID) {
 							if (isset($app_album) && isset($app_album["id"])) $page_id = $app_album["id"];
 							if($album_fount==0)
 							{
-								$attachment = array('name' => $app_name,
+								/*$attachment = array('name' => $app_name,
 										'access_token' => $acces_token,
 								);
 								try{
@@ -524,8 +524,8 @@ function xyz_link_publish($post_ID) {
 								catch (Exception $e)
 								{
 									$fb_publish_status[$page_id."/albums"]=$e->getMessage();
-								}
-									
+								}*/
+									$fb_publish_status[$page_id."/albums"]='<span style=\"color:red\">Invalid album name<span>';
 							}
 						}
 					}
@@ -993,7 +993,7 @@ function xyz_link_publish($post_ID) {
 			{
 				if ($ln_posting_method==3)
 			{
-				$image_upload_flag=0;
+// 				$image_upload_flag=0;
 				if ($attachmenturl!="")
 				{
 					if(get_option('xyz_smap_ln_api_permission')!=2)
@@ -1017,9 +1017,9 @@ function xyz_link_publish($post_ID) {
 							$asset_val= substr($urn_li_digitalmediaAsset,25);
 							$status_check=$ObjLinkedin->check_status_linkedin_asset('https://api.linkedin.com/v2/assets/'.$asset_val);
 							$upload_status_arr=$status_check['recipes'][0];
-							if (isset($upload_status_arr['status']) && $upload_status_arr['status'] =="AVAILABLE")
+							if (isset($upload_status_arr['status']) && ($upload_status_arr['status'] =="AVAILABLE" || $upload_status_arr['status'] =="PROCESSING"))
 							{
-								$image_upload_flag=1;
+// 								$image_upload_flag=1;
 							}
 							else
 							{
@@ -1124,7 +1124,7 @@ function xyz_link_publish($post_ID) {
 							$contentln['visibility']['com.linkedin.ugc.MemberNetworkVisibility']='PUBLIC';
 					if ($ln_posting_method==3)
 					{
-						$image_upload_flag=0;
+// 						$image_upload_flag=0;
 						if ($attachmenturl!="")
 						{
 							if(get_option('xyz_smap_ln_api_permission')!=2)
@@ -1148,9 +1148,9 @@ function xyz_link_publish($post_ID) {
 									$asset_val= substr($urn_li_digitalmediaAsset,25);
 									$status_check=$ObjLinkedin->check_status_linkedin_asset('https://api.linkedin.com/v2/assets/'.$asset_val);
 									$upload_status_arr=$status_check['recipes'][0];
-									if (isset($upload_status_arr['status']) && $upload_status_arr['status'] =="AVAILABLE")
+									if (isset($upload_status_arr['status']) && ( $upload_status_arr['status'] =="AVAILABLE" || $upload_status_arr['status'] =="PROCESSING"))
 									{
-										$image_upload_flag=1;
+// 										$image_upload_flag=1;
 									}
 									else
 									{

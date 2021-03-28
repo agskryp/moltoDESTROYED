@@ -179,6 +179,8 @@ jQuery(document).ready(function() {
 	 var xyz_smap_lnpost_permission=jQuery("input[name='xyz_smap_lnpost_permission']:checked").val();
 	 XyzSmapToggleRadio(xyz_smap_lnpost_permission,'xyz_smap_lnpost_permission'); 
 
+	var wp_version='<?php echo XYZ_SMAP_WP_VERSION; ?>';
+	if (wp_version <= '5.3') {
 			
 	jQuery('#category-all').bind("DOMSubtreeModified",function(){
 		smap_get_categorylist(1);
@@ -196,6 +198,7 @@ jQuery(document).ready(function() {
 	jQuery(document).on('change', 'input[type="checkbox"]', function() {
 		smap_get_categorylist(2);
 				});
+	}
 });
 
 function smap_get_categorylist(val)

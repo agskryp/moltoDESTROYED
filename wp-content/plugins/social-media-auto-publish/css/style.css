@@ -304,7 +304,7 @@ a.xyz_smap_link:hover{text-decoration:underline;}
 	
 	
 .xyz_smap_widefat_table input[type="text"], .xyz_smap_widefat_table input[type="password"], .xyz_smap_widefat_table input[type="email"], .xyz_smap_widefat_table input[type="number"], .xyz_smap_widefat_table input[type="search"], .xyz_smap_widefat_table input[type="tel"], .xyz_smap_widefat_table input[type="url"], .xyz_smap_widefat_table select {
-    width: 200px;padding: 5px !important;height: 2.35em !important;
+    width: 200px;padding: 3px !important;height: 2.35em !important;
 }
 .xyz_smap_widefat_table textarea
 {
@@ -323,7 +323,7 @@ width: 100%;
 	width: 100%;border: 1px solid #DFDFDF;border-radius:3px; margin-top: 8px;padding-bottom: 5px;
 }
 .xyz_smap_meta_acclist_table select ,.xyz_smap_meta_acclist_table textarea{
-    width: 200px;padding: 5px !important;height: 2.35em !important;
+    width: 200px;padding: 3px !important;height: 2.35em !important;
 }
 a {
 	text-decoration: none;

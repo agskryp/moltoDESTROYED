@@ -560,7 +560,7 @@ function dethide_smap(id)
 				</tr>
 			<tr valign="top">
 					<td width="50%">Application name
-					<br/><span style="color: #0073aa;">[This is for tracking purpose as well as creating Facebook app album]</span>
+					<br/><span style="color: #0073aa;">[This is for tracking purpose]</span>
 					</td>
 					<td><input id="xyz_smap_application_name"
 						name="xyz_smap_application_name" type="text"
@@ -572,9 +572,18 @@ function dethide_smap(id)
 			</td>
 				<td>
 				<input type="radio" name="xyz_smap_app_sel_mode" id="xyz_smap_app_sel_mode_reviewd" value="0" <?php if($xyz_smap_app_sel_mode==0) echo 'checked';?>>
-				<span style="color: #a7a7a7;font-weight: bold;">Own App ( requires app submission and Facebook review )</span><br>
-				<a href="http://help.xyzscripts.com/docs/social-media-auto-publish/faq/how-can-i-create-facebook-application/" target="_blank" style="padding-left: 30px;">How can I create a Facebook Application?</a><br/>
-				<br/><input type="radio" name="xyz_smap_app_sel_mode" id="xyz_smap_app_sel_mode_xyzapp" value="1" <?php if($xyz_smap_app_sel_mode==1) echo 'checked';?>>
+				<span style="color: #a7a7a7;font-weight: bold;">Own App ( requires app submission and Facebook review -<a href="http://help.xyzscripts.com/docs/social-media-auto-publish/faq/how-can-i-create-facebook-application/" style="color: #a7a7a7;text-decoration: underline; " target="_blank" >Help</a>)</span>
+				<br>
+				<div class="xyz_smap_facebook_settings" style="display: none;" onmouseover="detdisplay_smap('xyz_smap_app_review')" onmouseout="dethide_smap('xyz_smap_app_review')"><span style="padding-left: 25px;color: #0073aa;">App approval service available for 50 USD
+				</span><br/>
+				<div id="xyz_smap_app_review" class="smap_informationdiv" style="display: none;width: 400px;">
+				<b>Expected time frame:</b><br/>30 days<br/>
+				<b>Required details:</b><br/>1. WordPress login<br/>
+				2. Admin access to Facebook developer app for review submission (temporary).<br/>
+				For more details contact <a href="https://xyzscripts.com/support/" target="_blank" >Support Desk</a> .
+				</div>
+				</div><br/>
+				<input type="radio" name="xyz_smap_app_sel_mode" id="xyz_smap_app_sel_mode_xyzapp" value="1" <?php if($xyz_smap_app_sel_mode==1) echo 'checked';?>>
 				<span style="color: #000000;font-size: 13px;background-color: #f7a676;font-weight: 500;padding: 3px 5px;"><i class="fa fa-star-o" aria-hidden="true" style="margin-right:5px;"></i>SMAPsolution.com's App ( ready to publish )<i class="fa fa-star-o" aria-hidden="true" style="margin-right:5px;"></i></span><br> <span style="padding-left: 30px;">Starts from 10 USD per year</span><br>
 				<?php if(get_option('xyz_smap_smapsoln_userid')==0)
 				{?>
@@ -593,7 +602,7 @@ function dethide_smap(id)
 			<span id='ajax-save-xyzscript_acc' style="display:none;"><img	class="img"  title="Saving details"	src="<?php echo plugins_url('../images/ajax-loader.gif',__FILE__);?>" style="width:65px;height:70px; "></span>
 			<span id="connect_to_xyzscripts"style="background-color: #1A87B9;color: white; padding: 4px 5px;
     text-align: center; text-decoration: none;   display: inline-block;border-radius: 4px;">
-			<a href="javascript:smap_popup_connect_to_xyzscripts();" style="color:white !important;">Connect your xyzscripts account</a>
+			<a href="javascript:smap_popup_connect_to_xyzscripts();void(0);" style="color:white !important;">Connect your xyzscripts account</a>
 			</span>
 			</td>
 			</tr>
@@ -618,6 +627,7 @@ function dethide_smap(id)
 				</tr>
 				<tr valign="top">
 					<td>Posting method
+					<br/><span style="color: #0073aa;">[Create app album(with <b>Application name</b>) in the Facebook pages,<br/>if you are using the posting method <b>Upload image to app album</b>]</span>
 					</td>
 					<td>
 					<select id="xyz_smap_po_method" name="xyz_smap_po_method">
@@ -671,6 +681,8 @@ function dethide_smap(id)
 		<textarea id="xyz_smap_message"  name="xyz_smap_message" style="height:80px !important;" ><?php 
 								echo esc_textarea(get_option('xyz_smap_message'));?></textarea>
 	</td></tr>
+	
+	
 	<tr valign="top">
 					<td>Clear facebook cache before publishing to facebook
 					</td>
@@ -679,6 +691,7 @@ function dethide_smap(id)
 						<label id="xyz_smap_clear_fb_cache_no"><input type="radio" name="xyz_smap_clear_fb_cache" value="0" <?php  if(get_option('xyz_smap_clear_fb_cache')==0) echo 'checked';?>/>No</label>
 					</td>
 				</tr>
+	
 
 				<?php 
 
@@ -1075,7 +1088,7 @@ else{
 	<span id='ajax-save-xyzscript_acc_ln' style="display:none;"><img	class="img"  title="Saving details"	src="<?php echo plugins_url('../images/ajax-loader.gif',__FILE__);?>" style="width:65px;height:70px; "></span>
 	<span id="connect_to_xyzscripts_ln" style="background-color: #1A87B9;color: white; padding: 4px 5px;
     text-align: center; text-decoration: none;   display: inline-block;border-radius: 4px;">
-	<a href="javascript:smap_popup_connect_to_xyzscripts();" style="color:white !important;">Connect your xyzscripts account</a>
+	<a href="javascript:smap_popup_connect_to_xyzscripts();void(0);" style="color:white !important;">Connect your xyzscripts account</a>
 	</span>
 	</td>
 	</tr>
@@ -1203,6 +1216,9 @@ else{
 					$ar=$ar['elements'];
 					foreach ($ar as $ark)
 					{ 
+						if (strpos($ark['organizationalTarget'], 'urn:li:organizationBrand') !== false)
+							$comp_id=str_replace('urn:li:organizationBrand:', '',$ark['organizationalTarget']);
+						else
 						$comp_id=str_replace('urn:li:organization:', '',$ark['organizationalTarget']);
 						?>
 					<input type="checkbox" name="xyz_smap_ln_share_post_company[]"  value="<?php echo $comp_id."-".$ark['organizationalTarget~']['localizedName']; ?>" <?php if(in_array($comp_id, $xyz_smap_ln_company_idArray)) echo "checked" ?>><?php echo $ark['organizationalTarget~']['localizedName']; ?><br/>
@@ -1456,12 +1472,11 @@ else{
 								'class'              => 'postform',
 								'depth'              => 0,
 								'tab_index'          => 0,
-								'taxonomy'           => 'category',
-								'hide_if_empty'      => false );
+								'taxonomy'           => 'category');
 
 						if(count(get_categories($args))>0)
 					{
-						$smap_categories=get_categories();
+						$smap_categories=get_categories($args);
 						foreach ($smap_categories as $smap_cat)
 						{
 							$cat_id[]=$smap_cat->cat_ID;

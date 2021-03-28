@@ -3,8 +3,8 @@ Contributors: f1logic
 Donate link: https://xyzscripts.com/donate/
 Tags:  social media auto publish, social media publishing, post to facebook, post to twitter, post to linkedin, social network auto publish, social media, social network, add link to facebook, add link to twitter, add link to linkedin, publish to facebook, publish to twitter, publish to linkedin, post to linkedIn company pages,linkedin companies
 Requires at least: 3.0
-Tested up to: 5.3.2
-Stable tag: 2.4
+Tested up to: 5.5.1
+Stable tag: 2.4.1
 License: GPLv2 or later
 
 Publish posts automatically to social media networks like Facebook, Twitter and LinkedIn.
@@ -128,6 +128,11 @@ SSL peer verification may not be functioning in your server. Please turn off SSL
 6. Auto publish logs.
 
 == Changelog ==
+
+= Social Media Auto Publish 2.4.1 =
+* Added support for LinkedIn showcase pages
+* Compatibility with Facebook API V 7.0
+* Minor bugs fixed
 
 = Social Media Auto Publish 2.4 =
 * Added option to attach image to linkedin post
