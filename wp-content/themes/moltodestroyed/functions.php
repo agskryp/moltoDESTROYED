@@ -32,21 +32,12 @@ add_action( 'after_setup_theme', 'moltodestroyed_setup' );
 function moltodestroyed_scripts() {
   $theme_version = '1.5.0';
   
-  // CSS
-  // wp_enqueue_style( 
-  //   'bootstrap-style', get_template_directory_uri() . '/css/bootstrap/bootstrap.min.css', array(), '3.3.7' 
-  // );
-  
+  // CSS  
   wp_enqueue_style( 
     'moltodestroyed-style', get_stylesheet_uri(), array(), $theme_version 
   );
   
-  if( is_page_template( 'page-templates/page-contact.php' ) ) {
-    wp_enqueue_style( 
-      'recaptcha-style', get_template_directory_uri() . '/css/recaptcha.css', array(), $theme_version 
-    );
-  }
-  
+
   // JS  
   wp_enqueue_script( 
     'jquery-3-4-1',  get_template_directory_uri() . '/js/jquery-3-4-1.js', array(), '3.4.1', false
@@ -66,6 +57,10 @@ function moltodestroyed_scripts() {
   
   wp_enqueue_script( 
     'moltodestroyed-global-scripts', get_template_directory_uri() . '/js/extra.js', array(), $theme_version, false 
+  );
+
+  wp_enqueue_script( 
+    'moltodestroyed-hide-captcha', get_template_directory_uri() . '/js/hide-captcha.js', array(), $theme_version, false 
   );
   
   wp_enqueue_script( 
