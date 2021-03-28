@@ -1,6 +1,7 @@
 #sb_instagram {
   width: auto !important;
   margin: 0;
+  display: inline;
   @media all and ( min-width: $screen-sm ) {
     margin: 0 -160px;
   }

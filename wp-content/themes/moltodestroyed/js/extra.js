@@ -24,6 +24,8 @@ function blockerMessage() {
       $( '.main-menu-icon' ).toggleClass( 'open' );
     } );
 
+
+    // TODO: move / conditional to only display when elements exist 
     var container = document.querySelector( '.textified-container' );
     var button    = container.querySelector( 'button' );
     var text      = container.querySelector( 'span' );

@@ -1,7 +1,9 @@
 <div class="social-share-container">
-  <h3>Share!</h3>
+  <h3 class="mobile-title">Share!</h3>
 
   <div class="social-share-link-container">
+    <h3 class="desktop-title">Share!</h3>
+    
     <a class="social-share-button" target="popupTwitter"
       onclick="PopupCenter( '', 'popupTwitter', '600', '360' );" title="Share on Twitter"
       href="https://twitter.com/intent/tweet?text=Check out the comic &#39;<?php echo get_the_title(); ?>&#39; by @moltoDESTROYED : <?php echo get_permalink(); ?>">

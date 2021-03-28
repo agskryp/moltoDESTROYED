@@ -29,28 +29,27 @@
 
   .center-left {
     left: 0;
-    top: 44%;
+    top: 55%;
     @media all and ( min-width: $screen-xs ) {
       left: 1%;
     }
 
     @media all and ( min-width: $screen-sm ) {
       left: 3%;
-      top: 48%;
+      top: 58%;
     }
 
     @media all and ( min-width: $screen-ms ) {
       left: 5%;
-      top: 53%;
     }
 
     @media all and ( min-width: $screen-md ) {
-      left: 3%;
-      top: 60%;
+      top: 65%;
+      left: 3%;      
     }
 
     @media all and ( min-width: $screen-lg ) {
-      top: 62%;
+      top: 67%;
       left: 15%;
     }
 
@@ -61,15 +60,15 @@
 
   .center {
     top: -29px;
-    left: 39%;
+    left: 41%;
     @media all and ( min-width: $screen-sm ) {
       top: -20px;
-      left: 41%;
+      left: 43%;
     }
 
     @media all and ( min-width: $screen-md ) {
-      top: -5px;
-      left: 43%;
+      // top: -20px;
+      // left: 43%;
     }
 
     @media all and ( min-width: $screen-lg ) {
@@ -82,20 +81,12 @@
   }
 
   .center-right {
-    top: 41%;
-    right: 5%;
-    @media all and ( min-width: $screen-xs ) {
-      top: 43%;
-    }
-
+    top: 50%;
+    right: 2%;
     @media all and ( min-width: $screen-sm ) {
-      top: 47%
+      top: 62%
     }
-
-    @media all and ( min-width: $screen-md ) {
-      top: 55%;
-    }
-
+    
     @media all and ( min-width: $screen-lg ) {
       right: 17%;
     }

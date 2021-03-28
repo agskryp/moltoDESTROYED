@@ -1,4 +1,18 @@
 .social-share-container {
+  .mobile-title {
+    display: block;
+    @media all and ( min-width: $screen-sm ) {
+      display: none;
+    }
+  }
+
+  .desktop-title {
+    display: none;
+    @media all and ( min-width: $screen-sm ) {
+      display: block;
+    }
+  }
+
   @include flex-center();
   background: $black;
   padding: 18px 12px;
@@ -34,7 +48,7 @@
     margin-left: 0;
     @media all and ( min-width: $screen-sm ) {
       margin-top: 0;
-      margin-left: 18px;
+      // margin-left: 18px;
     }
 
     .social-share-button {

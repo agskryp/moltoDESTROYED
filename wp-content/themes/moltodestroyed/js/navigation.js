@@ -7,7 +7,7 @@
 ( function($) {
   var container, button, menu, links, i, len;
 
-  container = document.querySelector( 'main-navigation' );
+  container = document.querySelector( '.main-navigation' );
   button    = container.getElementsByTagName( 'button' )[0];
   menu      = container.getElementsByTagName( 'ul' )[0];
   links     = menu.getElementsByTagName( 'a' );

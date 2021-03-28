@@ -96,7 +96,7 @@ add_action( 'wp_enqueue_scripts', 'moltodestroyed_scripts' );
 
 
 // Register the script
-wp_register_script( 'js_config', get_template_directory_uri() . '/js/extra.js' );
+wp_register_script( 'js_config', get_template_directory_uri() . '/js/extra.js', ['jQuery'] );
  
 // Localize the script with new data
 $config = array(
