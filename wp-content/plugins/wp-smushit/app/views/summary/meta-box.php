@@ -22,20 +22,35 @@ if ( ! defined( 'WPINC' ) ) {
 
 $tooltip = sprintf(
 	/* translators: %d - number of images */
-	esc_html__( 'You have %d images that need smushing', 'wp-smushit' ),
+	_n( 'You have %d image that needs smushing', 'You have %d images that need smushing', $remaining, 'wp-smushit' ),
 	absint( $remaining )
 );
 
+$tooltip_singular = sprintf(
+	/* translators: %s - count placeholder */
+	__( 'You have %s image that needs smushing', 'wp-smushit' ),
+	'{count}'
+);
+
+$tooltip_plural = sprintf(
+	/* translators: %s - count placeholder */
+	__( 'You have %s images that need smushing', 'wp-smushit' ),
+	'{count}'
+);
 ?>
 
-<div class="sui-summary-image-space" aria-hidden="true"></div>
-
+<div class="sui-summary-image-space" aria-hidden="true" style="background-image: url( '<?php echo esc_url( apply_filters( 'wpmudev_branding_hero_image', '' ) ); ?>' )"></div>
 <div class="sui-summary-segment">
 	<div class="sui-summary-details">
 		<span class="sui-summary-large wp-smush-stats-human">
 			<?php echo esc_html( $human_size ); ?>
 		</span>
-		<span class="sui-tooltip" data-tooltip="<?php echo esc_html( $tooltip ); ?>">
+		<span
+			class="sui-tooltip"
+			data-tooltip="<?php echo esc_html( $tooltip ); ?>"
+			data-singular="<?php echo esc_html( $tooltip_singular ); ?>"
+			data-plural="<?php echo esc_html( $tooltip_plural ); ?>"
+		>
 			<i class="sui-icon-info sui-warning smush-stats-icon <?php echo $remaining > 0 ? '' : 'sui-hidden'; ?>" aria-hidden="true"></i>
 		</span>
 		<span class="sui-summary-detail wp-smush-savings">
@@ -74,7 +89,7 @@ $tooltip = sprintf(
 			<span class="sui-list-label">
 				<?php esc_html_e( 'Image Resize Savings', 'wp-smushit' ); ?>
 				<?php if ( ! $resize_enabled && $resize_savings <= 0 ) : ?>
-					<p class="wp-smush-stats-label-message">
+					<p class="wp-smush-stats-label-message sui-hidden-sm sui-hidden-md sui-hidden-lg">
 						<?php
 						$link_class = 'wp-smush-resize-enable-link';
 						if ( ( is_multisite() && Settings::can_access( 'bulk' ) ) || 'bulk' !== $this->get_current_tab() ) {
@@ -83,11 +98,12 @@ $tooltip = sprintf(
 							$settings_link = '#';
 							$link_class    = 'wp-smush-resize-enable';
 						}
+
 						printf(
 							/* translators: %1$1s - opening <a> tag, %2$2s - closing <a> tag */
 							esc_html__( 'Save a ton of space by not storing over-sized images on your server. %1$1sEnable image resizing%2$2s', 'wp-smushit' ),
 							'<a role="button" class="' . esc_attr( $link_class ) . '" href="' . esc_url( $settings_link ) . '">',
-							'<span class="sui-screen-reader-text">' . esc_html__( 'Clicking this link will toggle the Enable image resizing checkbox.', 'wp-smushit' ) . '</span></a>'
+							'</a>'
 						);
 						?>
 					</p>
@@ -95,7 +111,11 @@ $tooltip = sprintf(
 			</span>
 			<span class="sui-list-detail wp-smush-stats">
 				<?php if ( $resize_enabled || $resize_savings > 0 ) : ?>
-					<?php echo $resize_savings > 0 ? esc_html( $resize_savings ) : esc_html__( 'No resize savings available', 'wp-smushit' ); ?>
+					<?php echo $resize_savings > 0 ? esc_html( $resize_savings ) : esc_html__( 'No resize savings', 'wp-smushit' ); ?>
+				<?php else : ?>
+					<a role="button" class="sui-hidden-xs <?php echo esc_attr( $link_class ); ?>" href="<?php echo esc_url( $settings_link ); ?>">
+						<?php esc_html_e( 'Resize images', 'wp-smushit' ); ?>
+					</a>
 				<?php endif; ?>
 			</span>
 		</li>
