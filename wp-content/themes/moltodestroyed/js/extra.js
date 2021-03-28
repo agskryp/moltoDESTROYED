@@ -24,26 +24,27 @@ function blockerMessage() {
       $( '.main-menu-icon' ).toggleClass( 'open' );
     } );
 
+    var textifiedContainer = document.querySelector( '.textified-container' );
+    
+    if( typeof( textifiedContainer ) != 'undefined' && textifiedContainer != null ) {    
+      var button    = textifiedContainer.querySelector( 'button' );
+      var text      = textifiedContainer.querySelector( 'span' );
+      var arrow     = textifiedContainer.querySelector( 'svg' );
+      var textified = textifiedContainer.querySelector( '.textified-text-container' );
+          
+      // Toggle comic texted version button
+      button.addEventListener( 'click', function () {
+        textified.classList.toggle( 'molto-sr-text' );
+        arrow.classList.toggle( 'flip' );
 
-    // TODO: move / conditional to only display when elements exist 
-    var container = document.querySelector( '.textified-container' );
-    var button    = container.querySelector( 'button' );
-    var text      = container.querySelector( 'span' );
-    var arrow     = container.querySelector( 'svg' );
-    var textified = container.querySelector( '.textified-text-container' );
-        
-    // Toggle comic texted version button
-    button.addEventListener( 'click', function () {
-      textified.classList.toggle( 'molto-sr-text' );
-      arrow.classList.toggle( 'flip' );
+        if( text.innerHTML === "Close the text version" ) {
+          text.innerHTML = "Read the text version";
+        }
 
-      if( text.innerHTML === "Close the text version" ) {
-        text.innerHTML = "Read the text version";
-      }
-
-      else {
-        text.innerHTML = "Close the text version";
-      } 
-    } );
+        else {
+          text.innerHTML = "Close the text version";
+        } 
+      } );
+    }
   } );
 } )( jQuery );

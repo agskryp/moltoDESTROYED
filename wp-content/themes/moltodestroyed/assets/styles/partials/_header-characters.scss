@@ -54,7 +54,7 @@
     }
 
     @media all and ( min-width: $screen-xl ) {
-      left: 21%;
+      left: 18%;
     }
   }
 
@@ -84,11 +84,12 @@
     top: 50%;
     right: 2%;
     @media all and ( min-width: $screen-sm ) {
-      top: 62%
+      top: 57%
     }
     
     @media all and ( min-width: $screen-lg ) {
       right: 17%;
+      top: 62%
     }
 
     @media all and ( min-width: $screen-xl ) {

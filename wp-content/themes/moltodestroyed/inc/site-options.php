@@ -73,13 +73,11 @@ function moltodestroyed_theme_site_option( $key = '', $default = false ) {
   
   // Fallback to get_option if CMB2 is not loaded yet.
   $opts = get_option( 'moltodestroyed_theme_options', $default );
-  $val = $default;
+  $val  = $default;
   
-  if( 'all' == $key ) {
-    $val = $opts;
-  } 
+  if( 'all' == $key ) $val = $opts;
   
-  elseif( is_array( $opts ) && array_key_exists( $key, $opts ) && false !== $opts[ $key ] ) {
+  else if( is_array( $opts ) && array_key_exists( $key, $opts ) && false !== $opts[ $key ] ) {
     $val = $opts[ $key ];
   }
   

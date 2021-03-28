@@ -1,13 +1,29 @@
+/*!
+Theme Name: moltoDESTROYED
+Theme URI: https://underscores.me/
+Author: A.G. Skryp
+Author URI: http://agskryp.com
+Description: Wordpress theme for the moltodestroyed web comic
+Version: 1.5.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: moltoDESTROYED
 
-/*--------------------------------------------------------------
-# moltotheme v1.5
---------------------------------------------------------------*/
+moltodestroyed is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import "common/normalize";
 @import "common/variables";
 @import "common/mixins";
 @import "common/utilities";
 @import "common/elements";
+@import "common/other";
 
-@import "component/ad-blocker";
+@import "component/ads";
 @import "component/social-links";
 @import "component/social-share";
 @import "component/textified";
@@ -28,111 +44,3 @@
 @import "templates/blog-page";
 @import "templates/comic-post";
 @import "templates/default-page";
-
-
-
-
-
-
-
-/*!
-Theme Name: moltodestroyed
-Theme URI: https://underscores.me/
-Author: A.G. Skryp
-Author URI: http://agskryp.com
-Description: Wordpress theme for the moltodestroyed web comic
-Version: 1.3.1
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: moltodestroyed
-Tags: custom-theme
-
-moltodestroyed is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
-
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Initalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Misc
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Initalize
---------------------------------------------------------------*/
-@import "aasass/normalize";
-@import "aasass/common/colors";
-@import "aasass/common/columns";
-@import "aasass/common/mixins";
-@import "aasass/common/structure";
-@import "aasass/common/typography";
-@import "aasass/common/utilities";
-
-
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-@import "aasass/typography/typography";
-
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-@import "aasass/elements/elements";
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-@import "aasass/forms/forms";
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-@import "aasass/navigation/navigation";
-
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-@import "aasass/modules/accessibility";
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-@import "aasass/modules/alignments";
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-@import "aasass/modules/clearings";
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "aasass/site/site";
-
-/*--------------------------------------------------------------
-# Misc
---------------------------------------------------------------*/
-@import "aasass/misc/plugins";
-@import "aasass/misc/share-buttons";
-@import "aasass/misc/ads";
-@import "aasass/misc/wp-editor";
-
-
-@import "aasass/misc/header-characters";
