@@ -1,6 +1,7 @@
 a {
   color: $soft_black;
   font-weight: 600;
+  text-decoration: none;
   
   &:hover,
   &:focus,
@@ -36,6 +37,10 @@ blockquote {
   padding: 24px;
   @media all and ( min-width: $screen-sm ) {
     margin: 30px;
+  }
+
+  p {
+    margin: 0;
   }
 }
 

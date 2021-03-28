@@ -56,7 +56,7 @@ $font__line-height-pre: 1.6;
 body, button, input, select, optgroup, textarea {
   color: $black;
   font-family: $font__main;
-  @include font-size( 2 );
+  // @include font-size( 2 );
   line-height: $font__line-height-body;
 }
 

@@ -33,9 +33,9 @@ function moltodestroyed_scripts() {
   $theme_version = '1.5.0';
   
   // CSS
-  wp_enqueue_style( 
-    'bootstrap-style', get_template_directory_uri() . '/css/bootstrap/bootstrap.min.css', array(), '3.3.7' 
-  );
+  // wp_enqueue_style( 
+  //   'bootstrap-style', get_template_directory_uri() . '/css/bootstrap/bootstrap.min.css', array(), '3.3.7' 
+  // );
   
   wp_enqueue_style( 
     'moltodestroyed-style', get_stylesheet_uri(), array(), $theme_version 
