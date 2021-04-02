@@ -22,8 +22,6 @@
 }
 
 a.site-banner {
-  
-
   &:hover,
   &:focus,
   &:active {
@@ -31,7 +29,8 @@ a.site-banner {
   }
 
   img {
-    max-height: 190px; 
+    max-height: 192px;
     padding: 6px 0;
+    box-sizing: content-box;
   }
 }

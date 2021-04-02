@@ -19,6 +19,9 @@ function blockerMessage() {
 ( function($) {
   $( document ).ready( function() {
 
+
+
+
     // Toggle open class when menu button's clicked
     $( '.menu-toggle' ).click( function () {
       $( '.main-menu-icon' ).toggleClass( 'open' );

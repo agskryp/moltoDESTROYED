@@ -1,7 +1,7 @@
 <?php
 
 $root         = get_template_directory();
-$path         = '/images/characters/';
+$path         = '/assets/images/characters/';
 $imageURLRoot = get_template_directory_uri() . $path;
 
 function getImagesFromDir( $path ) {

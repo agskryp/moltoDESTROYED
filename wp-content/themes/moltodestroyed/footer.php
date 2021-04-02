@@ -54,7 +54,8 @@
         echo '<span class="copyright-container">Copyright &copy; 2014-' . date( 'Y' ) . ' moltoDESTROYED.  All rights reserved.</span>';
 
         echo '<span>Site by ';
-          echo '<a href="' . esc_url( 'https://agskryp.com' ) . '" target="_blank">A.G. Skryp</a>';
+          echo '<a href="' . esc_url( 'https://agskryp.com' ) .
+               '" target="_blank" rel="noopener">A.G. Skryp</a>';
         echo '</span>';
       ?>
     </div>
