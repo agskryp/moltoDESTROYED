@@ -133,14 +133,6 @@
     }
   }  
 
-
-
-
-
-
-
-
-
   .ip-background {
     background: $black;
     padding: 24px 30px;
@@ -155,8 +147,6 @@
       font-size: 14px;
       flex-direction: column;
       @media all and ( min-width: $screen-md ) {
-        
-        
         flex-direction: row;
         justify-content: space-between;
       }

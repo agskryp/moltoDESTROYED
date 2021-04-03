@@ -30,7 +30,7 @@ add_action( 'after_setup_theme', 'moltodestroyed_setup' );
  * Enqueue scripts and styles.
  */
 function moltodestroyed_scripts() {
-  $theme_version = '1.5.0';
+  $theme_version = '1.5.1';
   
   // CSS  
   wp_enqueue_style( 

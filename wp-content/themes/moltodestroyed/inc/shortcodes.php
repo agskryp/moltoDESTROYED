@@ -8,7 +8,7 @@ function random_molto_character( $atts ) {
   
   if( !empty( $atts[ 'float' ] ) ) $float = 'pull-right';
   
-  $shortcode = '<img class="' . $float . '" src="' . $imageURLRoot . getRandomFromArray( $imgList ) . '" />';
+  $shortcode = '<img class="random-character ' . $float . '" src="' . $imageURLRoot . getRandomFromArray( $imgList ) . '" />';
   
   return $shortcode;
 }
