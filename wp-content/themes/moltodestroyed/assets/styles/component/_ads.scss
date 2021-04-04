@@ -43,11 +43,9 @@ ins.adsbygoogle,
 .google-auto-placed {
   position: relative;
   margin: 0 auto 42px !important;
-  
-  iframe html body div {
-    &::before {
-      @include global-ad-settings( "Advertisement by Google", $black );
-    }
+
+  &::before {
+    @include global-ad-settings( "Advertisement by Google", $black );
   }
 }
 
