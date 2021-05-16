@@ -15,7 +15,7 @@
   menu.setAttribute( 'aria-expanded', 'false' );
 	
   if( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-	menu.className += ' nav-menu';
+	  menu.className += ' nav-menu';
   }
 
   button.onclick = function() {
@@ -34,8 +34,8 @@
 
   // Each time a menu link is focused or blurred, toggle focus.
   for( i = 0, len = links.length; i < len; i++ ) {
-	links[i].addEventListener( 'focus', toggleFocus, true );
-	links[i].addEventListener( 'blur', toggleFocus, true );
+    links[i].addEventListener( 'focus', toggleFocus, true );
+    links[i].addEventListener( 'blur', toggleFocus, true );
   }
 
   // Sets or removes .focus class on an element.
@@ -47,15 +47,15 @@
       if( 'li' === self.tagName.toLowerCase() ) {
         if( -1 !== self.className.indexOf( 'focus' ) ) {
           self.className = self.className.replace( ' focus', '' );
-		}
+		    }
         
         else {
           self.className += ' focus';
-		}
+	    	}
       }
 
       self = self.parentElement;
-	}
+	  }
   }
 
   // Toggles `focus` class to allow submenu access on tablets.
@@ -65,13 +65,13 @@
 
     if( 'ontouchstart' in window ) {
       touchStartFn = function(e) {
-		var menuItem = this.parentNode, i;
+		    var menuItem = this.parentNode, i;
 
-		if( !menuItem.classList.contains( 'focus' ) ) {
+		    if( !menuItem.classList.contains( 'focus' ) ) {
           e.preventDefault();
 		
           for( i = 0; i < menuItem.parentNode.children.length; ++i ) {
-			if( menuItem === menuItem.parentNode.children[i] ) {
+			      if( menuItem === menuItem.parentNode.children[i] ) {
               continue;
             }
 			
@@ -79,15 +79,15 @@
           }
 		
           menuItem.classList.add( 'focus' );
-		}
+		    }
         
         else {
           menuItem.classList.remove( 'focus' );
-		}
-      };
+		    }
+      }
 
       for( i = 0; i < parentLink.length; ++i ) {
-		parentLink[i].addEventListener( 'touchstart', touchStartFn, false );
+		    parentLink[i].addEventListener( 'touchstart', touchStartFn, false );
       }
     }
   }( container ) );

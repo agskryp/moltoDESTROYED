@@ -44,7 +44,8 @@ function moltodestroyed_scripts() {
   );
   
   wp_enqueue_script( 
-    'analytics-scripts',  get_template_directory_uri() . '/js/analytics-scripts.js', array(), $theme_version, false
+    'analytics-scripts',  get_template_directory_uri() . '/assets/scripts/analytics-scripts.js',
+    array(), $theme_version, false
   );
   
   wp_enqueue_script( 
@@ -56,30 +57,33 @@ function moltodestroyed_scripts() {
   );
   
   wp_enqueue_script( 
-    'moltodestroyed-global-scripts', get_template_directory_uri() . '/js/extra.js', array(), $theme_version, false 
+    'moltodestroyed-global-scripts', get_template_directory_uri() . '/assets/scripts/extra.js',
+    array(), $theme_version, false 
   );
 
   wp_enqueue_script( 
     'moltodestroyed-hide-captcha', get_template_directory_uri() . '/js/hide-captcha.js', array(), $theme_version, false 
   );
   
-  wp_enqueue_script( 
-    'moltodestroyed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true 
-  );
+  // wp_enqueue_script( 
+  //   'moltodestroyed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true 
+  // );
   
-  wp_enqueue_script( 
-    'moltodestroyed-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true 
-  );
+  // wp_enqueue_script( 
+  //   'moltodestroyed-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true 
+  // );
   
   if( is_page_template( array( 'page-templates/page-archive.php' ) ) ) {
     wp_enqueue_script( 
-      'comic-rocket',  get_template_directory_uri() . '/js/comic-rocket.js', array(), $theme_version, true
+      'comic-rocket',  get_template_directory_uri() . '/assets/scripts/comic-rocket.js',
+      array(), $theme_version, true
     );
   }
 
   if( is_singular( 'comics' ) ) {
     wp_enqueue_script(
-      'moltodestroyed-pop-up-window', get_template_directory_uri() . '/js/pop-up-window.js', array(), $theme_version, true 
+      'moltodestroyed-pop-up-window', get_template_directory_uri() . '/assets/scripts/pop-up-window.js',
+      array(), $theme_version, true 
     );
   }
 }

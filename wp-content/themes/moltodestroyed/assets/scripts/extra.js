@@ -1,11 +1,9 @@
 /**
  * Display support images if user is running an ad blocker
  * Run outside of anonymous loading function to be defined
- * before googlead script runs
- *
- * TODO: add back to anonymous function and async js(?)
+ * before google ad script runs
  */
-function blockerMessage() {
+function moltoBlockerMessage() {
   jQuery( ".ad-container" ).before(
     '<div class="ad-blocker-container">' +
       '<img src="' + moltoConfig.themeDirectory + '/images/messages/blocker-message-01.png" ' +
@@ -16,19 +14,18 @@ function blockerMessage() {
   );
 }
 
-( function($) {
-  $( document ).ready( function() {
-
-
-
+( function() {
+  document.addEventListener( "DOMContentLoaded", function() {
+    var menuToggle         = document.querySelector( '.menu-toggle' );
+    var menuIcon           = document.querySelector( '.main-menu-icon' );
+    var textifiedContainer = document.querySelector( '.textified-container' );
 
     // Toggle open class when menu button's clicked
-    $( '.menu-toggle' ).click( function () {
-      $( '.main-menu-icon' ).toggleClass( 'open' );
-    } );
-
-    var textifiedContainer = document.querySelector( '.textified-container' );
+    menuToggle.onclick = function() {
+      menuIcon.classList.toggle( 'open' );
+    }
     
+    // Check if textified component exists
     if( typeof( textifiedContainer ) != 'undefined' && textifiedContainer != null ) {    
       var button    = textifiedContainer.querySelector( 'button' );
       var text      = textifiedContainer.querySelector( 'span' );
@@ -50,4 +47,4 @@ function blockerMessage() {
       } );
     }
   } );
-} )( jQuery );
+} )();
