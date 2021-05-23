@@ -1,7 +1,8 @@
 ( function() {
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener( "DOMContentLoaded", function() {
     var promoContainer = document.querySelector( ".promo-container" );
     var divElement = document.createElement( 'div' );
+    
     divElement.setAttribute( 'class', 'text-center' );
 
     if( window.innerWidth > 768 ) {

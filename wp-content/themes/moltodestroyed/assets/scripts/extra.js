@@ -17,14 +17,16 @@ function moltoBlockerMessage() {
 ( function() {
   document.addEventListener( "DOMContentLoaded", function() {
     var menuToggle         = document.querySelector( '.menu-toggle' );
+    var mainNavMenu        = document.querySelector( '.main-nav-menu' );
     var menuIcon           = document.querySelector( '.main-menu-icon' );
     var textifiedContainer = document.querySelector( '.textified-container' );
 
     // Toggle open class when menu button's clicked
     menuToggle.onclick = function() {
       menuIcon.classList.toggle( 'open' );
+      mainNavMenu.classList.toggle( 'in' );
     }
-    
+
     // Check if textified component exists
     if( typeof( textifiedContainer ) != 'undefined' && textifiedContainer != null ) {    
       var button    = textifiedContainer.querySelector( 'button' );
