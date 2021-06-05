@@ -25,10 +25,10 @@
 
 // Transition speed for mobile menu icon
 @mixin transform-menu-speed() {
-  -webkit-transition: .35s ease-in-out;
-  -moz-transition: .35s ease-in-out;
-  -o-transition: .35s ease-in-out;
-  transition: .35s ease-in-out;
+  -webkit-transition: 0s ease-in-out;
+  -moz-transition: 0s ease-in-out;
+  -o-transition: 0s ease-in-out;
+  transition: 0s ease-in-out;
 }
 
 // Transform support for rotate

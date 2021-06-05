@@ -33,45 +33,19 @@ function moltodestroyed_scripts() {
   $theme_version = '1.5.1';
   
   // CSS  
-  wp_enqueue_style( 
-    'moltodestroyed-style', get_stylesheet_uri(), array(), $theme_version 
-  );
+  wp_enqueue_style( 'moltodestroyed-style', get_stylesheet_uri(), array(), $theme_version );
   
 
   // JS  
-  // wp_enqueue_script( 
-  //   'jquery-3-4-1',  get_template_directory_uri() . '/js/jquery-3-4-1.js', array(), '3.4.1', false
-  // );
-  
   wp_enqueue_script( 
     'analytics-scripts',  get_template_directory_uri() . '/assets/scripts/analytics-scripts.js',
     array(), $theme_version, false
   );
   
-  // wp_enqueue_script( 
-  //   'bootstrap-collapse',  get_template_directory_uri() . '/js/bootstrap-collapse-min.js', array(), '3.4.1', true
-  // );
-  
-  // wp_enqueue_script( 
-  //   'bootstrap-transitions',  get_template_directory_uri() . '/js/bootstrap-transitions-min.js', array(), '3.4.1', true
-  // );
-  
   wp_enqueue_script( 
     'moltodestroyed-global-scripts', get_template_directory_uri() . '/assets/scripts/extra.js',
     array(), $theme_version, false 
   );
-
-  // wp_enqueue_script( 
-  //   'moltodestroyed-hide-captcha', get_template_directory_uri() . '/js/hide-captcha.js', array(), $theme_version, false 
-  // );
-  
-  // wp_enqueue_script( 
-  //   'moltodestroyed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true 
-  // );
-  
-  // wp_enqueue_script( 
-  //   'moltodestroyed-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true 
-  // );
   
   if( is_page_template( array( 'page-templates/page-archive.php' ) ) ) {
     wp_enqueue_script( 
