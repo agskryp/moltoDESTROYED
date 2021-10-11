@@ -27,7 +27,7 @@
   <?php
     echo '<div class="button-container">';
       if( $post -> ID !== $first_comic[0] -> ID ) {
-        echo "<a href='" . get_permalink( $first_comic[0] -> ID ) . "'>";
+        echo "<a class='comic-nav-button' href='" . get_permalink( $first_comic[0] -> ID ) . "'>";
           echo "<span class='molto-sr-text'>First Comic</span> &lt; &lt; &lt;";
         echo "</a>";
       }
@@ -38,7 +38,7 @@
     echo '</div>';
 
     echo '<div class="button-container">';
-      echo "<a href='" . get_permalink( $random_comic[0] -> ID ) . "'>";
+      echo "<a class='comic-nav-button' href='" . get_permalink( $random_comic[0] -> ID ) . "'>";
         echo "<span class='molto-sr-text'>Random Comic</span> &#63; &#63; &#63;";
       echo "</a>";
     echo '</div>';
@@ -49,7 +49,7 @@
 
     echo '<div class="button-container">';
       if( $post -> ID !== $latest_comic[0] -> ID ) {
-        echo "<a href='" . get_permalink( $latest_comic[0] -> ID ) . "'>";
+        echo "<a class='comic-nav-button' href='" . get_permalink( $latest_comic[0] -> ID ) . "'>";
           echo "<span class='molto-sr-text'>Latest Comic</span> &gt; &gt; &gt;";
         echo "</a>";
       }
