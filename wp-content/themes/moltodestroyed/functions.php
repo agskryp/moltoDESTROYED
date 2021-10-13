@@ -220,14 +220,16 @@ add_action( 'template_redirect', 'front_page_redirect' );
 
 // Return a class for previous/next functions
 function posts_link_next_class( $format ) {
-  $format = str_replace( 'href=', 'class="comic-nav-button" href=', $format );
+  $format = str_replace( 'href=', 'data-label="Next Comic Link" class="comic-nav-button" href=', $format );
 
   return $format;
 }
 add_filter( 'next_post_link', 'posts_link_next_class' );
 
 function posts_link_prev_class( $format ) {
-  $format = str_replace( 'href=', 'class="comic-nav-button" href=', $format );
+  $format = str_replace( 
+    'href=', 'data-label="Previous Comic Link" class="comic-nav-button" href=', $format
+  );
 
   return $format;
 }
