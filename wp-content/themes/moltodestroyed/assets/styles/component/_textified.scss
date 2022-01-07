@@ -21,16 +21,17 @@
       background: $grey;
     }
 
-    span {
-      font-size: 14px;
-    }
-    
-    svg {
+    &::after {
+      content: '';
+      background-image: url( 'assets/images/caret.svg' );
       transform: rotate( 90deg );
-      fill: $white;
+      height: 12px;
+      width: 12px;
       margin-left: 6px;
+    }
 
-      &.flip {
+    &.opened {
+      &::after {
         transform: rotate( 270deg );
       }
     }

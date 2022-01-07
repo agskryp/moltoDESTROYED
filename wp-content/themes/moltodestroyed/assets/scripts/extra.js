@@ -32,29 +32,30 @@ function moltoBlockerMessage() {
     // Check if textified component exists
     if( typeof( textifiedContainer ) != 'undefined' && textifiedContainer != null ) {    
       var button    = textifiedContainer.querySelector( 'button' );
-      var text      = textifiedContainer.querySelector( 'span' );
-      var arrow     = textifiedContainer.querySelector( 'svg' );
+      // var text      = textifiedContainer.querySelector( 'span' );
+      // var arrow     = textifiedContainer.querySelector( 'svg' );
       var textified = textifiedContainer.querySelector( '.textified-text-container' );
           
       // Toggle comic texted version button
       button.addEventListener( 'click', function () {
 
         // For Google Tag Manager
-        dataLayer.push( {
-          'event': 'Comic',
-          'action': window.location.pathname,
-          'label': 'Click comic text button'
-        } );
+        // dataLayer.push( {
+        //   'event': 'Comic',
+        //   'action': window.location.pathname,
+        //   'label': 'Click comic text button'
+        // } );
 
         textified.classList.toggle( 'molto-sr-text' );
-        arrow.classList.toggle( 'flip' );
+        // arrow.classList.toggle( 'flip' );
+        button.classList.toggle( 'opened' );
 
-        if( text.innerHTML === "Close the text version" ) {
-          text.innerHTML = "Read the text version";
+        if( button.innerText === "Close the text version" ) {
+          button.innerText = "Read the text version";
         }
 
         else {
-          text.innerHTML = "Close the text version";
+          button.innerText = "Close the text version";
         } 
       } );
     }
