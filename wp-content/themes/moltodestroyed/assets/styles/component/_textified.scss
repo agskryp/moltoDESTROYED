@@ -2,7 +2,7 @@
   max-width: 500px;
   margin: 0 auto;
 
-  button {
+  button.textified-button {
     display: -moz-box !important; // Required for firefox on windows
     cursor: pointer;
     margin: 30px auto;

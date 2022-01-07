@@ -30,7 +30,7 @@
 
             echo '<div class="placeholder-image">Loading...</div>';
           
-            echo wp_get_attachment_image( $image, 'full' );              
+            echo wp_get_attachment_image( $image, 'full' );
           }
         
           require_once get_template_directory() . '/partials/textified-comic.php';

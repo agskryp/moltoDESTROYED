@@ -4,9 +4,10 @@
   <div class="social-share-link-container">
     <h3 class="desktop-title">Share!</h3>
     
-    <a class="social-share-button" target="popupTwitter"
-      onclick="PopupCenter( '', 'popupTwitter', '600', '360' );" title="Share on Twitter"
-      href="https://twitter.com/intent/tweet?text=Check out the comic &#39;<?php echo get_the_title(); ?>&#39; by @moltoDESTROYED : <?php echo get_permalink(); ?>">
+    <a class="social-share-button" target="popupTwitter" 
+       data-label='Shared <?= get_the_title(); ?> comic strip on Twitter'
+       onclick="PopupCenter( '', 'popupTwitter', '600', '360' );" title="Share on Twitter"
+       href="https://twitter.com/intent/tweet?text=Check out the comic &#39;<?= get_the_title(); ?>&#39; by @moltoDESTROYED : <?= get_permalink(); ?>">
       <span class="molto-sr-text">Share on Twitter</span>
 
       <svg width="32" height="32" viewBox="0 0 24 24">
@@ -14,9 +15,10 @@
       </svg>
     </a>
 
-    <a class="social-share-button" target="popupFacebook"
-      onclick="PopupCenter( '', 'popupFacebook', '600', '500' );" title="Share on Facebook"
-      href="http://www.facebook.com/share.php?u=<?php echo get_permalink(); ?>">
+    <a class="social-share-button" target="popupFacebook" 
+       data-label='Shared <?= get_the_title(); ?> comic strip on Facebook'
+       onclick="PopupCenter( '', 'popupFacebook', '600', '500' );" title="Share on Facebook"
+       href="http://www.facebook.com/share.php?u=<?= get_permalink(); ?>">
       <span class="molto-sr-text">Share on Facebook</span>
 
       <svg width="32" height="32" viewBox="0 0 24 24">
@@ -25,8 +27,9 @@
     </a>
 
     <a class="social-share-button" target="popupTumblr" 
-      onclick="PopupCenter( '', 'popupTumblr', '540', '600' );" title="Share on Tumblr"
-      <?php echo 'href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=' . get_permalink() . 'posttype=photo&content=' . get_the_post_thumbnail_url() . '&caption=&#39;' . get_the_title() . '&#39; : ' . get_permalink() . '"'; ?>>
+       data-label='Shared <?= get_the_title(); ?> comic strip on Tumblr'
+       onclick="PopupCenter( '', 'popupTumblr', '540', '600' );" title="Share on Tumblr"
+       <?= 'href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=' . get_permalink() . 'posttype=photo&content=' . get_the_post_thumbnail_url() . '&caption=&#39;' . get_the_title() . '&#39; : ' . get_permalink() . '"'; ?>>
       <span class="molto-sr-text">Share on Tumblr</span>
 
       <svg width="32" height="32" viewBox="0 0 24 24">
@@ -34,8 +37,9 @@
       </svg>
     </a>
 
-    <a class="social-share-button" target="_blank" rel="noopener" title="Share on Reddit"
-      href="http://www.reddit.com/submit?url=<?php echo get_permalink(); ?>&title=<?php echo get_the_title(); ?>">
+    <a class="social-share-button" target="_blank" rel="noopener" title="Share on Reddit" 
+       data-label='Shared <?= get_the_title(); ?> comic strip on Reddit'
+       href="http://www.reddit.com/submit?url=<?= get_permalink(); ?>&title=<?= get_the_title(); ?>">
       <span class="molto-sr-text">Share on Reddit</span>
 
       <svg width="32" height="32" viewBox="0 0 24 24">
@@ -44,7 +48,8 @@
     </a>
 
     <a class="social-share-button" target="popupMix" onclick="PopupCenter( '', 'popupMix', '600', '760' );"
-      href="https://mix.com/add?url=<?php echo get_permalink(); ?>" title="Share to mix.com">
+       href="https://mix.com/add?url=<?= get_permalink(); ?>" title="Share to mix.com"
+       data-label='Shared <?= get_the_title(); ?> comic strip on mix.com'>
       <span class="molto-sr-text">Share to mix.com</span>
 
       <svg width="32" height="32" viewBox="0 0 448 512">
@@ -53,7 +58,8 @@
     </a>
 
     <a class="social-share-button" target="_blank" rel="noopener" title="Share on WhatsApp"
-      href="https://wa.me/?text=<?php echo get_permalink(); ?>">
+       data-label='Shared <?= get_the_title(); ?> comic strip on WhatsApp'
+       href="https://wa.me/?text=<?= get_permalink(); ?>">
       <span class="molto-sr-text">Share on WhatsApp</span>
 
       <svg width="32" height="32" viewBox="0 0 24 24">
@@ -61,9 +67,9 @@
       </svg>
     </a>
 
-    <a class="social-share-button" title="Share via E-Mail"
-      href="mailto:?subject=<?php echo get_the_title(); ?>&body=Check out the comic strip &#39;<?php echo get_the_title(); ?>&#39; : <?php echo get_permalink(); ?>"
-      >
+    <a class="social-share-button" title="Share via E-Mail" 
+       data-label='Shared <?= get_the_title(); ?> comic strip via Email'
+       href="mailto:?subject=<?= get_the_title(); ?>&body=Check out the comic strip &#39;<?= get_the_title(); ?>&#39; : <?= get_permalink(); ?>">
       <span class="molto-sr-text">Share via E-Mail</span>
 
       <svg width="32" height="32" viewBox="0 0 24 24">

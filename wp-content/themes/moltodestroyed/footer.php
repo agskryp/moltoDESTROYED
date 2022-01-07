@@ -55,7 +55,7 @@
 
         echo '<span>Site by ';
           echo '<a href="' . esc_url( 'https://agskryp.com' ) .
-               '" target="_blank" rel="noopener">A.G. Skryp</a>';
+               '" class="gtm-network-link" data-label="Visiting A.G Skryp homepage" target="_blank" rel="noopener">A.G. Skryp</a>';
         echo '</span>';
       ?>
     </div>

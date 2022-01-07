@@ -15,6 +15,8 @@ function moltoBlockerMessage() {
 }
 
 ( function() {
+  window.dataLayer = window.dataLayer || [];
+
   document.addEventListener( "DOMContentLoaded", function() {
     var menuToggle         = document.querySelector( '.menu-toggle' );
     var mainNavMenu        = document.querySelector( '.main-nav-menu' );
@@ -36,6 +38,14 @@ function moltoBlockerMessage() {
           
       // Toggle comic texted version button
       button.addEventListener( 'click', function () {
+
+        // For Google Tag Manager
+        dataLayer.push( {
+          'event': 'Comic',
+          'action': window.location.pathname,
+          'label': 'Click comic text button'
+        } );
+
         textified.classList.toggle( 'molto-sr-text' );
         arrow.classList.toggle( 'flip' );
 

@@ -1,8 +1,8 @@
 <div class="social-container">
   <h2 class="molto-sr-text">Follow Us</h2>
   
-  <a href="https://www.instagram.com/moltodestroyed/" 
-     target="_blank" rel="noopener" title="Follow on Instagram">
+  <a href="https://www.instagram.com/moltodestroyed/" data-label='Visiting Instagram social account'
+     class="gtm-network-link" target="_blank" rel="noopener" title="Follow on Instagram">
     <span class="molto-sr-text">on Instagram</span>
     
     <svg width="36" height="36" viewBox="0 0 24 24">
@@ -10,7 +10,8 @@
     </svg>
   </a>
 
-  <a href="https://twitter.com/moltodestroyed/" target="_blank" rel="noopener" title="Follow on Twitter">
+  <a href="https://twitter.com/moltodestroyed/" target="_blank" data-label='Visiting Twitter social account'
+     class="gtm-network-link" rel="noopener" title="Follow on Twitter">
     <span class="molto-sr-text">on Twitter</span>
     
     <svg width="36" height="36" viewBox="0 0 24 24">
@@ -18,8 +19,8 @@
     </svg>
   </a>
 
-  <a href="https://www.facebook.com/moltoDESTROYED/" 
-     target="_blank" rel="noopener" title="Follow on Facebook">
+  <a href="https://www.facebook.com/moltoDESTROYED/" data-label='Visiting Facebook social account'
+     class="gtm-network-link" target="_blank" rel="noopener" title="Follow on Facebook">
     <span class="molto-sr-text">on Facebook</span>
     
     <svg width="36" height="36" viewBox="0 0 24 24">
